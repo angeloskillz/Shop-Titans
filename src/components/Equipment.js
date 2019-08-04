@@ -97,7 +97,9 @@ export default props => (
           {props.details.blueprint_unlocks.map((blueprint, index) => (
             <div key={index}>
               <Blueprint
-                src={require(`../images/Items/${blueprint}.png`)}
+                src={require(`../images/Items/${blueprint
+                  .toLowerCase()
+                  .replace(/\s/g, '')}.png`)}
                 alt={props.details.name}
               />
             </div>

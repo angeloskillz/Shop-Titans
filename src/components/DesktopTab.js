@@ -15,11 +15,20 @@ import stone from "../constants/gauntlets/stone"
 import toxic from "../constants/gauntlets/toxic"
 import wind from "../constants/gauntlets/wind"
 import EquipmentBox from "../components/Equipment"
-import lores from "../constants/lores";
-import LoreBox from "../components/Lorecard";
-import Model from "./3dmodel";
+import lores from "../constants/lores"
+import LoreBox from "../components/Lorecard"
+import Model from "./3dmodel"
 import skins from "../constants/skins"
-import blacksmith from "../constants/workers/blacksmith";
+import blacksmith from "../constants/workers/blacksmith"
+import carpenter from "../constants/workers/carpenter"
+import engineer from "../constants/workers/engineer"
+import herbalist from "../constants/workers/herbalist"
+import master from "../constants/workers/master"
+import priestess from "../constants/workers/priestess"
+import scholar from "../constants/workers/scholar"
+import tailor from "../constants/workers/tailor"
+import wizard from "../constants/workers/wizard"
+import stats from "../constants/workers/stats"
 
 const StyledAppBar = withStyles({
   root: {
@@ -50,16 +59,26 @@ const StyledTab = withStyles({
 })(Tab)
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
-const classes = [
-
-]
+const classes = []
 const workers = [
-  blacksmith
+  blacksmith,
+  carpenter,
+  engineer,
+  herbalist,
+  master,
+  priestess,
+  scholar,
+  tailor,
+  wizard,
 ]
 
 function TabContainer({ children, dir }) {
   return (
-    <Typography component="div" dir={dir} style={{ padding: 8 * 3, background:'#141b1e' }}>
+    <Typography
+      component="div"
+      dir={dir}
+      style={{ padding: 8 * 3, background: "#141b1e" }}
+    >
       {children}
     </Typography>
   )
@@ -199,7 +218,7 @@ class FullWidthTabs extends React.Component {
               </div>
 
               <div className="Selectan">
-                <h1>Belts</h1>
+                <h1>Worker Stats</h1>
               </div>
               <img
                 src={require("../images/Divider2.png")}
@@ -212,48 +231,24 @@ class FullWidthTabs extends React.Component {
                 alt="divider"
               />
 
-
-              <div className="Selectan">
-                <h1>Boots</h1>
-              </div>
-              <img
-                src={require("../images/Divider2.png")}
-                style={{
-                  width: "200px",
-                  display: "block",
-                  margin: "0 auto",
-                  marginBottom: "24px",
-                }}
-                alt="divider"
-              />
-
-              <div className="Selectan">
-                <h1>Consumables</h1>
-              </div>
-              <img
-                src={require("../images/Divider2.png")}
-                style={{
-                  width: "200px",
-                  display: "block",
-                  margin: "0 auto",
-                  marginBottom: "24px",
-                }}
-                alt="divider"
-              />
-
-              <div className="Selectan">
-                <h1>Runes</h1>
-              </div>
-              <img
-                src={require("../images/Divider2.png")}
-                style={{
-                  width: "200px",
-                  display: "block",
-                  margin: "0 auto",
-                  marginBottom: "24px",
-                }}
-                alt="divider"
-              />
+              <table>
+                <thead>
+                  <tr>
+                    <th>Worker Level</th>
+                    <th>XP Needed</th>
+                    <th>Crafting Speed Bonus</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stats.map((stat, index) => (
+                    <tr>
+                      <td align="left">{stat["Worker Level"]}</td>
+                      <td align="right">{stat["XP Needed"]}</td>
+                      <td align="right">{stat["Crafting Speed Bonus"]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </TabContainer>
           )}
           {value === 3 && (
