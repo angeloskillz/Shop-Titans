@@ -174,7 +174,7 @@ class Classbox extends React.Component {
             <div key={index}>
               <ScrollGroup>
               <Scrollimg src={require(`../images/Classes/${stat.name}.jpg`)} alt={this.props.name} />
-              <div> 
+              <div>
               <Scroll>{stat.name}</Scroll>
                   <Scrolltype>{stat.type}</Scrolltype>
                 </div>

@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Spellbreak Wiki`,
-    description: `The best Spellbreak wiki stats site.`,
+    title: `Shop Titans Wiki`,
+    description: `The best Shop Titans wiki stats site.`,
     author: `AngeloCant1 & Skillz4Killz`,
-    url: "https://www.sbwiki.netlify.com",
+    url: "https://www.shoptitans.netlify.com",
   },
   plugins: [
     {
@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `SBWIKI`,
-        short_name: `SBWIKI`,
+        name: `STWIKI`,
+        short_name: `STWIKI`,
         start_url: `/`,
         background_color: `#F7B241`,
         theme_color: `#141b1e`,

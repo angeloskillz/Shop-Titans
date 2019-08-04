@@ -3,7 +3,7 @@ import styled from "styled-components"
 import "./equipment.css"
 
 const Class = styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
   position: relative;
   width: 280px;
@@ -40,6 +40,12 @@ const Icon2 = styled.img`
   margin-left: 11px;
   margin-top: 11px;
 `
+const Blueprint = styled.img`
+  width: 60px;
+  height: 60px;
+  border: 1px solid #fec470;
+`
+
 const Description = styled.h2`
   font-family: Roboto;
   font-weight: 800;
@@ -66,7 +72,7 @@ export default props => (
   <Class>
     <Icons>
       <Icon2
-        src={require(`../images/Equipment/${props.details.name}.png`)}
+        src={require(`../images/City Characters/${props.details.name.toLowerCase()}.png`)}
         alt={props.details.name}
       />
       <Icon1
@@ -75,17 +81,29 @@ export default props => (
       />
     </Icons>
     <Title>{props.details.name}</Title>
-    <SubDescription>{props.details.description.join(`\n`)}</SubDescription>
-    {props.details.cooldown ? (
-      <SubDescription style={{marginTop: '0px', marginBottom:'7px'}}>Cooldown: {props.details.cooldown}</SubDescription>
+    <SubDescription>{props.details.title}</SubDescription>
+    <SubDescription>
+      Level Required: {props.details.level_required}
+    </SubDescription>
+    <SubDescription>
+      Unlock Cost: {props.details.gold_cost} Gold OR {props.details.gem_cost}{" "}
+      Gems
+    </SubDescription>
+    <SubDescription />
+    <Description>{props.details.name}</Description>
+    {props.details.blueprint_unlocks.length ? (
+      <div>
+        <Icons>
+          {props.details.blueprint_unlocks.map((blueprint, index) => (
+            <div key={index}>
+              <Blueprint
+                src={require(`../images/Items/${blueprint}.png`)}
+                alt={props.details.name}
+              />
+            </div>
+          ))}
+        </Icons>
+      </div>
     ) : null}
-    {props.details.duration ? (
-      <SubDescription style={{ marginTop: '0px' }}>Duration: {props.details.duration}</SubDescription>
-    ) : null}
-    <Description
-      className={props.details.type ? props.details.type.toLowerCase() : null}
-    >
-      {props.details.type}
-    </Description>
   </Class>
 )

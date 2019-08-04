@@ -4,8 +4,8 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-site_url: https://sbwiki.netlify.com
-logo_url: https://sbwiki.netlify.com/images/Sun.png
+site_url: https://shoptitans.netlify.com
+logo_url: https://shoptitans.netlify.com/images/Sun.png
 show_preview_links: false
 publish_mode: editorial_workflow
 

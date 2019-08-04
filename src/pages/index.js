@@ -12,19 +12,6 @@ import lightning from "../constants/gauntlets/lightning"
 import stone from "../constants/gauntlets/stone"
 import toxic from "../constants/gauntlets/toxic"
 import wind from "../constants/gauntlets/wind"
-import bulwark from "../constants/classes/bulwark"
-import conduit from "../constants/classes/conduit"
-import crackshot from "../constants/classes/crackshot"
-import frostborn from "../constants/classes/frostborn"
-import pyromancer from "../constants/classes/pyromancer"
-import scavenger from "../constants/classes/scavenger"
-import scholar from "../constants/classes/scholar"
-import scout from "../constants/classes/scout"
-import stoneshaper from "../constants/classes/stoneshaper"
-import tempest from "../constants/classes/tempest"
-import toxicologist from "../constants/classes/toxicologist"
-import zealot from "../constants/classes/zealot"
-import amulets from "../constants/equipment/amulets"
 import belts from "../constants/equipment/belts"
 import boots from "../constants/equipment/boots"
 import consumables from "../constants/equipment/consumables"
@@ -34,25 +21,18 @@ import EquipmentBox from "../components/Equipment"
 import Desktop from "../components/DesktopTab"
 
 import MediaQuery from "react-responsive"
-import StickyFooter from 'react-sticky-footer'
-import LoreBox from "../components/Lorecard";
-import Model from "../components/3dmodel";
+import StickyFooter from "react-sticky-footer"
+import LoreBox from "../components/Lorecard"
+import Model from "../components/3dmodel"
 import skins from "../constants/skins"
+import blacksmith from "../constants/workers/blacksmith";
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
 const classes = [
-  bulwark,
-  conduit,
-  crackshot,
-  frostborn,
-  pyromancer,
-  scavenger,
-  scholar,
-  scout,
-  stoneshaper,
-  tempest,
-  toxicologist,
-  zealot,
+
+]
+const workers = [
+  blacksmith
 ]
 
 const IndexPage = props => (
@@ -137,7 +117,7 @@ const IndexPage = props => (
         </div>
       </div>
       <div className="Selectan">
-        <h1>Amulets</h1>
+        <h1>Workers</h1>
       </div>
       <img
         src={require("../images/Divider2.png")}
@@ -151,7 +131,7 @@ const IndexPage = props => (
       />
       <div className="CardboxGroupScroll">
         <div className="CardboxGroup">
-          {amulets.map((equipment, index) => (
+          {workers.map((equipment, index) => (
             <EquipmentBox key={index} details={equipment} />
           ))}
         </div>
@@ -276,7 +256,7 @@ const IndexPage = props => (
       <div className="CardboxGroupScroll">
         <div className="CardboxGroup">
           {lores.map((lore, index) => (
-          <LoreBox
+            <LoreBox
               key={index}
               title={lore.title}
               link={lore.link}
@@ -290,37 +270,44 @@ const IndexPage = props => (
       className="footer"
       bottomThreshold={50}
       normalStyles={{
-        backgroundColor: '',
-        padding: '1rem',
-        fontSize: '12px',
-        color: 'white',
-        textAlign: 'center',
-        marginTop: '50px',
-        fontWeight: '600'
+        backgroundColor: "",
+        padding: "1rem",
+        fontSize: "12px",
+        color: "white",
+        textAlign: "center",
+        marginTop: "50px",
+        fontWeight: "600",
       }}
       stickyStyles={{
-        backgroundColor: '',
-        padding: '1rem',
-        fontSize: '12px',
-        color: 'white',
-        textAlign: 'center',
-        marginTop: '50px',
-        fontWeight:'800'
+        backgroundColor: "",
+        padding: "1rem",
+        fontSize: "12px",
+        color: "white",
+        textAlign: "center",
+        marginTop: "50px",
+        fontWeight: "800",
       }}
     >
       <p>Copyright © 2019 SBWIKI</p>
-      <p>SBWIKI is not affiliated or part of Proletariat Inc. All Spellbreak copyrights and art assets belong to Proletariat Inc.</p>
-      Made by
-{' '}
-      <a style={{ color: '#daa54e' }} href="https://twitter.com/AngeloCant1">AngeloC</a> & <a style={{ color: '#daa54e' }} href="https://twitter.com/IGNSkillz4Killz">Skillz4Killz</a>
-      <p>Assets provided by Fireball & 
-      <a style={{ color: '#daa54e' }} href="https://twitter.com/FN_flocci"> FN_flocci</a>
-        <a style={{ color: '#6441a5' }} href="https://www.twitch.tv/fn_flocci"> (Twitch)</a>
-      </p>{' '}
-      <p>Privacy Policy: We don’t store your data</p>
+      <p>
+        Shop Titans Wiki is not affiliated or part of Kabam Games, Inc. All Spellbreak
+        copyrights and art assets belong to Proletariat Inc.
+      </p>
+      Made by{" "}
+      <a style={{ color: "#daa54e" }} href="https://twitter.com/AngeloCant1">
+        AngeloC
+      </a>{" "}
+      &{" "}
+      <a
+        style={{ color: "#daa54e" }}
+        href="https://twitter.com/IGNSkillz4Killz"
+      >
+        Skillz4Killz
+      </a>
+      <p>Privacy Policy: We don’t store your data.</p>
     </StickyFooter>
   </Layout>
-  )
+)
 
 export default IndexPage
 
