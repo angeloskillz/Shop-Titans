@@ -6,7 +6,7 @@ import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
 import Typography from "@material-ui/core/Typography"
-import EquipmentBox from "../components/Equipment"
+import WorkerBox from "../components/Worker"
 import lores from "../constants/lores"
 import LoreBox from "../components/Lorecard"
 import blacksmith from "../constants/workers/blacksmith"
@@ -19,6 +19,8 @@ import scholar from "../constants/workers/scholar"
 import tailor from "../constants/workers/tailor"
 import wizard from "../constants/workers/wizard"
 import stats from "../constants/workers/stats"
+import BlueprintsBox from "./Blueprint";
+import squiresword from "../constants/blueprints/swords/squiresword";
 
 const StyledAppBar = withStyles({
   root: {
@@ -58,6 +60,10 @@ const workers = [
   scholar,
   tailor,
   wizard,
+]
+
+const blueprints = [
+  squiresword
 ]
 
 function TabContainer({ children, dir }) {
@@ -112,6 +118,7 @@ class FullWidthTabs extends React.Component {
               variant="fullWidth"
             >
               <StyledTab label="WORKERS" className="button" />
+              <StyledTab label="BLUEPRINTS" className="button" />
               <StyledTab label="GUIDES" className="button" />
             </StyledTabs>
           </StyledAppBar>
@@ -133,7 +140,7 @@ class FullWidthTabs extends React.Component {
               <div className="CardboxGroupScroll">
                 <div className="CardboxGroup">
                   {workers.map((worker, index) => (
-                    <EquipmentBox key={index} details={worker} />
+                    <WorkerBox key={index} details={worker} />
                   ))}
                 </div>
               </div>
@@ -173,6 +180,30 @@ class FullWidthTabs extends React.Component {
             </TabContainer>
           )}
           {value === 1 && (
+            <TabContainer>
+              <div className="Selectan">
+                <h1>Blueprints</h1>
+              </div>
+              <img
+                src={require("../images/Divider2.png")}
+                style={{
+                  width: "200px",
+                  display: "block",
+                  margin: "0 auto",
+                  marginBottom: "24px",
+                }}
+                alt="divider"
+              />
+              <div className="CardboxGroupScroll">
+                <div className="CardboxGroup">
+                  {blueprints.map((blueprint, index) => (
+                    <BlueprintsBox key={index} details={blueprint} />
+                  ))}
+                </div>
+              </div>
+            </TabContainer>
+          )}
+          {value === 2 && (
             <TabContainer>
               <div className="Selectan">
                 <h1>Lores</h1>
