@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
             {
               name: "keywords",
               content:
-                "spellbreak, wiki, spellbreakwiki, spellbreak wiki, sbwiki, sb",
+                "shop titans, wiki, shoptitanswiki, shoptitans, shop titans wiki, stwiki, st",
             },
             {
               property: "og:image",
@@ -44,24 +44,24 @@ const Layout = ({ children }) => (
             },
           ]}
         >
-          <meta name="title" content="SBWIKI" />
-          <meta name="description" content="A Spellbreak Wiki" />
+          <meta name="title" content="Shop Titans Wiki" />
+          <meta name="description" content="A Shop Titans Wiki" />
 
           <meta
             name="keywords"
-            content="spellbreak, wiki, spellbreakwiki, spellbreak wiki, sbwiki, sb"
+            content="shop titans, wiki, shoptitanswiki, shoptitans, shop titans wiki, stwiki, st"
           />
 
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="SBWIKI" />
-          <meta property="og:description" content="A Spellbreak Wiki" />
+          <meta property="og:title" content="Shop Titans Wiki" />
+          <meta property="og:description" content="A Shop Titans Wiki" />
           <meta property="og:image" content="https://i.imgur.com/2q3zVoV.png" />
-          <meta property="og:url" content="https://vgwiki.xyz/" />
+          <meta property="og:url" content="https://shoptitans.netlify.com/" />
 
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://vgwiki.xyz/" />
-          <meta property="twitter:title" content="SBWIKI" />
-          <meta property="twitter:description" content="A Spellbreak Wiki" />
+          <meta property="twitter:url" content="https://shoptitans.netlify.com" />
+          <meta property="twitter:title" content="Shop Titans Wiki" />
+          <meta property="twitter:description" content="A Shop Titans Wiki" />
           <meta
             property="twitter:image"
             content="https://i.imgur.com/2q3zVoV.png"
@@ -92,7 +92,7 @@ const Layout = ({ children }) => (
             fontWeight: "800",
           }}
         >
-          <p>Copyright © 2019 SBWIKI</p>
+          <p>Copyright © 2019 Shop Titans Wiki</p>
           <p>
             Shop Titans Wiki is not affiliated or part of Kabam Games, Inc. All
             Spellbreak copyrights and art assets belong to Kabam Games Inc.
