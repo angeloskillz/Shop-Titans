@@ -3,6 +3,12 @@ import styled from "styled-components"
 import "./equipment.css"
 import blueprints from "../constants/blueprints"
 
+const Blueprint = styled.img`
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+`
+
 const Class = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,19 +43,6 @@ const HeroImg = styled.img`
   height: 60px;
   margin-left: 11px;
   margin-top: 11px;
-`
-
-const ItemIcons = styled.div`
-  text-align: center;
-  margin-top: 16px;
-  display: flex;
-`
-
-const Blueprint = styled.img`
-  width: 60px;
-  height: 60px;
-  border: 1px solid #fec470;
-  margin-left: auto;
 `
 
 const Cost = styled.p`
@@ -114,7 +107,7 @@ export default props => (
     <Description>Blueprints Unlocked:</Description>
     {props.details.blueprint_unlocks.length ? (
       <div>
-        <ItemIcons>
+        <Resources>
           {props.details.blueprint_unlocks.map((blueprint, index) => {
             const blueprintName = blueprint.toLowerCase().replace(/\s/g, "")
             const itemType = blueprints.find(
@@ -129,7 +122,7 @@ export default props => (
               </div>
             )
           })}
-        </ItemIcons>
+        </Resources>
       </div>
     ) : null}
   </Class>
