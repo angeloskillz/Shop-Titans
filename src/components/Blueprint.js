@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import ReactModal from "react-modal"
+import blueprints from "../constants/blueprints"
 
 const Class = styled.div`
   position: relative;
@@ -160,6 +161,7 @@ class Classbox extends React.Component {
       .map(key => this.props.details[key])
 
     const ascensionValues = ascension.map(key => this.props.details[key])
+    const item = blueprints.find(b => b.Name === this.props.details.Name)
     return (
       <div tabIndex="0">
         <Class onClick={this.handleOpenModal} tabIndex="0">
@@ -167,14 +169,18 @@ class Classbox extends React.Component {
           <Title>{this.props.name}</Title>
           <Icons>
             <Icon2
-              src={require(`../images/Items/${this.props.details.Name.toLowerCase().replace(
+              src={require(`../images/Items/${
+                item.Type
+              }s/${this.props.details.Name.toLowerCase().replace(
                 /\s/g,
                 ""
               )}.png`)}
               alt={this.props.title}
             />
             <Icon1
-              src={require(`../images/Items/${this.props.details.Name.toLowerCase().replace(
+              src={require(`../images/Items/${
+                item.Type
+              }s/${this.props.details.Name.toLowerCase().replace(
                 /\s/g,
                 ""
               )}.png`)}
@@ -195,14 +201,14 @@ class Classbox extends React.Component {
           <Title>{this.props.details.Name}</Title>
           <Icons>
             <Icon2
-              src={require(`../images/Items/${this.props.details.Name.toLowerCase().replace(
+              src={require(`../images/Items/${item.Type}s/${this.props.details.Name.toLowerCase().replace(
                 /\s/g,
                 ""
               )}.png`)}
               alt={this.props.title}
             />
             <Icon1
-              src={require(`../images/Items/${this.props.details.Name.toLowerCase().replace(
+              src={require(`../images/Items/${item.Type}s/${this.props.details.Name.toLowerCase().replace(
                 /\s/g,
                 ""
               )}.png`)}
