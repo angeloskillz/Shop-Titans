@@ -123,78 +123,11 @@ class FullWidthTabs extends React.Component {
               textColor="primary"
               variant="fullWidth"
             >
-              <StyledTab label="CLASSES" className="button" />
-              <StyledTab label="GAUNTLETS" className="button" />
               <StyledTab label="WORKERS" className="button" />
-              <StyledTab label="SKINS" className="button" />
-              <StyledTab label="LORES" className="button" />
+              <StyledTab label="GUIDES" className="button" />
             </StyledTabs>
           </StyledAppBar>
           {value === 0 && (
-            <TabContainer>
-              <div className="Selectan">
-                <h1>Select a Class</h1>
-                <img
-                  src={require("../images/Divider2.png")}
-                  style={{
-                    width: "200px",
-                    display: "block",
-                    margin: "0 auto",
-                    marginBottom: "24px",
-                  }}
-                  alt="divider"
-                />
-              </div>
-              <div className="CardboxGroupScroll">
-                <div className="CardboxGroup">
-                  {classes.map((kind, index) => (
-                    <Classbox
-                      key={index}
-                      name={kind.name}
-                      image={require(`./../images/Classes/${kind.image}.jpg`)}
-                      description={kind.description}
-                      stats={kind.stats}
-                    />
-                  ))}
-                </div>
-              </div>
-            </TabContainer>
-          )}
-          {value === 1 && (
-            <TabContainer>
-              <div className="Selectan">
-                <h1>Select a Gauntlet</h1>
-              </div>
-              <img
-                src={require("../images/Divider2.png")}
-                style={{
-                  width: "200px",
-                  display: "block",
-                  margin: "0 auto",
-                  marginBottom: "24px",
-                }}
-                alt="divider"
-              />
-              <div className="CardboxGroupScroll">
-                <div className="CardboxGroup">
-                  {gauntlets.map((gauntlet, index) => (
-                    <Gauntletbox
-                      key={index}
-                      title={gauntlet.title}
-                      image={gauntlet.image}
-                      description={gauntlet.description}
-                      subdescription={gauntlet.subdescription}
-                      stats={gauntlet.stats}
-                      ultimate={gauntlet.ultimate}
-                      name={gauntlet.name}
-                      spellname={gauntlet.spellname}
-                    />
-                  ))}
-                </div>
-              </div>
-            </TabContainer>
-          )}
-          {value === 2 && (
             <TabContainer>
               <div className="Selectan">
                 <h1>Workers</h1>
@@ -251,35 +184,7 @@ class FullWidthTabs extends React.Component {
               </table>
             </TabContainer>
           )}
-          {value === 3 && (
-            <TabContainer>
-              <div className="Selectan">
-                <h1>Skins</h1>
-                <img
-                  src={require("../images/Divider2.png")}
-                  style={{
-                    width: "200px",
-                    display: "block",
-                    margin: "0 auto",
-                    marginBottom: "24px",
-                  }}
-                  alt="divider"
-                />
-              </div>
-              <div className="CardboxGroupScroll">
-                <div className="CardboxGroup">
-                  {skins.map((skin, index) => (
-                    <Model
-                      key={index}
-                      title={skin.title}
-                      image={require(`./../images/Skin/${skin.title}.png`)}
-                    />
-                  ))}
-                </div>
-              </div>
-            </TabContainer>
-          )}
-          {value === 4 && (
+          {value === 1 && (
             <TabContainer>
               <div className="Selectan">
                 <h1>Lores</h1>
