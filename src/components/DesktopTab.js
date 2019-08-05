@@ -6,19 +6,9 @@ import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
 import Typography from "@material-ui/core/Typography"
-import Classbox from "../components/Class"
-import Gauntletbox from "../components/Gauntlet"
-import fire from "../constants/gauntlets/fire"
-import frost from "../constants/gauntlets/frost"
-import lightning from "../constants/gauntlets/lightning"
-import stone from "../constants/gauntlets/stone"
-import toxic from "../constants/gauntlets/toxic"
-import wind from "../constants/gauntlets/wind"
 import EquipmentBox from "../components/Equipment"
 import lores from "../constants/lores"
 import LoreBox from "../components/Lorecard"
-import Model from "./3dmodel"
-import skins from "../constants/skins"
 import blacksmith from "../constants/workers/blacksmith"
 import carpenter from "../constants/workers/carpenter"
 import engineer from "../constants/workers/engineer"
@@ -58,8 +48,6 @@ const StyledTab = withStyles({
   },
 })(Tab)
 
-const gauntlets = [fire, frost, lightning, stone, toxic, wind]
-const classes = []
 const workers = [
   blacksmith,
   carpenter,
@@ -114,7 +102,7 @@ class FullWidthTabs extends React.Component {
 
     return (
       <MediaQuery query="(min-width: 721px)">
-        <div className={classes.root}>
+        <div>
           <StyledAppBar position="static" color="default">
             <StyledTabs
               value={this.state.value}
