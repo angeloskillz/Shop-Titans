@@ -76,8 +76,6 @@ const SubDescription = styled.h2`
 `
 
 const basic = [
-  "Name",
-  "Type",
   "Unlock Prerequisite",
   "Research Scrolls",
   "Tier",
@@ -201,14 +199,18 @@ class Classbox extends React.Component {
           <Title>{this.props.details.Name}</Title>
           <Icons>
             <Icon2
-              src={require(`../images/Items/${item.Type}s/${this.props.details.Name.toLowerCase().replace(
+              src={require(`../images/Items/${
+                item.Type
+              }s/${this.props.details.Name.toLowerCase().replace(
                 /\s/g,
                 ""
               )}.png`)}
               alt={this.props.title}
             />
             <Icon1
-              src={require(`../images/Items/${item.Type}s/${this.props.details.Name.toLowerCase().replace(
+              src={require(`../images/Items/${
+                item.Type
+              }s/${this.props.details.Name.toLowerCase().replace(
                 /\s/g,
                 ""
               )}.png`)}
@@ -239,7 +241,7 @@ class Classbox extends React.Component {
               </div>
             ))}
 
-          {resources
+          {/*{resources
             .filter(key => this.props.details[key] !== "---")
             .map((key, index) => (
               <div key={index}>
@@ -285,7 +287,7 @@ class Classbox extends React.Component {
                   {key}: {this.props.details[key]}
                 </SubDescription>
               </div>
-            ))}
+            ))}*/}
 
           <button
             onClick={this.handleCloseModal}
