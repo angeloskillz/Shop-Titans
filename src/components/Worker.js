@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import "./equipment.css"
 import blueprints from "../constants/blueprints"
+import { cleanName } from "../utils/util"
 
 const Blueprint = styled.img`
   width: 50px;
@@ -109,9 +110,9 @@ export default props => (
       <div>
         <Resources>
           {props.details.blueprint_unlocks.map((blueprint, index) => {
-            const blueprintName = blueprint.toLowerCase().replace(/\s/g, "")
+            const blueprintName = cleanName(blueprint)
             const itemType = blueprints.find(
-              b => b.Name.toLowerCase().replace(/\s/g, "") === blueprintName
+              b => cleanName(b.Name) === blueprintName
             ).Type
             return (
               <div key={index}>

@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import ReactModal from "react-modal"
 import blueprints from "../constants/blueprints"
+import { cleanName } from "../utils/util"
 
 const Class = styled.div`
   position: relative;
@@ -160,6 +161,7 @@ class Classbox extends React.Component {
 
     const ascensionValues = ascension.map(key => this.props.details[key])
     const item = blueprints.find(b => b.Name === this.props.details.Name)
+    const name = cleanName(this.props.Name)
     return (
       <div tabIndex="0">
         <Class onClick={this.handleOpenModal} tabIndex="0">
@@ -167,21 +169,11 @@ class Classbox extends React.Component {
           <Title>{this.props.name}</Title>
           <Icons>
             <Icon2
-              src={require(`../images/Items/${
-                item.Type
-              }s/${this.props.details.Name.toLowerCase().replace(
-                /\s/g,
-                ""
-              )}.png`)}
+              src={require(`../images/Items/${item.Type}s/${name}.png`)}
               alt={this.props.title}
             />
             <Icon1
-              src={require(`../images/Items/${
-                item.Type
-              }s/${this.props.details.Name.toLowerCase().replace(
-                /\s/g,
-                ""
-              )}.png`)}
+              src={require(`../images/Items/${item.Type}s/${name}.png`)}
               alt={this.props.title}
             />
           </Icons>
@@ -201,19 +193,13 @@ class Classbox extends React.Component {
             <Icon2
               src={require(`../images/Items/${
                 item.Type
-              }s/${this.props.details.Name.toLowerCase().replace(
-                /\s/g,
-                ""
-              )}.png`)}
+              }s/${name}.png`)}
               alt={this.props.title}
             />
             <Icon1
               src={require(`../images/Items/${
                 item.Type
-              }s/${this.props.details.Name.toLowerCase().replace(
-                /\s/g,
-                ""
-              )}.png`)}
+              }s/${name}.png`)}
               alt={this.props.title}
             />
           </Icons>

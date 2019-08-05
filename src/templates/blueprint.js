@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import workers from "../constants/workers/workers"
+import { cleanName } from "../utils/util"
 
 const Cost = styled.p`
   font-size: 16px;
@@ -104,18 +105,15 @@ const BlueprintPage = ({ pageContext: data }) => {
     .map(key => data[key])
 
   const ascensionValues = ascension.map(key => data[key])
+  const name = cleanName(data.Name)
   return (
     <Layout>
       <Icon2
-        src={require(`../images/Items/${
-          data.Type
-        }s/${data.Name.toLowerCase().replace(/\s/g, "")}.png`)}
+        src={require(`../images/Items/${data.Type}s/${name}.png`)}
         alt={data.title}
       />
       <Icon1
-        src={require(`../images/Items/${
-          data.Type
-        }s/${data.Name.toLowerCase().replace(/\s/g, "")}.png`)}
+        src={require(`../images/Items/${data.Type}s/${name}.png`)}
         alt={data.title}
       />
       <Title>{data.Name}</Title>
@@ -186,9 +184,8 @@ const BlueprintPage = ({ pageContext: data }) => {
           <div>
             <Cost>{data["Amount Needed"]}</Cost>
             <Currency
-              src={require(`../images/Components/${data.Component.toLowerCase().replace(
-                /\s/g,
-                ``
+              src={require(`../images/Components/${cleanName(
+                data.Component
               )}.png`)}
             />
           </div>
@@ -198,9 +195,9 @@ const BlueprintPage = ({ pageContext: data }) => {
           <div>
             <Cost>{data["Amount Needed__1"]}</Cost>
             <Currency
-              src={require(`../images/Components/${data["Component__1"]
-                .toLowerCase()
-                .replace(/\s/g, ``)}.png`)}
+              src={require(`../images/Components/${cleanName(
+                data["Component__1"]
+              )}.png`)}
             />
           </div>
         ) : null}
@@ -214,17 +211,19 @@ const BlueprintPage = ({ pageContext: data }) => {
             <Currency src={require(`../images/Icons/st_${stat.name}.png`)} />
           </div>
         ))}
-			</Resources>
+      </Resources>
 
-			<Title>Energy Costs:</Title>
+      <Title>Energy Costs:</Title>
       <Resources>
         {energy.map((stat, index) => (
           <div key={index}>
-            <Cost>{stat.split(' ')[0]}: {data[stat]}</Cost>
+            <Cost>
+              {stat.split(" ")[0]}: {data[stat]}
+            </Cost>
             <Currency src={require(`../images/Currencies/energy.png`)} />
           </div>
         ))}
-			</Resources>
+      </Resources>
 
       <div className="scrollable">
         <div className="gradientmodal" />
