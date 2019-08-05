@@ -16,9 +16,11 @@
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-remark-relative-images": "^0.2.2",
     "gatsby-source-filesystem": "^2.1.8",
+    "gatsby-transformer-javascript-frontmatter": "^2.1.2",
     "gatsby-transformer-remark": "^2.6.10",
     "gatsby-transformer-sharp": "^2.2.5",
-    "netlify-cms": "^2.9.7",
+    "match-sorter": "^4.0.1",
+    "namor": "^1.1.2",
     "netlify-cms-app": "^2.9.7",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -27,6 +29,7 @@
     "react-modal": "^3.9.1",
     "react-responsive": "^7.0.0",
     "react-sticky-footer": "^0.1.0-rc3",
+    "react-table": "^6.10.0",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {

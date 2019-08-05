@@ -8,7 +8,6 @@ import EquipmentBox from "../components/Worker"
 import Desktop from "../components/DesktopTab"
 
 import MediaQuery from "react-responsive"
-import StickyFooter from "react-sticky-footer"
 import blacksmith from "../constants/workers/blacksmith"
 
 const workers = [blacksmith]
@@ -60,46 +59,6 @@ const IndexPage = props => (
         </div>
       </div>
     </MediaQuery>
-    <StickyFooter
-      className="footer"
-      bottomThreshold={50}
-      normalStyles={{
-        backgroundColor: "",
-        padding: "1rem",
-        fontSize: "12px",
-        color: "white",
-        textAlign: "center",
-        marginTop: "50px",
-        fontWeight: "600",
-      }}
-      stickyStyles={{
-        backgroundColor: "",
-        padding: "1rem",
-        fontSize: "12px",
-        color: "white",
-        textAlign: "center",
-        marginTop: "50px",
-        fontWeight: "800",
-      }}
-    >
-      <p>Copyright © 2019 SBWIKI</p>
-      <p>
-        Shop Titans Wiki is not affiliated or part of Kabam Games, Inc. All
-        Spellbreak copyrights and art assets belong to Proletariat Inc.
-      </p>
-      Made by{" "}
-      <a style={{ color: "#daa54e" }} href="https://twitter.com/AngeloCant1">
-        AngeloC
-      </a>{" "}
-      &{" "}
-      <a
-        style={{ color: "#daa54e" }}
-        href="https://twitter.com/IGNSkillz4Killz"
-      >
-        Skillz4Killz
-      </a>
-      <p>Privacy Policy: We don’t store your data.</p>
-    </StickyFooter>
   </Layout>
 )
 

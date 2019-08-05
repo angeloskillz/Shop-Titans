@@ -1,4 +1,4 @@
-export default {
+export const frontmatter = {
   Name: "Squire Sword",
   Type: "Sword",
   "Unlock Prerequisite": "Blacksmith",

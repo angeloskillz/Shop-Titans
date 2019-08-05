@@ -2,9 +2,24 @@ const _ = require("lodash")
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
+const blueprints = require("./src/constants/oldblueprints")
+
+const buildBlueprintPages = (createPage, graphql) => {
+  const buildsPageTemplate = path.resolve("src/templates/blueprint.js")
+
+  for (const blueprint of blueprints) {
+    createPage({
+      path: `blueprints/${blueprint.Name}`,
+      component: buildsPageTemplate,
+      context: blueprint,
+    })
+  }
+}
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
+
+  buildBlueprintPages(createPage, graphql)
 
   return graphql(`
     {

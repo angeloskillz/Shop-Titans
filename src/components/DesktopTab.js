@@ -19,8 +19,9 @@ import scholar from "../constants/workers/scholar"
 import tailor from "../constants/workers/tailor"
 import wizard from "../constants/workers/wizard"
 import stats from "../constants/workers/stats"
-import BlueprintsBox from "./Blueprint";
-import squiresword from "../constants/blueprints/swords/squiresword";
+import BlueprintsBox from "./Blueprint"
+import squiresword from "../constants/blueprints/swords/squiresword"
+import blueprints from "../constants/blueprints"
 
 const StyledAppBar = withStyles({
   root: {
@@ -62,9 +63,7 @@ const workers = [
   wizard,
 ]
 
-const blueprints = [
-  squiresword
-]
+// const blueprints = [squiresword]
 
 function TabContainer({ children, dir }) {
   return (
@@ -169,7 +168,7 @@ class FullWidthTabs extends React.Component {
                 </thead>
                 <tbody>
                   {stats.map((stat, index) => (
-                    <tr>
+                    <tr key={index}>
                       <td align="left">{stat["Worker Level"]}</td>
                       <td align="right">{stat["XP Needed"]}</td>
                       <td align="right">{stat["Crafting Speed Bonus"]}</td>
@@ -194,13 +193,16 @@ class FullWidthTabs extends React.Component {
                 }}
                 alt="divider"
               />
-              <div className="CardboxGroupScroll">
+              {/*<div className="CardboxGroupScroll">
                 <div className="CardboxGroup">
                   {blueprints.map((blueprint, index) => (
                     <BlueprintsBox key={index} details={blueprint} />
                   ))}
                 </div>
-              </div>
+                  </div>*/}
+              {blueprints.map((blueprint, index) => (
+                <div key={index}></div>
+              ))}
             </TabContainer>
           )}
           {value === 2 && (
