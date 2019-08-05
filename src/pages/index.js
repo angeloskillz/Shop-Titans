@@ -25,15 +25,11 @@ import StickyFooter from "react-sticky-footer"
 import LoreBox from "../components/Lorecard"
 import Model from "../components/3dmodel"
 import skins from "../constants/skins"
-import blacksmith from "../constants/workers/blacksmith";
+import blacksmith from "../constants/workers/blacksmith"
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
-const classes = [
-
-]
-const workers = [
-  blacksmith
-]
+const classes = []
+const workers = [blacksmith]
 
 const IndexPage = props => (
   <Layout>
@@ -290,8 +286,8 @@ const IndexPage = props => (
     >
       <p>Copyright © 2019 SBWIKI</p>
       <p>
-        Shop Titans Wiki is not affiliated or part of Kabam Games, Inc. All Spellbreak
-        copyrights and art assets belong to Proletariat Inc.
+        Shop Titans Wiki is not affiliated or part of Kabam Games, Inc. All
+        Spellbreak copyrights and art assets belong to Proletariat Inc.
       </p>
       Made by{" "}
       <a style={{ color: "#daa54e" }} href="https://twitter.com/AngeloCant1">
@@ -313,7 +309,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   {
-    imageOne: file(relativePath: { eq: "BG1.jpg" }) {
+    imageOne: file(relativePath: { eq: "Backgrounds/BG1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2560) {
           ...GatsbyImageSharpFluid

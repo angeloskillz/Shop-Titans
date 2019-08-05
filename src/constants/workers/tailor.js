@@ -4,6 +4,5 @@ export default {
   gold_cost: "0",
   gem_cost: "0",
   title: "Tailor",
-  // TODO: add Shirt
-  blueprint_unlocks: ["Leather Gloves", "Leather Boots"],
+  blueprint_unlocks: ["Leather Gloves", "Shirt", "Leather Boots"],
 }
