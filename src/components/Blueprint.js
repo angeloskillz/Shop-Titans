@@ -110,24 +110,24 @@ const resources = [
 const stats = ["ATK", "DEF", "HP"]
 const crafting = [
   "Crafting Upgrade 1",
-  "Crafts Needed",
   "Crafting Upgrade 2",
-  "Crafts Needed__1",
   "Crafting Upgrade 3",
-  "Crafts Needed__2",
   "Crafting Upgrade 4",
-  "Crafts Needed__3",
   "Crafting Upgrade 5",
+]
+const craftValues = [
+  "Crafts Needed",
+  "Crafts Needed__1",
+  "Crafts Needed__2",
+  "Crafts Needed__3",
   "Crafts Needed__4",
 ]
 const ascension = [
   "Ascension Upgrade 1",
-  "Shards Needed",
   "Ascension Upgrade 2",
-  "Shards Needed__1",
   "Ascension Upgrade 3",
-  "Shards Needed__2",
 ]
+const ascendValues = ["Shards Needed", "Shards Needed__1", "Shards Needed__2"]
 const energy = [
   "Discount Energy",
   "Surcharge Energy",
@@ -155,6 +155,11 @@ class Classbox extends React.Component {
   }
 
   render() {
+    const craftingValue = crafting
+      .filter(key => this.props.details[key] !== "---")
+      .map(key => this.props.details[key])
+
+    const ascensionValues = ascension.map(key => this.props.details[key])
     return (
       <div tabIndex="0">
         <Class onClick={this.handleOpenModal} tabIndex="0">
@@ -238,45 +243,43 @@ class Classbox extends React.Component {
               </div>
             ))}
 
-            {stats
-              .filter(key => this.props.details[key] !== "---")
-              .map((key, index) => (
-                <div key={index}>
-                  <SubDescription>
-                    {key}: {this.props.details[key]}
-                  </SubDescription>
-                </div>
-              ))}
+          {stats
+            .filter(key => this.props.details[key] !== "---")
+            .map((key, index) => (
+              <div key={index}>
+                <SubDescription>
+                  {key}: {this.props.details[key]}
+                </SubDescription>
+              </div>
+            ))}
 
-              {crafting
-                .filter(key => this.props.details[key] !== "---")
-                .map((key, index) => (
-                  <div key={index}>
-                    <SubDescription>
-                      {key}: {this.props.details[key]}
-                    </SubDescription>
-                  </div>
-                ))}
+          {craftingValue.map((value, index) => (
+            <div key={index}>
+              <SubDescription>
+                Crafting Upgrade {index + 1}: {value} [{" "}
+                {this.props.details[craftValues[index + 1]]} ]
+              </SubDescription>
+            </div>
+          ))}
 
-                {ascension
-                  .filter(key => this.props.details[key] !== "---")
-                  .map((key, index) => (
-                    <div key={index}>
-                      <SubDescription>
-                        {key}: {this.props.details[key]}
-                      </SubDescription>
-                    </div>
-                  ))}
+          {ascensionValues.map((value, index) => (
+            <div key={index}>
+              <SubDescription>
+                Ascension Upgrade {index + 1}: {value} [{" "}
+                {this.props.details[ascendValues[index + 1]]} ]
+              </SubDescription>
+            </div>
+          ))}
 
-                  {energy
-                    .filter(key => this.props.details[key] !== "---")
-                    .map((key, index) => (
-                      <div key={index}>
-                        <SubDescription>
-                          {key}: {this.props.details[key]}
-                        </SubDescription>
-                      </div>
-                    ))}
+          {energy
+            .filter(key => this.props.details[key] !== "---")
+            .map((key, index) => (
+              <div key={index}>
+                <SubDescription>
+                  {key}: {this.props.details[key]}
+                </SubDescription>
+              </div>
+            ))}
 
           <button
             onClick={this.handleCloseModal}
