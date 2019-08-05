@@ -30,14 +30,11 @@ const Icons = styled.div`
   text-align: center;
   margin-top: 16px;
 `
-const Icon1 = styled.img`
+
+const HeroImg = styled.img`
   position: relative;
-`
-const Icon2 = styled.img`
-  position: absolute;
   width: 60px;
   height: 60px;
-  border: 1px solid #fec470;
   margin-left: 11px;
   margin-top: 11px;
 `
@@ -47,24 +44,22 @@ const ItemIcons = styled.div`
   margin-top: 16px;
   display: flex;
 `
-const ItemIcon1 = styled.img`
-  position: relative;
-  flex: 50%;
-`
-const ItemIcon2 = styled.img`
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border: 1px solid #fec470;
-  margin-left: 11px;
-  margin-top: 11px;
-  flex: 50%;
-`
+
 const Blueprint = styled.img`
   width: 60px;
   height: 60px;
   border: 1px solid #fec470;
   margin-left: auto;
+`
+
+const Cost = styled.p`
+  font-size: 16px;
+  color: #6f879f;
+  margin-bottom: 0px;
+`
+const Currency = styled.img`
+  width: 20px;
+  height: 20px;
 `
 
 const Description = styled.h2`
@@ -79,25 +74,44 @@ const Description = styled.h2`
   padding-right: 16px;
   white-space: pre-wrap;
 `
+
+const Resources = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family: "Roboto";
+  font-size: 14px;
+  text-align: left;
+  color: #bc9060;
+  margin-top: -5px;
+  margin-bottom: 0px;
+  text-align: center;
+`
+
 export default props => (
   <Class>
     <Icons>
-      <Icon2
+      <HeroImg
         src={require(`../images/Portraits/${props.details.name.toLowerCase()}.png`)}
-        alt={props.details.name}
-      />
-      <Icon1
-        src={require(`../images/Equipment.png`)}
         alt={props.details.name}
       />
     </Icons>
     <Title>{props.details.name}</Title>
     <Description>{props.details.title}</Description>
     <Description>Level Required: {props.details.level_required}</Description>
-    <Description>
-      Unlock Cost: {props.details.gold_cost} Gold OR {props.details.gem_cost}{" "}
-      Gems
-    </Description>
+    <Resources>
+      <div>
+        <Cost>{props.details.gold_cost}</Cost>
+        <Currency src={require(`../images/Currencies/gold.png`)} />
+      </div>
+      <div>
+        <Cost>{props.details.gem_cost}</Cost>
+        <Currency src={require(`../images/Currencies/gem.png`)} />
+      </div>
+    </Resources>
+
+    <Description>Blueprints Unlocked:</Description>
     {props.details.blueprint_unlocks.length ? (
       <div>
         <ItemIcons>
