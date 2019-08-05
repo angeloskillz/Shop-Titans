@@ -125,7 +125,7 @@ class FullWidthTabs extends React.Component {
             >
               <StyledTab label="CLASSES" className="button" />
               <StyledTab label="GAUNTLETS" className="button" />
-              <StyledTab label="EQUIPMENT" className="button" />
+              <StyledTab label="WORKERS" className="button" />
               <StyledTab label="SKINS" className="button" />
               <StyledTab label="LORES" className="button" />
             </StyledTabs>
