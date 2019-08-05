@@ -48,13 +48,13 @@ const IndexPage = props => (
         <div className="gradient" />
       </div>
       <div className="HeroGroup">
-        <h1>SPELLBREAK WIKI</h1>
+        <h1>Shop Titans</h1>
         <img
           src={require("../images/Divider.png")}
           alt="divider"
           style={{ width: "300px" }}
         />
-        <p>CLOSED ALPHA</p>
+        <p>Update 2.0.1</p>
       </div>
     </div>
     <Desktop />
