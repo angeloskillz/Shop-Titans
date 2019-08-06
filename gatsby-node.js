@@ -4,11 +4,11 @@ const { createFilePath } = require("gatsby-source-filesystem")
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 const blueprints = require("./src/constants/oldblueprints")
 
-const buildBlueprintPages = async (createPage) => {
+const buildBlueprintPages = (createPage) => {
   const buildsPageTemplate = path.resolve("src/templates/blueprint.js")
 
   for (const blueprint of blueprints) {
-    await createPage({
+    createPage({
       path: `blueprints/${blueprint.Name}`,
       component: buildsPageTemplate,
       context: blueprint,
@@ -49,7 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges
     posts.forEach(edge => {
       const id = edge.node.id
-      if (!edge.node.frontmatter.category) console.log(edge.node)
+
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,

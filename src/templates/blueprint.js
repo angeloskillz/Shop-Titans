@@ -201,7 +201,8 @@ export default ({ pageContext: data }) => {
           </div>
         ) : null}
 
-        {/* {data["Component__1"] !== "---" ? (
+
+         {/*{data["Component__1"] !== "---" ? (
           <div>
             <Cost>{data["Amount Needed__1"]}</Cost>
             <Currency

@@ -7,7 +7,6 @@ import StickyFooter from 'react-sticky-footer'
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-  // console.log(post)
   return (
     <Layout>
       <Lore
