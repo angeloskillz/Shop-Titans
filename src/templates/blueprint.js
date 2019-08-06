@@ -102,10 +102,8 @@ const energy = [
 ]
 
 const componentImageURL = name => {
-  const cleanedName = cleanName(name)
-  const item = blueprints.find(b => cleanName(b.Name) === cleanedName)
-  const type = item ? `${item.Type}s` : `Components`
-  return `${type}/${cleanedName}.png`
+  const item = blueprints.find(b => cleanName(b.Name) === name)
+  return item ? `Items/${item.Type}s` : `Components`
 }
 
 const resourceNames = [
@@ -126,6 +124,8 @@ export default ({ pageContext: data }) => {
 
   const ascensionValues = ascension.map(key => data[key])
   const name = cleanName(data.Name)
+  const componentName = cleanName(data.Component)
+  const folder = componentImageURL(componentName)
 
   return (
     <Layout>
@@ -192,18 +192,16 @@ export default ({ pageContext: data }) => {
           ) : null
         )}
 
-        {/*  {data.Component !== "---" ? (
+        {data.Component !== "---" ? (
           <div>
-            {console.log(componentImageURL(data.Component))}
-            {console.log(`../images/${componentImageURL(data.Component)}`)}
             <Cost>{data["Amount Needed"]}</Cost>
             <Currency
-              src={require(`../images/${componentImageURL(data.Component)}`)}
+              src={require(`../images/${folder}/${componentName}.png`)}
             />
           </div>
         ) : null}
 
-        {data["Component__1"] !== "---" ? (
+        {/* {data["Component__1"] !== "---" ? (
           <div>
             <Cost>{data["Amount Needed__1"]}</Cost>
             <Currency
