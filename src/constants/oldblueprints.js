@@ -7561,7 +7561,7 @@ module.exports = [
   },
   {
     "Name": "Iron Armguards",
-    "Type": "Gauntlets",
+    "Type": "Gauntlet",
     "Unlock Prerequisite": "---",
     "Research Scrolls": "---",
     "Tier": 1,
@@ -7615,7 +7615,7 @@ module.exports = [
   },
   {
     "Name": "Plated Gauntlets",
-    "Type": "Gauntlets",
+    "Type": "Gauntlet",
     "Unlock Prerequisite": "---",
     "Research Scrolls": 1,
     "Tier": 2,
@@ -7669,7 +7669,7 @@ module.exports = [
   },
   {
     "Name": "Warrior Gauntlets",
-    "Type": "Gauntlets",
+    "Type": "Gauntlet",
     "Unlock Prerequisite": "---",
     "Research Scrolls": 3,
     "Tier": 3,
@@ -7723,7 +7723,7 @@ module.exports = [
   },
   {
     "Name": "Demi Gauntlets",
-    "Type": "Gauntlets",
+    "Type": "Gauntlet",
     "Unlock Prerequisite": "---",
     "Research Scrolls": 7,
     "Tier": 4,
@@ -7777,7 +7777,7 @@ module.exports = [
   },
   {
     "Name": "Knight Gauntlets",
-    "Type": "Gauntlets",
+    "Type": "Gauntlet",
     "Unlock Prerequisite": "---",
     "Research Scrolls": 10,
     "Tier": 5,
@@ -7831,7 +7831,7 @@ module.exports = [
   },
   {
     "Name": "Paladin Gauntlets",
-    "Type": "Gauntlets",
+    "Type": "Gauntlet",
     "Unlock Prerequisite": "---",
     "Research Scrolls": 15,
     "Tier": 6,
@@ -7885,7 +7885,7 @@ module.exports = [
   },
   {
     "Name": "Samurai Kote",
-    "Type": "Gauntlets",
+    "Type": "Gauntlet",
     "Unlock Prerequisite": "---",
     "Research Scrolls": 25,
     "Tier": 7,
