@@ -104,10 +104,22 @@ const energy = [
 const componentImageURL = name => {
   const cleanedName = cleanName(name)
   const item = blueprints.find(b => cleanName(b.Name) === cleanedName)
-  return `${item ? `${item.Type}s` : `Components`}/${cleanedName}.png`
+  const type = item ? `${item.Type}s` : `Components`
+  return `${type}/${cleanedName}.png`
 }
 
-const BlueprintPage = ({ pageContext: data }) => {
+const resourceNames = [
+  "iron",
+  "wood",
+  "leather",
+  "herbs",
+  "steel",
+  "ironwood",
+  "fabric",
+  "oil",
+]
+
+export default ({ pageContext: data }) => {
   const craftingValue = crafting
     .filter(key => data[key] !== "---")
     .map(key => data[key])
@@ -171,16 +183,7 @@ const BlueprintPage = ({ pageContext: data }) => {
 
       <Title>Craft Requirements:</Title>
       <Resources>
-        {[
-          "iron",
-          "wood",
-          "leather",
-          "herbs",
-          "steel",
-          "ironwood",
-          "fabric",
-          "oil",
-        ].map((resource, index) =>
+        {resourceNames.map((resource, index) =>
           data[resource] !== "---" ? (
             <div key={index}>
               <Cost>{data[resource]}</Cost>
@@ -227,9 +230,9 @@ const BlueprintPage = ({ pageContext: data }) => {
         {energy.map((stat, index) => (
           <div key={index}>
             <Cost>
-              {stat.split("")[0]}: {data[stat]}
+              {stat.split(" ")[0]}: {data[stat]}
             </Cost>
-            <Currency src={require(`../images/Currencies/energy.png`)} />
+            <Currency src={require("../images/Currencies/energy.png")} />
           </div>
         ))}
       </Resources>
@@ -267,5 +270,3 @@ const BlueprintPage = ({ pageContext: data }) => {
     </Layout>
   )
 }
-
-export default BlueprintPage
