@@ -4,5 +4,5 @@ export default {
 	gold_cost: "0",
 	gem_cost: "0",
 	title: 'Blacksmith',
-	blueprint_unlocks: ['squiresword', 'silverband'],
+	blueprint_unlocks: ['squiresword'],
 }

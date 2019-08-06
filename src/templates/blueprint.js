@@ -3,15 +3,13 @@ import Layout from "../components/layout"
 import styled from "styled-components"
 import workers from "../constants/workers/workers"
 import { cleanName } from "../utils/util"
+import blueprints from "../constants/blueprints"
+import Img from "gatsby-image"
 
 const Cost = styled.p`
   font-size: 16px;
   color: #6f879f;
   margin-bottom: 0px;
-`
-const Currency = styled.img`
-  width: 50px;
-  height: 50px;
 `
 
 const Title = styled.h1`
@@ -99,6 +97,12 @@ const energy = [
   "Speed Up Energy",
 ]
 
+const componentImageURL = name => {
+  const cleanedName = cleanName(name)
+  const item = blueprints.find(b => cleanName(b.Name) === cleanedName)
+  return `${item ? `${item.Type}s` : `Components`}/${cleanedName}.png`
+}
+
 const BlueprintPage = ({ pageContext: data }) => {
   const craftingValue = crafting
     .filter(key => data[key] !== "---")
@@ -106,6 +110,7 @@ const BlueprintPage = ({ pageContext: data }) => {
 
   const ascensionValues = ascension.map(key => data[key])
   const name = cleanName(data.Name)
+  console.log(name, "page")
   return (
     <Layout>
       <Icon2
@@ -129,29 +134,29 @@ const BlueprintPage = ({ pageContext: data }) => {
         {data["Unlock Prerequisite"] !== "---" ? (
           <div>
             <Cost>{data["Unlock Prerequisite"]}</Cost>
-            <Currency
+            <Img
               src={require(`../images/Portraits/${workers[
-                data["Required Worker__1"].toLowerCase()
+                data["Required Worker"].toLowerCase()
               ].name.toLowerCase()}.png`)}
             />
           </div>
         ) : null}
         <div>
           <Cost>{data["Research Scrolls"]}</Cost>
-          <Currency src={require(`../images/Currencies/bp_unlock.png`)} />
+          <Img src={require(`../images/Currencies/bp_unlock.png`)} />
         </div>
         <div>
           <Cost>Level {data["Worker Level"]}</Cost>
-          <Currency
+          <Img
             src={require(`../images/Portraits/${workers[
               data["Required Worker"].toLowerCase()
             ].name.toLowerCase()}.png`)}
           />
         </div>
-        {data["Required Worker__1"] ? (
+        {data["Required Worker__1"] !== "---" ? (
           <div>
             <Cost>Level {data["Worker Level__1"]}</Cost>
-            <Currency
+            <Img
               src={require(`../images/Portraits/${workers[
                 data["Required Worker__1"].toLowerCase()
               ].name.toLowerCase()}.png`)}
@@ -175,32 +180,32 @@ const BlueprintPage = ({ pageContext: data }) => {
           data[resource] !== "---" ? (
             <div key={index}>
               <Cost>{data[resource]}</Cost>
-              <Currency src={require(`../images/Resources/${resource}.png`)} />
+              <Img src={require(`../images/Resources/${resource}.png`)} />
             </div>
           ) : null
         )}
 
         {data.Component !== "---" ? (
           <div>
+            {console.log(componentImageURL(data.Component))}
+            {console.log(`../images/${componentImageURL(data.Component)}`)}
             <Cost>{data["Amount Needed"]}</Cost>
-            <Currency
-              src={require(`../images/Components/${cleanName(
-                data.Component
-              )}.png`)}
+            <Img
+              src={require(`../images/${componentImageURL(data.Component)}`)}
             />
           </div>
         ) : null}
 
-        {data["Component__1"] !== "---" ? (
+       {/* {data["Component__1"] !== "---" ? (
           <div>
             <Cost>{data["Amount Needed__1"]}</Cost>
-            <Currency
-              src={require(`../images/Components/${cleanName(
+            <Img
+              src={require(`../images/${componentImageURL(
                 data["Component__1"]
-              )}.png`)}
+              )}`)}
             />
           </div>
-        ) : null}
+              ) : null}*/}
       </Resources>
 
       <Title>Item Stats:</Title>
@@ -208,7 +213,7 @@ const BlueprintPage = ({ pageContext: data }) => {
         {stats.map((stat, index) => (
           <div key={index}>
             <Cost>{data[stat.prop]}</Cost>
-            <Currency src={require(`../images/Icons/st_${stat.name}.png`)} />
+            <Img src={require(`../images/Icons/st_${stat.name}.png`)} />
           </div>
         ))}
       </Resources>
@@ -220,7 +225,7 @@ const BlueprintPage = ({ pageContext: data }) => {
             <Cost>
               {stat.split(" ")[0]}: {data[stat]}
             </Cost>
-            <Currency src={require(`../images/Currencies/energy.png`)} />
+            <Img src={require(`../images/Currencies/energy.png`)} />
           </div>
         ))}
       </Resources>
