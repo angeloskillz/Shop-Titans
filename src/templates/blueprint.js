@@ -126,6 +126,8 @@ export default ({ pageContext: data }) => {
   const name = cleanName(data.Name)
   const componentName = cleanName(data.Component)
   const folder = componentImageURL(componentName)
+  const componentName1 = cleanName(data["Component__1"])
+  const folder1 = componentImageURL(componentName1)
 
   return (
     <Layout>
@@ -201,17 +203,14 @@ export default ({ pageContext: data }) => {
           </div>
         ) : null}
 
-
-         {/*{data["Component__1"] !== "---" ? (
+        {data["Component__1"] !== "---" ? (
           <div>
             <Cost>{data["Amount Needed__1"]}</Cost>
             <Currency
-              src={require(`../images/${componentImageURL(
-                data["Component__1"]
-              )}`)}
+              src={require(`../images/${folder1}/${componentName1}.png`)}
             />
           </div>
-              ) : null}*/}
+        ) : null}
       </Resources>
 
       <Title>Item Stats:</Title>
