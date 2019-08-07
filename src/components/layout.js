@@ -59,7 +59,10 @@ const Layout = ({ children }) => (
           <meta property="og:url" content="https://shoptitans.netlify.com/" />
 
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://shoptitans.netlify.com" />
+          <meta
+            property="twitter:url"
+            content="https://shoptitans.netlify.com"
+          />
           <meta property="twitter:title" content="Shop Titans Wiki" />
           <meta property="twitter:description" content="A Shop Titans Wiki" />
           <meta
@@ -77,7 +80,7 @@ const Layout = ({ children }) => (
             backgroundColor: "",
             padding: "1rem",
             fontSize: "12px",
-            color: "white",
+            color: "black",
             textAlign: "center",
             marginTop: "50px",
             fontWeight: "600",
@@ -95,7 +98,7 @@ const Layout = ({ children }) => (
           <p>Copyright © 2019 Shop Titans Wiki</p>
           <p>
             Shop Titans Wiki is not affiliated or part of Kabam Games, Inc. All
-            Spellbreak copyrights and art assets belong to Kabam Games Inc.
+            Shop Titans copyrights and art assets belong to Kabam Games Inc.
           </p>
           Made by{" "}
           <a
@@ -107,7 +110,7 @@ const Layout = ({ children }) => (
           &{" "}
           <a
             style={{ color: "#daa54e" }}
-            href="https://twitter.com/IGNSkillz4Killz"
+            href="https://discord.gg/rWMuMdk"
           >
             Skillz4Killz
           </a>
