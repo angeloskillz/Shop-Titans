@@ -1,4 +1,4 @@
-# Spellbreak Wiki
+# Shop Titans Wiki
 
 # Features
 
