@@ -67,7 +67,7 @@ const Description = styled.h2`
   font-style: italic;
   font-size: 14px;
   text-align: center;
-  color: #fff;
+  color: black;
   margin-bottom: 16px;
   padding-left: 16px;
   padding-right: 16px;
