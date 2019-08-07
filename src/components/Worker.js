@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import "./equipment.css"
 import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
 
@@ -12,7 +11,7 @@ const Blueprint = styled.img`
   position: relative;
   background: #38ec94;
 `
-const Class = styled.div`
+const Class = styled.a`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -107,8 +106,9 @@ const Currency = styled.img`
   margin-bottom: 10px;
 `
 
+// <Class href={`/workers/${props.details.name}`}>
 export default props => (
-  <Class href={`/workers/${props.details.name}`}>
+  <Class>
     <Icons>
       <HeroImg
         src={require(`../images/Portraits/${props.details.name.toLowerCase()}.png`)}

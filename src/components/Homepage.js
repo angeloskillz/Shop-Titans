@@ -127,28 +127,6 @@ class FullWidthTabs extends React.Component {
                 ))}
               </div>
             </div>
-
-            {/*<div className="Selectan">
-              <h1>Worker Stats</h1>
-            </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Worker Level</th>
-                  <th>XP Needed</th>
-                  <th>Crafting Speed Bonus</th>
-                </tr>
-              </thead>
-              <tbody>
-                {stats.map((stat, index) => (
-                  <tr key={index}>
-                    <td align="left">{stat["Worker Level"]}</td>
-                    <td align="right">{stat["XP Needed"]}</td>
-                    <td align="right">{stat["Crafting Speed Bonus"]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>*/}
           </TabContainer>
         )}
       </div>
