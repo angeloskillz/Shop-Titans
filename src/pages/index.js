@@ -4,7 +4,7 @@ import ImgHero from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Desktop from "../components/DesktopTab"
+import Homepage from "../components/Homepage"
 
 const IndexPage = props => (
   <Layout>
@@ -23,7 +23,7 @@ const IndexPage = props => (
         <p>Update 2.0.1</p>
       </div>
     </div>
-    <Desktop />
+    <Homepage />
   </Layout>
 )
 
