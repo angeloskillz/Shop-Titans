@@ -34,8 +34,9 @@ const StyledAppBar = withStyles({
 
 const StyledTabs = withStyles({
   indicator: {
-    backgroundColor: "#daa54e",
-    color: "white",
+    display: 'none',
+    backgroundColor: "none",
+    color: "none",
   },
 })(Tabs)
 
@@ -44,7 +45,9 @@ const StyledTab = withStyles({
     color: "grey",
   },
   selected: {
-    border: "2px solid #daa54e",
+    background: '#5FA9FF',
+    borderRadius: "10px",
+    marginRight: '16px'
   },
   label: {
     color: "white",
@@ -70,7 +73,7 @@ function TabContainer({ children, dir }) {
     <Typography
       component="div"
       dir={dir}
-      style={{ padding: 8 * 3, background: "#141b1e" }}
+      style={{ padding: 8 * 3, background: "#F4FAFF" }}
     >
       {children}
     </Typography>
@@ -106,7 +109,6 @@ class FullWidthTabs extends React.Component {
     const { value } = this.state
 
     return (
-      <MediaQuery query="(min-width: 721px)">
         <div>
           <StyledAppBar position="static" color="default">
             <StyledTabs
@@ -126,16 +128,6 @@ class FullWidthTabs extends React.Component {
               <div className="Selectan">
                 <h1>Workers</h1>
               </div>
-              <img
-                src={require("../images/Divider2.png")}
-                style={{
-                  width: "200px",
-                  display: "block",
-                  margin: "0 auto",
-                  marginBottom: "24px",
-                }}
-                alt="divider"
-              />
               <div className="CardboxGroupScroll">
                 <div className="CardboxGroup">
                   {workers.map((worker, index) => (
@@ -235,7 +227,6 @@ class FullWidthTabs extends React.Component {
             </TabContainer>
           )}
         </div>
-      </MediaQuery>
     )
   }
 }

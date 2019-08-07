@@ -5,83 +5,113 @@ import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
 
 const Blueprint = styled.img`
-  width: 50px;
-  height: 50px;
-  margin-left: auto;
+    padding: 10px;
+    border-radius: 26px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  padding-bottom: 10px;
+   padding-top: 10px;
+   background: #38ec94;
 `
-
 const Class = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+height: 367px;
   width: 280px;
-  height: auto;
-  border-radius: 26px;
-  background: #1a2327;
-  border: 2px solid #daa54e;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+border-radius: 26px;
+background: #fff;
+box-shadow: 0px 8px 12px #bdccdb;
   margin-left: 16px;
   margin-top: 16px;
 `
+const Icons = styled.div`
+  margin: 0 auto;
+  margin-top: 16px;
+  width: 70px;
+border-radius: 26px;
+background: #ff665f;
+`
+const HeroImg = styled.img`
+  position: relative;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-bottom: 10px;
+   padding-top: 10px;
+`
 const Title = styled.h1`
-  font-family: "Roboto";
-  font-weight: bold;
-  font-size: 18px;
+  font-family: Roboto;
+font-weight: 800;
+font-size: 18px;
+text-align: center;
+color: #ff665f;
   text-align: center;
-  color: #fff;
-  text-shadow: 0px 3px 6px #000;
   text-transform: uppercase;
   margin-bottom: 0;
 `
-const Icons = styled.div`
-  text-align: center;
-  margin-top: 16px;
-`
-
-const HeroImg = styled.img`
-  position: relative;
-  width: 60px;
-  height: 60px;
-  margin-left: 11px;
-  margin-top: 11px;
-`
-
-const Cost = styled.p`
-  font-size: 16px;
-  color: #6f879f;
-  margin-bottom: 0px;
-`
-const Currency = styled.img`
-  width: 20px;
-  height: 20px;
-`
-
 const Description = styled.h2`
   font-family: Roboto;
-  font-weight: normal;
-  font-style: italic;
-  font-size: 14px;
+font-weight: bold;
+font-size: 14px;
+color: #406081;
   text-align: center;
-  color: #fff;
   margin-bottom: 16px;
   padding-left: 16px;
   padding-right: 16px;
   white-space: pre-wrap;
 `
-
+const LvlRq = styled.div`
+  padding: 6px;
+  margin-left:56px;
+  margin-right:56px;
+border-radius: 20px;
+background: #bdccdb80;
+font-family: Roboto;
+font-weight: normal;
+font-size: 12px;
+text-align: center;
+color: #406081;
+`
 const Resources = styled.div`
   display: flex;
   box-sizing: border-box;
   justify-content: space-around;
   flex-wrap: wrap;
-  font-family: "Roboto";
-  font-size: 14px;
-  text-align: left;
-  color: #bc9060;
-  margin-top: -5px;
-  margin-bottom: 0px;
   text-align: center;
 `
+const Gold = styled.div`
+    position: absolute;
+    display: flex;
+    width: 280px;
+    border-radius: 26px;
+    background: #F0F4F8;
+    border-radius: 0px 0px 26px 26px;
+    text-align: right;
+    bottom: 0;
+`
+const Cost = styled.p`
+  font-family: Roboto;
+font-weight: normal;
+font-size: 12px;
+text-align: center;
+color: #406081;
+margin: 0;
+margin-left: 6px;
+margin-top: 10px;
+margin-bottom: 10px;
+`
+const Currency = styled.img`
+  width: 15px;
+  height: 15px;
+margin-left: 16px;
+margin-top: 10px;
+margin-bottom: 10px;
+`
+
+
 
 export default props => (
   <Class>
@@ -93,17 +123,8 @@ export default props => (
     </Icons>
     <Title>{props.details.name}</Title>
     <Description>{props.details.title}</Description>
-    <Description>Level Required: {props.details.level_required}</Description>
-    <Resources>
-      <div>
-        <Cost>{props.details.gold_cost}</Cost>
-        <Currency src={require(`../images/Currencies/gold.png`)} />
-      </div>
-      <div>
-        <Cost>{props.details.gem_cost}</Cost>
-        <Currency src={require(`../images/Currencies/gem.png`)} />
-      </div>
-    </Resources>
+    <LvlRq>Level Required: {props.details.level_required}</LvlRq>
+  
 
     <Description>Blueprints Unlocked:</Description>
     {props.details.blueprint_unlocks.length ? (
@@ -126,5 +147,15 @@ export default props => (
         </Resources>
       </div>
     ) : null}
+    <Gold>
+      <div style={{ display: 'flex'}}>
+        <Currency src={require(`../images/Currencies/gold.png`)} />
+        <Cost>{props.details.gold_cost}</Cost>
+      </div>
+      <div style={{ display: 'flex'}}>
+        <Currency src={require(`../images/Currencies/gem.png`)} />
+        <Cost>{props.details.gem_cost}</Cost>
+      </div>
+    </Gold>
   </Class>
 )

@@ -26,39 +26,10 @@ const IndexPage = props => (
       </div>
       <div className="HeroGroup">
         <h1>Shop Titans</h1>
-        <img
-          src={require("../images/Divider.png")}
-          alt="divider"
-          style={{ width: "300px" }}
-        />
         <p>Update 2.0.1</p>
       </div>
     </div>
     <Desktop />
-    <MediaQuery query="(max-width: 720px)">
-      <div className="Selectan">
-        <div className="Selectan">
-          <h1>Workers</h1>
-        </div>
-        <img
-          src={require("../images/Divider2.png")}
-          style={{
-            width: "200px",
-            display: "block",
-            margin: "0 auto",
-            marginBottom: "24px",
-          }}
-          alt="divider"
-        />
-        <div className="CardboxGroupScroll">
-          <div className="CardboxGroup">
-            {workers.map((equipment, index) => (
-              <EquipmentBox key={index} details={equipment} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </MediaQuery>
   </Layout>
 )
 
