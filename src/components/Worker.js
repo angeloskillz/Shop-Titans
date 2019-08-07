@@ -108,43 +108,45 @@ const Currency = styled.img`
 
 // <Class href={`/workers/${props.details.name}`}>
 export default props => (
-  <Class>
-    <Icons>
-      <HeroImg
-        src={require(`../images/Portraits/${props.details.name.toLowerCase()}.png`)}
-        alt={props.details.name}
-      />
-    </Icons>
-    <Title>{props.details.name}</Title>
-    <Description>{props.details.title}</Description>
-    <LvlRq>Level Required: {props.details.level_required}</LvlRq>
+  <div>
+    <Class>
+      <Icons>
+        <HeroImg
+          src={require(`../images/Portraits/${props.details.name.toLowerCase()}.png`)}
+          alt={props.details.name}
+        />
+      </Icons>
+      <Title>{props.details.name}</Title>
+      <Description>{props.details.title}</Description>
+      <LvlRq>Level Required: {props.details.level_required}</LvlRq>
 
-    <Description>Blueprints Unlocked:</Description>
-    {props.details.blueprint_unlocks.length ? (
-      <div>
-        <Resources>
-          {props.details.blueprint_unlocks.map((blueprint, index) => {
-            const blueprintName = cleanName(blueprint)
-            const itemType = blueprints.find(
-              b => cleanName(b.Name) === blueprintName
-            ).Type
-            return (
-              <div key={index}>
-                <Blueprint
-                  src={require(`../images/Items/${itemType}s/${blueprintName}.png`)}
-                  alt={props.details.name}
-                />
-              </div>
-            )
-          })}
-        </Resources>
-      </div>
-    ) : null}
-    <Gold>
-      <Currency src={require(`../images/Currencies/gold.png`)} />
-      <Cost>{props.details.gold_cost}</Cost>
-      <Currency src={require(`../images/Currencies/gem.png`)} />
-      <Cost>{props.details.gem_cost}</Cost>
-    </Gold>
-  </Class>
+      <Description>Blueprints Unlocked:</Description>
+      {props.details.blueprint_unlocks.length ? (
+        <div>
+          <Resources>
+            {props.details.blueprint_unlocks.map((blueprint, index) => {
+              const blueprintName = cleanName(blueprint)
+              const itemType = blueprints.find(
+                b => cleanName(b.Name) === blueprintName
+              ).Type
+              return (
+                <div key={index}>
+                  <Blueprint
+                    src={require(`../images/Items/${itemType}s/${blueprintName}.png`)}
+                    alt={props.details.name}
+                  />
+                </div>
+              )
+            })}
+          </Resources>
+        </div>
+      ) : null}
+      <Gold>
+        <Currency src={require(`../images/Currencies/gold.png`)} />
+        <Cost>{props.details.gold_cost}</Cost>
+        <Currency src={require(`../images/Currencies/gem.png`)} />
+        <Cost>{props.details.gem_cost}</Cost>
+      </Gold>
+    </Class>
+  </div>
 )
