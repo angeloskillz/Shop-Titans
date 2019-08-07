@@ -161,7 +161,7 @@ class Classbox extends React.Component {
 
     const ascensionValues = ascension.map(key => this.props.details[key])
     const item = blueprints.find(b => b.Name === this.props.details.Name)
-    const name = cleanName(this.props.Name)
+    const name = cleanName(this.props.details.Name)
     return (
       <div tabIndex="0">
         <Class onClick={this.handleOpenModal} tabIndex="0">
