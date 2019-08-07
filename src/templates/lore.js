@@ -3,7 +3,6 @@ import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Lore from "../components/lore"
-import StickyFooter from 'react-sticky-footer'
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
