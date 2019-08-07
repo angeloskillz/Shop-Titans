@@ -128,7 +128,7 @@ class FullWidthTabs extends React.Component {
               </div>
             </div>
 
-            <div className="Selectan">
+            {/*<div className="Selectan">
               <h1>Worker Stats</h1>
             </div>
             <table>
@@ -148,7 +148,7 @@ class FullWidthTabs extends React.Component {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table>*/}
           </TabContainer>
         )}
       </div>

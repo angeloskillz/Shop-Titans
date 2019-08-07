@@ -97,13 +97,12 @@ const Cost = styled.p`
   font-size: 12px;
   color: #406081;
   margin: 10px;
-  margin-right: 10px;
   margin-left: 6px;
+  margin-right: 16px;
 `
 const Currency = styled.img`
   width: 15px;
   height: 15px;
-  margin-left: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
 `
