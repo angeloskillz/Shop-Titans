@@ -4,13 +4,7 @@ import ImgHero from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import EquipmentBox from "../components/Worker"
 import Desktop from "../components/DesktopTab"
-
-import MediaQuery from "react-responsive"
-import blacksmith from "../constants/workers/blacksmith"
-
-const workers = [blacksmith]
 
 const IndexPage = props => (
   <Layout>

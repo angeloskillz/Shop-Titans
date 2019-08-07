@@ -34,7 +34,7 @@ const StyledAppBar = withStyles({
 
 const StyledTabs = withStyles({
   indicator: {
-    display: 'none',
+    display: "none",
     backgroundColor: "none",
     color: "none",
   },
@@ -45,9 +45,9 @@ const StyledTab = withStyles({
     color: "grey",
   },
   selected: {
-    background: '#5FA9FF',
+    background: "#5FA9FF",
     borderRadius: "10px",
-    marginRight: '16px'
+    marginRight: "16px",
   },
   label: {
     color: "white",
@@ -109,124 +109,55 @@ class FullWidthTabs extends React.Component {
     const { value } = this.state
 
     return (
-        <div>
-          <StyledAppBar position="static" color="default">
-            <StyledTabs
-              value={this.state.value}
-              onChange={this.handleChange}
-              indicatorColor="primary"
-              textColor="primary"
-              variant="fullWidth"
-            >
-              <StyledTab label="WORKERS" className="button" />
-              <StyledTab label="BLUEPRINTS" className="button" />
-              <StyledTab label="GUIDES" className="button" />
-            </StyledTabs>
-          </StyledAppBar>
-          {value === 0 && (
-            <TabContainer>
-              <div className="Selectan">
-                <h1>Workers</h1>
+      <div>
+        <StyledAppBar position="static" color="default">
+          <StyledTabs
+            value={this.state.value}
+            onChange={this.handleChange}
+            indicatorColor="primary"
+            textColor="primary"
+            variant="fullWidth"
+          >
+            <StyledTab label="WORKERS" className="button" />
+          </StyledTabs>
+        </StyledAppBar>
+        {value === 0 && (
+          <TabContainer>
+            <div className="Selectan">
+              <h1>Workers</h1>
+            </div>
+            <div className="CardboxGroupScroll">
+              <div className="CardboxGroup">
+                {workers.map((worker, index) => (
+                  <WorkerBox key={index} details={worker} />
+                ))}
               </div>
-              <div className="CardboxGroupScroll">
-                <div className="CardboxGroup">
-                  {workers.map((worker, index) => (
-                    <WorkerBox key={index} details={worker} />
-                  ))}
-                </div>
-              </div>
+            </div>
 
-              <div className="Selectan">
-                <h1>Worker Stats</h1>
-              </div>
-              <img
-                src={require("../images/Divider2.png")}
-                style={{
-                  width: "200px",
-                  display: "block",
-                  margin: "0 auto",
-                  marginBottom: "24px",
-                }}
-                alt="divider"
-              />
-
-              <table>
-                <thead>
-                  <tr>
-                    <th>Worker Level</th>
-                    <th>XP Needed</th>
-                    <th>Crafting Speed Bonus</th>
+            <div className="Selectan">
+              <h1>Worker Stats</h1>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Worker Level</th>
+                  <th>XP Needed</th>
+                  <th>Crafting Speed Bonus</th>
+                </tr>
+              </thead>
+              <tbody>
+                {stats.map((stat, index) => (
+                  <tr key={index}>
+                    <td align="left">{stat["Worker Level"]}</td>
+                    <td align="right">{stat["XP Needed"]}</td>
+                    <td align="right">{stat["Crafting Speed Bonus"]}</td>
                   </tr>
-                </thead>
-                <tbody>
-                  {stats.map((stat, index) => (
-                    <tr key={index}>
-                      <td align="left">{stat["Worker Level"]}</td>
-                      <td align="right">{stat["XP Needed"]}</td>
-                      <td align="right">{stat["Crafting Speed Bonus"]}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </TabContainer>
-          )}
-          {value === 1 && (
-            <TabContainer>
-              <div className="Selectan">
-                <h1>Blueprints</h1>
-              </div>
-              <img
-                src={require("../images/Divider2.png")}
-                style={{
-                  width: "200px",
-                  display: "block",
-                  margin: "0 auto",
-                  marginBottom: "24px",
-                }}
-                alt="divider"
-              />
-              {/*<div className="CardboxGroupScroll">
-                <div className="CardboxGroup">
-                  {blueprints.map((blueprint, index) => (
-                    <BlueprintsBox key={index} details={blueprint} />
-                  ))}
-                </div>
-                  </div>*/}
-              {blueprints.map((blueprint, index) => (
-                <div key={index}></div>
-              ))}
-            </TabContainer>
-          )}
-          {value === 2 && (
-            <TabContainer>
-              <div className="Selectan">
-                <h1>Lores</h1>
-              </div>
-              <img
-                src={require("../images/Divider2.png")}
-                style={{
-                  width: "200px",
-                  display: "block",
-                  margin: "0 auto",
-                  marginBottom: "24px",
-                }}
-                alt="divider"
-              />
-              <div className="CardboxGroupScroll">
-                <div className="CardboxGroup">
-                  {lores.map((lore, index) => (
-                    <LoreBox
-                      key={index}
-                      title={lore.title}
-                      link={lore.link}
-                      description={lore.description}
-                    />
-                  ))}
-                </div>
-              </div>
-            </TabContainer>
-          )}
-        </div>
+                ))}
+              </tbody>
+            </table>
+          </TabContainer>
+        )}
+      </div>
     )
   }
 }

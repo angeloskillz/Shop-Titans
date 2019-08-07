@@ -12,7 +12,7 @@ const Blueprint = styled.img`
   position: relative;
   background: #38ec94;
 `
-const Class = styled.a`
+const Class = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
