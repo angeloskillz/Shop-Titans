@@ -109,7 +109,7 @@ class FullWidthTabs extends React.Component {
               <h1>Major Contributors</h1>
 						</div>
 						{contributors.map((contributor, index) => (
-							<div>
+							<div key={index}>
 								<p>{contributor.name} from {contributor.guild}</p>
 							</div>
 						))}

@@ -121,15 +121,6 @@ const Currency = styled.img`
 
 // <Class href={`/workers/${props.details.name}`}>
 export default props => {
-  const produce =
-    props.type === "resource" ? (
-      <Gold>
-        <Cost>Produces:</Cost>
-        <Currency
-          src={require(`../images/Resources/${props.details.resource}.png`)}
-        />
-      </Gold>
-    ) : null
   return (
     <Class>
       <Icons
