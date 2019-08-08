@@ -60,6 +60,19 @@ const Description = styled.h2`
   padding-right: 16px;
   white-space: pre-wrap;
 `
+
+const SubDescription = styled.p`
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 12px;
+  color: #406081;
+  text-align: center;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: pre-wrap;
+`
+
 const LvlRq = styled.div`
   padding: 6px;
   margin-left: 56px;
@@ -109,9 +122,13 @@ const Currency = styled.img`
 // <Class href={`/workers/${props.details.name}`}>
 export default props => (
   <Class>
-    <Icons>
+    <Icons
+      style={{ background: props.type === "worker" ? "ff665f" : "orange" }}
+    >
       <HeroImg
-        src={require(`../images/Portraits/${props.details.name.toLowerCase()}.png`)}
+        src={require(`../images/Portraits/${cleanName(
+          props.details.name
+        )}.png`)}
         alt={props.details.name}
       />
     </Icons>
@@ -119,7 +136,13 @@ export default props => (
     <Description>{props.details.title}</Description>
     <LvlRq>Level Required: {props.details.level_required}</LvlRq>
 
-    <Description>Blueprints Unlocked:</Description>
+    <Description>
+      {props.type === "worker" ? "Blueprints Unlocked:" : "Description:"}
+    </Description>
+    {props.type === "worker" ? null : (
+      <SubDescription>{props.details.description}</SubDescription>
+    )}
+
     {props.details.blueprint_unlocks.length ? (
       <div>
         <Resources>
@@ -141,10 +164,11 @@ export default props => (
       </div>
     ) : null}
     <Gold>
+      <Cost>Unlock Cost:</Cost>
       <Currency src={require(`../images/Currencies/gold.png`)} />
-      <Cost>{props.details.gold_cost}</Cost>
+      <Cost>{props.type === "worker" ? props.details.gold_cost : "Free"}</Cost>
       <Currency src={require(`../images/Currencies/gem.png`)} />
-      <Cost>{props.details.gem_cost}</Cost>
+      <Cost>{props.type === "worker" ? props.details.gem_cost : "Free"}</Cost>
     </Gold>
   </Class>
 )

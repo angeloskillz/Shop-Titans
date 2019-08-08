@@ -16,6 +16,10 @@ import scholar from "../constants/workers/scholar"
 import tailor from "../constants/workers/tailor"
 import wizard from "../constants/workers/wizard"
 import stats from "../constants/workers/stats"
+import townhall from "../constants/special/townhall"
+import tavern from "../constants/special/tavern";
+import emeraldinn from "../constants/special/emeraldinn";
+import traininghall from "../constants/special/traininghall";
 
 const StyledAppBar = withStyles({
   root: {
@@ -59,6 +63,8 @@ const workers = [
   tailor,
   wizard,
 ]
+
+const specialWorkers = [townhall, tavern, emeraldinn, traininghall]
 
 // const blueprints = [squiresword]
 
@@ -123,7 +129,18 @@ class FullWidthTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {workers.map((worker, index) => (
-                  <WorkerBox key={index} details={worker} />
+                  <WorkerBox key={index} details={worker} type="worker" />
+                ))}
+              </div>
+            </div>
+
+            <div className="Selectan">
+              <h1>Special</h1>
+            </div>
+            <div className="CardboxGroupScroll">
+              <div className="CardboxGroup">
+                {specialWorkers.map((worker, index) => (
+                  <WorkerBox key={index} details={worker} type="special" />
                 ))}
               </div>
             </div>
