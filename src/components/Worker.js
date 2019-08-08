@@ -120,55 +120,81 @@ const Currency = styled.img`
 `
 
 // <Class href={`/workers/${props.details.name}`}>
-export default props => (
-  <Class>
-    <Icons
-      style={{ background: props.type === "worker" ? "ff665f" : "orange" }}
-    >
-      <HeroImg
-        src={require(`../images/Portraits/${cleanName(
-          props.details.name
-        )}.png`)}
-        alt={props.details.name}
-      />
-    </Icons>
-    <Title>{props.details.name}</Title>
-    <Description>{props.details.title}</Description>
-    <LvlRq>Level Required: {props.details.level_required}</LvlRq>
+export default props => {
+  const produce =
+    props.type === "resource" ? (
+      <Gold>
+        <Cost>Produces:</Cost>
+        <Currency
+          src={require(`../images/Resources/${props.details.resource}.png`)}
+        />
+      </Gold>
+    ) : null
+  return (
+    <Class>
+      <Icons
+        style={{
+          background:
+            props.type === "worker"
+              ? "ff665f"
+              : props.type === "resource"
+              ? "lightblue"
+              : "orange",
+        }}
+      >
+        <HeroImg
+          src={require(`../images/Portraits/${cleanName(
+            props.details.name
+          )}.png`)}
+          alt={props.details.name}
+        />
+      </Icons>
+      <Title>{props.details.name}</Title>
+      <Description>{props.details.title}</Description>
+      <LvlRq>{props.details.level_required && props.details.prerequisite !== '---' ? `Required: ${props.details.prerequisite}` : `Level Required: ${props.details.level_required}`}</LvlRq>
 
-    <Description>
-      {props.type === "worker" ? "Blueprints Unlocked:" : "Description:"}
-    </Description>
-    {props.type === "worker" ? null : (
-      <SubDescription>{props.details.description}</SubDescription>
-    )}
+      <Description>
+        {props.type === "worker" ? "Blueprints Unlocked:" : "Description:"}
+      </Description>
+      {props.type === "worker" ? null : (
+        <SubDescription>{props.details.description}</SubDescription>
+      )}
 
-    {props.details.blueprint_unlocks.length ? (
-      <div>
-        <Resources>
-          {props.details.blueprint_unlocks.map((blueprint, index) => {
-            const blueprintName = cleanName(blueprint)
-            const itemType = blueprints.find(
-              b => cleanName(b.Name) === blueprintName
-            ).Type
-            return (
-              <div key={index}>
-                <Blueprint
-                  src={require(`../images/Items/${itemType}s/${blueprintName}.png`)}
-                  alt={props.details.name}
-                />
-              </div>
-            )
-          })}
-        </Resources>
-      </div>
-    ) : null}
-    <Gold>
-      <Cost>Unlock Cost:</Cost>
-      <Currency src={require(`../images/Currencies/gold.png`)} />
-      <Cost>{props.type === "worker" ? props.details.gold_cost : "Free"}</Cost>
-      <Currency src={require(`../images/Currencies/gem.png`)} />
-      <Cost>{props.type === "worker" ? props.details.gem_cost : "Free"}</Cost>
-    </Gold>
-  </Class>
-)
+      {props.details.blueprint_unlocks.length ? (
+        <div>
+          <Resources>
+            {props.details.blueprint_unlocks.map((blueprint, index) => {
+              const blueprintName = cleanName(blueprint)
+              const itemType = blueprints.find(
+                b => cleanName(b.Name) === blueprintName
+              ).Type
+              return (
+                <div key={index}>
+                  <Blueprint
+                    src={require(`../images/Items/${itemType}s/${blueprintName}.png`)}
+                    alt={props.details.name}
+                  />
+                </div>
+              )
+            })}
+          </Resources>
+        </div>
+      ) : null}
+      <Gold>
+        {props.type === "resource" ? <Cost>Produces:</Cost> : null}
+        {props.type === "resource" ? (
+          <Currency
+            src={require(`../images/Resources/${props.details.resource}.png`)}
+          />
+        ) : null}
+        <Cost>Cost:</Cost>
+        <Currency src={require(`../images/Currencies/gold.png`)} />
+        <Cost>
+          {props.type === "worker" ? props.details.gold_cost : "Free"}
+        </Cost>
+        <Currency src={require(`../images/Currencies/gem.png`)} />
+        <Cost>{props.type === "worker" ? props.details.gem_cost : "Free"}</Cost>
+      </Gold>
+    </Class>
+  )
+}

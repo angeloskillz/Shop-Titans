@@ -17,9 +17,17 @@ import tailor from "../constants/workers/tailor"
 import wizard from "../constants/workers/wizard"
 import stats from "../constants/workers/stats"
 import townhall from "../constants/special/townhall"
-import tavern from "../constants/special/tavern";
-import emeraldinn from "../constants/special/emeraldinn";
-import traininghall from "../constants/special/traininghall";
+import tavern from "../constants/special/tavern"
+import emeraldinn from "../constants/special/emeraldinn"
+import traininghall from "../constants/special/traininghall"
+import lumberyard from "../constants/farmers/lumberyard";
+import ironmine from "../constants/farmers/ironmine";
+import oilpress from "../constants/farmers/oilpress";
+import garden from "../constants/farmers/garden";
+import ironwoodsawmill from "../constants/farmers/ironwoodsawmill";
+import smelter from "../constants/farmers/smelter";
+import tannery from "../constants/farmers/tannery";
+import weavermill from "../constants/farmers/weavermill";
 
 const StyledAppBar = withStyles({
   root: {
@@ -65,6 +73,7 @@ const workers = [
 ]
 
 const specialWorkers = [townhall, tavern, emeraldinn, traininghall]
+const resourceWorkers = [garden, ironmine, ironwoodsawmill, lumberyard, oilpress, smelter, tannery, weavermill]
 
 // const blueprints = [squiresword]
 
@@ -141,6 +150,17 @@ class FullWidthTabs extends React.Component {
               <div className="CardboxGroup">
                 {specialWorkers.map((worker, index) => (
                   <WorkerBox key={index} details={worker} type="special" />
+                ))}
+              </div>
+            </div>
+
+            <div className="Selectan">
+              <h1>Producers</h1>
+            </div>
+            <div className="CardboxGroupScroll">
+              <div className="CardboxGroup">
+                {resourceWorkers.map((worker, index) => (
+                  <WorkerBox key={index} details={worker} type="resource" />
                 ))}
               </div>
             </div>
