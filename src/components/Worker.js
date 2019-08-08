@@ -151,7 +151,7 @@ export default props => {
       </Icons>
       <Title>{props.details.name}</Title>
       <Description>{props.details.title}</Description>
-      <LvlRq>{props.details.level_required && props.details.prerequisite !== '---' ? `Required: ${props.details.prerequisite}` : `Level Required: ${props.details.level_required}`}</LvlRq>
+      <LvlRq>{props.details.level_required && props.details.prerequisite && props.details.prerequisite !== '---' ? `Required: ${props.details.prerequisite}` : `Level Required: ${props.details.level_required}`}</LvlRq>
 
       <Description>
         {props.type === "worker" ? "Blueprints Unlocked:" : "Description:"}
