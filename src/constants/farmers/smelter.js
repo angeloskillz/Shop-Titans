@@ -8,6 +8,8 @@ export default {
   description: "Investing in this industry will speed up steel production.",
   bonus: "---",
   prerequisite: "Iron Mine Lv. 7",
-  levels: [],
+  levels: [
+    { level: 1, time: '---', investments: { gold: 300, gems: 6 }, cost: 3000, effect: 'Steel Production: 0.75/min' }
+  ],
   resource: "steel",
 }

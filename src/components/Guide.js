@@ -1,15 +1,13 @@
 import React from "react"
-import "./lore.css"
+import "./guide.css"
 
 export default props => (
   <div>
     <br />
     {props.helmet || ""}
-    <div className="lore">
-      <p className="loreDate">{props.date}</p>
-      <h1 className="loreTitle">
-        {props.title}
-      </h1>
+    <div className="guide" style={{ color: "black" }}>
+      <p className="guideDate">{props.date}</p>
+      <h1 className="guideTitle">{props.title}</h1>
       <img
         src={require("../images/Divider.png")}
         style={{
@@ -20,7 +18,10 @@ export default props => (
         }}
         alt="divider"
       />
-      <div className="loreContent" dangerouslySetInnerHTML={{ __html: props.content }}></div>
+      <div
+        className="guideContent"
+        dangerouslySetInnerHTML={{ __html: props.content }}
+      ></div>
     </div>
   </div>
 )

@@ -2,18 +2,18 @@ import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Lore from "../components/lore"
+import Guide from "../components/Guide"
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
   return (
     <Layout>
-      <Lore
+      <Guide
         date={post.frontmatter.date}
         content={post.html}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Lore">
+          <Helmet titleTemplate="%s | Guide">
             <title>{post.frontmatter.title}</title>
             <meta name="description" content={post.frontmatter.description} />
           </Helmet>
