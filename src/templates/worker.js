@@ -5,34 +5,12 @@ import blueprints from "../constants/blueprints"
 import Blueprint from "../components/Blueprint"
 import Worker from "../components/Worker"
 import SEO from "../components/seo"
-import { cleanName } from "../utils/util"
 import { withStyles } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
 import Typography from "@material-ui/core/Typography"
 import PropTypes from "prop-types"
-
-const HeroImg = styled.img`
-  position: relative;
-  margin-left: 25px;
-  height: 200px;
-  width: 200px;
-  display: block;
-  padding-bottom: 10px;
-  padding-top: 10px;
-`
-
-const Title = styled.h1`
-  font-family: Roboto;
-  font-weight: 800;
-  font-size: 18px;
-  text-align: center;
-  color: #ff665f;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 0;
-`
 
 const Resources = styled.div`
   display: flex;
@@ -59,10 +37,6 @@ const Container = styled.div`
   width: 100%;
   z-index: -1;
   position: relative;
-`
-
-const WorkerCard = styled.div`
-  display: flex;
 `
 
 const StyledAppBar = withStyles({
