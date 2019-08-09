@@ -6,9 +6,7 @@ import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
 import Typography from "@material-ui/core/Typography"
 
-const contributors = [
-	{ name: 'LordAzuRa', guild: 'Guild Name' },
-]
+const contributors = [{ name: "LordAzuRa", guild: "Guild Name" }]
 
 const StyledAppBar = withStyles({
   root: {
@@ -91,8 +89,9 @@ class FullWidthTabs extends React.Component {
             textColor="primary"
             variant="fullWidth"
           >
-						<StyledTab label="Developers" className="button" />
-						<StyledTab label="Contributors" className="button" />
+            <StyledTab label="Developers" className="button" />
+            <StyledTab label="Contributors" className="button" />
+            <StyledTab label="Roadmap" className="button" />
           </StyledTabs>
         </StyledAppBar>
         {value === 0 && (
@@ -100,21 +99,36 @@ class FullWidthTabs extends React.Component {
             <div className="Selectan">
               <h1>Lead Developers</h1>
             </div>
-
           </TabContainer>
-				)}
-				{value === 1 && (
+        )}
+        {value === 1 && (
           <TabContainer>
             <div className="Selectan">
               <h1>Major Contributors</h1>
-						</div>
-						{contributors.map((contributor, index) => (
-							<div key={index}>
-								<p>{contributor.name} from {contributor.guild}</p>
-							</div>
-						))}
+            </div>
+            {contributors.map((contributor, index) => (
+              <div key={index}>
+                <p>
+                  {contributor.name} from {contributor.guild}
+                </p>
+              </div>
+            ))}
           </TabContainer>
-				)}
+        )}
+        {value === 2 && (
+          <TabContainer>
+            <div className="Selectan">
+              <div>
+                <h1>Version 1 Release Plan:</h1>
+                <ul>
+                  <li>Homepage With Tabs showing Workers and Heroes</li>
+                  <li>Each worker has it's own individual page.</li>
+                  <li>Each blueprint has it's own individual page.</li>
+                </ul>
+              </div>
+            </div>
+          </TabContainer>
+        )}
       </div>
     )
   }
