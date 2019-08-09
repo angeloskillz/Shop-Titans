@@ -28,7 +28,7 @@ export default {
     { level: 17, time: '6d 40m', seconds: 520800, investments: { gold: 90000000, gems: 300 }, cost: 162000000000, effect: 'Fabric Production: 4.75/min' },
     { level: 18, time: '7d 2h', seconds: 612000, investments: { gold: 150000000, gems: 300 }, cost: 285000000000, effect: 'Fabric Production: 5/min' },
     { level: 19, time: '8d 5h 20m', seconds: 710400, investments: { gold: 300000000, gems: 300 }, cost: 600000000000, effect: 'Fabric Production: 5.25/min' },
-    { level: 20, time: '9d 10h 40m', seconds: 816000, investments: { gold: 300000000, gems: 300 }, cost: ---, effect: 'Fabric Production: 5.5/min' },
+    { level: 20, time: '9d 10h 40m', seconds: 816000, investments: { gold: 300000000, gems: 300 }, cost: '---', effect: 'Fabric Production: 5.5/min' },
   ],
   resource: "fabric",
 }
