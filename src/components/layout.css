@@ -128,20 +128,7 @@ a {
   border-radius: 0px;
   font-weight: 800;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.808);
-  -webkit-font-smoothing: antialiased;
-  width: 100px;
-  margin: 0 auto;
-  margin-top: 5px;
-  border-bottom: 1.5px solid #daa54e;
-}
-
-.HeroGroup p {
-  padding: 10px;
-  border-radius: 0px;
-  font-weight: 800;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.808);
+  color: black;
   -webkit-font-smoothing: antialiased;
   width: 100px;
   margin: 0 auto;
