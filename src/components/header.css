@@ -1,43 +1,43 @@
-.Header{
-    position:fixed;
-    width: 100%;
-    padding: 10px;
-    z-index: 100;
-    transition: 0.8s cubic-bezier(0.02, 0.8, 0.2, 1);
-
+.Header {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  z-index: 100;
+  transition: 0.8s cubic-bezier(0.02, 0.8, 0.2, 1);
 }
 
-.HeaderScrolled{
-    background: #141b1ecc;
-    backdrop-filter: blur(8px);
+.HeaderScrolled {
+  background: #141b1ecc;
+  backdrop-filter: blur(8px);
 }
 
 .HeaderGroup {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0px auto;
-    padding: 0px 30px;
-    justify-content: center;
-
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
+  padding: 0px 30px;
+  justify-content: center;
 }
 
-.herobut{
-    margin-left: 50px;
+.herobut {
+  margin-left: 50px;
 }
 
-.Header a{
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 20px;
-  }
+.Header a {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: black;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+  margin: 10px;
+}
 
-  .Header img{
-      margin-left: -22px;
-      height:20px;
-      vertical-align: middle;
-  }
+.Header img {
+  margin-left: -22px;
+  height: 20px;
+  vertical-align: middle;
+}

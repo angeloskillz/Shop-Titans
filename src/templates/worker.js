@@ -4,6 +4,10 @@ import styled from "styled-components"
 import { cleanName } from "../utils/util"
 import blueprints from "../constants/blueprints"
 import Blueprint from "../components/Blueprint"
+import Worker from "../components/Worker"
+import SEO from "../components/seo"
+import { graphql } from "gatsby"
+import ImgHero from "gatsby-image"
 
 const Currency = styled.img`
   width: 50px;
@@ -82,6 +86,19 @@ const Icons = styled.div`
   background: #ff665f;
 `
 
+const Section = styled.div`
+  position: relative;
+  text-align: center;
+  color: white;
+`
+
+const Container = styled.div`
+  height: 50px;
+  width: 100%;
+  z-index: -1;
+  position: relative;
+`
+
 export default ({ pageContext: data }) => {
   const relevantBlueprints = blueprints.filter(
     b =>
@@ -91,47 +108,11 @@ export default ({ pageContext: data }) => {
 
   return (
     <Layout>
-      <Icons>
-        <HeroImg
-          src={require(`../images/Portraits/${data.name.toLowerCase()}.png`)}
-          alt={data.name}
-        />
-      </Icons>
-      <Title>{data.name}</Title>
-      <Description>{data.title}</Description>
-      <LvlRq>Level Required: {data.level_required}</LvlRq>
-      <Resources>
-        <div>
-          <Cost>{data.gold_cost}</Cost>
-          <Currency src={require(`../images/Currencies/gold.png`)} />
-        </div>
-        <div>
-          <Cost>{data.gem_cost}</Cost>
-          <Currency src={require(`../images/Currencies/gem.png`)} />
-        </div>
-      </Resources>
-
-      <Description>Blueprints Unlocked:</Description>
-      {data.blueprint_unlocks.length ? (
-        <div>
-          <Resources>
-            {data.blueprint_unlocks.map((blueprint, index) => {
-              const blueprintName = cleanName(blueprint)
-              const itemType = blueprints.find(
-                b => cleanName(b.Name) === blueprintName
-              ).Type
-              return (
-                <div key={index}>
-                  <BlueprintUnlocked
-                    src={require(`../images/Items/${itemType}s/${blueprintName}.png`)}
-                    alt={data.name}
-                  />
-                </div>
-              )
-            })}
-          </Resources>
-        </div>
-      ) : null}
+      <SEO title={data.name}></SEO>
+      <Section>
+        <Container />
+      </Section>
+      <Worker details={data} type="worker" />
       <Title>Blueprints</Title>
       <Resources>
         {relevantBlueprints.map((blueprint, index) => (
@@ -143,3 +124,15 @@ export default ({ pageContext: data }) => {
     </Layout>
   )
 }
+
+export const pageQuery = graphql`
+  {
+    imageOne: file(relativePath: { eq: "Backgrounds/BG1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2560) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

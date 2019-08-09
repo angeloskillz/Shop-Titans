@@ -119,10 +119,9 @@ const Currency = styled.img`
   margin-bottom: 10px;
 `
 
-// <Class href={`/workers/${props.details.name}`}>
 export default props => {
   return (
-    <Class>
+    <Class href={`/workers/${props.details.name}`}>
       <Icons
         style={{
           background:
