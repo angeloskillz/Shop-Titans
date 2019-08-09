@@ -50,6 +50,8 @@ class Header extends React.Component {
             <img src={require("./../images/Logo.png")} alt="LOGOVGWIKI" />
           </Link>
           <Link to="/about">About</Link>
+          <Link to="/">News(soon)</Link>
+          <Link to="/">Guilds(soon)</Link>
         </div>
       </div>
     )
