@@ -28,23 +28,23 @@ const HeroImg = styled.img`
   margin-right: auto;
   display: block;
   padding-bottom: 10px;
-   padding-top: 10px;
+  padding-top: 10px;
 `
 const Title = styled.h1`
   font-family: Roboto;
-font-weight: 800;
-font-size: 18px;
-text-align: center;
-color: #ff665f;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: #ff665f;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0;
 `
 const Description = styled.h2`
   font-family: Roboto;
-font-weight: bold;
-font-size: 14px;
-color: #406081;
+  font-weight: bold;
+  font-size: 14px;
+  color: #406081;
   text-align: center;
   margin-bottom: 16px;
   padding-left: 16px;
@@ -53,12 +53,12 @@ color: #406081;
 `
 const LvlRq = styled.div`
   padding: 6px;
-border-radius: 20px;
-font-family: Roboto;
-font-weight: normal;
-font-size: 12px;
-text-align: center;
-color: #406081;
+  border-radius: 20px;
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+  color: #406081;
 `
 
 const Resources = styled.div`
@@ -78,10 +78,9 @@ const Resources = styled.div`
 const Icons = styled.div`
   margin: 0 auto;
   width: 100px;
-border-radius: 26px;
-background: #ff665f;
+  border-radius: 26px;
+  background: #ff665f;
 `
-
 
 export default ({ pageContext: data }) => {
   const relevantBlueprints = blueprints.filter(
@@ -98,9 +97,9 @@ export default ({ pageContext: data }) => {
           alt={data.name}
         />
       </Icons>
-    <Title>{data.name}</Title>
-    <Description>{data.title}</Description>
-    <LvlRq>Level Required: {data.level_required}</LvlRq>
+      <Title>{data.name}</Title>
+      <Description>{data.title}</Description>
+      <LvlRq>Level Required: {data.level_required}</LvlRq>
       <Resources>
         <div>
           <Cost>{data.gold_cost}</Cost>
