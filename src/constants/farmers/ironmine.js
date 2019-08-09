@@ -28,7 +28,7 @@ export default {
     { level: 17, time: '3d 20m', seconds: 260400, investments: { gold: 30000000, gems: 100 }, cost: 54000000000, effect: 'Iron Production: 4.75/min' },
     { level: 18, time: '3d 13h', seconds: 306666, investments: { gold: 50000000, gems: 100 }, cost: 95000000000, effect: 'Iron Production: 5/min' },
     { level: 19, time: '4d 2h 40m', seconds: 355200, investments: { gold: 100000000, gems: 100 }, cost: 200000000000, effect: 'Iron Production: 5.25/min' },
-    { level: 20, time: '4d 17h 20m', seconds: 408000, investments: { gold: 100000000, gems: 100 }, cost: ---, effect: 'Iron Production: 5.5/min' },
+    { level: 20, time: '4d 17h 20m', seconds: 408000, investments: { gold: 100000000, gems: 100 }, cost: '---', effect: 'Iron Production: 5.5/min' },
   ],
   resource: "iron",
 }
