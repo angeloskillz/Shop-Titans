@@ -148,7 +148,7 @@ const energy = [
   "Speed Up Energy",
 ]
 
-class Classbox extends React.Component {
+export default class extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -212,7 +212,7 @@ class Classbox extends React.Component {
               </div>
             ))}
 
-          {/*{resources
+          {resources
             .filter(key => this.props.details[key] !== "---")
             .map((key, index) => (
               <div key={index}>
@@ -258,7 +258,7 @@ class Classbox extends React.Component {
                   {key}: {this.props.details[key]}
                 </SubDescription>
               </div>
-            ))}*/}
+            ))}
 
           <button
             onClick={this.handleCloseModal}
@@ -276,14 +276,3 @@ class Classbox extends React.Component {
     )
   }
 }
-
-export default Classbox
-// {Object.keys(this.props.details)
-//   .filter(key => this.props.details[key] !== "---")
-//   .map((key, index) => (
-//     <div key={index}>
-//       <SubDescription>
-//         {key}: {this.props.details[key]}
-//       </SubDescription>
-//     </div>
-//   ))}

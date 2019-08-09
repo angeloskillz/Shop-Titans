@@ -1,9 +1,9 @@
-.lore {
+.guide {
   color: white;
   text-align: center;
 }
 
-.loreTitle {
+.guideTitle {
   text-align: center;
   max-width: 100%;
   margin-top: 7px;
@@ -15,7 +15,7 @@
   font-size: 30px;
 }
 
-.loreDate {
+.guideDate {
   text-align: center;
   margin-top: 32px;
   text-transform: uppercase;
@@ -23,32 +23,32 @@
   font-weight: 600
 }
 
-.loreDescription {
+.guideDescription {
   text-align: center;
   margin-top: 2px;
 }
 
-.loreContent {
+.guideContent {
   text-align: center;
     width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.loreContent h1{
+.guideContent h1{
   font-size: 20px;
 }
 
-.loreContent h2{
+.guideContent h2{
   font-size: 18px;
 }
 
-.loreContent p{
+.guideContent p{
   font-size: 16px;
 }
 
 @media (max-width:1300px){
-.loreContent {
+.guideContent {
   max-width: 90%;
   margin-left: 16px;
   margin-right: 16px;

@@ -4,11 +4,11 @@ import ImgHero from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Homepage from "../components/Homepage"
+import About from "../components/About"
 
-const IndexPage = props => (
+export default props => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About" />
     <div className="Hero">
       <div className="HeroContainer">
         <ImgHero
@@ -19,15 +19,13 @@ const IndexPage = props => (
         <div className="gradient" />
       </div>
       <div className="HeroGroup">
-        <h1>Shop Titans</h1>
-        <p>Update 2.0.1</p>
+        <h1>About Us</h1>
+        <p>Shop Titans Wiki</p>
       </div>
     </div>
-    <Homepage />
+    <About />
   </Layout>
 )
-
-export default IndexPage
 
 export const pageQuery = graphql`
   {
