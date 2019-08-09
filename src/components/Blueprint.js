@@ -6,74 +6,87 @@ import { cleanName } from "../utils/util"
 
 const Class = styled.div`
   position: relative;
-  width: 280px;
-  height: 245px;
+  width: 80px;
+  height: 80px;
   align-items: stretch;
-  border-radius: 26px;
-  background: #1a2327;
-  border: 1.5px solid #daa54e;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 40px;
+  background: #38ec94;
+box-shadow: 0px 8px 12px #bdccdb;
   margin-left: 16px;
   margin-top: 16px;
+  margin-right: 16px;
   cursor: pointer;
   outline: none;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   &:hover {
     transform: scale(1.1);
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    box-shadow: 0px 10px 25px 1px rgba(218, 165, 78, 0.3);
+    box-shadow: 0px 10px 25px 1px #bdccdb;
     z-index: 1;
   }
 `
-const Sun = styled.img`
-  display: block;
-  margin: 0 auto;
-`
 const Title = styled.h1`
-  font-family: "QuadratSerial";
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 18px;
   text-align: center;
-  color: #fff;
-  text-shadow: 0px 3px 6px #000;
-  margin-top: -30px;
+  color: black;
+  margin-top: 16px;
   text-transform: uppercase;
 `
 const Icons = styled.div`
-  text-align: center;
+position: relative;
+  width: 80px;
+  height: 80px;
+  align-items: stretch;
+  border-radius: 40px;
+  background: #38ec94;
+box-shadow: 0px 8px 12px #bdccdb;
+margin: 0 auto;
 `
 const Icon1 = styled.img`
   position: relative;
   width: 54px;
   height: 54px;
-  border-radius: 20px;
-`
-const Icon2 = styled.img`
-  position: absolute;
-  width: 54px;
-  height: 54px;
-  border-radius: 20px;
-  filter: blur(9px);
+  margin-top: 10px;
 `
 
 const SubDescription = styled.h2`
   font-family: Roboto;
-  font-weight: normal;
-  font-style: italic;
-  font-size: 14px;
+font-weight: bold;
+font-size: 14px;
+color: #406081;
   text-align: center;
-  color: #fff;
   margin-bottom: 16px;
   padding-left: 16px;
   padding-right: 16px;
+  white-space: pre-wrap;
+  width: 80px;
+`
+const SubDescription2 = styled.h2`
+padding: 6px;
+  margin-left:105px;
+  margin-right:105px;
+  margin-top: 16px;
+border-radius: 20px;
+background: #bdccdb80;
+font-family: Roboto;
+font-weight: normal;
+font-size: 12px;
+text-align: center;
+color: #406081;
+`
+
+
+const Description = styled.h3`
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  color: black;
 `
 
 const basic = [
@@ -163,23 +176,14 @@ class Classbox extends React.Component {
     const item = blueprints.find(b => b.Name === this.props.details.Name)
     const name = cleanName(this.props.details.Name)
     return (
-      <div tabIndex="0">
+      <div>
         <Class onClick={this.handleOpenModal} tabIndex="0">
-          <Sun src={require("../images/Sun.png")} />
-          <Title>{this.props.name}</Title>
-          <Icons>
-            <Icon2
-              src={require(`../images/Items/${item.Type}s/${name}.png`)}
-              alt={this.props.title}
-            />
             <Icon1
               src={require(`../images/Items/${item.Type}s/${name}.png`)}
               alt={this.props.title}
             />
-          </Icons>
-          <SubDescription>{this.props.details.Name}</SubDescription>
         </Class>
-
+          <SubDescription>{this.props.details.Name}</SubDescription>
         <ReactModal
           isOpen={this.state.showModal}
           className="Modal"
@@ -187,33 +191,14 @@ class Classbox extends React.Component {
           shouldCloseOnOverlayClick={true}
           onRequestClose={this.handleCloseModal}
         >
-          <Sun src={require("../images/Sun.png")} />
           <Title>{this.props.details.Name}</Title>
           <Icons>
-            <Icon2
-              src={require(`../images/Items/${
-                item.Type
-              }s/${name}.png`)}
-              alt={this.props.title}
-            />
             <Icon1
-              src={require(`../images/Items/${
-                item.Type
-              }s/${name}.png`)}
+              src={require(`../images/Items/${item.Type}s/${name}.png`)}
               alt={this.props.title}
             />
-          </Icons>
-          <SubDescription>{this.props.details.Type}</SubDescription>
-          <img
-            src={require("../images/Divider.png")}
-            style={{
-              width: "200px",
-              display: "block",
-              margin: "0 auto",
-              marginBottom: "24px",
-            }}
-            alt="divider"
-          />
+            </Icons>
+          <SubDescription2>{this.props.details.Type}</SubDescription2>
           <div className="scrollable">
             <div className="gradientmodal" />
           </div>
@@ -221,9 +206,9 @@ class Classbox extends React.Component {
             .filter(key => this.props.details[key] !== "---")
             .map((key, index) => (
               <div key={index}>
-                <SubDescription>
+                <Description>
                   {key}: {this.props.details[key]}
-                </SubDescription>
+                </Description>
               </div>
             ))}
 

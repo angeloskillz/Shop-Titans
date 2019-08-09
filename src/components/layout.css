@@ -1,17 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-@font-face {
-  font-family: "QuadratSerial";
-  src: url("./../images/39683E_0_0.eot"); /* IE9 Compat Modes */
-  src: url("./../images/39683E_0_0.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("./../images/39683E_0_0.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./../images/39683E_0_0.woff")
-      format("woff"),
-    /* Pretty Modern Browsers */ url("./../images/39683E_0_0.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./../images/39683E_0_0.svg#39683E_0_0.svg")
-      format("svg"); /* Legacy iOS */
-}
 
 img {
 
@@ -262,7 +250,7 @@ a {
   height: auto;
   outline: none;
   border-radius: 20px;
-  background-color: #141b1e;
+  background-color: #fff;
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.418);
   outline: none;
   overflow-y: auto;
