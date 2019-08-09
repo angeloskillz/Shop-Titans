@@ -28,7 +28,7 @@ import ironwoodsawmill from "../constants/farmers/ironwoodsawmill"
 import smelter from "../constants/farmers/smelter"
 import tannery from "../constants/farmers/tannery"
 import weavermill from "../constants/farmers/weavermill"
-import champions from "../constants/champions"
+import heroes from "../constants/heroes"
 import HeroBox from "../components/Hero"
 
 const StyledAppBar = withStyles({
@@ -86,7 +86,7 @@ const resourceWorkers = [
   weavermill,
 ]
 
-const fighters = champions.filter(champion => champion.class === 'Fighter')
+const fighters = heroes.filter(hero => hero.class === 'Fighter')
 
 // const blueprints = [squiresword]
 
