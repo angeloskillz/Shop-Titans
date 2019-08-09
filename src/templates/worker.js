@@ -1,39 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
-import { cleanName } from "../utils/util"
 import blueprints from "../constants/blueprints"
 import Blueprint from "../components/Blueprint"
 import Worker from "../components/Worker"
 import SEO from "../components/seo"
-import { graphql } from "gatsby"
-import ImgHero from "gatsby-image"
 
-const Currency = styled.img`
-  width: 50px;
-  height: 50px;
-`
-
-const BlueprintUnlocked = styled.img`
-  width: 50px;
-  height: 50px;
-  margin-left: auto;
-`
-
-const Cost = styled.p`
-  font-size: 16px;
-  color: #6f879f;
-  margin-bottom: 0px;
-`
-const HeroImg = styled.img`
-  position: relative;
-  height: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  padding-bottom: 10px;
-  padding-top: 10px;
-`
 const Title = styled.h1`
   font-family: Roboto;
   font-weight: 800;
@@ -43,26 +15,6 @@ const Title = styled.h1`
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0;
-`
-const Description = styled.h2`
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 14px;
-  color: #406081;
-  text-align: center;
-  margin-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
-  white-space: pre-wrap;
-`
-const LvlRq = styled.div`
-  padding: 6px;
-  border-radius: 20px;
-  font-family: Roboto;
-  font-weight: normal;
-  font-size: 12px;
-  text-align: center;
-  color: #406081;
 `
 
 const Resources = styled.div`
@@ -77,13 +29,6 @@ const Resources = styled.div`
   margin-top: -5px;
   margin-bottom: 0px;
   text-align: center;
-`
-
-const Icons = styled.div`
-  margin: 0 auto;
-  width: 100px;
-  border-radius: 26px;
-  background: #ff665f;
 `
 
 const Section = styled.div`
@@ -124,15 +69,3 @@ export default ({ pageContext: data }) => {
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  {
-    imageOne: file(relativePath: { eq: "Backgrounds/BG1.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2560) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

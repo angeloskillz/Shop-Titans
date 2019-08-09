@@ -1,15 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import ReactModal from "react-modal"
 
-const Blueprint = styled.img`
-  padding: 10px;
-  border-radius: 19px;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  background: #38ec94;
-`
 const Class = styled.a`
   display: flex;
   flex-direction: column;
@@ -22,22 +13,7 @@ const Class = styled.a`
   margin-left: 16px;
   margin-top: 16px;
 `
-const Icons = styled.div`
-  margin: 0 auto;
-  margin-top: 16px;
-  width: 70px;
-  border-radius: 26px;
-  background: #ff665f;
-`
-const HeroImg = styled.img`
-  position: relative;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  padding-bottom: 10px;
-  padding-top: 10px;
-`
+
 const Title = styled.h1`
   font-family: Roboto;
   font-weight: 800;
@@ -48,6 +24,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   margin-bottom: 0;
 `
+
 const Description = styled.h2`
   font-family: Roboto;
   font-weight: bold;
@@ -72,25 +49,6 @@ const SubDescription = styled.p`
   white-space: pre-wrap;
 `
 
-const LvlRq = styled.div`
-  padding: 6px;
-  margin-left: 56px;
-  margin-right: 56px;
-  border-radius: 20px;
-  background: #bdccdb80;
-  font-family: Roboto;
-  font-weight: normal;
-  font-size: 12px;
-  text-align: center;
-  color: #406081;
-`
-const Resources = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: center;
-`
 const Gold = styled.div`
   position: absolute;
   display: flex;
@@ -162,7 +120,7 @@ export default class extends React.Component {
           {this.props.details.equipments.map((equipment, index) => (
             <div key={index}>
               <SubDescription>
-                Slot {equipment.slot}: {equipment.allowed.join(', ')}
+                Slot {equipment.slot}: {equipment.allowed.join(", ")}
               </SubDescription>
             </div>
           ))}
