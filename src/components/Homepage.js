@@ -20,14 +20,16 @@ import townhall from "../constants/special/townhall"
 import tavern from "../constants/special/tavern"
 import emeraldinn from "../constants/special/emeraldinn"
 import traininghall from "../constants/special/traininghall"
-import lumberyard from "../constants/farmers/lumberyard";
-import ironmine from "../constants/farmers/ironmine";
-import oilpress from "../constants/farmers/oilpress";
-import garden from "../constants/farmers/garden";
-import ironwoodsawmill from "../constants/farmers/ironwoodsawmill";
-import smelter from "../constants/farmers/smelter";
-import tannery from "../constants/farmers/tannery";
-import weavermill from "../constants/farmers/weavermill";
+import lumberyard from "../constants/farmers/lumberyard"
+import ironmine from "../constants/farmers/ironmine"
+import oilpress from "../constants/farmers/oilpress"
+import garden from "../constants/farmers/garden"
+import ironwoodsawmill from "../constants/farmers/ironwoodsawmill"
+import smelter from "../constants/farmers/smelter"
+import tannery from "../constants/farmers/tannery"
+import weavermill from "../constants/farmers/weavermill"
+import champions from "../constants/champions"
+import HeroBox from "../components/Hero"
 
 const StyledAppBar = withStyles({
   root: {
@@ -73,7 +75,18 @@ const workers = [
 ]
 
 const specialWorkers = [townhall, tavern, emeraldinn, traininghall]
-const resourceWorkers = [garden, ironmine, ironwoodsawmill, lumberyard, oilpress, smelter, tannery, weavermill]
+const resourceWorkers = [
+  garden,
+  ironmine,
+  ironwoodsawmill,
+  lumberyard,
+  oilpress,
+  smelter,
+  tannery,
+  weavermill,
+]
+
+const fighters = champions.filter(champion => champion.class === 'Fighter')
 
 // const blueprints = [squiresword]
 
@@ -104,19 +117,24 @@ const styles = theme => ({
 class FullWidthTabs extends React.Component {
   state = {
     value: 0,
+    heroValue: null,
   }
 
   handleChange = (event, value) => {
-    this.setState({ value })
+    this.setState({ value, heroValue: value === 1 ? 0 : null })
   }
 
   handleChangeIndex = index => {
     this.setState({ value: index })
   }
 
-  render() {
-    const { value } = this.state
+  handleHeroChange = (event, value) => {
+    this.setState({ heroValue: value, value: null })
+  }
 
+  render() {
+    const { value, heroValue } = this.state
+    console.log("logs", value, heroValue)
     return (
       <div>
         <StyledAppBar position="static" color="default">
@@ -128,6 +146,7 @@ class FullWidthTabs extends React.Component {
             variant="fullWidth"
           >
             <StyledTab label="WORKERS" className="button" />
+            <StyledTab label="HEROES" className="button" />
           </StyledTabs>
         </StyledAppBar>
         {value === 0 && (
@@ -164,6 +183,32 @@ class FullWidthTabs extends React.Component {
                 ))}
               </div>
             </div>
+          </TabContainer>
+        )}
+        {value === 1 && (
+          <TabContainer>
+            <StyledAppBar position="static" color="default">
+              <StyledTabs
+                value={this.state.heroValue}
+                onChange={this.handleHeroChange}
+                indicatorColor="primary"
+                textColor="primary"
+                variant="fullWidth"
+              >
+                <StyledTab label="FIGHTERS" className="button" />
+              </StyledTabs>
+            </StyledAppBar>
+            {heroValue === 0 && (
+              <TabContainer>
+                <div className="CardboxGroupScroll">
+                  <div className="CardboxGroup">
+                    {fighters.map((fighter, index) => (
+                      <HeroBox key={index} details={fighter} />
+                    ))}
+                  </div>
+                </div>
+              </TabContainer>
+            )}
           </TabContainer>
         )}
       </div>
