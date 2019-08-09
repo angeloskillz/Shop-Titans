@@ -109,6 +109,7 @@ class FullWidthTabs extends React.Component {
 
   render() {
     const data = this.props.pageContext
+    console.log(data)
     const { value } = this.state
 
     const relevantBlueprints = blueprints.filter(
@@ -152,6 +153,34 @@ class FullWidthTabs extends React.Component {
                 ))}
               </Resources>
             </div>
+          </TabContainer>
+        )}
+        {value === 1 && (
+          <TabContainer>
+            <table class="table table-bordered table-hover table-condensed">
+              <thead>
+                <tr>
+                  <th title="Field #1">Level</th>
+                  <th title="Field #2">Upgrade Time</th>
+                  <th title="Field #3">Gold Investment</th>
+                  <th title="Field #4">Gems Investment</th>
+                  <th title="Field #5">Total Gold Cost</th>
+                  <th title="Field #6">Effect</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.levels.map((lvl, index) => (
+                  <tr key={index}>
+                    <td>{lvl.level}</td>
+                    <td>{lvl.time}</td>
+                    <td>{lvl.investments.gold.toLocaleString()}</td>
+                    <td>{lvl.investments.gems.toLocaleString()}</td>
+                    <td>{lvl.cost.toLocaleString()}</td>
+                    <td>{lvl.effect}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </TabContainer>
         )}
       </Layout>
