@@ -81,6 +81,18 @@ class FullWidthTabs extends React.Component {
 
     return (
       <div>
+        <p>
+          Hey there! We made this wiki with a massive focus on user interface
+          and user experience so that everyone can have the best possible
+          experience with Shop Titans. We wanted to take a moment and thank
+          everyone that uses this project, everyone that helped contribute to
+          it, Kabam for making this amazing game.
+        </p>
+        <p>
+          This wiki is available on any device online but it will also be able
+          to be installed as an App on your devices. Check out the guide to get
+          the app!
+        </p>
         <StyledAppBar position="static" color="default">
           <StyledTabs
             value={this.state.value}
@@ -92,13 +104,15 @@ class FullWidthTabs extends React.Component {
             <StyledTab label="Developers" className="button" />
             <StyledTab label="Contributors" className="button" />
             <StyledTab label="Roadmap" className="button" />
+            <StyledTab label="Changelog" className="button" />
           </StyledTabs>
         </StyledAppBar>
         {value === 0 && (
           <TabContainer>
-            <div className="Selectan">
-              <h1>Lead Developers</h1>
-            </div>
+            <h2>Skillz4Killz: Lead Dev (Full Stack)</h2>
+            <p></p>
+            <h2>AngeloC: Designer & Front End Dev</h2>
+            <p></p>
           </TabContainer>
         )}
         {value === 1 && (
@@ -121,11 +135,65 @@ class FullWidthTabs extends React.Component {
               <div>
                 <h1>Version 1 Release Plan:</h1>
                 <ul>
-                  <li>Homepage With Tabs showing Workers and Heroes</li>
-                  <li>Each worker has it's own individual page.</li>
-                  <li>Each blueprint has it's own individual page.</li>
+                  <li>✅ Homepage With Tabs showing Workers and Heroes</li>
+                  <li>✅ Each worker has it's own individual page.</li>
+                  <li>✅ Each blueprint has it's own individual page.</li>
+                  <li>✅ PWA to allow users to create an App on their devices.</li>
+                  <li>✅ Credits to contributors.</li>
+                  <li>✅ Roadmap</li>
+                  <li>✅ Changelog</li>
                 </ul>
               </div>
+
+              <div>
+                <h1>Version 2</h1>
+                <ul>
+                  <li>
+                    Guides
+                    <ul>
+                      <li>
+                        📝 Users can create the guides through Netlify CMS right
+                        on the dashboard.
+                      </li>
+                      <li>📝 Users can submit guides with Google Docs.</li>
+                      <li>
+                        📝 Atleast a few guides must be written as a start.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Each worker has it's own individual page.</li>
+                </ul>
+              </div>
+            </div>
+          </TabContainer>
+        )}
+        {value === 3 && (
+          <TabContainer>
+            <div>
+              <h1>Latest Update:</h1>
+              <ul>
+                <li>✅ Added a footer with copyrights to Kabam.</li>
+                <li>
+                  ✅ Added privacy policy showing we don't store any user data.
+                </li>
+                <li>✅ Created a navbar.</li>
+                <li>✅ Added Discord Links on home page.</li>
+                <li>
+                  Worker Cards
+                  <ul>
+                    ✅ Added Worker cards on home page in first tab.
+                    <li>
+                      ✅ Cards are separated into sections based on their type.
+                    </li>
+                    <li>
+                      ✅ Cards are able to be clicked to open their individual
+                      page for more details.
+                    </li>
+                  </ul>
+                </li>
+                <li>✅ Added Hero cards on home page in second tab.</li>
+                <li>📝 Added Champion cards on home page in third tab.</li>
+              </ul>
             </div>
           </TabContainer>
         )}

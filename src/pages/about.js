@@ -20,7 +20,6 @@ export default props => (
       </div>
       <div className="HeroGroup">
         <h1>About Us</h1>
-        <p>Shop Titans Wiki</p>
       </div>
     </div>
     <About />
