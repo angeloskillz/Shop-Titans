@@ -109,8 +109,20 @@ class FullWidthTabs extends React.Component {
 
   render() {
     const data = this.props.pageContext
-    console.log(data)
     const { value } = this.state
+
+    const test = {}
+
+    for (const b of blueprints) {
+      if (
+        !b["Required Worker"] === data.title &&
+        !b["Required Worker__1"] === data.title
+      )
+        continue
+
+      if (!test[b.Type]) test[b.Type] = [b]
+      else test[b.Type].push(b)
+    }
 
     const relevantBlueprints = blueprints.filter(
       b =>
@@ -144,15 +156,17 @@ class FullWidthTabs extends React.Component {
         </StyledAppBar>
         {value === 0 && (
           <TabContainer>
-            <div className="CardboxGroupScroll">
-              <Resources className="CardboxGroup">
-                {relevantBlueprints.map((blueprint, index) => (
-                  <div key={index}>
-                    <Blueprint details={blueprint}></Blueprint>
-                  </div>
-                ))}
-              </Resources>
-            </div>
+            {Object.values(test).map(blueprints => (
+              <div className="CardboxGroupScroll">
+                <Resources className="CardboxGroup">
+                  {blueprints.map((blueprint, index) => (
+                    <div>
+                      <Blueprint key={index} details={blueprint}></Blueprint>
+                    </div>
+                  ))}
+                </Resources>
+              </div>
+            ))}
           </TabContainer>
         )}
         {value === 1 && (
