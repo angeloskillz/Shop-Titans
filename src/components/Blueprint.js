@@ -3,6 +3,7 @@ import styled from "styled-components"
 import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
 import { Link } from "gatsby"
+import Image from "./BlueprintImage"
 
 const BlueprintBox = styled.div`
   position: relative;
@@ -47,12 +48,6 @@ const BlueprintBox = styled.div`
 //   box-shadow: 0px 8px 12px #bdccdb;
 //   margin: 0 auto;
 // `
-const Icon = styled.img`
-  position: relative;
-  width: 54px;
-  height: 54px;
-  margin-top: 10px;
-`
 
 const SubDescription = styled.h2`
   font-family: Roboto;
@@ -67,15 +62,15 @@ const SubDescription = styled.h2`
   width: 80px;
 `
 
-export default (props) => {
+export default props => {
   const item = blueprints.find(b => b.Name === props.details.Name)
   const name = cleanName(props.details.Name)
   return (
     <div>
       <BlueprintBox>
         <Link to={`/blueprints/${props.details.Name}`}>
-          <Icon
-            src={require(`../images/Items/${item.Type}s/${name}.png`)}
+          <Image
+            filename={name}
             alt={props.title}
           />
         </Link>

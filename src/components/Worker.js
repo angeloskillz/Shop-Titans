@@ -2,8 +2,26 @@ import React from "react"
 import styled from "styled-components"
 import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
-import Image from "../components/GImage"
+import Image from "../components/WorkerUnlocks"
 
+const BlueprintBox = styled.div`
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  border-radius: 19px;
+  background: #38ec94;
+  box-shadow: 0px 8px 12px #bdccdb;
+`
+
+const Blueprint = styled.img`
+  padding: 10px;
+  border-radius: 19px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background: #38ec94;
+`
 const Class = styled.a`
   display: flex;
   flex-direction: column;
@@ -162,10 +180,9 @@ export default props => {
               ).Type
               return (
                 <div key={index}>
-                  <Image
-                    alt={props.details.name}
-                    filename={`../images/Items/${itemType}s/${blueprintName}.png`}
-                  />
+                  <BlueprintBox>
+                    <Image alt={props.details.name} filename={blueprintName} />
+                  </BlueprintBox>
                 </div>
               )
             })}
