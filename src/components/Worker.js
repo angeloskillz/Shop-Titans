@@ -121,7 +121,7 @@ const Currency = styled.img`
 
 export default props => {
   return (
-    <Class href={`/workers/${props.details.name}`}>
+    <Class href={`/workers/${props.details.name}`} className={props.type !== "worker" ? "not-active" : ""}>
       <Icons
         style={{
           background:
