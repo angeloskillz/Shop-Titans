@@ -30,18 +30,6 @@ const Description = styled.h2`
   white-space: pre-wrap;
 `
 
-const SubDescription = styled.p`
-  font-family: Roboto;
-  font-weight: normal;
-  font-size: 12px;
-  color: #406081;
-  text-align: center;
-  margin: 2px;
-  padding-left: 16px;
-  padding-right: 16px;
-  white-space: pre-wrap;
-`
-
 const contributors = [
   { name: "LordAzuRa", guild: "Guild Name" },
   { name: "hsidnomeL", guild: "River Echo" },

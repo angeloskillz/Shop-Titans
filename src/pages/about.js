@@ -7,17 +7,6 @@ import SEO from "../components/seo"
 import About from "../components/About"
 import styled from "styled-components"
 
-const Title = styled.h1`
-  font-family: Roboto;
-  font-weight: 800;
-  font-size: 18px;
-  text-align: center;
-  color: #ff665f;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 0;
-`
-
 const Description = styled.h2`
   font-family: Roboto;
   font-weight: bold;
@@ -30,17 +19,6 @@ const Description = styled.h2`
   white-space: pre-wrap;
 `
 
-const SubDescription = styled.p`
-  font-family: Roboto;
-  font-weight: normal;
-  font-size: 12px;
-  color: #406081;
-  text-align: center;
-  margin: 2px;
-  padding-left: 16px;
-  padding-right: 16px;
-  white-space: pre-wrap;
-`
 export default props => (
   <Layout>
     <SEO title="About" />

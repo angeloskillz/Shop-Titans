@@ -2,15 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
+import Image from "../components/GImage"
 
-const Blueprint = styled.img`
-  padding: 10px;
-  border-radius: 19px;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  background: #38ec94;
-`
 const Class = styled.a`
   display: flex;
   flex-direction: column;
@@ -121,7 +114,10 @@ const Currency = styled.img`
 
 export default props => {
   return (
-    <Class href={`/workers/${props.details.name}`} className={props.type !== "worker" ? "not-active" : ""}>
+    <Class
+      href={`/workers/${props.details.name}`}
+      className={props.type !== "worker" ? "not-active" : ""}
+    >
       <Icons
         style={{
           background:
@@ -141,7 +137,13 @@ export default props => {
       </Icons>
       <Title>{props.details.name}</Title>
       <Description>{props.details.title}</Description>
-      <LvlRq>{props.details.level_required && props.details.prerequisite && props.details.prerequisite !== '---' ? `Required: ${props.details.prerequisite}` : `Level Required: ${props.details.level_required}`}</LvlRq>
+      <LvlRq>
+        {props.details.level_required &&
+        props.details.prerequisite &&
+        props.details.prerequisite !== "---"
+          ? `Required: ${props.details.prerequisite}`
+          : `Level Required: ${props.details.level_required}`}
+      </LvlRq>
 
       <Description>
         {props.type === "worker" ? "Blueprints Unlocked:" : "Description:"}
@@ -160,9 +162,9 @@ export default props => {
               ).Type
               return (
                 <div key={index}>
-                  <Blueprint
-                    src={require(`../images/Items/${itemType}s/${blueprintName}.png`)}
+                  <Image
                     alt={props.details.name}
+                    filename={`../images/Items/${itemType}s/${blueprintName}.png`}
                   />
                 </div>
               )
