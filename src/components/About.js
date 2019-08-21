@@ -5,6 +5,42 @@ import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
 import Typography from "@material-ui/core/Typography"
+import styled from "styled-components"
+
+const Title = styled.h1`
+  font-family: Roboto;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: #ff665f;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+`
+
+const Description = styled.h2`
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 14px;
+  color: #406081;
+  text-align: center;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: pre-wrap;
+`
+
+const SubDescription = styled.p`
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 12px;
+  color: #406081;
+  text-align: center;
+  margin: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: pre-wrap;
+`
 
 const contributors = [
   { name: "LordAzuRa", guild: "Guild Name" },
@@ -84,29 +120,18 @@ class FullWidthTabs extends React.Component {
 
     return (
       <div>
-        <p>
+        <Description>
           Hey there! We made this wiki with a massive focus on user interface
           and user experience so that everyone can have the best possible
           experience with Shop Titans. We wanted to take a moment and thank
           everyone that uses this project, everyone that helped contribute to
           it, Kabam for making this amazing game.
-        </p>
-        <p>
+        </Description>
+        <Description>
           This wiki is available on any device online but it will also be able
           to be installed as an App on your devices. Check out the guide to get
           the app!
-        </p>
-        <p>
-          If you wish to help support this project, please contact Kabam on the
-          Official Discord Server and ask them to give approval to monetize this
-          project. If we had permission to monetize, we could add in a lot more
-          features a lot faster. A better website url, Guild features, Upgrade
-          tracker, Streamer/Youtuber features, Guides, and soo much more! These
-          features cost money and we can only afford so much ourself. At the
-          moment, this is being hosted for free thanks to Netlify. But with more
-          features we need to build a powerful backend which will begin costing
-          money. Check out the Roadmap for more details on the stuff we want to build.
-        </p>
+        </Description>
         <StyledAppBar position="static" color="default">
           <StyledTabs
             value={this.state.value}
@@ -123,10 +148,8 @@ class FullWidthTabs extends React.Component {
         </StyledAppBar>
         {value === 0 && (
           <TabContainer>
-            <h2>Skillz4Killz: Lead Dev (Full Stack)</h2>
-            <p></p>
-            <h2>AngeloC: Designer & Front End Dev</h2>
-            <p></p>
+            <Title>Skillz4Killz: Lead Dev (Full Stack)</Title>
+            <Title>AngeloC: Designer & Front End Dev</Title>
           </TabContainer>
         )}
         {value === 1 && (
@@ -136,9 +159,9 @@ class FullWidthTabs extends React.Component {
             </div>
             {contributors.map((contributor, index) => (
               <div key={index}>
-                <p>
+                <Description>
                   {contributor.name} from {contributor.guild}
-                </p>
+                </Description>
               </div>
             ))}
           </TabContainer>
