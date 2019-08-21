@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import ReactModal from "react-modal"
 import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
 import { Link } from "gatsby"
+
 const BlueprintBox = styled.div`
   position: relative;
   width: 80px;
@@ -28,26 +28,26 @@ const BlueprintBox = styled.div`
     z-index: 1;
   }
 `
-const Title = styled.h1`
-  font-family: "Roboto";
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  color: black;
-  margin-top: 16px;
-  text-transform: uppercase;
-`
-const Icons = styled.div`
-  position: relative;
-  width: 80px;
-  height: 80px;
-  align-items: stretch;
-  border-radius: 40px;
-  background: #38ec94;
-  box-shadow: 0px 8px 12px #bdccdb;
-  margin: 0 auto;
-`
-const Icon1 = styled.img`
+// const Title = styled.h1`
+//   font-family: "Roboto";
+//   font-weight: bold;
+//   font-size: 18px;
+//   text-align: center;
+//   color: black;
+//   margin-top: 16px;
+//   text-transform: uppercase;
+// `
+// const Icons = styled.div`
+//   position: relative;
+//   width: 80px;
+//   height: 80px;
+//   align-items: stretch;
+//   border-radius: 40px;
+//   background: #38ec94;
+//   box-shadow: 0px 8px 12px #bdccdb;
+//   margin: 0 auto;
+// `
+const Icon = styled.img`
   position: relative;
   width: 54px;
   height: 54px;
@@ -74,7 +74,7 @@ export default (props) => {
     <div>
       <BlueprintBox>
         <Link to={`/blueprints/${props.details.Name}`}>
-          <Icon1
+          <Icon
             src={require(`../images/Items/${item.Type}s/${name}.png`)}
             alt={props.title}
           />

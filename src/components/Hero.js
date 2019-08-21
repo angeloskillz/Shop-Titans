@@ -13,6 +13,22 @@ const Class = styled.a`
   margin-left: 16px;
   margin-top: 16px;
 `
+const Icons = styled.div`
+  margin: 0 auto;
+  margin-top: 16px;
+  width: 70px;
+  border-radius: 26px;
+  background: #ff665f;
+`
+const HeroImg = styled.img`
+  position: relative;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+`
 
 const Title = styled.h1`
   font-family: Roboto;
@@ -99,6 +115,12 @@ export default class extends React.Component {
     return (
       <div tabIndex="0">
         <Class onClick={this.handleOpenModal} tabIndex="0">
+          <Icons>
+            <HeroImg
+              src={require(`../images/Hero Classes/${this.props.details.class}s/${this.props.details.subclass}.png`)}
+              alt={this.props.details.subclass}
+            />
+          </Icons>
           <Title>{this.props.details.subclass}</Title>
           <SubDescription>
             Prerequisites:{" "}
