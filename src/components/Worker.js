@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
 import Image from "../components/WorkerUnlocks"
 import WorkerImage from "../components/WorkerImage"
@@ -155,9 +154,6 @@ export default props => {
           <Resources>
             {props.details.blueprint_unlocks.map((blueprint, index) => {
               const blueprintName = cleanName(blueprint)
-              const itemType = blueprints.find(
-                b => cleanName(b.Name) === blueprintName
-              ).Type
               return (
                 <div key={index}>
                   <BlueprintBox>

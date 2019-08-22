@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
 import { Link } from "gatsby"
 import Image from "./BlueprintImage"
@@ -29,25 +28,6 @@ const BlueprintBox = styled.div`
     z-index: 1;
   }
 `
-// const Title = styled.h1`
-//   font-family: "Roboto";
-//   font-weight: bold;
-//   font-size: 18px;
-//   text-align: center;
-//   color: black;
-//   margin-top: 16px;
-//   text-transform: uppercase;
-// `
-// const Icons = styled.div`
-//   position: relative;
-//   width: 80px;
-//   height: 80px;
-//   align-items: stretch;
-//   border-radius: 40px;
-//   background: #38ec94;
-//   box-shadow: 0px 8px 12px #bdccdb;
-//   margin: 0 auto;
-// `
 
 const SubDescription = styled.h2`
   font-family: Roboto;
@@ -63,7 +43,6 @@ const SubDescription = styled.h2`
 `
 
 export default props => {
-  const item = blueprints.find(b => b.Name === props.details.Name)
   const name = cleanName(props.details.Name)
   return (
     <div>
