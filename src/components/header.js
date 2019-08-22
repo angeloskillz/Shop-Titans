@@ -49,8 +49,8 @@ class Header extends React.Component {
           <Link to="/">
             <img src={require("./../images/Logo.png")} alt="LOGOSTWIKI" />
           </Link>
-          <Link to="/overview">Overview</Link>
-          <Link to="/about">About</Link>
+          <Link to="/overview" style={{ color: this.state.hasScrolled ? "white" : "black"}}>Overview</Link>
+          <Link to="/about" style={{ color: this.state.hasScrolled ? "white" : "black"}}>About</Link>
         </div>
       </div>
     )
