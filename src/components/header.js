@@ -45,7 +45,6 @@ class Header extends React.Component {
       <div
         className={this.state.hasScrolled ? "Header HeaderScrolled" : "Header"}
       >
-        {console.log(this.props.daa)}
         <div className="HeaderGroup">
           <Link to="/">
             <img src={require("./../images/Logo.png")} alt="LOGOVGWIKI" />

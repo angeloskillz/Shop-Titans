@@ -134,7 +134,7 @@ class FullWidthTabs extends React.Component {
 
   render() {
     const { value, heroValue } = this.state
-    console.log("logs", value, heroValue)
+
     return (
       <div>
         <StyledAppBar position="static" color="default">
