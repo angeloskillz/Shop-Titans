@@ -55,8 +55,15 @@ module.exports = {
         path: `${__dirname}/src/constants/blueprints/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-material-ui`,
     'gatsby-transformer-javascript-frontmatter',
     `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
