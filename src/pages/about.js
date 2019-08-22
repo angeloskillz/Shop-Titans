@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import About from "../components/About"
 import styled from "styled-components"
+import { Button } from "@material-ui/core"
 
 const Description = styled.h2`
   font-family: Roboto;
@@ -34,13 +35,18 @@ export default props => (
       <div className="HeroGroup">
         <h1>About Us</h1>
         <Description>
-          To support this project, please ask Kabam to allow this project to
-          monetize. We could add in a lot more features a lot faster. A better
-          url, Guild features, Upgrade tracker, Streamer/Youtuber features,
-          Guides, and soo much more! These features cost money and we can only
-          afford so much ourself. Check out the Roadmap for more details on the
-          stuff we want to build.
+          Do you like this project? Help support it by going to the discord and
+          asking Kabam to allow this project to monetize. We could add in a lot
+          more features a lot faster. A better url, Guild features, Upgrade
+          tracker, Streamer/Youtuber features, Guides, and soo much more! These
+          features cost money and we can only afford so much ourself. Check out
+          the Roadmap for more details on the stuff we want to build.
         </Description>
+        <a href="https://discord.gg/shoptitans" style={{ margin: "15px" }}>
+          <Button variant="contained" color="primary">
+            Support The Project
+          </Button>
+        </a>
       </div>
     </div>
     <About />

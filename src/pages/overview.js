@@ -4,7 +4,6 @@ import ReactTable from "react-table"
 import React from "react"
 import blueprints from "../constants/blueprints"
 import { graphql } from "gatsby"
-import ImgHero from "gatsby-image"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
@@ -31,13 +30,12 @@ const IndexPage = props => (
   <Layout>
     <SEO title="Home" />
     <Hero>
-      <HeroContainer>
-        <div className="gradient" />
-      </HeroContainer>
+      <HeroContainer></HeroContainer>
       <div className="HeroGroup">
-        <h1>Shop Titans</h1>
+        <h1>Blueprints Overview</h1>
       </div>
     </Hero>
+
     <ReactTable
     style={{border: '1px solid transparent'}}
       data={blueprints}
@@ -55,6 +53,7 @@ const IndexPage = props => (
       getTdProps={(state, rowInfo, column, instance) => {
         return {
           onClick: (e, handleOriginal) => {
+            if (column.Header !== "Name") return
             window.location.assign(`/blueprints/${rowInfo.original.Name}`)
             // IMPORTANT! React-Table uses onClick internally to trigger
             // events like expanding SubComponents and pivots.
