@@ -53,6 +53,7 @@ const IndexPage = props => (
       getTdProps={(state, rowInfo, column, instance) => {
         return {
           onClick: (e, handleOriginal) => {
+            if (column.Header !== "Name") return
             window.location.assign(`/blueprints/${rowInfo.original.Name}`)
             // IMPORTANT! React-Table uses onClick internally to trigger
             // events like expanding SubComponents and pivots.
