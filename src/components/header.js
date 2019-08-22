@@ -1,6 +1,7 @@
 import React from "react"
 import "./header.css"
 import { Link } from "gatsby"
+import GatsbyImage from "gatsby-image"
 
 class Header extends React.Component {
   state = {
@@ -47,6 +48,7 @@ class Header extends React.Component {
       >
         <div className="HeaderGroup">
           <Link to="/">
+            <GatsbyImage fixed={props.data.imageOne.childImageSharp.fixed} />
             <img src={require("./../images/Logo.png")} alt="LOGOVGWIKI" />
           </Link>
           <Link to="/about">About</Link>
@@ -60,3 +62,15 @@ class Header extends React.Component {
 }
 
 export default Header
+
+export const pageQuery = graphql`
+  {
+    imageOne: file(relativePath: { eq: "Backgrounds/BG1.jpg" }) {
+      childImageSharp {
+        fixed(width: 1366) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
