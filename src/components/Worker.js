@@ -1,16 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
+import Image from "../components/WorkerUnlocks"
+import WorkerImage from "../components/WorkerImage"
+import IconImage from "../components/IconImage"
 
-const Blueprint = styled.img`
-  padding: 10px;
-  border-radius: 19px;
-  width: 30px;
-  height: 30px;
+const BlueprintBox = styled.div`
   position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  border-radius: 19px;
   background: #38ec94;
+  box-shadow: 0px 8px 12px #bdccdb;
 `
+
 const Class = styled.a`
   display: flex;
   flex-direction: column;
@@ -29,16 +33,10 @@ const Icons = styled.div`
   width: 70px;
   border-radius: 26px;
   background: #ff665f;
-`
-const HeroImg = styled.img`
-  position: relative;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
   padding-bottom: 10px;
   padding-top: 10px;
 `
+
 const Title = styled.h1`
   font-family: Roboto;
   font-weight: 800;
@@ -112,16 +110,13 @@ const Cost = styled.p`
   margin-left: 6px;
   margin-right: 16px;
 `
-const Currency = styled.img`
-  width: 15px;
-  height: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-`
 
 export default props => {
   return (
-    <Class href={`/workers/${props.details.name}`}>
+    <Class
+      href={`/workers/${props.details.name}`}
+      className={props.type !== "worker" ? "not-active" : ""}
+    >
       <Icons
         style={{
           background:
@@ -132,16 +127,20 @@ export default props => {
               : "orange",
         }}
       >
-        <HeroImg
-          src={require(`../images/Portraits/${cleanName(
-            props.details.name
-          )}.png`)}
+        <WorkerImage
+          filename={cleanName(props.details.name)}
           alt={props.details.name}
         />
       </Icons>
       <Title>{props.details.name}</Title>
       <Description>{props.details.title}</Description>
-      <LvlRq>{props.details.level_required && props.details.prerequisite && props.details.prerequisite !== '---' ? `Required: ${props.details.prerequisite}` : `Level Required: ${props.details.level_required}`}</LvlRq>
+      <LvlRq>
+        {props.details.level_required &&
+        props.details.prerequisite &&
+        props.details.prerequisite !== "---"
+          ? `Required: ${props.details.prerequisite}`
+          : `Level Required: ${props.details.level_required}`}
+      </LvlRq>
 
       <Description>
         {props.type === "worker" ? "Blueprints Unlocked:" : "Description:"}
@@ -155,15 +154,11 @@ export default props => {
           <Resources>
             {props.details.blueprint_unlocks.map((blueprint, index) => {
               const blueprintName = cleanName(blueprint)
-              const itemType = blueprints.find(
-                b => cleanName(b.Name) === blueprintName
-              ).Type
               return (
                 <div key={index}>
-                  <Blueprint
-                    src={require(`../images/Items/${itemType}s/${blueprintName}.png`)}
-                    alt={props.details.name}
-                  />
+                  <BlueprintBox>
+                    <Image alt={props.details.name} filename={blueprintName} />
+                  </BlueprintBox>
                 </div>
               )
             })}
@@ -173,16 +168,18 @@ export default props => {
       <Gold>
         {props.type === "resource" ? <Cost>Produces:</Cost> : null}
         {props.type === "resource" ? (
-          <Currency
-            src={require(`../images/Resources/${props.details.resource}.png`)}
+          <IconImage
+            filename={props.details.resource}
+            alt={props.details.resource}
           />
         ) : null}
         <Cost>Cost:</Cost>
-        <Currency src={require(`../images/Currencies/gold.png`)} />
+
+        <IconImage filename="gold" alt="gold" />
         <Cost>
           {props.type === "worker" ? props.details.gold_cost : "Free"}
         </Cost>
-        <Currency src={require(`../images/Currencies/gem.png`)} />
+        <IconImage filename="gems" alt="gem" />
         <Cost>{props.type === "worker" ? props.details.gem_cost : "Free"}</Cost>
       </Gold>
     </Class>

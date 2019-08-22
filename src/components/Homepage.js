@@ -15,7 +15,7 @@ import priestess from "../constants/workers/priestess"
 import scholar from "../constants/workers/scholar"
 import tailor from "../constants/workers/tailor"
 import wizard from "../constants/workers/wizard"
-import stats from "../constants/workers/stats"
+// import stats from "../constants/workers/stats"
 import townhall from "../constants/special/townhall"
 import tavern from "../constants/special/tavern"
 import emeraldinn from "../constants/special/emeraldinn"
@@ -134,7 +134,7 @@ class FullWidthTabs extends React.Component {
 
   render() {
     const { value, heroValue } = this.state
-    console.log("logs", value, heroValue)
+
     return (
       <div>
         <StyledAppBar position="static" color="default">
