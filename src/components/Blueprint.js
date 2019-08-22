@@ -43,15 +43,16 @@ const SubDescription = styled.h2`
 
 export default props => {
   const name = cleanName(props.details.Name)
+  // <Link to={`/blueprints/${props.details.Name}`}>
+  //         <Image
+  //           filename={name}
+  //           alt={props.title}
+  //         />
+  //       </Link>
   return (
     <div>
       <BlueprintBox>
-        <Link to={`/blueprints/${props.details.Name}`}>
-          <Image
-            filename={name}
-            alt={props.title}
-          />
-        </Link>
+        <Image filename={name} alt={props.title} />
       </BlueprintBox>
       <SubDescription>{props.details.Name}</SubDescription>
     </div>
