@@ -47,12 +47,10 @@ class Header extends React.Component {
       >
         <div className="HeaderGroup">
           <Link to="/">
-            <img src={require("./../images/Logo.png")} alt="LOGOVGWIKI" />
+            <img src={require("./../images/Logo.png")} alt="LOGOSTWIKI" />
           </Link>
+          <Link to="/overview">Overview</Link>
           <Link to="/about">About</Link>
-          <Link to="/">Guides(soon)</Link>
-          <Link to="/">News(soon)</Link>
-          <Link to="/">Guilds(soon)</Link>
         </div>
       </div>
     )
@@ -60,3 +58,7 @@ class Header extends React.Component {
 }
 
 export default Header
+
+// <Link to="/">Guides(soon)</Link>
+// <Link to="/">News(soon)</Link>
+// <Link to="/">Guilds(soon)</Link>
