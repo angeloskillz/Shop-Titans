@@ -35,13 +35,14 @@ export default props => (
       <div className="HeroGroup">
         <h1>About Us</h1>
         <Description>
-          Do you like this project? Help support it by going to the discord and
+          Do you like this project? Support it by going to the discord and
           asking Kabam to allow this project to monetize. We could add in a lot
           more features a lot faster. A better url, Guild features, Upgrade
-          tracker, Streamer/Youtuber features, Guides, and soo much more! These
-          features cost money and we can only afford so much ourself. Check out
-          the Roadmap for more details on the stuff we want to build.
+          tracker, Streamer/Youtuber features, Guides, and so much more! These
+          features cost money and we can only afford so much ourselves. Check out
+          the Roadmap for more details on what we want to build.
         </Description>
+        <Description>Click Below To Support The Project!</Description>
         <a href="https://discord.gg/shoptitans" style={{ margin: "15px" }}>
           <Button variant="contained" color="primary">
             Support The Project
