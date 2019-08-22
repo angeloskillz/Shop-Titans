@@ -16,7 +16,7 @@ const BlueprintBox = styled.div`
   box-shadow: 0px 8px 12px #bdccdb;
 `
 
-const Class = styled.div`
+const Class = styled.a`
   display: flex;
   flex-direction: column;
   position: relative;
