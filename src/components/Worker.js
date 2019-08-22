@@ -3,6 +3,8 @@ import styled from "styled-components"
 import blueprints from "../constants/blueprints"
 import { cleanName } from "../utils/util"
 import Image from "../components/WorkerUnlocks"
+import WorkerImage from "../components/WorkerImage"
+import IconImage from "../components/IconImage"
 
 const BlueprintBox = styled.div`
   position: relative;
@@ -14,15 +16,7 @@ const BlueprintBox = styled.div`
   box-shadow: 0px 8px 12px #bdccdb;
 `
 
-const Blueprint = styled.img`
-  padding: 10px;
-  border-radius: 19px;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  background: #38ec94;
-`
-const Class = styled.a`
+const Class = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -40,16 +34,10 @@ const Icons = styled.div`
   width: 70px;
   border-radius: 26px;
   background: #ff665f;
-`
-const HeroImg = styled.img`
-  position: relative;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
   padding-bottom: 10px;
   padding-top: 10px;
 `
+
 const Title = styled.h1`
   font-family: Roboto;
   font-weight: 800;
@@ -123,12 +111,6 @@ const Cost = styled.p`
   margin-left: 6px;
   margin-right: 16px;
 `
-const Currency = styled.img`
-  width: 15px;
-  height: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-`
 
 export default props => {
   return (
@@ -146,10 +128,8 @@ export default props => {
               : "orange",
         }}
       >
-        <HeroImg
-          src={require(`../images/Portraits/${cleanName(
-            props.details.name
-          )}.png`)}
+        <WorkerImage
+          filename={cleanName(props.details.name)}
           alt={props.details.name}
         />
       </Icons>
@@ -192,16 +172,18 @@ export default props => {
       <Gold>
         {props.type === "resource" ? <Cost>Produces:</Cost> : null}
         {props.type === "resource" ? (
-          <Currency
-            src={require(`../images/Resources/${props.details.resource}.png`)}
+          <IconImage
+            filename={props.details.resource}
+            alt={props.details.resource}
           />
         ) : null}
         <Cost>Cost:</Cost>
-        <Currency src={require(`../images/Currencies/gold.png`)} />
+
+        <IconImage filename="gold" alt="gold" />
         <Cost>
           {props.type === "worker" ? props.details.gold_cost : "Free"}
         </Cost>
-        <Currency src={require(`../images/Currencies/gem.png`)} />
+        <IconImage filename="gems" alt="gem" />
         <Cost>{props.type === "worker" ? props.details.gem_cost : "Free"}</Cost>
       </Gold>
     </Class>

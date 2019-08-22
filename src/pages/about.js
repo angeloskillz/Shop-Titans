@@ -34,9 +34,8 @@ export default props => (
       <div className="HeroGroup">
         <h1>About Us</h1>
         <Description>
-          To support this project, please ask Kabam on the Discord and to give
-          approval to monetize this project. If we had permission to monetize,
-          we could add in a lot more features a lot faster. A better website
+          To support this project, please ask Kabam to allow this project to
+          monetize. We could add in a lot more features a lot faster. A better
           url, Guild features, Upgrade tracker, Streamer/Youtuber features,
           Guides, and soo much more! These features cost money and we can only
           afford so much ourself. Check out the Roadmap for more details on the

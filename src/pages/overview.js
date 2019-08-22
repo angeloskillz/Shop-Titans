@@ -27,11 +27,7 @@ const IndexPage = props => (
       </div>
       <div className="HeroGroup">
         <h1>Shop Titans</h1>
-        <img
-          src={require("../images/Divider.png")}
-          alt="divider"
-          style={{ width: "300px" }}
-        />
+
         <p>Update 2.0.1</p>
       </div>
     </div>
@@ -47,22 +43,22 @@ const IndexPage = props => (
             background: rowInfo.row.age > 20 ? "green" : "white",
           },
         }
-			}}
-			getTdProps={(state, rowInfo, column, instance) => {
-				return {
-					onClick: (e, handleOriginal) => {
-						window.location.assign(`/blueprints/${rowInfo.original.Name}`);
-						// IMPORTANT! React-Table uses onClick internally to trigger
-						// events like expanding SubComponents and pivots.
-						// By default a custom 'onClick' handler will override this functionality.
-						// If you want to fire the original onClick handler, call the
-						// 'handleOriginal' function.
-						if (handleOriginal) {
-							handleOriginal()
-						}
-					}
-				}
-			}}
+      }}
+      getTdProps={(state, rowInfo, column, instance) => {
+        return {
+          onClick: (e, handleOriginal) => {
+            window.location.assign(`/blueprints/${rowInfo.original.Name}`)
+            // IMPORTANT! React-Table uses onClick internally to trigger
+            // events like expanding SubComponents and pivots.
+            // By default a custom 'onClick' handler will override this functionality.
+            // If you want to fire the original onClick handler, call the
+            // 'handleOriginal' function.
+            if (handleOriginal) {
+              handleOriginal()
+            }
+          },
+        }
+      }}
     />
   </Layout>
 )

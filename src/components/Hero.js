@@ -149,7 +149,7 @@ export default class extends React.Component {
           <Gold>
             <Currency src={require(`../images/Currencies/gold.png`)} />
             <Cost>{this.props.details.cost.gold}</Cost>
-            <Currency src={require(`../images/Currencies/gem.png`)} />
+            <Currency src={require(`../images/Currencies/gems.png`)} />
             <Cost>{this.props.details.cost.gems}</Cost>
             {this.props.details.stats.map((stat, index) => (
               <div style={{ display: "flex" }} key={index}>
