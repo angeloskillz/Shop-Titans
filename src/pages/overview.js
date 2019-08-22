@@ -31,18 +31,12 @@ const IndexPage = props => (
   <Layout>
     <SEO title="Home" />
     <Hero>
-      <HeroContainer>
-        <ImgHero
-          imgStyle={{ objectPosition: "center top" }}
-          className="Img"
-          fluid={props.data.imageOne.childImageSharp.fluid}
-        />
-        <div className="gradient" />
-      </HeroContainer>
+      <HeroContainer></HeroContainer>
       <div className="HeroGroup">
-        <h1>Shop Titans</h1>
+        <h1>Blueprints Overview</h1>
       </div>
     </Hero>
+
     <ReactTable
       data={blueprints}
       columns={columns}
