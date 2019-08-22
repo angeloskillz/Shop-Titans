@@ -15,7 +15,7 @@ const IndexPage = props => (
         <ImgHero
           imgStyle={{ objectPosition: "center top" }}
           className="Img"
-          fluid={props.data.imageOne.childImageSharp.fixed}
+          fluid={props.data.imageOne.childImageSharp.fluid}
         />
         <div className="gradient" />
       </div>
@@ -44,8 +44,8 @@ export const pageQuery = graphql`
   {
     imageOne: file(relativePath: { eq: "Backgrounds/BG1.jpg" }) {
       childImageSharp {
-        fixed(width: 1366) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1366) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
