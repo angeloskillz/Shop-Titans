@@ -37,6 +37,7 @@ const IndexPage = props => (
     </Hero>
 
     <ReactTable
+    style={{border: '1px solid transparent'}}
       data={blueprints}
       columns={columns}
       showPagination={false}

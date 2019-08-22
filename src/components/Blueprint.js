@@ -30,7 +30,6 @@ const BlueprintBox = styled.div`
 `
 
 const SubDescription = styled.h2`
-  font-family: Roboto;
   font-weight: bold;
   font-size: 14px;
   color: #406081;

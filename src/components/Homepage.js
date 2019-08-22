@@ -152,7 +152,7 @@ class FullWidthTabs extends React.Component {
         {value === 0 && (
           <TabContainer>
             <div className="Selectan">
-              <h1>Workers</h1>
+              <h1 style={{color: '#ff665f'}}>Workers</h1>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -163,7 +163,7 @@ class FullWidthTabs extends React.Component {
             </div>
 
             <div className="Selectan">
-              <h1>Special</h1>
+              <h1 style={{color: 'orange'}}>Special</h1>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -174,7 +174,7 @@ class FullWidthTabs extends React.Component {
             </div>
 
             <div className="Selectan">
-              <h1>Producers</h1>
+              <h1 style={{color: 'lightblue'}}>Producers</h1>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">

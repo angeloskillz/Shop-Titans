@@ -38,7 +38,7 @@ const Icons = styled.div`
 `
 
 const Title = styled.h1`
-  font-family: Roboto;
+font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, sans-serif;
   font-weight: 800;
   font-size: 18px;
   text-align: center;
@@ -48,7 +48,6 @@ const Title = styled.h1`
   margin-bottom: 0;
 `
 const Description = styled.h2`
-  font-family: Roboto;
   font-weight: bold;
   font-size: 14px;
   color: #406081;
@@ -60,7 +59,6 @@ const Description = styled.h2`
 `
 
 const SubDescription = styled.p`
-  font-family: Roboto;
   font-weight: normal;
   font-size: 12px;
   color: #406081;
@@ -77,7 +75,6 @@ const LvlRq = styled.div`
   margin-right: 56px;
   border-radius: 20px;
   background: #bdccdb80;
-  font-family: Roboto;
   font-weight: normal;
   font-size: 12px;
   text-align: center;
@@ -102,7 +99,6 @@ const Gold = styled.div`
   justify-content: flex-end;
 `
 const Cost = styled.p`
-  font-family: Roboto;
   font-weight: normal;
   font-size: 12px;
   color: #406081;
@@ -132,7 +128,15 @@ export default props => {
           alt={props.details.name}
         />
       </Icons>
-      <Title>{props.details.name}</Title>
+      <Title
+      style={{
+        color:
+          props.type === "worker"
+            ? "ff665f"
+            : props.type === "resource"
+            ? "lightblue"
+            : "orange",
+      }}>{props.details.name}</Title>
       <Description>{props.details.title}</Description>
       <LvlRq>
         {props.details.level_required &&
