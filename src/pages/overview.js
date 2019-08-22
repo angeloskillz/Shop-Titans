@@ -4,7 +4,6 @@ import ReactTable from "react-table"
 import React from "react"
 import blueprints from "../constants/blueprints"
 import { graphql } from "gatsby"
-import ImgHero from "gatsby-image"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
