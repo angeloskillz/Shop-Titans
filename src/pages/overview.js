@@ -32,11 +32,6 @@ const IndexPage = props => (
     <SEO title="Home" />
     <Hero>
       <HeroContainer>
-        <ImgHero
-          imgStyle={{ objectPosition: "center top" }}
-          className="Img"
-          fluid={props.data.imageOne.childImageSharp.fluid}
-        />
         <div className="gradient" />
       </HeroContainer>
       <div className="HeroGroup">
@@ -44,6 +39,7 @@ const IndexPage = props => (
       </div>
     </Hero>
     <ReactTable
+    style={{border: '1px solid transparent'}}
       data={blueprints}
       columns={columns}
       showPagination={false}

@@ -5,48 +5,58 @@ import workers from "../constants/workers/workers"
 import { cleanName } from "../utils/util"
 import blueprints from "../constants/blueprints"
 
+const BlueprintBox = styled.div`
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left:auto;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  border-radius: 19px;
+  background: #38ec94;
+  box-shadow: 0px 8px 12px #bdccdb;
+  margin-top: 16px;
+`
+
 const Currency = styled.img`
-  width: 50px;
   height: 50px;
+  margin-top: 16px;
 `
 
 const Cost = styled.p`
-  font-size: 16px;
-  color: #6f879f;
-  margin-bottom: 0px;
+padding: 6px;
+padding-left: 16px;
+padding-right: 16px;
+border-radius: 20px;
+background: #bdccdb80;
+font-weight: normal;
+font-size: 12px;
+text-align: center;
+color: #406081;
 `
 
 const Title = styled.h1`
-  font-family: "QuadratSerial";
   font-weight: bold;
   font-size: 18px;
   text-align: center;
-  color: #fff;
-  text-shadow: 0px 3px 6px #000;
+  color: #000;
   text-transform: uppercase;
   display: block;
 `
 
 const Icon1 = styled.img`
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 20px;
+
+width: 40px;
+height: 40px;
 `
-const Icon2 = styled.img`
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 20px;
-  filter: blur(9px);
-`
+
 
 const Resources = styled.div`
   display: flex;
   box-sizing: border-box;
   justify-content: space-around;
   flex-wrap: wrap;
-  font-family: "Roboto";
   font-size: 14px;
   text-align: left;
   color: #bc9060;
@@ -56,12 +66,10 @@ const Resources = styled.div`
 `
 
 const SubDescription = styled.h2`
-  font-family: Roboto;
   font-weight: normal;
-  font-style: italic;
   font-size: 14px;
   text-align: center;
-  color: #fff;
+  color: #000;
   margin-bottom: 16px;
   padding-left: 16px;
   padding-right: 16px;
@@ -131,14 +139,10 @@ export default ({ pageContext: data }) => {
 
   return (
     <Layout>
-      <Icon2
-        src={require(`../images/Items/${data.Type}s/${name}.png`)}
-        alt={data.title}
-      />
-      <Icon1
-        src={require(`../images/Items/${data.Type}s/${name}.png`)}
-        alt={data.title}
-      />
+      <div>
+      <BlueprintBox>
+                    <Icon1 src={require(`../images/Items/${data.Type}s/${name}.png`)} alt={data.title}/>
+                  </BlueprintBox>
       <Title>{data.Name}</Title>
       <SubDescription>{data.Type}</SubDescription>
       <SubDescription>Tier: {data.Tier}</SubDescription>
@@ -151,34 +155,34 @@ export default ({ pageContext: data }) => {
       <Resources>
         {data["Unlock Prerequisite"] !== "---" ? (
           <div>
-            <Cost>{data["Unlock Prerequisite"]}</Cost>
             <Currency
               src={require(`../images/Portraits/${workers[
                 data["Required Worker"].toLowerCase()
               ].name.toLowerCase()}.png`)}
             />
+            <Cost>{data["Unlock Prerequisite"]}</Cost>
           </div>
         ) : null}
         <div>
-          <Cost>{data["Research Scrolls"]}</Cost>
           <Currency src={require(`../images/Currencies/bp_unlock.png`)} />
+          <Cost>{data["Research Scrolls"]}</Cost>
         </div>
         <div>
-          <Cost>Level {data["Worker Level"]}</Cost>
           <Currency
             src={require(`../images/Portraits/${workers[
               data["Required Worker"].toLowerCase()
             ].name.toLowerCase()}.png`)}
           />
+          <Cost>Level {data["Worker Level"]}</Cost>
         </div>
         {data["Required Worker__1"] !== "---" ? (
           <div>
-            <Cost>Level {data["Worker Level__1"]}</Cost>
             <Currency
               src={require(`../images/Portraits/${workers[
                 data["Required Worker__1"].toLowerCase()
               ].name.toLowerCase()}.png`)}
             />
+            <Cost>Level {data["Worker Level__1"]}</Cost>
           </div>
         ) : null}
       </Resources>
@@ -188,27 +192,27 @@ export default ({ pageContext: data }) => {
         {resourceNames.map((resource, index) =>
           data[resource] !== "---" ? (
             <div key={index}>
-              <Cost>{data[resource]}</Cost>
               <Currency src={require(`../images/Resources/${resource}.png`)} />
+              <Cost>{data[resource]}</Cost>
             </div>
           ) : null
         )}
 
         {data.Component !== "---" ? (
           <div>
-            <Cost>{data["Amount Needed"]}</Cost>
             <Currency
               src={require(`../images/${folder}/${componentName}.png`)}
             />
+            <Cost>{data["Amount Needed"]}</Cost>
           </div>
         ) : null}
 
         {data["Component__1"] !== "---" ? (
           <div>
-            <Cost>{data["Amount Needed__1"]}</Cost>
             <Currency
               src={require(`../images/${folder1}/${componentName1}.png`)}
             />
+            <Cost>{data["Amount Needed__1"]}</Cost>
           </div>
         ) : null}
       </Resources>
@@ -217,8 +221,8 @@ export default ({ pageContext: data }) => {
       <Resources>
         {stats.map((stat, index) => (
           <div key={index}>
-            <Cost>{data[stat.prop]}</Cost>
             <Currency src={require(`../images/Icons/st_${stat.name}.png`)} />
+            <Cost>{data[stat.prop]}</Cost>
           </div>
         ))}
       </Resources>
@@ -227,17 +231,14 @@ export default ({ pageContext: data }) => {
       <Resources>
         {energy.map((stat, index) => (
           <div key={index}>
+            <Currency src={require("../images/Currencies/energy.png")} />
             <Cost>
               {stat.split(" ")[0]}: {data[stat]}
             </Cost>
-            <Currency src={require("../images/Currencies/energy.png")} />
           </div>
         ))}
       </Resources>
 
-      <div className="scrollable">
-        <div className="gradientmodal" />
-      </div>
       {basic
         .filter(key => data[key] !== "---")
         .map((key, index) => (
@@ -265,6 +266,7 @@ export default ({ pageContext: data }) => {
           </SubDescription>
         </div>
       ))}
+      </div>
     </Layout>
   )
 }
