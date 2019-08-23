@@ -32,6 +32,16 @@ const Hero = styled.div`
   text-align: center;
   color: white;
 `
+const Title = styled.h1`
+  font-family: Roboto;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: #ff665f;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+`
 
 const IndexPage = props => {
   const relevantBlueprints = {}
@@ -52,15 +62,21 @@ const IndexPage = props => {
         </div>
       </Hero>
 
-      {Object.values(relevantBlueprints).map(blueprints => (
-        <div className="CardboxGroupScroll">
-          <Resources className="CardboxGroup">
-            {blueprints.map((blueprint, index) => (
-              <div>
-              <BlueprintCard details={blueprint} key={index}></BlueprintCard>
-              </div>
-            ))}
-          </Resources>
+      {Object.values(relevantBlueprints).map((blueprints, index) => (
+        <div key={index}>
+          <div className="Selectan">
+            <h1>{blueprints[0].Type}s</h1>
+          </div>
+          <div className="CardboxGroupScroll">
+            <Resources className="CardboxGroup">
+              {blueprints.map((blueprint, printIndex) => (
+                <BlueprintCard
+                  details={blueprint}
+                  key={printIndex}
+                ></BlueprintCard>
+              ))}
+            </Resources>
+          </div>
         </div>
       ))}
       {/*blueprints.map((blueprint, index) => (
