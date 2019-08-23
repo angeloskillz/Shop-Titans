@@ -5,36 +5,6 @@ import Image from "./WorkerImage"
 import IconImage from "../components/IconImage"
 import workers from "../constants/workers/workers"
 
-const BlueprintBox = styled.div`
-  position: relative;
-  width: 40px;
-  height: 40px;
-  padding: 9px;
-  border-radius: 19px;
-  background: #38ec94;
-  box-shadow: 0px 8px 12px #bdccdb;
-`
-
-const Required = styled.p`
-  font-weight: normal;
-  font-size: 14px;
-  color: #406081;
-  margin-left: 6px;
-`
-
-const Requirements = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  font-size: 14px;
-  text-align: left;
-  color: #bc9060;
-  margin-top: -5px;
-  margin-bottom: 0px;
-  text-align: center;
-`
-
 const Class = styled.div`
   display: flex;
   flex-direction: column;
@@ -91,24 +61,6 @@ const SubDescription = styled.p`
   white-space: pre-wrap;
 `
 
-const LvlRq = styled.div`
-  padding: 6px;
-  margin-left: 30px;
-  margin-right: 30px;
-  border-radius: 20px;
-  background: #bdccdb80;
-  font-weight: normal;
-  font-size: 12px;
-  text-align: center;
-  color: #406081;
-`
-const Resources = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: center;
-`
 const Gold = styled.div`
   position: absolute;
   display: flex;
@@ -188,7 +140,7 @@ export default props => {
           alt={props.details["Required Worker"]}
         />
 
-        <EnergyCost>{props.details["Worker Level"]}</EnergyCost>
+        <EnergyCost>Level {props.details["Worker Level"]}</EnergyCost>
 
         {props.details["Required Worker__1"] !== "---" ? (
           <IconImage
@@ -199,7 +151,7 @@ export default props => {
           />
         ) : null}
         {props.details["Required Worker__1"] !== "---" ? (
-          <EnergyCost>{props.details["Worker Level__1"]}</EnergyCost>
+          <EnergyCost>Level {props.details["Worker Level__1"]}</EnergyCost>
         ) : null}
       </EnergyBox>
 
@@ -215,7 +167,9 @@ export default props => {
       <SubDescription>
         Merchant XP: {props.details["Merchant XP"]}
       </SubDescription>
-      <Description>Components:</Description>
+
+      {props.details.Component !== "---" ? (<Description>Components:</Description>) : null}
+
       <EnergyBox>
         {props.details.Component !== "---" ? (
           <IconImage
