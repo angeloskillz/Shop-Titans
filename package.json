@@ -27,7 +27,7 @@
     "netlify-cms-app": "^2.9.7",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8yarn .6",
+    "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-modal": "^3.9.1",
     "react-responsive": "^7.0.0",
