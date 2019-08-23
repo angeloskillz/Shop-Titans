@@ -9,7 +9,7 @@ const BlueprintBox = styled.div`
   position: relative;
   display: block;
   margin-right: auto;
-  margin-left:auto;
+  margin-left: auto;
   width: 40px;
   height: 40px;
   padding: 9px;
@@ -25,15 +25,15 @@ const Currency = styled.img`
 `
 
 const Cost = styled.p`
-padding: 6px;
-padding-left: 16px;
-padding-right: 16px;
-border-radius: 20px;
-background: #bdccdb80;
-font-weight: normal;
-font-size: 12px;
-text-align: center;
-color: #406081;
+  padding: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 20px;
+  background: #bdccdb80;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+  color: #406081;
 `
 
 const Title = styled.h1`
@@ -46,11 +46,9 @@ const Title = styled.h1`
 `
 
 const Icon1 = styled.img`
-
-width: 40px;
-height: 40px;
+  width: 40px;
+  height: 40px;
 `
-
 
 const Resources = styled.div`
   display: flex;
@@ -140,132 +138,137 @@ export default ({ pageContext: data }) => {
   return (
     <Layout>
       <div>
-      <BlueprintBox>
-                    <Icon1 src={require(`../images/Items/${data.Type}s/${name}.png`)} alt={data.title}/>
-                  </BlueprintBox>
-      <Title>{data.Name}</Title>
-      <SubDescription>{data.Type}</SubDescription>
-      <SubDescription>Tier: {data.Tier}</SubDescription>
-      <SubDescription>Base Price: {data.Value}</SubDescription>
-      <SubDescription>
-        Crafting Time: {data["Crafting Time (formatted)"]}
-      </SubDescription>
+        <BlueprintBox>
+          <Icon1
+            src={require(`../images/Items/${data.Type}s/${name}.png`)}
+            alt={data.title}
+          />
+        </BlueprintBox>
+        <Title>{data.Name}</Title>
+        <SubDescription>{data.Type}</SubDescription>
+        <SubDescription>Tier: {data.Tier}</SubDescription>
+        <SubDescription>Base Price: {data.Value}</SubDescription>
+        <SubDescription>
+          Crafting Time: {data["Crafting Time (formatted)"]}
+        </SubDescription>
 
-      <Title>Unlock Requirements:</Title>
-      <Resources>
-        {data["Unlock Prerequisite"] !== "---" ? (
+        <Title>Unlock Requirements:</Title>
+        <Resources>
+          {data["Unlock Prerequisite"] !== "---" ? (
+            <div>
+              <Currency
+                src={require(`../images/Portraits/${workers[
+                  data["Required Worker"].toLowerCase()
+                ].name.toLowerCase()}.png`)}
+              />
+              <Cost>{data["Unlock Prerequisite"]}</Cost>
+            </div>
+          ) : null}
+          <div>
+            <Currency src={require(`../images/Currencies/bp_unlock.png`)} />
+            <Cost>{data["Research Scrolls"]}</Cost>
+          </div>
           <div>
             <Currency
               src={require(`../images/Portraits/${workers[
                 data["Required Worker"].toLowerCase()
               ].name.toLowerCase()}.png`)}
             />
-            <Cost>{data["Unlock Prerequisite"]}</Cost>
+            <Cost>Level {data["Worker Level"]}</Cost>
           </div>
-        ) : null}
-        <div>
-          <Currency src={require(`../images/Currencies/bp_unlock.png`)} />
-          <Cost>{data["Research Scrolls"]}</Cost>
-        </div>
-        <div>
-          <Currency
-            src={require(`../images/Portraits/${workers[
-              data["Required Worker"].toLowerCase()
-            ].name.toLowerCase()}.png`)}
-          />
-          <Cost>Level {data["Worker Level"]}</Cost>
-        </div>
-        {data["Required Worker__1"] !== "---" ? (
-          <div>
-            <Currency
-              src={require(`../images/Portraits/${workers[
-                data["Required Worker__1"].toLowerCase()
-              ].name.toLowerCase()}.png`)}
-            />
-            <Cost>Level {data["Worker Level__1"]}</Cost>
-          </div>
-        ) : null}
-      </Resources>
-
-      <Title>Craft Requirements:</Title>
-      <Resources>
-        {resourceNames.map((resource, index) =>
-          data[resource] !== "---" ? (
-            <div key={index}>
-              <Currency src={require(`../images/Resources/${resource}.png`)} />
-              <Cost>{data[resource]}</Cost>
+          {data["Required Worker__1"] !== "---" ? (
+            <div>
+              <Currency
+                src={require(`../images/Portraits/${workers[
+                  data["Required Worker__1"].toLowerCase()
+                ].name.toLowerCase()}.png`)}
+              />
+              <Cost>Level {data["Worker Level__1"]}</Cost>
             </div>
-          ) : null
-        )}
+          ) : null}
+        </Resources>
 
-        {data.Component !== "---" ? (
-          <div>
-            <Currency
-              src={require(`../images/${folder}/${componentName}.png`)}
-            />
-            <Cost>{data["Amount Needed"]}</Cost>
-          </div>
-        ) : null}
+        <Title>Craft Requirements:</Title>
+        <Resources>
+          {resourceNames.map((resource, index) =>
+            data[resource] !== "---" ? (
+              <div key={index}>
+                <Currency
+                  src={require(`../images/Resources/${resource}.png`)}
+                />
+                <Cost>{data[resource]}</Cost>
+              </div>
+            ) : null
+          )}
 
-        {data["Component__1"] !== "---" ? (
-          <div>
-            <Currency
-              src={require(`../images/${folder1}/${componentName1}.png`)}
-            />
-            <Cost>{data["Amount Needed__1"]}</Cost>
-          </div>
-        ) : null}
-      </Resources>
+          {data.Component !== "---" ? (
+            <div>
+              <Currency
+                src={require(`../images/${folder}/${componentName}.png`)}
+              />
+              <Cost>{data["Amount Needed"]}</Cost>
+            </div>
+          ) : null}
 
-      <Title>Item Stats:</Title>
-      <Resources>
-        {stats.map((stat, index) => (
-          <div key={index}>
-            <Currency src={require(`../images/Icons/st_${stat.name}.png`)} />
-            <Cost>{data[stat.prop]}</Cost>
-          </div>
-        ))}
-      </Resources>
+          {data["Component__1"] !== "---" ? (
+            <div>
+              <Currency
+                src={require(`../images/${folder1}/${componentName1}.png`)}
+              />
+              <Cost>{data["Amount Needed__1"]}</Cost>
+            </div>
+          ) : null}
+        </Resources>
 
-      <Title>Energy Costs:</Title>
-      <Resources>
-        {energy.map((stat, index) => (
-          <div key={index}>
-            <Currency src={require("../images/Currencies/energy.png")} />
-            <Cost>
-              {stat.split(" ")[0]}: {data[stat]}
-            </Cost>
-          </div>
-        ))}
-      </Resources>
+        <Title>Item Stats:</Title>
+        <Resources>
+          {stats.map((stat, index) => (
+            <div key={index}>
+              <Currency src={require(`../images/Icons/st_${stat.name}.png`)} />
+              <Cost>{data[stat.prop]}</Cost>
+            </div>
+          ))}
+        </Resources>
 
-      {basic
-        .filter(key => data[key] !== "---")
-        .map((key, index) => (
+        <Title>Energy Costs:</Title>
+        <Resources>
+          {energy.map((stat, index) => (
+            <div key={index}>
+              <Currency src={require("../images/Currencies/energy.png")} />
+              <Cost>
+                {stat.split(" ")[0]}: {data[stat]}
+              </Cost>
+            </div>
+          ))}
+        </Resources>
+
+        {basic
+          .filter(key => data[key] !== "---")
+          .map((key, index) => (
+            <div key={index}>
+              <SubDescription>
+                {key}: {data[key]}
+              </SubDescription>
+            </div>
+          ))}
+
+        {craftingValue.map((value, index) => (
           <div key={index}>
             <SubDescription>
-              {key}: {data[key]}
+              Crafting Upgrade {index + 1}: {value} [{" "}
+              {data[craftValues[index + 1]]} ]
             </SubDescription>
           </div>
         ))}
 
-      {craftingValue.map((value, index) => (
-        <div key={index}>
-          <SubDescription>
-            Crafting Upgrade {index + 1}: {value} [{" "}
-            {data[craftValues[index + 1]]} ]
-          </SubDescription>
-        </div>
-      ))}
-
-      {ascensionValues.map((value, index) => (
-        <div key={index}>
-          <SubDescription>
-            Ascension Upgrade {index + 1}: {value} [{" "}
-            {data[ascendValues[index + 1]]} ]
-          </SubDescription>
-        </div>
-      ))}
+        {ascensionValues.map((value, index) => (
+          <div key={index}>
+            <SubDescription>
+              Ascension Upgrade {index + 1}: {value} [{" "}
+              {data[ascendValues[index + 1]]} ]
+            </SubDescription>
+          </div>
+        ))}
       </div>
     </Layout>
   )

@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { cleanName } from "../utils/util"
-import { Link } from "gatsby"
 import Image from "./BlueprintImage"
 
 const BlueprintBox = styled.div`

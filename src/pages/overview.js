@@ -1,18 +1,25 @@
 import "react-table/react-table.css"
 
-import ReactTable from "react-table"
 import React from "react"
 import blueprints from "../constants/blueprints"
-import { graphql } from "gatsby"
 import styled from "styled-components"
-
+import BlueprintCard from "../components/BlueprintCard"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const columns = Object.keys(blueprints[0]).map(key => ({
-  Header: key,
-  accessor: key,
-}))
+const Resources = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family: "Roboto";
+  font-size: 14px;
+  text-align: left;
+  color: #bc9060;
+  margin-top: -5px;
+  margin-bottom: 0px;
+  text-align: center;
+`
 
 const HeroContainer = styled.div`
   background-size: cover;
@@ -26,60 +33,40 @@ const Hero = styled.div`
   color: white;
 `
 
-const IndexPage = props => (
-  <Layout>
-    <SEO title="Home" />
-    <Hero>
-      <HeroContainer></HeroContainer>
-      <div className="HeroGroup">
-        <h1>Blueprints Overview</h1>
-      </div>
-    </Hero>
+const IndexPage = props => {
+  const relevantBlueprints = {}
 
-    <ReactTable
-    style={{border: '1px solid transparent'}}
-      data={blueprints}
-      columns={columns}
-      showPagination={false}
-      filterable={true}
-      defaultPageSize={blueprints.length}
-      getTrProps={(state, rowInfo, column) => {
-        return {
-          style: {
-            background: rowInfo.row.age > 20 ? "green" : "white",
-          },
-        }
-      }}
-      getTdProps={(state, rowInfo, column, instance) => {
-        return {
-          onClick: (e, handleOriginal) => {
-            if (column.Header !== "Name") return
-            window.location.assign(`/blueprints/${rowInfo.original.Name}`)
-            // IMPORTANT! React-Table uses onClick internally to trigger
-            // events like expanding SubComponents and pivots.
-            // By default a custom 'onClick' handler will override this functionality.
-            // If you want to fire the original onClick handler, call the
-            // 'handleOriginal' function.
-            if (handleOriginal) {
-              handleOriginal()
-            }
-          },
-        }
-      }}
-    />
-  </Layout>
-)
-
-export default IndexPage
-
-export const pageQuery = graphql`
-  {
-    imageOne: file(relativePath: { eq: "Backgrounds/BG1.jpg" }) {
-      childImageSharp {
-        fluid(maxHeight: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
+  for (const blueprint of blueprints) {
+    if (!relevantBlueprints[blueprint.Type])
+      relevantBlueprints[blueprint.Type] = [blueprint]
+    else relevantBlueprints[blueprint.Type].push(blueprint)
   }
-`
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Hero>
+        <HeroContainer></HeroContainer>
+        <div className="HeroGroup">
+          <h1>Blueprints Overview</h1>
+        </div>
+      </Hero>
+
+      {Object.values(relevantBlueprints).map(blueprints => (
+        <div className="CardboxGroupScroll">
+          <Resources className="CardboxGroup">
+            {blueprints.map((blueprint, index) => (
+              <div>
+              <BlueprintCard details={blueprint} key={index}></BlueprintCard>
+              </div>
+            ))}
+          </Resources>
+        </div>
+      ))}
+      {/*blueprints.map((blueprint, index) => (
+        <BlueprintCard details={blueprint} key={index}></BlueprintCard>
+      ))*/}
+    </Layout>
+  )
+}
+export default IndexPage
