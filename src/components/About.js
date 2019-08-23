@@ -1,10 +1,7 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { withStyles } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
-import Typography from "@material-ui/core/Typography"
 import styled from "styled-components"
 
 const Title = styled.h1`
@@ -35,60 +32,10 @@ const contributors = [
   { name: "hsidnomeL", guild: "River Echo" },
 ]
 
-const StyledAppBar = withStyles({
-  root: {
-    background: "none",
-    width: "max-content",
-    margin: "0 auto",
-    boxShadow: "none",
-  },
-})(AppBar)
-
-const StyledTabs = withStyles({
-  indicator: {
-    display: "none",
-    backgroundColor: "none",
-    color: "none",
-  },
-})(Tabs)
-
-const StyledTab = withStyles({
-  root: {
-    color: "grey",
-  },
-  selected: {
-    background: "#5FA9FF",
-    borderRadius: "10px",
-    marginRight: "16px",
-  },
-  label: {
-    color: "white",
-  },
-})(Tab)
-
-function TabContainer({ children, dir }) {
-  return (
-    <Typography
-      component="div"
-      dir={dir}
-      style={{ padding: 8 * 3, background: "#F4FAFF" }}
-    >
-      {children}
-    </Typography>
-  )
-}
-
-TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  dir: PropTypes.string.isRequired,
-}
-
-const styles = theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-    width: 500,
-  },
-})
+const TabContainer = styled.div`
+  padding: 24px;
+  background: "#F4FAFF"
+`
 
 const UnorderedList = styled.ul`
   list-style-type: none;
@@ -174,20 +121,38 @@ class FullWidthTabs extends React.Component {
 
     return (
       <div>
-        <StyledAppBar position="static" color="default">
-          <StyledTabs
+        <AppBar
+          position="static"
+          color="default"
+          style={{
+            background: "none",
+            width: "max-content",
+            margin: "0 auto",
+            boxShadow: "none",
+          }}
+        >
+          <Tabs
             value={this.state.value}
             onChange={this.handleChange}
-            indicatorColor="primary"
+            indicatorColor=""
             textColor="primary"
             variant="fullWidth"
+
           >
-            <StyledTab label="Developers" className="button" />
-            <StyledTab label="Contributors" className="button" />
-            <StyledTab label="Roadmap" className="button" />
-            <StyledTab label="Changelog" className="button" />
-          </StyledTabs>
-        </StyledAppBar>
+            {["Developers", "Contributors", "Roadmap", "Changelog"].map((name, index) => (
+              <Tab
+                label={name}
+                className="button"
+                selected={true}
+                style={{
+                  background: this.state.value === index ? "#5FA9FF" : "",
+                  borderRadius: this.state.value === index ? "10px" : "",
+                }}
+                key={index}
+              />
+            ))}
+          </Tabs>
+        </AppBar>
         {value === 0 && (
           <TabContainer>
             <Description>
@@ -312,9 +277,4 @@ class FullWidthTabs extends React.Component {
   }
 }
 
-FullWidthTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-}
-
-export default withStyles(styles, { withTheme: true })(FullWidthTabs)
+export default FullWidthTabs

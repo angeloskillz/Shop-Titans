@@ -1,10 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { withStyles } from "@material-ui/core/styles"
-import AppBar from "@material-ui/core/AppBar"
-import Tabs from "@material-ui/core/Tabs"
-import Tab from "@material-ui/core/Tab"
-import Typography from "@material-ui/core/Typography"
 import WorkerBox from "./Worker"
 import blacksmith from "../constants/workers/blacksmith"
 import carpenter from "../constants/workers/carpenter"
@@ -15,7 +9,6 @@ import priestess from "../constants/workers/priestess"
 import scholar from "../constants/workers/scholar"
 import tailor from "../constants/workers/tailor"
 import wizard from "../constants/workers/wizard"
-// import stats from "../constants/workers/stats"
 import townhall from "../constants/special/townhall"
 import tavern from "../constants/special/tavern"
 import emeraldinn from "../constants/special/emeraldinn"
@@ -30,37 +23,10 @@ import tannery from "../constants/farmers/tannery"
 import weavermill from "../constants/farmers/weavermill"
 import heroes from "../constants/heroes"
 import HeroBox from "../components/Hero"
-
-const StyledAppBar = withStyles({
-  root: {
-    background: "none",
-    width: "max-content",
-    margin: "0 auto",
-    boxShadow: "none",
-  },
-})(AppBar)
-
-const StyledTabs = withStyles({
-  indicator: {
-    display: "none",
-    backgroundColor: "none",
-    color: "none",
-  },
-})(Tabs)
-
-const StyledTab = withStyles({
-  root: {
-    color: "grey",
-  },
-  selected: {
-    background: "#5FA9FF",
-    borderRadius: "10px",
-    marginRight: "16px",
-  },
-  label: {
-    color: "white",
-  },
-})(Tab)
+import AppBar from "@material-ui/core/AppBar"
+import Tabs from "@material-ui/core/Tabs"
+import Tab from "@material-ui/core/Tab"
+import styled from "styled-components"
 
 const workers = [
   blacksmith,
@@ -86,73 +52,64 @@ const resourceWorkers = [
   weavermill,
 ]
 
-const fighters = heroes.filter(hero => hero.class === 'Fighter')
+const fighters = heroes.filter(hero => hero.class === "Fighter")
+const rogues = heroes.filter(hero => hero.class === "Rogue")
+const spellcasters = heroes.filter(hero => hero.class === "Spellcaster")
 
-// const blueprints = [squiresword]
+const TabContainer = styled.div`
+  padding: 24px;
+  background: #f4faff;
+`
 
-function TabContainer({ children, dir }) {
-  return (
-    <Typography
-      component="div"
-      dir={dir}
-      style={{ padding: 8 * 3, background: "#F4FAFF" }}
-    >
-      {children}
-    </Typography>
-  )
-}
-
-TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  dir: PropTypes.string.isRequired,
-}
-
-const styles = theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-    width: 500,
-  },
-})
-
-class FullWidthTabs extends React.Component {
+class HomePageTabs extends React.Component {
   state = {
     value: 0,
-    heroValue: null,
   }
 
   handleChange = (event, value) => {
-    this.setState({ value, heroValue: value === 1 ? 0 : null })
-  }
-
-  handleChangeIndex = index => {
-    this.setState({ value: index })
-  }
-
-  handleHeroChange = (event, value) => {
-    this.setState({ heroValue: value, value: null })
+    this.setState({ value })
   }
 
   render() {
-    const { value, heroValue } = this.state
+    const { value } = this.state
 
     return (
       <div>
-        <StyledAppBar position="static" color="default">
-          <StyledTabs
+        <AppBar
+          position="static"
+          color="default"
+          style={{
+            background: "none",
+            width: "max-content",
+            margin: "0 auto",
+            boxShadow: "none",
+          }}
+        >
+          <Tabs
             value={this.state.value}
             onChange={this.handleChange}
-            indicatorColor="primary"
+            indicatorColor=""
             textColor="primary"
             variant="fullWidth"
           >
-            <StyledTab label="WORKERS" className="button" />
-            <StyledTab label="HEROES" className="button" />
-          </StyledTabs>
-        </StyledAppBar>
+            {["WORKERS", "HEROES"].map((name, index) => (
+              <Tab
+                label={name}
+                className="button"
+                selected={true}
+                style={{
+                  background: this.state.value === index ? "#5FA9FF" : "",
+                  borderRadius: this.state.value === index ? "10px" : "",
+                }}
+                key={index}
+              />
+            ))}
+          </Tabs>
+        </AppBar>
         {value === 0 && (
           <TabContainer>
             <div className="Selectan">
-              <h1 style={{color: '#ff665f'}}>Workers</h1>
+              <h1 style={{ color: "#ff665f" }}>Workers</h1>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -163,7 +120,7 @@ class FullWidthTabs extends React.Component {
             </div>
 
             <div className="Selectan">
-              <h1 style={{color: 'orange'}}>Special</h1>
+              <h1 style={{ color: "orange" }}>Special</h1>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -174,7 +131,7 @@ class FullWidthTabs extends React.Component {
             </div>
 
             <div className="Selectan">
-              <h1 style={{color: 'lightblue'}}>Producers</h1>
+              <h1 style={{ color: "lightblue" }}>Producers</h1>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -187,28 +144,38 @@ class FullWidthTabs extends React.Component {
         )}
         {value === 1 && (
           <TabContainer>
-            <StyledAppBar position="static" color="default">
-              <StyledTabs
-                value={this.state.heroValue}
-                onChange={this.handleHeroChange}
-                indicatorColor="primary"
-                textColor="primary"
-                variant="fullWidth"
-              >
-                <StyledTab label="FIGHTERS" className="button" />
-              </StyledTabs>
-            </StyledAppBar>
-            {heroValue === 0 && (
-              <TabContainer>
-                <div className="CardboxGroupScroll">
-                  <div className="CardboxGroup">
-                    {fighters.map((fighter, index) => (
-                      <HeroBox key={index} details={fighter} />
-                    ))}
-                  </div>
-                </div>
-              </TabContainer>
-            )}
+            <div className="Selectan">
+              <h1>Fighters</h1>
+            </div>
+            <div className="CardboxGroupScroll">
+              <div className="CardboxGroup">
+                {fighters.map((fighter, index) => (
+                  <HeroBox key={index} details={fighter} />
+                ))}
+              </div>
+            </div>
+
+            <div className="Selectan">
+              <h1>Rogues</h1>
+            </div>
+            <div className="CardboxGroupScroll">
+              <div className="CardboxGroup">
+                {rogues.map((rogue, index) => (
+                  <HeroBox key={index} details={rogue} />
+                ))}
+              </div>
+            </div>
+
+            <div className="Selectan">
+              <h1>Spellcasters</h1>
+            </div>
+            <div className="CardboxGroupScroll">
+              <div className="CardboxGroup">
+                {spellcasters.map((spellcaster, index) => (
+                  <HeroBox key={index} details={spellcaster} />
+                ))}
+              </div>
+            </div>
           </TabContainer>
         )}
       </div>
@@ -216,9 +183,4 @@ class FullWidthTabs extends React.Component {
   }
 }
 
-FullWidthTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-}
-
-export default withStyles(styles, { withTheme: true })(FullWidthTabs)
+export default HomePageTabs
