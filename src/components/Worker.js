@@ -111,7 +111,7 @@ export default props => {
   return (
     <Class
       href={`/workers/${props.details.name}`}
-      className={props.type !== "worker" ? "not-active" : ""}
+      className={props.className}
     >
       <Icons
         style={{

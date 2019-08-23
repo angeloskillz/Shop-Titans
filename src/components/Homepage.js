@@ -27,6 +27,8 @@ import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
 import styled from "styled-components"
+import champions from "../constants/champions/index"
+import ChampionBox from "../components/ChampionBox"
 
 const workers = [
   blacksmith,
@@ -92,7 +94,7 @@ class HomePageTabs extends React.Component {
             textColor="primary"
             variant="fullWidth"
           >
-            {["WORKERS", "HEROES"].map((name, index) => (
+            {["WORKERS", "HEROES", "CHAMPIONS"].map((name, index) => (
               <Tab
                 label={name}
                 className="button"
@@ -173,6 +175,18 @@ class HomePageTabs extends React.Component {
               <div className="CardboxGroup">
                 {spellcasters.map((spellcaster, index) => (
                   <HeroBox key={index} details={spellcaster} />
+                ))}
+              </div>
+            </div>
+          </TabContainer>
+        )}
+
+        {value === 2 && (
+          <TabContainer>
+            <div className="CardboxGroupScroll">
+              <div className="CardboxGroup">
+                {champions.map((champion, index) => (
+                  <ChampionBox key={index} details={champion} />
                 ))}
               </div>
             </div>

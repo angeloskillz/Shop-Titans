@@ -4,6 +4,8 @@ const { createFilePath } = require("gatsby-source-filesystem")
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 const blueprints = require("./src/constants/oldblueprints")
 const workers = require("./src/constants/workers/oldworkers")
+const champions = require("./src/constants/champions/index")
+
 
 const buildBlueprintPages = (createPage) => {
   const buildsPageTemplate = path.resolve("src/templates/blueprint.js")
@@ -16,6 +18,19 @@ const buildBlueprintPages = (createPage) => {
     })
   }
 }
+
+const buildChampionPages = (createPage) => {
+  const buildsPageTemplate = path.resolve("src/templates/champion.js")
+
+  for (const champion of champions) {
+    createPage({
+      path: `champions/${champion.name}`,
+      component: buildsPageTemplate,
+      context: champion,
+    })
+  }
+}
+
 
 const buildWorkerPages = (createPage) => {
   const template = path.resolve("src/templates/worker.js")
@@ -34,6 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   buildBlueprintPages(createPage)
   buildWorkerPages(createPage)
+  buildChampionPages(createPage)
 
   return graphql(`
     {

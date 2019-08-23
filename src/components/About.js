@@ -28,7 +28,7 @@ const Description = styled.h2`
 `
 
 const contributors = [
-  { name: "LordAzuRa", guild: "Guild Name" },
+  { name: "LordAzuRa", guild: "Guild Master of Buy The Way (#42)" },
   { name: "hsidnomeL", guild: "River Echo" },
 ]
 
