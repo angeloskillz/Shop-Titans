@@ -201,7 +201,7 @@ export default ({ pageContext: data }) => {
             ) : null
           )}
 
-          {data.Component !== "---" ? (
+          {data.Component && data.Component !== "---" ? (
             <div>
               <Currency
                 src={require(`../images/${folder}/${componentName}.png`)}
@@ -210,7 +210,7 @@ export default ({ pageContext: data }) => {
             </div>
           ) : null}
 
-          {data["Component__1"] !== "---" ? (
+          {data["Component__1"] && data["Component__1"] !== "---" ? (
             <div>
               <Currency
                 src={require(`../images/${folder1}/${componentName1}.png`)}
