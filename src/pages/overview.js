@@ -32,16 +32,6 @@ const Hero = styled.div`
   text-align: center;
   color: white;
 `
-const Title = styled.h1`
-  font-family: Roboto;
-  font-weight: 800;
-  font-size: 18px;
-  text-align: center;
-  color: #ff665f;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 0;
-`
 
 const IndexPage = props => {
   const relevantBlueprints = {}
