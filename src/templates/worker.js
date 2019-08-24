@@ -115,6 +115,12 @@ class FullWidthTabs extends React.Component {
     const relevantBlueprints = {}
 
     for (const blueprint of blueprints) {
+      if (
+        blueprint["Required Worker"] !== data.title &&
+        blueprint["Required Worker__1"] !== data.title
+      )
+        continue
+        
       if (!relevantBlueprints[blueprint.Type])
         relevantBlueprints[blueprint.Type] = [blueprint]
       else relevantBlueprints[blueprint.Type].push(blueprint)
