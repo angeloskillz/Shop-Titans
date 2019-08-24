@@ -1,4 +1,5 @@
 import React from "react"
+import MaterialTable from "material-table"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import blueprints from "../constants/blueprints"
@@ -160,55 +161,35 @@ class FullWidthTabs extends React.Component {
         )}
         {value === 1 && (
           <TabContainer>
-            <table class="table table-bordered table-hover table-condensed">
-              <thead>
-                <tr>
-                  <th title="Field #1" style={{ textAlign: "center" }}>
-                    Level
-                  </th>
-                  <th title="Field #2" style={{ textAlign: "center" }}>
-                    Upgrade Time
-                  </th>
-                  <th title="Field #3" style={{ textAlign: "center" }}>
-                    Gold
-                  </th>
-                  <th title="Field #4" style={{ textAlign: "center" }}>
-                    Gems
-                  </th>
-                  <th title="Field #5" style={{ textAlign: "center" }}>
-                    Investments Needed
-                  </th>
-                  <th title="Field #6" style={{ textAlign: "center" }}>
-                    Total Cost
-                  </th>
-                  <th title="Field #7" style={{ textAlign: "center" }}>
-                    Effect
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.levels.map((lvl, index) => (
-                  <tr key={index}>
-                    <td style={{ textAlign: "center" }}>{lvl.level}</td>
-                    <td style={{ textAlign: "center" }}>{lvl.time}</td>
-                    <td style={{ textAlign: "center" }}>
-                      {lvl.investments.gold.toLocaleString()}
-                    </td>
-                    <td style={{ textAlign: "center" }}>
-                      {lvl.investments.gems.toLocaleString()}
-                    </td>
-                    <td style={{ textAlign: "center" }}>
-                      {lvl.cost === "---"
-                        ? "---" : Math.ceil(lvl.cost / lvl.investments.gold)}
-                    </td>
-                    <td style={{ textAlign: "center" }}>
-                      {lvl.cost.toLocaleString()}
-                    </td>
-                    <td style={{ textAlign: "center" }}>{lvl.effect}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <MaterialTable
+              columns={[
+                { title: "Level", field: "level" },
+                { title: "Upgrade Time", field: "time" },
+                { title: "Gold", field: "gold" },
+                { title: "Gems", field: "gems" },
+                { title: "Investments Needed", field: "needed" },
+                { title: "Total Cost", field: "cost" },
+                { title: "Effect", field: "effect" },
+              ]}
+              data={data.levels.map(lvl => ({
+                ...lvl,
+                gold: lvl.investments.gold.toLocaleString(),
+                gems: lvl.investments.gems.toLocaleString(),
+                needed:
+                  lvl.cost === "---"
+                    ? "---"
+                    : Math.ceil(lvl.cost / lvl.investments.gold),
+                cost: lvl.cost.toLocaleString(),
+              }))}
+              options={{
+                sorting: true,
+                search: false,
+                showTitle: false,
+                showFirstLastPageButtons: false,
+                pageSize: 20,
+                emptyRowsWhenPaging: false,
+              }}
+            />
           </TabContainer>
         )}
       </Layout>
