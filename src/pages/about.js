@@ -9,7 +9,7 @@ import styled from "styled-components"
 import { Button } from "@material-ui/core"
 
 const Description = styled.h2`
-  font-family: Roboto;
+   
   font-weight: bold;
   font-size: 14px;
   color: #406081;
@@ -24,12 +24,7 @@ export default props => (
   <Layout>
     <SEO title="About" />
     <div className="Hero">
-      <div className="HeroContainer">
-        <ImgHero
-          imgStyle={{ objectPosition: "center top" }}
-          className="Img"
-          fluid={props.data.imageOne.childImageSharp.fluid}
-        />
+      <div className="HeroContainer" style={{background:'white'}}>
         <div className="gradient" />
       </div>
       <div className="HeroGroup">

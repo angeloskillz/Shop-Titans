@@ -21,14 +21,14 @@ const IndexPage = props => (
       </div>
       <div className="HeroGroup">
         <h1>Shop Titans</h1>
-        <p style={{ marginBottom: "15px" }}>Update 2.0.1</p>
-        <a href="https://discord.gg/shoptitans" style={{ margin: "15px" }}>
-          <Button variant="contained" color="primary">
+        <p style={{ marginBottom: "16px" }}>Update 2.0.1</p>
+        <a href="https://discord.gg/shoptitans" style={{ margin: "16px" }}>
+          <Button variant="contained" color="primary" style={{marginBottom: '16px'}}>
             Official Discord
           </Button>
         </a>
         <a href="https://discord.gg/rWMuMdk">
-          <Button variant="contained" color="secondary">
+          <Button variant="contained" color="secondary" style={{marginBottom: '16px'}}>
             Wiki Discord
           </Button>
         </a>

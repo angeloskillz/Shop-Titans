@@ -18,7 +18,6 @@ const Resources = styled.div`
   box-sizing: border-box;
   justify-content: space-around;
   flex-wrap: wrap;
-  font-family: "Roboto";
   font-size: 14px;
   text-align: left;
   color: #bc9060;

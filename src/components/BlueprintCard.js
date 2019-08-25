@@ -21,19 +21,17 @@ const Icons = styled.div`
   margin: 0 auto;
   margin-top: 16px;
   width: 70px;
-  border-radius: 26px;
-  background: #ff665f;
+  border-radius: 86px;
+  background: #38ec94;
   padding-bottom: 10px;
   padding-top: 10px;
 `
 
 const Title = styled.h1`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    sans-serif;
   font-weight: 800;
   font-size: 18px;
   text-align: center;
-  color: #ff665f;
+  color: #38ec94;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -84,14 +82,16 @@ const Cost = styled.p`
 const TierBadge = styled.div`
   width: 26px;
   height: 26px;
-  background: #ff665f;
+  background: #38ec94;
   color: white;
-  font-size: 20px;
-  border-radius: 50%;
+  font-size: 18px;
+  border-radius: 100%;
   position: absolute;
-  right: 15px;
+  right: 16px;
   top: 16px;
   text-align: center;
+  jusitfy-content: center;
+
 `
 
 const EnergyBox = styled.div`

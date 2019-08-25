@@ -59,7 +59,6 @@ const rogues = heroes.filter(hero => hero.class === "Rogue")
 const spellcasters = heroes.filter(hero => hero.class === "Spellcaster")
 
 const TabContainer = styled.div`
-  padding: 24px;
   background: #f4faff;
 `
 

@@ -16,24 +16,15 @@ const Class = styled.a`
   margin-top: 16px;
 `
 const Icons = styled.div`
-  margin: 0 auto;
-  margin-top: 16px;
-  width: 70px;
-  border-radius: 26px;
-  background: #ff665f;
+margin: 0 auto;
+margin-top: 16px;
+width: 70px;
+border-radius: 26px;
+background: #ff665f;
+padding-bottom: 10px;
+padding-top: 10px;
 `
-const HeroImg = styled.img`
-  position: relative;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  padding-bottom: 10px;
-  padding-top: 10px;
-`
-
 const Title = styled.h1`
-  font-family: Roboto;
   font-weight: 800;
   font-size: 18px;
   text-align: center;
@@ -44,19 +35,17 @@ const Title = styled.h1`
 `
 
 const Description = styled.h2`
-  font-family: Roboto;
   font-weight: bold;
   font-size: 14px;
   color: #406081;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   padding-left: 16px;
   padding-right: 16px;
   white-space: pre-wrap;
 `
 
 const SubDescription = styled.p`
-  font-family: Roboto;
   font-weight: normal;
   font-size: 12px;
   color: #406081;
@@ -79,19 +68,13 @@ const Gold = styled.div`
   justify-content: flex-end;
 `
 const Cost = styled.p`
-  font-family: Roboto;
+   
   font-weight: normal;
   font-size: 12px;
   color: #406081;
   margin: 10px;
   margin-left: 5px;
   margin-right: 12px;
-`
-const Currency = styled.img`
-  width: 15px;
-  height: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 `
 
 export default props => (
@@ -121,7 +104,6 @@ export default props => (
 
     <Description>Hero Skill: {props.details.skill.name}</Description>
     <SubDescription>{props.details.skill.effect}</SubDescription>
-
     <Gold>
       {props.details.stats.map((stat, index) => (
         <React.Fragment key={index}>

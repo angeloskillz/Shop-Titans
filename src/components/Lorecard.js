@@ -32,7 +32,7 @@ z-index: 1;
   }
 `
 const Title = styled.h1`
-  font-family: "QuadratSerial";
+   
   font-weight: bold;
   font-size: 18px;
   text-align: center;
@@ -44,7 +44,7 @@ const Title = styled.h1`
     margin-right: auto;
 `
 const SubDescription = styled.h2`
-  font-family: Roboto;
+   
   font-weight: normal;
   font-style: italic;
   font-size: 14px;

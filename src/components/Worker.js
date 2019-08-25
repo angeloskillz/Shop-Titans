@@ -24,8 +24,9 @@ const Class = styled.a`
   border-radius: 26px;
   background: #fff;
   box-shadow: 0px 8px 12px #bdccdb;
-  margin-left: 16px;
+  margin-left: 6px;
   margin-top: 16px;
+  margin-bottom: 16px;
 `
 const Icons = styled.div`
   margin: 0 auto;

@@ -5,7 +5,7 @@ import Tab from "@material-ui/core/Tab"
 import styled from "styled-components"
 
 const Title = styled.h1`
-  font-family: Roboto;
+   
   font-weight: 800;
   font-size: 18px;
   text-align: center;
@@ -16,7 +16,7 @@ const Title = styled.h1`
 `
 
 const Description = styled.h2`
-  font-family: Roboto;
+   
   font-weight: bold;
   font-size: 14px;
   color: #406081;

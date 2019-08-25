@@ -80,23 +80,24 @@ a {
 
 .HeroContainer {
   background-size: cover;
-  height: 750px;
+  height: 512px;
   width: 100%;
   z-index: -1;
   position: relative;
 }
 .Img {
-  height: 750px;
+  height: 512px;
   object-position: center top;
 }
 
 .gradient {
   position: absolute;
-  height: 750px;
+  height: 80px;
   width: 100%;
   bottom: 0;
-  background: linear-gradient(0deg, #f4faff 1%, #f4faff 0, rgba(25, 26, 27, 0));
+  background:  #f4faff;
   pointer-events: none;
+  border-radius: 26px 26px 0px 0px;
 }
 
 .HeroGroup {
@@ -107,27 +108,25 @@ a {
 }
 
 .HeroGroup h1 {
-  font-size: 50px;
+  font-size: 60px;
   margin: 0;
   margin-bottom: 5px;
   color: black;
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   text-align: center;
-  letter-spacing: 3px;
 }
 
 .HeroGroup p {
   padding: 10px;
   border-radius: 0px;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 14px;
   color: black;
   -webkit-font-smoothing: antialiased;
   width: 100px;
   margin: 0 auto;
   margin-top: 5px;
-  border-bottom: 1.5px solid #daa54e;
 }
 
 .Hero svg {
@@ -193,7 +192,7 @@ a {
     text-align: center;
     margin-top: 16px;
     margin-bottom: 7px;
-    font-family: "QuadratSerial";
+     
     font-size: 24px;
     line-height: 1.2;
     color: rgb(255, 255, 255);
@@ -204,7 +203,7 @@ a {
 
 @media (max-width: 480px) {
   .Hero h1 {
-    font-size: 30px;
+    font-size: 50px;
   }
   .HeroContainer {
     height: 600px;
@@ -214,7 +213,7 @@ a {
   }
 
   .gradient {
-    height: 600px;
+    height: 80px;
   }
 }
 
