@@ -58,6 +58,13 @@ const fighters = heroes.filter(hero => hero.class === "Fighter")
 const rogues = heroes.filter(hero => hero.class === "Rogue")
 const spellcasters = heroes.filter(hero => hero.class === "Spellcaster")
 
+const MyTab = styled(Tab)({
+  border: '1px solid grey',
+  borderRadius: '50px',
+  fontSize: '12px',
+  marginRight: '16px'
+  })
+
 const TabContainer = styled.div`
   background: #f4faff;
 `
@@ -84,6 +91,7 @@ class HomePageTabs extends React.Component {
             width: "max-content",
             margin: "0 auto",
             boxShadow: "none",
+            marginTop: '-36px'
           }}
         >
           <Tabs
@@ -94,13 +102,14 @@ class HomePageTabs extends React.Component {
             variant="fullWidth"
           >
             {["WORKERS", "HEROES", "CHAMPIONS"].map((name, index) => (
-              <Tab
+              <MyTab
                 label={name}
                 className="button"
                 selected={true}
                 style={{
                   background: this.state.value === index ? "#5FA9FF" : "",
-                  borderRadius: this.state.value === index ? "10px" : "",
+                  borderRadius: this.state.value === index ? "50px" : "",
+                  border: '1px solid #5FA9FF',
                 }}
                 key={index}
               />

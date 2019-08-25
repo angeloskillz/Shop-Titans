@@ -80,13 +80,13 @@ a {
 
 .HeroContainer {
   background-size: cover;
-  height: 512px;
+  height: 300px;
   width: 100%;
   z-index: -1;
   position: relative;
 }
 .Img {
-  height: 512px;
+  height: 300px;
   object-position: center top;
 }
 

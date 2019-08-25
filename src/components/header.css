@@ -1,19 +1,14 @@
 .Header {
-  position: relative;
+  position: fixed;
   width: 100%;
   z-index: 100;
   transition: 0.8s cubic-bezier(0.02, 0.8, 0.2, 1);
-  background: #006effcc
 }
 
 .HeaderScrolled {
-  background: #141b1ecc;
-  backdrop-filter: blur(8px);
 }
 
 .HeaderGroup {
-  position: relative;
-  display: flex;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
@@ -32,12 +27,13 @@
   text-transform: uppercase;
   color: black;
   background: rgba(0, 0, 0, 0);
-  border-radius: 20px;
-  margin: 10px;
+  margin-left: 16px;
 }
 
 .Header img {
-  margin-left: -22px;
+  position: absolute;
+  left: 16px;
+  top: 16px;
   height: 20px;
   vertical-align: middle;
 }
