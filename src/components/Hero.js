@@ -1,5 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import WorkerImage from "../components/WorkerImage"
+import HeroItem from "../components/HeroItem"
+import { cleanName } from "../utils/util"
 
 const Class = styled.a`
   display: flex;
@@ -19,19 +22,11 @@ const Icons = styled.div`
   width: 70px;
   border-radius: 26px;
   background: #ff665f;
-`
-const HeroImg = styled.img`
-  position: relative;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
   padding-bottom: 10px;
   padding-top: 10px;
 `
 
 const Title = styled.h1`
-   
   font-weight: 800;
   font-size: 18px;
   text-align: center;
@@ -42,19 +37,17 @@ const Title = styled.h1`
 `
 
 const Description = styled.h2`
-   
   font-weight: bold;
   font-size: 14px;
   color: #406081;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   padding-left: 16px;
   padding-right: 16px;
   white-space: pre-wrap;
 `
 
 const SubDescription = styled.p`
-   
   font-weight: normal;
   font-size: 12px;
   color: #406081;
@@ -77,13 +70,12 @@ const Gold = styled.div`
   justify-content: flex-end;
 `
 const Cost = styled.p`
-   
   font-weight: normal;
-  font-size: 12px;
+  font-size: 10px;
   color: #406081;
   margin: 10px;
-  margin-left: 5px;
-  margin-right: 12px;
+  margin-left: 4px;
+  margin-right: 4px;
 `
 const Currency = styled.img`
   width: 15px;
@@ -92,76 +84,82 @@ const Currency = styled.img`
   margin-bottom: 10px;
 `
 
-export default class extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      modalIsOpen: false,
-    }
+const ItemSlots = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 250px;
+  margin: auto;
+  margin-top: 0px;
+`
 
-    this.handleOpenModal = this.handleOpenModal.bind(this)
-    this.handleCloseModal = this.handleCloseModal.bind(this)
-  }
+const ItemTypes = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 70px;
+  height: 50px;
+  border-radius: 15px;
+  background: #ff665f;
+  padding: 15px;
+`
 
-  handleOpenModal() {
-    this.setState({ showModal: true })
-  }
+export default props => (
+  <Class>
+    <Icons>
+      <WorkerImage
+        filename={props.details.subclass}
+        alt={props.details.subclass}
+      />
+    </Icons>
+    <Title>{props.details.subclass}</Title>
+    <SubDescription>
+      Prerequisites:{" "}
+      {props.details.prerequisite !== "---"
+        ? props.details.prerequisite
+        : "None"}
+    </SubDescription>
 
-  handleCloseModal() {
-    this.setState({ showModal: false })
-  }
+    <SubDescription>
+      Critical Hit: {props.details.criticalHit.chance} Chance of{" "}
+      {props.details.criticalHit.damage} Damage
+    </SubDescription>
 
-  render() {
-    return (
-      <div tabIndex="0">
-        <Class onClick={this.handleOpenModal} tabIndex="0">
-          <Icons>
-            <HeroImg
-              src={require(`../images/Hero Classes/${this.props.details.class}s/${this.props.details.subclass}.png`)}
-              alt={this.props.details.subclass}
-            />
-          </Icons>
-          <Title>{this.props.details.subclass}</Title>
-          <SubDescription>
-            Prerequisites:{" "}
-            {this.props.details.prerequisite !== "---"
-              ? this.props.details.prerequisite
-              : "None"}
-          </SubDescription>
+    <SubDescription>Threat Rating: {props.details.threatRating}</SubDescription>
 
-          <SubDescription>
-            Critical Hit: {this.props.details.criticalHit.chance} Chance of{" "}
-            {this.props.details.criticalHit.damage} Damage
-          </SubDescription>
+    <Description>Allowed Equipments:</Description>
 
-          <SubDescription>
-            Threat Rating: {this.props.details.threatRating}
-          </SubDescription>
-
-          <Description>Allowed Equipments:</Description>
-          {this.props.details.equipments.map((equipment, index) => (
-            <div key={index}>
-              <SubDescription>
-                Slot {equipment.slot}: {equipment.allowed.join(", ")}
-              </SubDescription>
-            </div>
+    <ItemSlots>
+      {props.details.equipments.map((equipment, index) => (
+        <ItemTypes key={index}>
+          {equipment.allowed.map((type, itemIndex) => (
+            <HeroItem
+              filename={`icon_global_item_${cleanName(type)}`}
+              alt={type}
+              key={itemIndex}
+            ></HeroItem>
           ))}
-          <Gold>
-            <Currency src={require(`../images/Currencies/gold.png`)} />
-            <Cost>{this.props.details.cost.gold}</Cost>
-            <Currency src={require(`../images/Currencies/gems.png`)} />
-            <Cost>{this.props.details.cost.gems}</Cost>
-            {this.props.details.stats.map((stat, index) => (
-              <div style={{ display: "flex" }} key={index}>
-                <Currency
-                  src={require(`../images/Stat Indicators/${stat.name}.png`)}
-                ></Currency>
-                <Cost>{stat.amount}</Cost>
-              </div>
-            ))}
-          </Gold>
-        </Class>
-      </div>
-    )
-  }
-}
+        </ItemTypes>
+      ))}
+    </ItemSlots>
+    <Gold>
+      {props.details.stats.map((stat, index) => (
+        <div style={{ display: "flex" }} key={index}>
+          <Currency
+            src={require(`../images/Stat Indicators/${stat.name}.png`)}
+          ></Currency>
+          <Cost>{stat.amount}</Cost>
+        </div>
+      ))}
+      <Currency src={require(`../images/Currencies/gold.png`)} />
+      <Cost>{props.details.cost.gold.toLocaleString()}</Cost>
+      <Currency src={require(`../images/Currencies/gems.png`)} />
+      <Cost>{props.details.cost.gems.toLocaleString()}</Cost>
+    </Gold>
+  </Class>
+)

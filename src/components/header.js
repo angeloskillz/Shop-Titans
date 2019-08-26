@@ -2,15 +2,15 @@ import "./header.css"
 import React from "react"
 import { Link } from "gatsby"
 
-import Fab from '@material-ui/core/Fab'
+import Fab from "@material-ui/core/Fab"
 import styled from "styled-components"
-import LongMenu from "./Menu";
+import LongMenu from "./Menu"
 
 const MyFab = styled(Fab)({
-  fontSize: '12px',
-  boxShadow: 'none',
+  fontSize: "12px",
+  boxShadow: "none",
   margin: 0,
-  })
+})
 
 class Header extends React.Component {
   state = {
@@ -59,27 +59,29 @@ class Header extends React.Component {
           <Link to="/">
             <img src={require("./../images/Logo.png")} alt="LOGOSTWIKI" />
           </Link>
-          <div style={{display: 'flex',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        right: '16px',
-        top: '6px',
-        position: 'absolute',
-        margin: 0,
-        }}>
-          <a href="https://discord.gg/shoptitans" >
-          <MyFab size="small" variant="contained" color="primary">
-            D
-          </MyFab>
-        </a>
-        <a href="https://discord.gg/rWMuMdk">
-          <MyFab size="small" variant="contained" color="secondary">
-            W
-          </MyFab>
-        </a>
-        <LongMenu></LongMenu>
-        </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              right: "16px",
+              top: "6px",
+              position: "absolute",
+              margin: 0,
+            }}
+          >
+            <a href="https://discord.gg/shoptitans">
+              <MyFab size="small" variant="contained" color="primary">
+                D
+              </MyFab>
+            </a>
+            <a href="https://discord.gg/rWMuMdk">
+              <MyFab size="small" variant="contained" color="secondary">
+                W
+              </MyFab>
+            </a>
+            <LongMenu></LongMenu>
+          </div>
         </div>
       </div>
     )

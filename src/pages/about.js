@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ImgHero from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,7 +8,6 @@ import styled from "styled-components"
 import { Button } from "@material-ui/core"
 
 const Description = styled.h2`
-   
   font-weight: bold;
   font-size: 14px;
   color: #406081;
