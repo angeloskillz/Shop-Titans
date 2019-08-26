@@ -176,15 +176,13 @@ export default props => (
     <Gold>
       {props.details.stats.map((stat, index) => (
         <div style={{ display: "flex" }} key={index}>
-          <Currency
-            src={require(`../images/Stat Indicators/${stat.name}.png`)}
-          ></Currency>
+        <IconImage filename={stat.name} alt={stat.name} />
           <Cost>{stat.amount}</Cost>
         </div>
       ))}
-      <Currency src={require(`../images/Currencies/gold.png`)} />
+      <IconImage filename="gold" alt="gold" />
       <Cost>{props.details.cost.gold.toLocaleString()}</Cost>
-      <Currency src={require(`../images/Currencies/gems.png`)} />
+      <IconImage filename="gems" alt="gems" />
       <Cost>{props.details.cost.gems.toLocaleString()}</Cost>
     </Gold>
   </Class>

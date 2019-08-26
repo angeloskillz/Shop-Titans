@@ -68,7 +68,6 @@ const Gold = styled.div`
   justify-content: flex-end;
 `
 const Cost = styled.p`
-   
   font-weight: normal;
   font-size: 12px;
   color: #406081;
