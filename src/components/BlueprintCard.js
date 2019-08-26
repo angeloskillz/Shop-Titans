@@ -91,7 +91,6 @@ const TierBadge = styled.div`
   top: 16px;
   text-align: center;
   jusitfy-content: center;
-
 `
 
 const EnergyBox = styled.div`

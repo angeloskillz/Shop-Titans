@@ -3,6 +3,7 @@ import styled from "styled-components"
 import WorkerImage from "../components/WorkerImage"
 import HeroItem from "../components/HeroItem"
 import { cleanName } from "../utils/util"
+import IconImage from "../components/IconImage"
 
 const Class = styled.a`
   display: flex;
@@ -41,7 +42,7 @@ const Description = styled.h2`
   font-size: 14px;
   color: #406081;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   padding-left: 16px;
   padding-right: 16px;
   white-space: pre-wrap;
@@ -109,8 +110,29 @@ const ItemTypes = styled.div`
   padding: 15px;
 `
 
+const TierBadge = styled.div`
+  width: 26px;
+  height: 26px;
+  background: #38ec94;
+  color: white;
+  font-size: 18px;
+  border-radius: 100%;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  text-align: center;
+  jusitfy-content: center;
+`
+
 export default props => (
   <Class>
+    <TierBadge className="badge">
+      <HeroItem
+        filename={`icon_global_item_${cleanName(props.details.element)}`}
+        alt="gem"
+        style={{ marginTop: "5px" }}
+      />
+    </TierBadge>
     <Icons>
       <WorkerImage
         filename={props.details.subclass}
@@ -126,11 +148,15 @@ export default props => (
     </SubDescription>
 
     <SubDescription>
-      Critical Hit: {props.details.criticalHit.chance} Chance of{" "}
+      {props.details.criticalHit.chance} Critical Hit Chance{" "}
       {props.details.criticalHit.damage} Damage
     </SubDescription>
 
     <SubDescription>Threat Rating: {props.details.threatRating}</SubDescription>
+
+    <SubDescription>
+      Skill Unlock Levels: {props.details.skillUnlockLevels.join(", ")}
+    </SubDescription>
 
     <Description>Allowed Equipments:</Description>
 
