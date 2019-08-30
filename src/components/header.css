@@ -37,3 +37,16 @@
   height: 20px;
   vertical-align: middle;
 }
+
+.nav-hide-mobile {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .nav-hide-mobile {
+    display: inline;
+  }
+  .nav-show-mobile {
+    display: none;
+  }
+}

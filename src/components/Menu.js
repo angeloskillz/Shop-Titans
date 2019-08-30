@@ -1,32 +1,39 @@
-import React from 'react';
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuIcon from '@material-ui/icons/MenuRounded';
+import React from "react"
+import IconButton from "@material-ui/core/IconButton"
+import Menu from "@material-ui/core/Menu"
+import MenuItem from "@material-ui/core/MenuItem"
+import MenuIcon from "@material-ui/icons/MenuRounded"
 import { Link } from "gatsby"
 
-const ITEM_HEIGHT = 48;
+const ITEM_HEIGHT = 48
 
 export default function LongMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = React.useState(null)
+  const open = Boolean(anchorEl)
 
   function handleClick(event) {
-    setAnchorEl(event.currentTarget);
+    setAnchorEl(event.currentTarget)
   }
 
   function handleClose() {
-    setAnchorEl(null);
+    setAnchorEl(null)
   }
 
   return (
     <div>
+      <Link to="/blueprints" className="nav-hide-mobile">
+        Blueprints
+      </Link>
+      <Link to="/about" className="nav-hide-mobile">
+        About
+      </Link>
       <IconButton
         aria-label="more"
         aria-controls="long-menu"
         aria-haspopup="true"
         onClick={handleClick}
-        style={{marginLeft: '16px'}}
+        style={{ marginLeft: "16px" }}
+        className="nav-show-mobile"
       >
         <MenuIcon />
       </IconButton>
@@ -43,17 +50,23 @@ export default function LongMenu() {
           },
         }}
       >
-          <Link to="/overview">
-          <MenuItem onClick={handleClose} style={{display:'flex', color: '#5FA9FF'}}>
-          Blueprints
+        <Link to="/overview">
+          <MenuItem
+            onClick={handleClose}
+            style={{ display: "flex", color: "#5FA9FF" }}
+          >
+            Blueprints
           </MenuItem>
-          </Link>
-          <Link to="/about">
-          <MenuItem onClick={handleClose} style={{display:'flex', color: '#5FA9FF'}}>
-          About
+        </Link>
+        <Link to="/about">
+          <MenuItem
+            onClick={handleClose}
+            style={{ display: "flex", color: "#5FA9FF" }}
+          >
+            About
           </MenuItem>
-          </Link>
+        </Link>
       </Menu>
     </div>
-  );
+  )
 }

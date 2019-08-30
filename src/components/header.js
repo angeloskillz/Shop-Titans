@@ -72,12 +72,12 @@ class Header extends React.Component {
           >
             <a href="https://discord.gg/shoptitans">
               <MyFab size="small" variant="contained" color="primary">
-                D
+                Discord
               </MyFab>
             </a>
             <a href="https://discord.gg/rWMuMdk">
               <MyFab size="small" variant="contained" color="secondary">
-                W
+                Contact Us
               </MyFab>
             </a>
             <LongMenu></LongMenu>
