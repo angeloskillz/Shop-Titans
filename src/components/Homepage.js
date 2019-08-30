@@ -135,7 +135,7 @@ class HomePageTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {specialWorkers.map((worker, index) => (
-                  <WorkerBox key={index} details={worker} type="special" />
+                  <WorkerBox key={index} details={worker} type="special" className="no-active" />
                 ))}
               </div>
             </div>
@@ -146,7 +146,7 @@ class HomePageTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {resourceWorkers.map((worker, index) => (
-                  <WorkerBox key={index} details={worker} type="resource" />
+                  <WorkerBox key={index} details={worker} type="resource" className="no-active" />
                 ))}
               </div>
             </div>
