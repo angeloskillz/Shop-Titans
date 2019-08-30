@@ -32,11 +32,13 @@ const Image = props => (
         <Img
           alt={props.alt}
           fixed={image.node.childImageSharp.fixed}
-          style={props.style || {
-						position: "relative",
-						margin: "auto",
-            display: "block",
-          }}
+          style={
+            props.style || {
+              position: "relative",
+              margin: "auto",
+              display: "block",
+            }
+          }
         />
       )
     }}

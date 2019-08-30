@@ -75,14 +75,8 @@ const Cost = styled.p`
   font-size: 10px;
   color: #406081;
   margin: 10px;
-  margin-left: 4px;
-  margin-right: 4px;
-`
-const Currency = styled.img`
-  width: 15px;
-  height: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
 `
 
 const ItemSlots = styled.div`
@@ -123,6 +117,9 @@ const TierBadge = styled.div`
   text-align: center;
   jusitfy-content: center;
 `
+
+const rightMargins = ["12px", "10px", "10px", "8px", "3px"]
+const leftMargins = ["5px", "2px", "2px", "2px", "2px"]
 
 export default props => (
   <Class>
@@ -168,22 +165,35 @@ export default props => (
               filename={`icon_global_item_${cleanName(type)}`}
               alt={type}
               key={itemIndex}
+              style={{
+                margin: `${
+                  equipment.allowed.length < 2 ? "auto" : "-5px"
+                } 0px 8px 0px`,
+                left: itemIndex > 1 ? "-5px" : "auto",
+              }}
             ></HeroItem>
           ))}
         </ItemTypes>
       ))}
     </ItemSlots>
     <Gold>
-      {props.details.stats.map((stat, index) => (
-        <div style={{ display: "flex" }} key={index}>
-        <IconImage filename={stat.name} alt={stat.name} />
-          <Cost>{stat.amount}</Cost>
-        </div>
+      {[
+        ...props.details.stats,
+        { name: "gems", amount: props.details.cost.gems },
+        { name: "gold", amount: props.details.cost.gold },
+      ].map((stat, index) => (
+        <React.Fragment key={index}>
+          <IconImage filename={stat.name} alt={stat.name} />
+          <Cost
+            style={{
+              marginRight: rightMargins[props.index] || "2px",
+              marginLeft: leftMargins[props.index] || "2px",
+            }}
+          >
+            {stat.amount.toLocaleString()}
+          </Cost>
+        </React.Fragment>
       ))}
-      <IconImage filename="gold" alt="gold" />
-      <Cost>{props.details.cost.gold.toLocaleString()}</Cost>
-      <IconImage filename="gems" alt="gems" />
-      <Cost>{props.details.cost.gems.toLocaleString()}</Cost>
     </Gold>
   </Class>
 )
