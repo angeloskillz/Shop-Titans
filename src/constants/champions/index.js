@@ -34,6 +34,53 @@ module.exports = [
             effect: "10% bonus Attack and Defense for the party.",
           },
         },
+        title: "The King's Shadow",
+        story: [
+          {
+            name: "Argon",
+            text:
+              "...And that's when I slashed the Troublin with my sword! Pow!",
+          },
+          {
+            name: "Elder Owen",
+            text:
+              "Ho ho! Quite the tale, Argon! Ah the fire of youth... I must say, it's very nice of you to accompany this old man on his morning walk.",
+          },
+          {
+            name: "Argon",
+            text:
+              "Don't mention it! If I am to become a knight someday, I must help people in need!",
+          },
+          {
+            name: "Elder Owen",
+            text:
+              "Just like your father, eh? I'm sure you'll make a fine knight, my boy. Why, perhaps you could even work as the King's royal guard. Speak of the devil, there he is at the market! Why not go ask him?",
+          },
+          {
+            name: "Argon",
+            text:
+              "YOUR MAJESTY! I've come to offer you my services as a knight!",
+          },
+          {
+            name: "Reinhold",
+            text:
+              "W-what's the meaning of this!? Sia, please handle this commoner!",
+          },
+          {
+            name: "Sia",
+            text: "Of course, my King. Well, young man? What is it?",
+          },
+          {
+            name: "Argon",
+            text:
+              "Wow! I, uh... I'm knight! I want to become an Argon! No, wait a minute...",
+          },
+          {
+            name: "Sia",
+            text:
+              "You certainly have guts! If you're so determined, come see me in the castle's courtyard next week. Train hard until then! I would not tolerate a slacker among the King's knights...",
+          },
+        ],
       },
       {
         rank: 2,
