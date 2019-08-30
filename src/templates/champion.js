@@ -140,10 +140,13 @@ export default ({ pageContext: data }) => (
 
     {data.ranks.map((rank, index) => (
       <React.Fragment key={index}>
-
-        {rank.story ? (<div className="Selectan">
-          <h1 style={{ color: "#ff665f" }}>Story #{rank.rank}: {rank.title}</h1>
-        </div>) : null}
+        {rank.story ? (
+          <div className="Selectan">
+            <h1 style={{ color: "#ff665f" }}>
+              Story #{rank.rank}: {rank.title}
+            </h1>
+          </div>
+        ) : null}
         {rank.story &&
           rank.story.map((page, pageIndex) => (
             <Page key={pageIndex}>
