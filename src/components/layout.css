@@ -5,7 +5,8 @@ img {
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
@@ -95,7 +96,7 @@ a {
   height: 80px;
   width: 100%;
   bottom: 0;
-  background:  #f4faff;
+  background: #f4faff;
   pointer-events: none;
   border-radius: 26px 26px 0px 0px;
 }
@@ -192,7 +193,7 @@ a {
     text-align: center;
     margin-top: 16px;
     margin-bottom: 7px;
-     
+
     font-size: 24px;
     line-height: 1.2;
     color: rgb(255, 255, 255);
@@ -461,7 +462,7 @@ tbody tr:hover {
 }
 
 /* overview table */
-.rt-table{
+.rt-table {
   background: #fff;
   box-shadow: 0px 8px 12px #bdccdb;
   border-radius: 26px;
@@ -473,7 +474,6 @@ tbody tr:hover {
   font-weight: 500;
 }
 
-.rt-tr.-odd{
-  background: #f7f7f7  !important;
-
+.rt-tr.-odd {
+  background: #f7f7f7 !important;
 }

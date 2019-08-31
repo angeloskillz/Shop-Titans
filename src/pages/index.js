@@ -19,6 +19,7 @@ const IndexPage = props => (
         <div className="gradient" />
       </div>
       <div className="HeroGroup">
+        <h2>Shop Titans Wiki</h2>
         <p style={{ marginBottom: "16px" }}>Update 2.0.1</p>
       </div>
     </div>

@@ -21,7 +21,7 @@ export default function LongMenu() {
 
   return (
     <div>
-      <Link to="/blueprints" className="nav-hide-mobile">
+      <Link to="/overview" className="nav-hide-mobile">
         Blueprints
       </Link>
       <Link to="/about" className="nav-hide-mobile">
