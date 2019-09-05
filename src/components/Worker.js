@@ -10,16 +10,16 @@ const BlueprintBox = styled.div`
   width: 40px;
   height: 40px;
   padding: 9px;
-  border-radius: 19px;
+  border-radius: 29px;
   background: #38ec94;
-  box-shadow: 0px 8px 12px #bdccdb;
+  margin-bottom: 0;
 `
 
 const Class = styled.a`
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 367px;
+  height: auto;
   width: 280px;
   border-radius: 26px;
   background: #fff;
@@ -27,6 +27,8 @@ const Class = styled.a`
   margin-left: 6px;
   margin-top: 16px;
   margin-bottom: 16px;
+
+  padding-bottom: 50px;
 `
 const Icons = styled.div`
   margin: 0 auto;
@@ -65,6 +67,7 @@ const SubDescription = styled.p`
   color: #406081;
   text-align: center;
   margin-bottom: 16px;
+  margin-top: -10px;
   padding-left: 16px;
   padding-right: 16px;
   white-space: pre-wrap;

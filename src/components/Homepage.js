@@ -160,7 +160,7 @@ class HomePageTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {fighters.map((fighter, index) => (
-                  <HeroBox key={index} details={fighter} index={index} />
+                  <HeroBox key={index} details={fighter} type='fighter'  index={index} />
                 ))}
               </div>
             </div>
@@ -171,7 +171,7 @@ class HomePageTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {rogues.map((rogue, index) => (
-                  <HeroBox key={index} details={rogue} index={index} />
+                  <HeroBox key={index} details={rogue} type='rogue'  index={index} />
                 ))}
               </div>
             </div>
