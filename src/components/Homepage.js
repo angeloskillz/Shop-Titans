@@ -33,14 +33,14 @@ import ChampionBox from "../components/ChampionBox"
 const workers = [
   blacksmith,
   carpenter,
-  engineer,
   herbalist,
   master,
   priestess,
-  scholar,
   tailor,
   wizard,
 ]
+
+const premiumWorkers = [engineer, scholar]
 
 const specialWorkers = [townhall, tavern, emeraldinn, traininghall]
 const resourceWorkers = [
@@ -124,6 +124,17 @@ class HomePageTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {workers.map((worker, index) => (
+                  <WorkerBox key={index} details={worker} type="worker" />
+                ))}
+              </div>
+            </div>
+
+            <div className="Selectan">
+              <h1 style={{ color: "#ff665f" }}>Premium Workers</h1>
+            </div>
+            <div className="CardboxGroupScroll">
+              <div className="CardboxGroup">
+                {premiumWorkers.map((worker, index) => (
                   <WorkerBox key={index} details={worker} type="worker" />
                 ))}
               </div>

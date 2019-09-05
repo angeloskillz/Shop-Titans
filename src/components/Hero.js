@@ -94,10 +94,10 @@ const ItemTypes = styled.div`
   box-sizing: border-box;
   flex-wrap: wrap;
   width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background: #ff665f;
-    justify-content: center;
+  height: 40px;
+  border-radius: 50px;
+  background: #ff665f;
+  justify-content: center;
 `
 
 const TierBadge = styled.div`
@@ -119,7 +119,17 @@ const leftMargins = ["5px", "2px", "2px", "2px", "2px"]
 
 export default props => (
   <Class>
-    <TierBadge className="badge">
+    <TierBadge
+      className="badge"
+      style={{
+        background:
+          props.type === "fighter"
+            ? "#ff665f"
+            : props.type === "rogue"
+            ? "#38ec94"
+            : "#02CFF2",
+      }}
+    >
       <HeroItem
         filename={`icon_global_item_${cleanName(props.details.element)}`}
         alt="gem"
@@ -130,24 +140,29 @@ export default props => (
       style={{
         background:
           props.type === "fighter"
-            ? "ff665f"
+            ? "#ff665f"
             : props.type === "rogue"
-              ? "#38ec94"
-              : "#02CFF2",
-      }}>
+            ? "#38ec94"
+            : "#02CFF2",
+      }}
+    >
       <WorkerImage
         filename={props.details.subclass}
         alt={props.details.subclass}
       />
     </Icons>
-    <Title style={{
-      color:
-        props.type === "fighter"
-          ? "ff665f"
-          : props.type === "rogue"
+    <Title
+      style={{
+        color:
+          props.type === "fighter"
+            ? "ff665f"
+            : props.type === "rogue"
             ? "#38ec94"
             : "#02CFF2",
-    }}>{props.details.subclass}</Title>
+      }}
+    >
+      {props.details.subclass}
+    </Title>
     <SubDescription>
       Prerequisites:{" "}
       {props.details.prerequisite !== "---"
@@ -170,22 +185,25 @@ export default props => (
 
     <ItemSlots>
       {props.details.equipments.map((equipment, index) => (
-        <ItemTypes key={index} style={{
-          background:
-            props.type === "fighter"
-              ? "ff665f"
-              : props.type === "rogue"
+        <ItemTypes
+          key={index}
+          style={{
+            background:
+              props.type === "fighter"
+                ? "ff665f"
+                : props.type === "rogue"
                 ? "#38ec94"
                 : "#02CFF2",
-        }}>
+          }}
+        >
           {equipment.allowed.map((type, itemIndex) => (
             <HeroItem
               filename={`icon_global_item_${cleanName(type)}`}
               alt={type}
               key={itemIndex}
               style={{
-                alignSelf: 'center',
-                    }}
+                alignSelf: "center",
+              }}
             ></HeroItem>
           ))}
         </ItemTypes>

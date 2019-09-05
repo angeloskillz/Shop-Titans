@@ -477,3 +477,11 @@ tbody tr:hover {
 .rt-tr.-odd {
   background: #f7f7f7 !important;
 }
+
+
+/* My Custom CSS */
+
+.no-active {
+  pointer-events: none;
+  cursor: default;
+}
