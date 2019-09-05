@@ -122,6 +122,9 @@ class FullWidthTabs extends React.Component {
             indicatorColor="primary"
             textColor="primary"
             variant="fullWidth"
+            TabIndicatorProps={{
+              style: { visibility: "hidden" },
+            }}
           >
             {["Developers", "Contributors", "Roadmap", "Changelog"].map(
               (name, index) => (

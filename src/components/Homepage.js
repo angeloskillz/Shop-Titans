@@ -59,11 +59,11 @@ const rogues = heroes.filter(hero => hero.class === "Rogue")
 const spellcasters = heroes.filter(hero => hero.class === "Spellcaster")
 
 const MyTab = styled(Tab)({
-  border: '1px solid grey',
-  borderRadius: '50px',
-  fontSize: '12px',
-  marginRight: '16px'
-  })
+  border: "1px solid grey",
+  borderRadius: "50px",
+  fontSize: "12px",
+  marginRight: "16px",
+})
 
 const TabContainer = styled.div`
   background: #f4faff;
@@ -91,7 +91,7 @@ class HomePageTabs extends React.Component {
             width: "max-content",
             margin: "0 auto",
             boxShadow: "none",
-            marginTop: '-36px'
+            marginTop: "-36px",
           }}
         >
           <Tabs
@@ -100,6 +100,9 @@ class HomePageTabs extends React.Component {
             indicatorColor="primary"
             textColor="primary"
             variant="fullWidth"
+            TabIndicatorProps={{
+              style: { visibility: "hidden" },
+            }}
           >
             {["WORKERS", "HEROES", "CHAMPIONS"].map((name, index) => (
               <MyTab
@@ -109,7 +112,7 @@ class HomePageTabs extends React.Component {
                 style={{
                   background: this.state.value === index ? "#5FA9FF" : "",
                   borderRadius: this.state.value === index ? "50px" : "",
-                  border: '1px solid #5FA9FF',
+                  border: "1px solid #5FA9FF",
                 }}
                 key={index}
               />
@@ -146,7 +149,12 @@ class HomePageTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {specialWorkers.map((worker, index) => (
-                  <WorkerBox key={index} details={worker} type="special" className="no-active" />
+                  <WorkerBox
+                    key={index}
+                    details={worker}
+                    type="special"
+                    className="no-active"
+                  />
                 ))}
               </div>
             </div>
@@ -157,7 +165,12 @@ class HomePageTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {resourceWorkers.map((worker, index) => (
-                  <WorkerBox key={index} details={worker} type="resource" className="no-active" />
+                  <WorkerBox
+                    key={index}
+                    details={worker}
+                    type="resource"
+                    className="no-active"
+                  />
                 ))}
               </div>
             </div>
@@ -171,7 +184,12 @@ class HomePageTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {fighters.map((fighter, index) => (
-                  <HeroBox key={index} details={fighter} type='fighter'  index={index} />
+                  <HeroBox
+                    key={index}
+                    details={fighter}
+                    type="fighter"
+                    index={index}
+                  />
                 ))}
               </div>
             </div>
@@ -182,7 +200,12 @@ class HomePageTabs extends React.Component {
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
                 {rogues.map((rogue, index) => (
-                  <HeroBox key={index} details={rogue} type='rogue'  index={index} />
+                  <HeroBox
+                    key={index}
+                    details={rogue}
+                    type="rogue"
+                    index={index}
+                  />
                 ))}
               </div>
             </div>
