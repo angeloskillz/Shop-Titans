@@ -9,6 +9,7 @@
   background: #141b1ecc;
   backdrop-filter: blur(8px);
   height: 50px;
+  color: white;
 }
 
 .HeaderGroup {

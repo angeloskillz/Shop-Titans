@@ -4,7 +4,8 @@ import { Link } from "gatsby"
 import LongMenu from "./Menu"
 import { useMediaQuery } from "react-responsive"
 
-const Mobile = ({ children }) => useMediaQuery({ maxWidth: 700 }) ? children : null
+const Mobile = ({ children }) =>
+  useMediaQuery({ maxWidth: 700 }) ? children : null
 
 class Header extends React.Component {
   state = {
@@ -61,10 +62,21 @@ class Header extends React.Component {
               right: "16px",
               top: "6px",
               position: "absolute",
-              margin: 0,
+              margin: "10px",
             }}
           >
-            <LongMenu />
+            <Link
+              to="/overview"
+              style={{ color: this.state.hasScrolled ? "white" : "" }}
+            >
+              Blueprints
+            </Link>
+            <Link
+              to="/about"
+              style={{ color: this.state.hasScrolled ? "white" : "" }}
+            >
+              About
+            </Link>
           </div>
         </div>
       </div>

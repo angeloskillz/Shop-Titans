@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import ImgHero from "gatsby-image"
+import Fab from "@material-ui/core/Fab"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -19,8 +20,46 @@ const IndexPage = props => (
         <div className="gradient" />
       </div>
       <div className="HeroGroup">
-        <h2>Shop Titans Wiki</h2>
-        <p style={{ marginBottom: "16px" }}>Update 2.0.1</p>
+        <p style={{ marginBottom: "16px", marginTop: "-30px" }}>Update 2.0.1</p>
+        <div style={{ marginTop: "-15px" }}>
+          <a
+            href="https://discord.gg/shoptitans"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Fab
+              size="small"
+              variant="contained"
+              color="primary"
+              style={{
+                fontSize: "12px",
+                boxShadow: "none",
+                marginRight: "5px",
+              }}
+            >
+              Official Discord
+            </Fab>
+          </a>
+          <a
+            href="https://discord.gg/rWMuMdk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Fab
+              size="small"
+              variant="contained"
+              color="secondary"
+              style={{
+                fontSize: "12px",
+                boxShadow: "none",
+                margin: 0,
+                background: "orange",
+              }}
+            >
+              Contact Us
+            </Fab>
+          </a>
+        </div>
       </div>
     </div>
     <Homepage />

@@ -119,7 +119,7 @@ class FullWidthTabs extends React.Component {
         blueprint["Required Worker__1"] !== data.title
       )
         continue
-        
+
       if (!relevantBlueprints[blueprint.Type])
         relevantBlueprints[blueprint.Type] = [blueprint]
       else relevantBlueprints[blueprint.Type].push(blueprint)
@@ -133,7 +133,7 @@ class FullWidthTabs extends React.Component {
         </Section>
         <div className="CardboxGroupScroll" style={{ marginBottom: "50px" }}>
           <Resources className="CardboxGroup">
-            <Worker details={data} type="worker" />
+            <Worker details={data} type="worker" className="no-active" />
           </Resources>
         </div>
 
