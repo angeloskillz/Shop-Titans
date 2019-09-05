@@ -6,6 +6,7 @@ import Fab from "@material-ui/core/Fab"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Homepage from "../components/Homepage"
+import WorkerImage from "../components/WorkerImage"
 
 const IndexPage = props => (
   <Layout>
@@ -20,8 +21,8 @@ const IndexPage = props => (
         <div className="gradient" />
       </div>
       <div className="HeroGroup">
-        <p style={{ marginBottom: "16px", marginTop: "-30px" }}>Update 2.0.1</p>
-        <div style={{ marginTop: "-15px" }}>
+        <WorkerImage filename="Logo" alt="Logo" />
+        <div style={{ marginTop: "5px" }}>
           <a
             href="https://discord.gg/shoptitans"
             target="_blank"

@@ -478,10 +478,14 @@ tbody tr:hover {
   background: #f7f7f7 !important;
 }
 
-
 /* My Custom CSS */
 
 .no-active {
   pointer-events: none;
   cursor: default;
+}
+
+/* Hides the indicator on material ui tabs */
+.PrivateTabIndicator-colorPrimary-79 {
+  visibility: hidden;
 }

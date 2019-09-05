@@ -32,7 +32,7 @@ const contributors = [
 
 const TabContainer = styled.div`
   padding: 24px;
-  background: "#F4FAFF"
+  background: "#F4FAFF";
 `
 
 const UnorderedList = styled.ul`
@@ -49,6 +49,9 @@ const version1 = [
   { value: "Credits to contributors.", done: true },
   { value: "Make a detailed roadmap.", done: true },
   { value: "Start a changelog.", done: true },
+  { value: "Add Champion tab with each champions own box.", done: true },
+  { value: "Champion pages showing rank details and stories.", done: true },
+  { value: "Blueprints page: an overview of all blueprints", done: true },
 ]
 
 const version2 = [
@@ -59,11 +62,6 @@ const version2 = [
   },
   { value: "Users can submit guides with Google Docs.", done: false },
   { value: "Atleast a few guides must be written as a start.", done: false },
-  {
-    value:
-      "Add Champion tab with each champions own box. Consider a page per champion.",
-    done: false,
-  },
   { value: "Each blueprint has it's own individual page.", done: false },
   {
     value:
@@ -88,18 +86,7 @@ const version3 = [
   },
 ]
 
-const changelog = [
-  "Added a footer with copyrights to Kabam.",
-  "Added privacy policy showing we don't store any user data.",
-  "Created a navbar.",
-  "Added Discord Links on home page.",
-  "Worker Cards",
-  "Added Worker cards on home page in first tab.",
-  "Cards are separated into sections based on their type.",
-  "Cards are able to be clicked to open their individual page for more details.",
-  "Added Hero cards on home page in second tab.",
-  "Added Champion cards on home page in third tab.",
-]
+const changelog = ["Launched Verson 1.0 of the Shop Titans Wiki!"]
 
 class FullWidthTabs extends React.Component {
   state = {
@@ -132,23 +119,24 @@ class FullWidthTabs extends React.Component {
           <Tabs
             value={this.state.value}
             onChange={this.handleChange}
-            indicatorColor=""
+            indicatorColor="primary"
             textColor="primary"
             variant="fullWidth"
-
           >
-            {["Developers", "Contributors", "Roadmap", "Changelog"].map((name, index) => (
-              <Tab
-                label={name}
-                className="button"
-                selected={true}
-                style={{
-                  background: this.state.value === index ? "#5FA9FF" : "",
-                  borderRadius: this.state.value === index ? "10px" : "",
-                }}
-                key={index}
-              />
-            ))}
+            {["Developers", "Contributors", "Roadmap", "Changelog"].map(
+              (name, index) => (
+                <Tab
+                  label={name}
+                  className="button"
+                  selected={true}
+                  style={{
+                    background: this.state.value === index ? "#5FA9FF" : "",
+                    borderRadius: this.state.value === index ? "10px" : "",
+                  }}
+                  key={index}
+                />
+              )
+            )}
           </Tabs>
         </AppBar>
         {value === 0 && (

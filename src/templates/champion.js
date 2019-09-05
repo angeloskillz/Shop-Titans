@@ -41,28 +41,6 @@ const Container = styled.div`
   position: relative;
 `
 
-const Title = styled.h1`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  text-align: center;
-  color: #ff665f;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 0;
-`
-const Description = styled.h2`
-  font-weight: bold;
-  font-size: 14px;
-  color: #406081;
-  text-align: center;
-  margin-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
-  white-space: pre-wrap;
-`
-
 const SubDescription = styled.p`
   font-weight: normal;
   font-size: 12px;

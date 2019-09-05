@@ -1,11 +1,6 @@
 import "./header.css"
 import React from "react"
 import { Link } from "gatsby"
-import LongMenu from "./Menu"
-import { useMediaQuery } from "react-responsive"
-
-const Mobile = ({ children }) =>
-  useMediaQuery({ maxWidth: 700 }) ? children : null
 
 class Header extends React.Component {
   state = {
