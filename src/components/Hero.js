@@ -9,13 +9,14 @@ const Class = styled.a`
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 367px;
+  height: auto;
   width: 280px;
   border-radius: 26px;
   background: #fff;
   box-shadow: 0px 8px 12px #bdccdb;
   margin-left: 16px;
   margin-top: 16px;
+  padding-bottom: 30px;
 `
 const Icons = styled.div`
   margin: 0 auto;
@@ -85,23 +86,18 @@ const ItemSlots = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
-  width: 250px;
-  margin: auto;
-  margin-top: 0px;
+  margin: 16px;
 `
 
 const ItemTypes = styled.div`
   display: flex;
   box-sizing: border-box;
-  justify-content: space-around;
   flex-wrap: wrap;
-  margin-left: 5px;
-  margin-top: 5px;
-  width: 70px;
-  height: 50px;
-  border-radius: 15px;
-  background: #ff665f;
-  padding: 15px;
+  width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #ff665f;
+    justify-content: center;
 `
 
 const TierBadge = styled.div`
@@ -130,13 +126,28 @@ export default props => (
         style={{ marginTop: "5px" }}
       />
     </TierBadge>
-    <Icons>
+    <Icons
+      style={{
+        background:
+          props.type === "fighter"
+            ? "ff665f"
+            : props.type === "rogue"
+              ? "#38ec94"
+              : "#02CFF2",
+      }}>
       <WorkerImage
         filename={props.details.subclass}
         alt={props.details.subclass}
       />
     </Icons>
-    <Title>{props.details.subclass}</Title>
+    <Title style={{
+      color:
+        props.type === "fighter"
+          ? "ff665f"
+          : props.type === "rogue"
+            ? "#38ec94"
+            : "#02CFF2",
+    }}>{props.details.subclass}</Title>
     <SubDescription>
       Prerequisites:{" "}
       {props.details.prerequisite !== "---"
@@ -159,18 +170,22 @@ export default props => (
 
     <ItemSlots>
       {props.details.equipments.map((equipment, index) => (
-        <ItemTypes key={index}>
+        <ItemTypes key={index} style={{
+          background:
+            props.type === "fighter"
+              ? "ff665f"
+              : props.type === "rogue"
+                ? "#38ec94"
+                : "#02CFF2",
+        }}>
           {equipment.allowed.map((type, itemIndex) => (
             <HeroItem
               filename={`icon_global_item_${cleanName(type)}`}
               alt={type}
               key={itemIndex}
               style={{
-                margin: `${
-                  equipment.allowed.length < 2 ? "auto" : "-5px"
-                } 0px 8px 0px`,
-                left: itemIndex > 1 ? "-5px" : "auto",
-              }}
+                alignSelf: 'center',
+                    }}
             ></HeroItem>
           ))}
         </ItemTypes>
