@@ -5,6 +5,7 @@ import ChampionBox from "../components/ChampionBox"
 import SEO from "../components/seo"
 import WorkerImage from "../components/WorkerImage"
 import { cleanName } from "../utils/util"
+import MaterialTable from "material-table"
 
 const Icons = styled.div`
   margin: 0 auto;
@@ -95,48 +96,34 @@ export default ({ pageContext: data }) => (
       </Resources>
     </div>
 
-    <table class="table table-bordered table-hover table-condensed">
-      <thead>
-        <tr>
-          <th title="Field #1" style={{ textAlign: "center" }}>
-            Rank
-          </th>
-          <th title="Field #2" style={{ textAlign: "center" }}>
-            Coins
-          </th>
-          <th title="Field #3" style={{ textAlign: "center" }}>
-            Health
-          </th>
-          <th title="Field #4" style={{ textAlign: "center" }}>
-            Attack
-          </th>
-          <th title="Field #5" style={{ textAlign: "center" }}>
-            Skill
-          </th>
-          <th title="Field #6" style={{ textAlign: "center" }}>
-            Total Cost
-          </th>
-          <th title="Field #7" style={{ textAlign: "center" }}>
-            Effect
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.ranks.map((rank, index) => (
-          <tr key={index}>
-            <td style={{ textAlign: "center" }}>{rank.rank}</td>
-            <td style={{ textAlign: "center" }}>{rank.coins}</td>
-            <td style={{ textAlign: "center" }}>{rank.reward.health}</td>
-            <td style={{ textAlign: "center" }}>{rank.reward.attack}</td>
-            <td style={{ textAlign: "center" }}>{rank.reward.defense}</td>
-            <td style={{ textAlign: "center" }}>
-              {rank.reward.skill.name || "---"}
-            </td>
-            <td style={{ textAlign: "center" }}>{rank.reward.skill.effect}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <MaterialTable
+      columns={[
+        { title: "Rank", field: "rank" },
+        { title: "Coins", field: "coins" },
+        { title: "Health", field: "health" },
+        { title: "Attack", field: "attack" },
+        { title: "Defense", field: "defense" },
+        { title: "Skill", field: "skill" },
+        { title: "Total Cost", field: "cost" },
+        { title: "Effect", field: "effect" },
+      ]}
+      data={data.ranks.map(lvl => ({
+        ...lvl,
+        health: lvl.reward.health,
+        attack: lvl.reward.attack,
+        defense: lvl.reward.defense,
+        skill: lvl.reward.skill.name || '---',
+        effect: lvl.reward.skill.effect,
+      }))}
+      options={{
+        sorting: true,
+        search: false,
+        showTitle: false,
+        showFirstLastPageButtons: false,
+        pageSize: 20,
+        emptyRowsWhenPaging: false,
+      }}
+    />
 
     {data.ranks.map((rank, index) => (
       <React.Fragment key={index}>

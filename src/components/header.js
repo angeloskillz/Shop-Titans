@@ -1,10 +1,10 @@
 import "./header.css"
 import React from "react"
 import { Link } from "gatsby"
-
-import Fab from "@material-ui/core/Fab"
-import styled from "styled-components"
 import LongMenu from "./Menu"
+import { useMediaQuery } from "react-responsive"
+
+const Mobile = ({ children }) => useMediaQuery({ maxWidth: 700 }) ? children : null
 
 class Header extends React.Component {
   state = {
@@ -64,35 +64,6 @@ class Header extends React.Component {
               margin: 0,
             }}
           >
-            <a href="https://discord.gg/shoptitans" target="_blank" rel="noopener noreferrer">
-              <Fab
-                size="small"
-                variant="contained"
-                color="primary"
-                style={{
-                  fontSize: "12px",
-                  boxShadow: "none",
-                  margin: 0,
-                }}
-              >
-                Discord
-              </Fab>
-            </a>
-            <a href="https://discord.gg/rWMuMdk" target="_blank" rel="noopener noreferrer">
-              <Fab
-                size="small"
-                variant="contained"
-                color="secondary"
-                style={{
-                  fontSize: "12px",
-                  boxShadow: "none",
-                  margin: 0,
-                  background: "orange",
-                }}
-              >
-                Contact Us
-              </Fab>
-            </a>
             <LongMenu />
           </div>
         </div>

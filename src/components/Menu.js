@@ -4,6 +4,7 @@ import Menu from "@material-ui/core/Menu"
 import MenuItem from "@material-ui/core/MenuItem"
 import MenuIcon from "@material-ui/icons/MenuRounded"
 import { Link } from "gatsby"
+import Fab from "@material-ui/core/Fab"
 
 const ITEM_HEIGHT = 48
 
@@ -22,10 +23,34 @@ export default function LongMenu() {
   return (
     <div>
       <Link to="/overview" className="nav-hide-mobile">
-        Blueprints
+        <Fab
+          size="small"
+          variant="contained"
+          color="primary"
+          style={{
+            fontSize: "12px",
+            boxShadow: "none",
+            margin: 0,
+            background: "#38ec94",
+          }}
+        >
+          Blueprints
+        </Fab>
       </Link>
       <Link to="/about" className="nav-hide-mobile">
-        About
+        <Fab
+          size="small"
+          variant="contained"
+          color="primary"
+          style={{
+            fontSize: "12px",
+            boxShadow: "none",
+            margin: 0,
+            background: "#38ec94",
+          }}
+        >
+          About
+        </Fab>
       </Link>
       <IconButton
         aria-label="more"
@@ -67,6 +92,43 @@ export default function LongMenu() {
           </MenuItem>
         </Link>
       </Menu>
+      <a
+        href="https://discord.gg/shoptitans"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Fab
+          size="small"
+          variant="contained"
+          color="primary"
+          style={{
+            fontSize: "12px",
+            boxShadow: "none",
+            margin: 0,
+          }}
+        >
+          Discord
+        </Fab>
+      </a>
+      <a
+        href="https://discord.gg/rWMuMdk"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Fab
+          size="small"
+          variant="contained"
+          color="secondary"
+          style={{
+            fontSize: "12px",
+            boxShadow: "none",
+            margin: 0,
+            background: "orange",
+          }}
+        >
+          Contact Us
+        </Fab>
+      </a>
     </div>
   )
 }
