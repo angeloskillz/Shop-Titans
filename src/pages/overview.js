@@ -7,19 +7,6 @@ import BlueprintCard from "../components/BlueprintCard"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Resources = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  font-size: 14px;
-  text-align: left;
-  color: #bc9060;
-  margin-top: -5px;
-  margin-bottom: 0px;
-  text-align: center;
-`
-
 const HeroContainer = styled.div`
   background-size: cover;
   height: 300px;
@@ -54,23 +41,20 @@ const IndexPage = props => {
       {Object.values(relevantBlueprints).map((blueprints, index) => (
         <div key={index}>
           <div className="Selectan">
-            <h1>{blueprints[0].Type}s</h1>
+            <h1 style={{ color: "#ff665f" }}>{blueprints[0].Type}s</h1>
           </div>
           <div className="CardboxGroupScroll">
-            <Resources className="CardboxGroup">
+            <div className="CardboxGroup">
               {blueprints.map((blueprint, printIndex) => (
                 <BlueprintCard
                   details={blueprint}
                   key={printIndex}
                 ></BlueprintCard>
               ))}
-            </Resources>
+            </div>
           </div>
         </div>
       ))}
-      {/*blueprints.map((blueprint, index) => (
-        <BlueprintCard details={blueprint} key={index}></BlueprintCard>
-      ))*/}
     </Layout>
   )
 }
