@@ -179,7 +179,9 @@ class HomePageTabs extends React.Component {
         {value === 1 && (
           <TabContainer>
             <div className="Selectan">
-              <h1>Fighters</h1>
+              <h1 style={{
+                color: "#ff665f"
+              }}>Fighters</h1>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -195,7 +197,9 @@ class HomePageTabs extends React.Component {
             </div>
 
             <div className="Selectan">
-              <h1>Rogues</h1>
+              <h1 style={{
+                color: "#38ec94"
+              }}>Rogues</h1>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -211,7 +215,9 @@ class HomePageTabs extends React.Component {
             </div>
 
             <div className="Selectan">
-              <h1>Spellcasters</h1>
+              <h1 style={{
+                color: "#02CFF2"
+              }}>Spellcasters</h1>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">

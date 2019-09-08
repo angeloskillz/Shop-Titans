@@ -8,11 +8,9 @@ import { cleanName } from "../utils/util"
 import MaterialTable from "material-table"
 
 const Icons = styled.div`
-  margin: 0 auto;
   width: 70px;
   border-radius: 26px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  margin: 16px;
 `
 
 const Resources = styled.div`
@@ -50,6 +48,7 @@ const SubDescription = styled.p`
   padding-left: 16px;
   padding-right: 16px;
   white-space: pre-wrap;
+  text-align: left;
 `
 
 const Page = styled.div`
@@ -58,8 +57,9 @@ const Page = styled.div`
   width: 280px;
   border-radius: 26px;
   margin: auto;
-  background: #f0f4f8;
+  background: white;
   justify-content: flex-end;
+    margin-bottom: 16px;
 `
 
 export default ({ pageContext: data }) => (
@@ -68,8 +68,8 @@ export default ({ pageContext: data }) => (
     <Section>
       <Container />
     </Section>
-    <div className="CardboxGroupScroll" style={{ marginBottom: "50px" }}>
-      <Resources className="CardboxGroup">
+    <div className="CardboxGroupScroll">
+      <Resources className="CardboxGroup" style={{ marginBottom: "50px" }}>
         <ChampionBox details={data} className="not-active" />
       </Resources>
     </div>
@@ -104,9 +104,11 @@ export default ({ pageContext: data }) => (
       style={{
         width: "75%",
         margin: "auto",
-      }}
-    />
-
+        boxShadow: '0px 8px 12px #bdccdb',
+        borderRadius: '26px'
+        }}
+      />
+  
     {data.ranks.map((rank, index) => (
       <React.Fragment key={index}>
         {rank.story ? (
