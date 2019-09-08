@@ -105,7 +105,7 @@ class FullWidthTabs extends React.Component {
     const { value } = this.state
 
     return (
-      <div>
+      <div width="100%">
         <AppBar
           position="static"
           color="default"
@@ -126,7 +126,7 @@ class FullWidthTabs extends React.Component {
               style: { visibility: "hidden" },
             }}
           >
-            {["Developers", "Contributors", "Roadmap", "Changelog"].map(
+            {["Developers", "Roadmap", "Changelog"].map(
               (name, index) => (
                 <Tab
                   label={name}
@@ -134,7 +134,10 @@ class FullWidthTabs extends React.Component {
                   selected={true}
                   style={{
                     background: this.state.value === index ? "#5FA9FF" : "",
-                    borderRadius: this.state.value === index ? "10px" : "",
+                    border: "1px solid grey",
+                    borderRadius: "50px",
+                    fontSize: "12px",
+                    marginRight: "16px",
                   }}
                   key={index}
                 />
@@ -158,13 +161,8 @@ class FullWidthTabs extends React.Component {
             <Description>Skillz4Killz</Description>
             <Title>Designer & Front End Dev</Title>
             <Description>AngeloC</Description>
-          </TabContainer>
-        )}
-        {value === 1 && (
-          <TabContainer>
-            <div className="Selectan">
-              <h1>Major Contributors</h1>
-            </div>
+
+            <Title>Major Contributors</Title>
             {contributors.map((contributor, index) => (
               <div key={index}>
                 <Description>
@@ -174,7 +172,7 @@ class FullWidthTabs extends React.Component {
             ))}
           </TabContainer>
         )}
-        {value === 2 && (
+        {value === 1 && (
           <TabContainer>
             <Description>
               This roadmap can change at any time based on user feedback.
@@ -239,7 +237,7 @@ class FullWidthTabs extends React.Component {
             </div>
           </TabContainer>
         )}
-        {value === 3 && (
+        {value === 2 && (
           <TabContainer>
             <div>
               <Title>Latest Update:</Title>

@@ -27,7 +27,6 @@ const Class = styled.a`
   margin-left: 6px;
   margin-top: 16px;
   margin-bottom: 16px;
-
   padding-bottom: 50px;
 `
 const Icons = styled.div`
