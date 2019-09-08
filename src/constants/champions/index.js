@@ -86,11 +86,71 @@ module.exports = [
         rank: 2,
         coins: 15,
         reward: { health: 6, attack: 25, defense: 40, skill: "---" },
+        title: "Training Montage",
+        story: [
+          { name: "Lilu", text: "Argon, what are you doing out here?" },
+          {
+            name: "Argon",
+            text:
+              "Training hard! I've finally got my chance at becoming a knight for the King!",
+          },
+          {
+            name: "Lilu",
+            text: "The King? ...Or his mysterious advisor, Sia?",
+          },
+          { name: "Argon", text: "Is that her name? It's beautiful too!" },
+          { name: "Lilu", text: "..." },
+          {
+            name: "Argon",
+            text:
+              "Gah! No! Only the King matters! I must become a knight! Nothing else matters!",
+          },
+          { name: "Lilu", text: "Right... Here, let me heal your wounds." },
+          { name: "Argon", text: "Thanks- ouch! This spell stings!" },
+        ],
       },
       {
         rank: 3,
         coins: 25,
         reward: { health: 19, attack: 75, defense: 121, skill: "---" },
+        title: "Two Sides of a Coin",
+        story: [
+          {
+            name: "Argon",
+            text:
+              "Alright! Sia will show up any moment now! My training has paid off, I'm ready! ... But I'm still way too nervous... Oh! Hi there! You, in the bushes!",
+          },
+          { name: "Yami", text: "...!" },
+          {
+            name: "Argon",
+            text:
+              "Are you here to become a knight too? Sia will be here soon! There's no need to hide, she's pretty nice!",
+          },
+          { name: "Yami", text: "Sia...! I need to leave. Farewell." },
+          {
+            name: "Argon",
+            text: "W-wait! Woah! Smoke bomb!? What a strange girl...",
+          },
+          { name: "Sia", text: "Young man, who are you talking to?" },
+          {
+            name: "Argon",
+            text: "Ah, Sia! Just a shy passerby! Pay it no mind!",
+          },
+          {
+            name: "Sia",
+            text:
+              "...I see. Well then, it seems your resolve has not wavered. Are you ready to risk your life as one of the King's knights?",
+          },
+          {
+            name: "Argon",
+            text: "You bet! I-I mean, of course! I will make my father proud!",
+          },
+          {
+            name: "Sia",
+            text:
+              "Good. For your first assignment, I have an important event coming up...",
+          },
+        ],
       },
       {
         rank: 4,
@@ -104,6 +164,22 @@ module.exports = [
             effect: "20% bonus Attack and Defense for the party.",
           },
         },
+        title: "Empty-Handed",
+        story: [
+          { name: "Argon", text: "..." },
+          {
+            name: "Sia",
+            text:
+              "Surely you jest! You've cornered the assassin... and failed to stop her. Not only that, you're saying you LET HER GO because you think she's a good person!?",
+          },
+          { name: "Argon", text: "..." },
+          {
+            name: "Sia",
+            text:
+              "What nonsense is this? You DO realize that this assassin tried to kill our King - the very man you have sworn to protect? Such an incident endangers much more than your feeble mind can understand. Ugh... I suppose the King has the final say about the termination of his knights... ...But don't expect me to speak highly of you. Dismissed.",
+          },
+          { name: "Argon", text: "... Oh man... Sorry, dad." },
+        ],
       },
       {
         rank: 5,

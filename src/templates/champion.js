@@ -90,7 +90,7 @@ export default ({ pageContext: data }) => (
         health: lvl.reward.health,
         attack: lvl.reward.attack,
         defense: lvl.reward.defense,
-        skill: lvl.reward.skill.name || '---',
+        skill: lvl.reward.skill.name || "---",
         effect: lvl.reward.skill.effect,
       }))}
       options={{
@@ -100,6 +100,10 @@ export default ({ pageContext: data }) => (
         showFirstLastPageButtons: false,
         pageSize: 20,
         emptyRowsWhenPaging: false,
+      }}
+      style={{
+        width: "75%",
+        margin: "auto",
       }}
     />
 
