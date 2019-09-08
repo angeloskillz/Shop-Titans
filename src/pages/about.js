@@ -45,7 +45,7 @@ export default props => (
       </Description>
       <Description>Click Below To Support The Project!</Description>
       <a href="https://discord.gg/shoptitans" style={{ margin: "15px" }}>
-        <Button variant="contained" color="primary">
+        <Button variant="extended" color="primary">
           Support The Project
         </Button>
       </a>

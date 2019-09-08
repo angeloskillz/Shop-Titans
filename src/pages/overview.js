@@ -3,7 +3,6 @@ import "react-table/react-table.css"
 import React from "react"
 import blueprints from "../constants/blueprints"
 import styled from "styled-components"
-import BlueprintCard from "../components/BlueprintCard"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlueprintOverview from "../components/BlueprintOverview"
@@ -40,7 +39,7 @@ const IndexPage = props => {
       </Hero>
 
       <BlueprintOverview blueprints={relevantBlueprints}></BlueprintOverview>
-      
+
     </Layout>
   )
 }
