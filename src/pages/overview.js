@@ -6,6 +6,7 @@ import styled from "styled-components"
 import BlueprintCard from "../components/BlueprintCard"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BlueprintOverview from "../components/BlueprintOverview"
 
 const HeroContainer = styled.div`
   background-size: cover;
@@ -38,23 +39,8 @@ const IndexPage = props => {
         </div>
       </Hero>
 
-      {Object.values(relevantBlueprints).map((blueprints, index) => (
-        <div key={index}>
-          <div className="Selectan">
-            <h1 style={{ color: "#ff665f" }}>{blueprints[0].Type}s</h1>
-          </div>
-          <div className="CardboxGroupScroll">
-            <div className="CardboxGroup">
-              {blueprints.map((blueprint, printIndex) => (
-                <BlueprintCard
-                  details={blueprint}
-                  key={printIndex}
-                ></BlueprintCard>
-              ))}
-            </div>
-          </div>
-        </div>
-      ))}
+      <BlueprintOverview blueprints={relevantBlueprints}></BlueprintOverview>
+      
     </Layout>
   )
 }
