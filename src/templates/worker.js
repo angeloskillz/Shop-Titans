@@ -128,9 +128,14 @@ class FullWidthTabs extends React.Component {
     return (
       <Layout>
         <SEO title={data.name}></SEO>
+
         <Section>
           <Container />
         </Section>
+
+        <h1 style={{ textAlign: "center" }}>
+          Shop Titans: {data.name} Details
+        </h1>
         <div className="CardboxGroupScroll" style={{ marginBottom: "50px" }}>
           <Resources className="CardboxGroup">
             <Worker details={data} type="worker" className="no-active" />

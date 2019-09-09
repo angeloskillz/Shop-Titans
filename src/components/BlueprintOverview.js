@@ -30,7 +30,6 @@ const lightarmor = [
   "Rogue Hat",
 ]
 const items = ["Enchantment", "Herbal Medicine", "Potion", "Runestone", "Spell"]
-
 const TabContainer = styled.div`
   background: #f4faff;
 `
