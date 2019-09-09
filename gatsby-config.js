@@ -3,7 +3,8 @@ module.exports = {
     title: `Shop Titans Wiki`,
     description: `The best Shop Titans wiki stats site.`,
     author: `AngeloCant1 & Skillz4Killz`,
-    url: "https://www.shoptitans.netlify.com",
+    url: `https://www.shoptitans.xyz`,
+    image: `https://i.imgur.com/3xw6ZyV.png`
   },
   plugins: [
     {

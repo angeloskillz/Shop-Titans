@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -28,52 +29,37 @@ function SEO({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
 
   return (
-    <Helmet>
-      htmlAttributes=
-      {{
+    <Helmet
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta=
-      {[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          name: `google-site-verification`,
-          content: `9o7u6WshMXfm6-Ze-giLp6NKhBJhRSFz55Hqrz7neYs`,
-        },
-      ].concat(meta)}
+    >
+      {/* General tags */}
+      <title>{title}</title>
+      <meta name="description" content={metaDescription} />
+      <meta name="image" content={site.siteMetadata.image} />
+
+      {/* OpenGraph tags */}
+      <meta property="og:url" content={site.siteMetadata.url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={site.siteMetadata.image} />
+      {/* <meta property="fb:app_id" content={seo.social.fbAppID} /> */ }
+
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={site.siteMetadata.author} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={site.siteMetadata.image} />
+
+      {/* Needed for SEO */}
+      <meta
+        name="google-site-verification"
+        content="9o7u6WshMXfm6-Ze-giLp6NKhBJhRSFz55Hqrz7neYs"
+      />
     </Helmet>
   )
 }
