@@ -34,7 +34,7 @@ const TabContainer = styled.div`
   background: #f4faff;
 `
 
-class HomePageTabs extends React.Component {
+export default class BlueprintOverview extends React.Component {
   state = {
     value: 0,
   }
@@ -115,5 +115,3 @@ class HomePageTabs extends React.Component {
     )
   }
 }
-
-export default HomePageTabs

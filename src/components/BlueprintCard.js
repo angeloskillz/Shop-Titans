@@ -167,9 +167,11 @@ export default props => {
         Merchant XP: {props.details["Merchant XP"]}
       </SubDescription>
 
-      {props.details.Component !== "---" ? (<Description>Components:</Description>) : null}
+      {props.details.Component !== "---" ? (
+        <Description>Components:</Description>
+      ) : null}
 
-      <EnergyBox>
+      <EnergyBox  style={{ marginTop: "-6px"}}>
         {props.details.Component !== "---" ? (
           <IconImage
             filename={cleanName(props.details.Component)}
@@ -190,68 +192,29 @@ export default props => {
         ) : null}
       </EnergyBox>
       <Gold>
-        {props.details.ATK !== "---" ? (
-          <IconImage filename="attack" alt="ATK" />
-        ) : null}
-        {props.details.ATK !== "---" ? <Cost>{props.details.ATK}</Cost> : null}
-        {props.details.DEF !== "---" ? (
-          <IconImage filename="defense" alt="DEF" />
-        ) : null}
-        {props.details.DEF !== "---" ? <Cost>{props.details.DEF}</Cost> : null}
-        {props.details.HP !== "---" ? (
-          <IconImage filename="health" alt="HP" />
-        ) : null}
-        {props.details.HP !== "---" ? <Cost>{props.details.HP}</Cost> : null}
-
-        {props.details.iron !== "---" ? (
-          <IconImage filename="iron" alt="iron" />
-        ) : null}
-        {props.details.iron !== "---" ? (
-          <Cost>{props.details.iron}</Cost>
-        ) : null}
-        {props.details.wood !== "---" ? (
-          <IconImage filename="wood" alt="wood" />
-        ) : null}
-        {props.details.wood !== "---" ? (
-          <Cost>{props.details.wood}</Cost>
-        ) : null}
-        {props.details.leather !== "---" ? (
-          <IconImage filename="leather" alt="leather" />
-        ) : null}
-        {props.details.leather !== "---" ? (
-          <Cost>{props.details.leather}</Cost>
-        ) : null}
-        {props.details.herbs !== "---" ? (
-          <IconImage filename="herbs" alt="herbs" />
-        ) : null}
-        {props.details.herbs !== "---" ? (
-          <Cost>{props.details.herbs}</Cost>
-        ) : null}
-        {props.details.steel !== "---" ? (
-          <IconImage filename="steel" alt="steel" />
-        ) : null}
-        {props.details.steel !== "---" ? (
-          <Cost>{props.details.steel}</Cost>
-        ) : null}
-        {props.details.ironwood !== "---" ? (
-          <IconImage filename="ironwood" alt="ironwood" />
-        ) : null}
-        {props.details.ironwood !== "---" ? (
-          <Cost>{props.details.ironwood}</Cost>
-        ) : null}
-        {props.details.fabric !== "---" ? (
-          <IconImage filename="fabric" alt="fabric" />
-        ) : null}
-        {props.details.fabric !== "---" ? (
-          <Cost>{props.details.fabric}</Cost>
-        ) : null}
-        {props.details.oil !== "---" ? (
-          <IconImage filename="oil" alt="oil" />
-        ) : null}
-        {props.details.oil !== "---" ? <Cost>{props.details.oil}</Cost> : null}
-
-        <IconImage filename="gold" alt="gold" />
-        <Cost>{props.details.Value}</Cost>
+        {[
+          { prop: "ATK", filename: "attack" },
+          { prop: "DEF", filename: "defense" },
+          { prop: "HP", filename: "health" },
+          { prop: "iron", filename: "iron" },
+          { prop: "wood", filename: "wood" },
+          { prop: "leather", filename: "leather" },
+          { prop: "herbs", filename: "herbs" },
+          { prop: "steel", filename: "steel" },
+          { prop: "ironwood", filename: "ironwood" },
+          { prop: "fabric", filename: "fabric" },
+          { prop: "oil", filename: "oil" },
+          { prop: "Value", filename: "gold" },
+        ].map((data, index) => {
+          const amount = props.details[data.prop]
+          if (!amount || amount === "---") return null
+          return (
+            <React.Fragment key={index}>
+              <IconImage filename={data.filename} alt={data.filename} />
+              <Cost>{amount}</Cost>
+            </React.Fragment>
+          )
+        })}
       </Gold>
     </Class>
   )
