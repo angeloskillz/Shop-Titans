@@ -1,11 +1,11 @@
 import "react-table/react-table.css"
 
 import React from "react"
-import blueprints from "../constants/blueprints"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlueprintOverview from "../components/BlueprintOverview"
+const blueprints = require("../constants/oldblueprints")
 
 const HeroContainer = styled.div`
   background-size: cover;
