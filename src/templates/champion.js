@@ -64,7 +64,7 @@ const Page = styled.div`
 
 export default ({ pageContext: data }) => (
   <Layout>
-    <SEO title={data.name}></SEO>
+    <SEO title={`Shop Titans ${data.name} Details & Stats`}></SEO>
     <Section>
       <Container />
     </Section>
@@ -108,7 +108,7 @@ export default ({ pageContext: data }) => (
         borderRadius: '26px'
         }}
       />
-  
+
     {data.ranks.map((rank, index) => (
       <React.Fragment key={index}>
         {rank.story ? (
