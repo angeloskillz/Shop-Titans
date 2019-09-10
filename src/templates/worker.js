@@ -194,6 +194,15 @@ export default class WorkerPage extends React.Component {
                 showFirstLastPageButtons: false,
                 pageSize: 20,
                 emptyRowsWhenPaging: false,
+                headerStyle: {
+                  textAlign: "center",
+                  position: "sticky",
+                  zIndex: 11,
+                  top: 0,
+                },
+                cellStyle: {
+                  textAlign: "center",
+                },
               }}
               style={{
                 width: "75%",
