@@ -4,6 +4,8 @@ import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
 import styled from "styled-components"
 import BlueprintCard from "../components/BlueprintCard"
+import Fab from "@material-ui/core/Fab"
+import { blue } from "@material-ui/core/colors"
 
 const weapons = [
   "Axe",
@@ -37,32 +39,45 @@ const TabContainer = styled.div`
 export default class BlueprintOverview extends React.Component {
   state = {
     value: 0,
+    tier: 0,
   }
 
   handleChange = (event, value) => {
     this.setState({ value })
   }
 
+  handleTierFilter = (event, value) => {
+    this.setState({ tier: event.target.innerHTML })
+  }
+
   makeTab(array) {
     return Object.values(this.props.blueprints)
       .filter(b => array.includes(b[0].Type))
-      .map((blueprints, index) => (
-        <React.Fragment key={index}>
-          <div className="Selectan">
-            <h1 style={{ color: "#ff665f" }}>{blueprints[0].Type}s</h1>
-          </div>
-          <div className="CardboxGroupScroll">
-            <div className="CardboxGroup">
-              {blueprints.map((blueprint, printIndex) => (
-                <BlueprintCard
-                  details={blueprint}
-                  key={printIndex}
-                ></BlueprintCard>
-              ))}
+      .map((blueprints, index) => {
+        return (
+          <React.Fragment key={index}>
+            <div className="Selectan">
+              <h1 style={{ color: "#ff665f" }}>{blueprints[0].Type}s</h1>
             </div>
-          </div>
-        </React.Fragment>
-      ))
+            <div className="CardboxGroupScroll">
+              <div className="CardboxGroup">
+                {blueprints
+                  .filter(
+                    blueprint =>
+                      !this.state.tier ||
+                      blueprint.Tier.toString() === this.state.tier.toString()
+                  )
+                  .map((blueprint, printIndex) => (
+                    <BlueprintCard
+                      details={blueprint}
+                      key={printIndex}
+                    ></BlueprintCard>
+                  ))}
+              </div>
+            </div>
+          </React.Fragment>
+        )
+      })
   }
 
   render() {
@@ -70,6 +85,25 @@ export default class BlueprintOverview extends React.Component {
 
     return (
       <div>
+        <div style={{ textAlign: "center", marginBottom: "10px" }}>
+          {[1, 2, 3, 4, 5, 6, 7].map(tier => (
+            <Fab
+              key={tier}
+              size="small"
+              variant="extended"
+              color="primary"
+              style={{
+                fontSize: "12px",
+                boxShadow: "none",
+                marginRight: "5px",
+                background: "#ff665f",
+              }}
+              onClick={this.handleTierFilter}
+            >
+              {tier}
+            </Fab>
+          ))}
+        </div>
         <AppBar
           position="static"
           color="default"
