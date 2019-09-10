@@ -578,7 +578,6 @@ module.exports = [
       },
     ],
   },
-  ,
   {
     name: "Rudo",
     title: "Lone Warrior",
