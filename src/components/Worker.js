@@ -113,7 +113,7 @@ const Cost = styled.p`
 
 export default props => {
   return (
-    <Class href={`/workers/${props.details.name}`} className={props.className}>
+    <Class href={!props.className && `/workers/${props.details.name}`} className={props.className}>
       <Icons
         style={{
           background:
