@@ -58,17 +58,42 @@ const fighters = heroes.filter(hero => hero.class === "Fighter")
 const rogues = heroes.filter(hero => hero.class === "Rogue")
 const spellcasters = heroes.filter(hero => hero.class === "Spellcaster")
 
-const MyTab = styled(Tab)({
-  border: "1px solid grey",
-  borderRadius: "50px",
-  fontSize: "12px",
-  marginRight: "16px",
-})
+const workerData = [
+  {
+    title: "Workers",
+    array: workers,
+    type: "worker",
+    color: "#ff665f",
+  },
+  {
+    title: "Premium Workers",
+    array: premiumWorkers,
+    type: "worker",
+    color: "#ff665f",
+  },
+  {
+    title: "Special",
+    array: specialWorkers,
+    type: "special",
+    color: "orange",
+  },
+  {
+    title: "Producers",
+    array: resourceWorkers,
+    type: "resource",
+    color: "lightblue",
+  },
+]
 
 const TabContainer = styled.div`
   background: #f4faff;
 `
 
+const Title = styled.h2`
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: center;
+`
 class HomePageTabs extends React.Component {
   state = {
     value: 0,
@@ -105,14 +130,16 @@ class HomePageTabs extends React.Component {
             }}
           >
             {["WORKERS", "HEROES", "CHAMPIONS"].map((name, index) => (
-              <MyTab
+              <Tab
                 label={name}
                 className="button"
                 selected={true}
                 style={{
                   background: this.state.value === index ? "#5FA9FF" : "",
-                  borderRadius: this.state.value === index ? "50px" : "",
-                  border: "1px solid #5FA9FF",
+                  border: "1px solid grey",
+                  borderRadius: "50px",
+                  fontSize: "12px",
+                  marginRight: "16px",
                 }}
                 key={index}
               />
@@ -121,71 +148,36 @@ class HomePageTabs extends React.Component {
         </AppBar>
         {value === 0 && (
           <TabContainer>
-            <div className="Selectan">
-              <h1 style={{ color: "#ff665f" }}>Workers</h1>
-            </div>
-            <div className="CardboxGroupScroll">
-              <div className="CardboxGroup">
-                {workers.map((worker, index) => (
-                  <WorkerBox key={index} details={worker} type="worker" />
-                ))}
-              </div>
-            </div>
-
-            <div className="Selectan">
-              <h1 style={{ color: "#ff665f" }}>Premium Workers</h1>
-            </div>
-            <div className="CardboxGroupScroll">
-              <div className="CardboxGroup">
-                {premiumWorkers.map((worker, index) => (
-                  <WorkerBox key={index} details={worker} type="worker" />
-                ))}
-              </div>
-            </div>
-
-            <div className="Selectan">
-              <h1 style={{ color: "orange" }}>Special</h1>
-            </div>
-            <div className="CardboxGroupScroll">
-              <div className="CardboxGroup">
-                {specialWorkers.map((worker, index) => (
-                  <WorkerBox
-                    key={index}
-                    details={worker}
-                    type="special"
-                    className="no-active"
-                  />
-                ))}
-              </div>
-            </div>
-
-            <div className="Selectan">
-              <h1 style={{ color: "lightblue" }}>Producers</h1>
-            </div>
-            <div className="CardboxGroupScroll">
-              <div className="CardboxGroup">
-                {resourceWorkers.map((worker, index) => (
-                  <WorkerBox
-                    key={index}
-                    details={worker}
-                    type="resource"
-                    className="no-active"
-                  />
-                ))}
-              </div>
-            </div>
+            {workerData.map((data, index) => (
+              <React.Fragment key={index}>
+                <div className="Selectan">
+                  <Title style={{ color: data.color }}>{data.title}</Title>
+                </div>
+                <div className="CardboxGroupScroll">
+                  <div className="CardboxGroup">
+                    {data.array.map((worker, workerIndex) => (
+                      <WorkerBox
+                        key={workerIndex}
+                        details={worker}
+                        type={data.type}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </React.Fragment>
+            ))}
           </TabContainer>
         )}
         {value === 1 && (
           <TabContainer>
             <div className="Selectan">
-              <h1
+              <Title
                 style={{
                   color: "#ff665f",
                 }}
               >
                 Fighters
-              </h1>
+              </Title>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -201,13 +193,13 @@ class HomePageTabs extends React.Component {
             </div>
 
             <div className="Selectan">
-              <h1
+              <Title
                 style={{
                   color: "#38ec94",
                 }}
               >
                 Rogues
-              </h1>
+              </Title>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -223,13 +215,13 @@ class HomePageTabs extends React.Component {
             </div>
 
             <div className="Selectan">
-              <h1
+              <Title
                 style={{
                   color: "#02CFF2",
                 }}
               >
                 Spellcasters
-              </h1>
+              </Title>
             </div>
             <div className="CardboxGroupScroll">
               <div className="CardboxGroup">
@@ -240,7 +232,6 @@ class HomePageTabs extends React.Component {
             </div>
           </TabContainer>
         )}
-
         {value === 2 && (
           <TabContainer>
             <div className="CardboxGroupScroll">

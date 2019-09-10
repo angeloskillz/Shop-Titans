@@ -6,12 +6,9 @@ import blueprints from "../constants/blueprints"
 import Blueprint from "../components/Blueprint"
 import Worker from "../components/Worker"
 import SEO from "../components/seo"
-import { withStyles } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
-import Typography from "@material-ui/core/Typography"
-import PropTypes from "prop-types"
 
 const Resources = styled.div`
   display: flex;
@@ -39,62 +36,11 @@ const Container = styled.div`
   position: relative;
 `
 
-const StyledAppBar = withStyles({
-  root: {
-    background: "none",
-    width: "max-content",
-    margin: "0 auto",
-    boxShadow: "none",
-  },
-})(AppBar)
+const TabContainer = styled.div`
+  background: #f4faff;
+`
 
-const StyledTabs = withStyles({
-  indicator: {
-    display: "none",
-    backgroundColor: "none",
-    color: "none",
-  },
-})(Tabs)
-
-const StyledTab = withStyles({
-  root: {
-    color: "grey",
-  },
-  selected: {
-    background: "#5FA9FF",
-    borderRadius: "10px",
-    marginRight: "16px",
-  },
-  label: {
-    color: "white",
-  },
-})(Tab)
-
-function TabContainer({ children, dir }) {
-  return (
-    <Typography
-      component="div"
-      dir={dir}
-      style={{ padding: 8 * 3, background: "#F4FAFF" }}
-    >
-      {children}
-    </Typography>
-  )
-}
-
-TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  dir: PropTypes.string.isRequired,
-}
-
-const styles = theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-    width: 500,
-  },
-})
-
-class FullWidthTabs extends React.Component {
+export default class WorkerPage extends React.Component {
   state = {
     value: 0,
   }
@@ -105,6 +51,28 @@ class FullWidthTabs extends React.Component {
 
   handleChangeIndex = index => {
     this.setState({ value: index })
+  }
+
+  componentDidMount() {
+    const data = this.props.pageContext
+
+    const relevantBlueprints = {}
+
+    for (const blueprint of blueprints) {
+      if (
+        blueprint["Required Worker"] !== data.title &&
+        blueprint["Required Worker__1"] !== data.title
+      )
+        continue
+
+      if (!relevantBlueprints[blueprint.Type])
+        relevantBlueprints[blueprint.Type] = [blueprint]
+      else relevantBlueprints[blueprint.Type].push(blueprint)
+    }
+
+    if (!Object.values(relevantBlueprints).length) {
+      this.setState({ value: 1 })
+    }
   }
 
   render() {
@@ -142,18 +110,46 @@ class FullWidthTabs extends React.Component {
           </Resources>
         </div>
 
-        <StyledAppBar position="static" color="default">
-          <StyledTabs
+        <AppBar
+          position="static"
+          color="default"
+          style={{
+            background: "none",
+            width: "max-content",
+            margin: "0 auto",
+            boxShadow: "none",
+          }}
+        >
+          <Tabs
             value={this.state.value}
             onChange={this.handleChange}
             indicatorColor="primary"
             textColor="primary"
             variant="fullWidth"
+            TabIndicatorProps={{
+              style: { visibility: "hidden" },
+            }}
+            style={{
+              marginBottom: "20px",
+            }}
           >
-            <StyledTab label="BLUEPRINTS" className="button" />
-            <StyledTab label="LEVELS" className="button" />
-          </StyledTabs>
-        </StyledAppBar>
+            {["BLUEPRINTS", "LEVELS"].map((name, index) => (
+              <Tab
+                label={name}
+                className="button"
+                selected={true}
+                style={{
+                  background: this.state.value === index ? "#5FA9FF" : "",
+                  border: "1px solid grey",
+                  borderRadius: "50px",
+                  fontSize: "12px",
+                  marginRight: "16px",
+                }}
+                key={index}
+              />
+            ))}
+          </Tabs>
+        </AppBar>
         {value === 0 && (
           <TabContainer>
             {Object.values(relevantBlueprints).map(blueprints => (
@@ -199,6 +195,10 @@ class FullWidthTabs extends React.Component {
                 pageSize: 20,
                 emptyRowsWhenPaging: false,
               }}
+              style={{
+                width: "75%",
+                margin: "auto",
+              }}
             />
           </TabContainer>
         )}
@@ -206,10 +206,3 @@ class FullWidthTabs extends React.Component {
     )
   }
 }
-
-FullWidthTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-}
-
-export default withStyles(styles, { withTheme: true })(FullWidthTabs)
