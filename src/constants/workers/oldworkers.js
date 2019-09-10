@@ -1,6 +1,7 @@
 module.exports = [
   {
     name: "Wallace",
+    description: "Wallace specializes in forging all sorts of metal items, from swords to armor. Also forges jokes, but not good ones.",
     level_required: "0",
     gold_cost: "0",
     gem_cost: "0",
@@ -171,6 +172,7 @@ module.exports = [
   },
   {
     name: "Allan",
+    description: "Allan handles the crafting of many wooden items, such as staves and bows. He's the best, according to himself.",
     level_required: "3",
     gold_cost: "2,500",
     gem_cost: "50",
@@ -341,6 +343,7 @@ module.exports = [
   },
   {
     name: "Roxanne",
+    description: "Only Roxanne holds the secret of the powerful crossbows and gunpowder weapons. She likes to make things go boom.",
     level_required: "0",
     gold_cost: "0",
     gem_cost: "0",
@@ -511,6 +514,7 @@ module.exports = [
   },
   {
     name: "Maribel",
+    description: "Maribel concocts medicine such as magical herbs and potions. She has a druidic degree, so she's the real deal.",
     level_required: "5",
     gold_cost: "10,000",
     gem_cost: "200",
@@ -681,6 +685,7 @@ module.exports = [
   },
   {
     name: "Katarina",
+    description: "Katarina's expert hands can craft rings and ornate equipment that no else can. She's a bit of a penny pincher.",
     level_required: "20",
     gold_cost: "250,000",
     gem_cost: "600",
@@ -851,6 +856,7 @@ module.exports = [
   },
   {
     name: "Theodore",
+    description: "Theodore's boundless knowledge allows the creation of rare and powerful equipment. He can usually be seen peacefully enjoying his retirement.",
     level_required: "30",
     gold_cost: "1,000,000",
     gem_cost: "1,500",
@@ -1021,6 +1027,7 @@ module.exports = [
   },
   {
     name: "Freyja",
+    description: "Freyja's holy blessings are crucial to many magical items, such as amulets. She runs the temple and orphanage on her own.",
     level_required: "25",
     gold_cost: "500,000",
     gem_cost: "1,000",
@@ -1191,6 +1198,7 @@ module.exports = [
   },
   {
     name: "Evelyn",
+    description: "Evelyn teaches a wide variety of courses at the Academy. Thanks to her studies, she has learned how to craft Wands and Runestones.",
     level_required: "0",
     gold_cost: "0",
     gem_cost: "0",
@@ -1361,6 +1369,7 @@ module.exports = [
   },
   {
     name: "Julia",
+    description: "Julia is a light armor specialist capable of crafting all sorts of equipment for agile Heroes.",
     level_required: "2",
     gold_cost: "0",
     gem_cost: "0",
@@ -1531,6 +1540,7 @@ module.exports = [
   },
   {
     name: "Grimar",
+    description: "Grimar's infinite wisdom allows the creation of powerful arcane scrolls. He tends to be on the forgetful side.",
     level_required: "12",
     gold_cost: "50,000",
     gem_cost: "300",
