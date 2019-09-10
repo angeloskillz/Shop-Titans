@@ -354,7 +354,7 @@ module.exports = [
       { name: "attack", amount: 100 },
       { name: "health", amount: 25 },
       { name: "defense", amount: 30 },
-      { name: "evasion", amount: 30 },
+      { name: "evasion", amount: "30%" },
     ],
     skill: {
       name: "Eye for Loot",
@@ -469,7 +469,7 @@ module.exports = [
       { name: "attack", amount: 100 },
       { name: "health", amount: 25 },
       { name: "defense", amount: 30 },
-      { name: "evasion", amount: 30 },
+      { name: "evasion", amount: "30%" },
     ],
     skill: {
       name: "Ambush",
@@ -573,6 +573,125 @@ module.exports = [
             name: "Perfect Ambush",
             effect:
               "50% faster quest time. +20% Critical Chance and Evasion for the party.",
+          },
+        },
+      },
+    ],
+  },
+  ,
+  {
+    name: "Rudo",
+    title: "Lone Warrior",
+    prerequisite: "Merchant Lv.20",
+    stats: [
+      { name: "attack", amount: 80 },
+      { name: "health", amount: 40 },
+      { name: "defense", amount: 25 },
+      { name: "evasion", amount: "0%" },
+    ],
+    skill: {
+      name: "Rudo Blitz",
+      effect:
+        "30% critical hit chance and -50% break chance for the party. Lasts 1 round.",
+    },
+    criticalHit: {
+      chance: "5%",
+      damage: "2x",
+    },
+    unlockCost: {
+      coins: 90,
+    },
+    threatRating: 90,
+    ranks: [
+      {
+        rank: 1,
+        coins: 20,
+        reward: {
+          health: 10,
+          attack: 38,
+          defense: 33,
+          skill: "---",
+        },
+      },
+      {
+        rank: 2,
+        coins: 30,
+        reward: { health: 32, attack: 114, defense: 101, skill: "---" },
+      },
+      {
+        rank: 3,
+        coins: 50,
+        reward: {
+          health: 7,
+          attack: 136,
+          defense: 62,
+          skill: {
+            name: "Headstrong Assault",
+            effect:
+              "+40% Critical Hit Chance and -100% break chance for the party. Lasts 1 round.",
+          },
+        },
+      },
+      {
+        rank: 4,
+        coins: 70,
+        reward: {
+          health: 43,
+          attack: 152,
+          defense: 135,
+          skill: "---",
+        },
+      },
+      {
+        rank: 5,
+        coins: 100,
+        reward: { health: 43, attack: 152, defense: 135, skill: "---" },
+      },
+      {
+        rank: 6,
+        coins: 100,
+        reward: { health: 54, attack: 190, defense: 169, skill: "---" },
+      },
+      {
+        rank: 7,
+        coins: 150,
+        reward: {
+          health: 0,
+          attack: 0,
+          defense: 0,
+          skill: {
+            name: "Berserker Rampage",
+            effect:
+              "+40% Critical Hit Chance and -100% break chance for the party. Lasts 2 rounds.",
+          },
+        },
+      },
+      {
+        rank: 8,
+        coins: 150,
+        reward: { health: 65, attack: 228, defense: 203, skill: "---" },
+      },
+      {
+        rank: 9,
+        coins: 250,
+        reward: { health: 98, attack: 342, defense: 203, skill: "---" },
+      },
+      {
+        rank: 10,
+        coins: 300,
+        reward: { health: 131, attack: 457, defense: 406, skill: "---" },
+      },
+      {
+        rank: 11,
+        coins: "---",
+        reward: {
+          health: 0,
+          attack: 0,
+          defense: 0,
+          skill: {
+            name: "Total Mayhem",
+            effect:
+              "+50% Critical Hit Chance and -100% break chance for the party. Lasts 3 rounds.",
           },
         },
       },
