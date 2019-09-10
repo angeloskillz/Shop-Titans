@@ -95,7 +95,7 @@ export default class WorkerPage extends React.Component {
 
     return (
       <Layout>
-        <SEO title={data.name}></SEO>
+        <SEO title={`Shop Titans ${data.name} Details & Stats`} description={data.description || `${data.name} is one of the workers available in the Shop Titans Game. `}></SEO>
 
         <Section>
           <Container />
