@@ -221,7 +221,7 @@ module.exports = [
       },
       {
         rank: 11,
-        coins: "---",
+        coins: 0,
         reward: {
           health: 0,
           attack: 0,
@@ -333,7 +333,7 @@ module.exports = [
       },
       {
         rank: 11,
-        coins: "---",
+        coins: 0,
         reward: {
           health: 0,
           attack: 0,
@@ -447,7 +447,7 @@ module.exports = [
       },
       {
         rank: 11,
-        coins: "---",
+        coins: 0,
         reward: {
           health: 0,
           attack: 0,
@@ -564,7 +564,7 @@ module.exports = [
       },
       {
         rank: 11,
-        coins: "---",
+        coins: 0,
         reward: {
           health: 0,
           attack: 0,
@@ -682,7 +682,7 @@ module.exports = [
       },
       {
         rank: 11,
-        coins: "---",
+        coins: 0,
         reward: {
           health: 0,
           attack: 0,

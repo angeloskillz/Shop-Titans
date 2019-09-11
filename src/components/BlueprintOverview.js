@@ -5,7 +5,6 @@ import Tab from "@material-ui/core/Tab"
 import styled from "styled-components"
 import BlueprintCard from "../components/BlueprintCard"
 import Fab from "@material-ui/core/Fab"
-import { blue } from "@material-ui/core/colors"
 
 const weapons = [
   "Axe",
@@ -86,7 +85,7 @@ export default class BlueprintOverview extends React.Component {
     return (
       <div>
         <div style={{ textAlign: "center", marginBottom: "10px" }}>
-          {[1, 2, 3, 4, 5, 6, 7].map(tier => (
+          {[0, 1, 2, 3, 4, 5, 6, 7].map(tier => (
             <Fab
               key={tier}
               size="small"
