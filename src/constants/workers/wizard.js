@@ -4,7 +4,7 @@ export default {
   gold_cost: "50,000",
   gem_cost: "300",
   title: "Wizard",
-  blueprint_unlocks: ["Scroll of Sparks"],
+  blueprint_unlocks: ["Scroll of Sparks", "Ember Element", "Bubble Element"],
   levels: [
     {
       level: 1,

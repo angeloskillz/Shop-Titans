@@ -1545,7 +1545,7 @@ module.exports = [
     gold_cost: "50,000",
     gem_cost: "300",
     title: "Wizard",
-    blueprint_unlocks: ["Scroll of Sparks"],
+    blueprint_unlocks: ["Scroll of Sparks", "Embed Element", "Bubble Element"],
     levels: [
       {
         level: 1,
