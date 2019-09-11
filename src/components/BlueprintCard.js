@@ -104,7 +104,7 @@ const EnergyCost = styled.p`
   font-weight: normal;
   font-size: 12px;
   color: #406081;
-  margin: 10px;
+  margin-top: 10px;
   margin-left: 6px;
   margin-right: 6px;
 `
@@ -162,7 +162,7 @@ export default props => {
         <IconImage filename="energy" alt="energy" />
       </EnergyBox>
 
-      <Description>Stats:</Description>
+      <Description style={{ marginTop: "-8px"}}>Stats:</Description>
       <SubDescription>Worker XP: {props.details["Worker XP"]}</SubDescription>
       <SubDescription>
         Merchant XP: {props.details["Merchant XP"]}
@@ -172,7 +172,7 @@ export default props => {
         <Description>Components:</Description>
       ) : null}
 
-      <EnergyBox  style={{ marginTop: "-6px"}}>
+      <EnergyBox style={{ marginTop: "-6px" }}>
         {props.details.Component !== "---" ? (
           <IconImage
             filename={cleanName(props.details.Component)}
