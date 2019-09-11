@@ -16,6 +16,7 @@ const Class = styled.div`
   box-shadow: 0px 8px 12px #bdccdb;
   margin-left: 16px;
   margin-top: 16px;
+  padding-bottom: 16px;
 `
 const Icons = styled.div`
   margin: 0 auto;
