@@ -92,7 +92,13 @@ const version3 = [
   },
 ]
 
-const changelog = ["Launched Verson 1.0 of the Shop Titans Wiki!"]
+const changelog = [
+  "Updated about page main description.",
+  "Updated icon logo.",
+  "Change Knight's element to Light",
+  "Added Ember and Bubble elements to wizard blueprint unlocks.",
+  "Launched Verson 1.0 of the Shop Titans Wiki!",
+]
 
 class FullWidthTabs extends React.Component {
   state = {

@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import About from "../components/About"
 import styled from "styled-components"
-import Fab from "@material-ui/core/Fab"
+// import Fab from "@material-ui/core/Fab"
 
 const Description = styled.h2`
   font-weight: bold;
@@ -36,13 +36,13 @@ export default props => (
     <Hero>
       <Title>About Us</Title>
       <Description>
-        Do you like this project? Support it by going to the discord and asking
-        Kabam to allow this project to monetize. We could add in a lot more
-        features a lot faster. A better url, Guild features, Upgrade tracker,
-        Streamer/Youtuber features, Guides, and so much more! These features
-        cost money and we can only afford so much ourselves. Check out the
-        Roadmap for more details on what we want to build.
+        Do you like this project? Help spread the project to everyone! We will
+        be adding in a lot more features a lot faster now. A better url, Guild
+        features, Upgrade tracker, Streamer/Youtuber features, Guides, and so
+        much more! Check out the Roadmap for more details on what we want to
+        build.
       </Description>
+      {/* Commenting until we are ready to monetize
       <Description>Click Below To Support The Project!</Description>
       <a
         href="https://discord.gg/shoptitans"
@@ -62,7 +62,7 @@ export default props => (
         >
           Support The Project
         </Fab>
-      </a>
+      </a>*/}
     </Hero>
     <About />
   </Layout>
