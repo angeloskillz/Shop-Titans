@@ -86,7 +86,7 @@ module.exports = [
 			{ slot: 5, allowed: ["Heavy Footwear"] },
 			{ slot: 6, allowed: ["Shield"] },
 		],
-		element: "Fire",
+		element: "Light",
 		skillUnlockLevels: [5, 12, 23]
 	},
 	{
