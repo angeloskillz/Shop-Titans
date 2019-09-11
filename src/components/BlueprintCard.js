@@ -162,7 +162,7 @@ export default props => {
         <IconImage filename="energy" alt="energy" />
       </EnergyBox>
 
-      <Description style={{ marginTop: "-8px"}}>Stats:</Description>
+      <Description>Stats:</Description>
       <SubDescription>Worker XP: {props.details["Worker XP"]}</SubDescription>
       <SubDescription>
         Merchant XP: {props.details["Merchant XP"]}
