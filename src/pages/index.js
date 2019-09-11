@@ -30,7 +30,7 @@ const IndexPage = props => (
           >
             <Fab
               size="small"
-              variant="contained"
+              variant="extended"
               color="primary"
               style={{
                 fontSize: "12px",
@@ -48,7 +48,7 @@ const IndexPage = props => (
           >
             <Fab
               size="small"
-              variant="contained"
+              variant="extended"
               color="secondary"
               style={{
                 fontSize: "12px",

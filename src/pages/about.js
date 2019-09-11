@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import About from "../components/About"
 import styled from "styled-components"
-import { Button } from "@material-ui/core"
+import Fab from "@material-ui/core/Fab"
 
 const Description = styled.h2`
   font-weight: bold;
@@ -44,10 +44,24 @@ export default props => (
         Roadmap for more details on what we want to build.
       </Description>
       <Description>Click Below To Support The Project!</Description>
-      <a href="https://discord.gg/shoptitans" style={{ margin: "15px" }}>
-        <Button variant="contained" color="primary">
+      <a
+        href="https://discord.gg/shoptitans"
+        style={{ margin: "15px" }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Fab
+          size="small"
+          variant="extended"
+          color="primary"
+          style={{
+            fontSize: "12px",
+            boxShadow: "none",
+            marginRight: "5px",
+          }}
+        >
           Support The Project
-        </Button>
+        </Fab>
       </a>
     </Hero>
     <About />

@@ -40,7 +40,8 @@ const Icons = styled.div`
 `
 
 const Title = styled.h1`
-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+    sans-serif;
   font-weight: 800;
   font-size: 18px;
   text-align: center;
@@ -112,10 +113,7 @@ const Cost = styled.p`
 
 export default props => {
   return (
-    <Class
-      href={`/workers/${props.details.name}`}
-      className={props.className}
-    >
+    <Class href={!props.className && `/workers/${props.details.name}`} className={props.className}>
       <Icons
         style={{
           background:
@@ -132,14 +130,17 @@ export default props => {
         />
       </Icons>
       <Title
-      style={{
-        color:
-          props.type === "worker"
-            ? "ff665f"
-            : props.type === "resource"
-            ? "lightblue"
-            : "orange",
-      }}>{props.details.name}</Title>
+        style={{
+          color:
+            props.type === "worker"
+              ? "ff665f"
+              : props.type === "resource"
+              ? "lightblue"
+              : "orange",
+        }}
+      >
+        {props.details.name}
+      </Title>
       <Description>{props.details.title}</Description>
       <LvlRq>
         {props.details.level_required &&

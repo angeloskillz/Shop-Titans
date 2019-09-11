@@ -1,24 +1,11 @@
 import "react-table/react-table.css"
 
 import React from "react"
-import blueprints from "../constants/blueprints"
 import styled from "styled-components"
-import BlueprintCard from "../components/BlueprintCard"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-const Resources = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  font-size: 14px;
-  text-align: left;
-  color: #bc9060;
-  margin-top: -5px;
-  margin-bottom: 0px;
-  text-align: center;
-`
+import BlueprintOverview from "../components/BlueprintOverview"
+const blueprints = require("../constants/oldblueprints")
 
 const HeroContainer = styled.div`
   background-size: cover;
@@ -51,26 +38,8 @@ const IndexPage = props => {
         </div>
       </Hero>
 
-      {Object.values(relevantBlueprints).map((blueprints, index) => (
-        <div key={index}>
-          <div className="Selectan">
-            <h1>{blueprints[0].Type}s</h1>
-          </div>
-          <div className="CardboxGroupScroll">
-            <Resources className="CardboxGroup">
-              {blueprints.map((blueprint, printIndex) => (
-                <BlueprintCard
-                  details={blueprint}
-                  key={printIndex}
-                ></BlueprintCard>
-              ))}
-            </Resources>
-          </div>
-        </div>
-      ))}
-      {/*blueprints.map((blueprint, index) => (
-        <BlueprintCard details={blueprint} key={index}></BlueprintCard>
-      ))*/}
+      <BlueprintOverview blueprints={relevantBlueprints}></BlueprintOverview>
+
     </Layout>
   )
 }

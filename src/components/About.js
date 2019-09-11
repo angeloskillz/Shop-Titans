@@ -25,6 +25,12 @@ const Description = styled.h2`
   white-space: pre-wrap;
 `
 
+const Item = styled.p`
+  font-size: 14px;
+  color: #406081;
+  text-align: center;
+`
+
 const contributors = [
   { name: "LordAzuRa", guild: "Guild Master of Buy The Way (#42)" },
   { name: "hsidnomeL", guild: "River Echo" },
@@ -126,23 +132,21 @@ class FullWidthTabs extends React.Component {
               style: { visibility: "hidden" },
             }}
           >
-            {["Developers", "Roadmap", "Changelog"].map(
-              (name, index) => (
-                <Tab
-                  label={name}
-                  className="button"
-                  selected={true}
-                  style={{
-                    background: this.state.value === index ? "#5FA9FF" : "",
-                    border: "1px solid grey",
-                    borderRadius: "50px",
-                    fontSize: "12px",
-                    marginRight: "16px",
-                  }}
-                  key={index}
-                />
-              )
-            )}
+            {["Developers", "Roadmap", "Changelog"].map((name, index) => (
+              <Tab
+                label={name}
+                className="button"
+                selected={true}
+                style={{
+                  background: this.state.value === index ? "#5FA9FF" : "",
+                  border: "1px solid grey",
+                  borderRadius: "50px",
+                  fontSize: "12px",
+                  marginRight: "16px",
+                }}
+                key={index}
+              />
+            ))}
           </Tabs>
         </AppBar>
         {value === 0 && (
@@ -177,13 +181,19 @@ class FullWidthTabs extends React.Component {
             <Description>
               This roadmap can change at any time based on user feedback.
             </Description>
-            <div className="Selectan">
-              <div>
-                <h1>Version 1:</h1>
+            {[
+              { title: "Version 1: Public Launch", details: version1 },
+              { title: "Version 2: Guides", details: version2 },
+              { title: "Version 3: News", details: version3 },
+            ].map((roadmap, index) => (
+              <React.Fragment>
+                <div className="Selectan">
+                  <h1 style={{ color: "#ff665f" }}>{roadmap.title}</h1>
+                </div>
                 <UnorderedList>
-                  {version1.map((item, versionIndex) => (
+                  {roadmap.details.map((item, versionIndex) => (
                     <li key={versionIndex}>
-                      <Description>
+                      <Item>
                         <span
                           role="img"
                           aria-labelledby="jsx-a11y/accessible-emoji"
@@ -191,50 +201,12 @@ class FullWidthTabs extends React.Component {
                           {item.done ? "✅" : "📝"}
                         </span>{" "}
                         {item.value}
-                      </Description>
+                      </Item>
                     </li>
                   ))}
                 </UnorderedList>
-              </div>
-
-              <div>
-                <h1>Version 2: Guides</h1>
-                <UnorderedList>
-                  {version2.map((item, versionIndex) => (
-                    <li key={versionIndex}>
-                      <Description>
-                        <span
-                          role="img"
-                          aria-labelledby="jsx-a11y/accessible-emoji"
-                        >
-                          {item.done ? "✅" : "📝"}
-                        </span>{" "}
-                        {item.value}
-                      </Description>
-                    </li>
-                  ))}
-                </UnorderedList>
-              </div>
-
-              <div>
-                <h1>Version 3: News</h1>
-                <UnorderedList>
-                  {version3.map((item, versionIndex) => (
-                    <li key={versionIndex}>
-                      <Description>
-                        <span
-                          role="img"
-                          aria-labelledby="jsx-a11y/accessible-emoji"
-                        >
-                          {item.done ? "✅" : "📝"}
-                        </span>{" "}
-                        {item.value}
-                      </Description>
-                    </li>
-                  ))}
-                </UnorderedList>
-              </div>
-            </div>
+              </React.Fragment>
+            ))}
           </TabContainer>
         )}
         {value === 2 && (
