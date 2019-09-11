@@ -81,17 +81,22 @@ const Cost = styled.p`
 `
 
 const TierBadge = styled.div`
-  width: 26px;
-  height: 26px;
-  background: #38ec94;
-  color: white;
-  font-size: 18px;
-  border-radius: 100%;
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  text-align: center;
-  jusitfy-content: center;
+  width: 30px;
+    height: 30px;
+    background: #38ec94;
+    color: white;
+    font-size: 14px;
+    border-radius: 100%;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    text-align: center;
+    jusitfy-content: center;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
 `
 
 const EnergyBox = styled.div`
