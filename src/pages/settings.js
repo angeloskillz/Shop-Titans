@@ -42,10 +42,14 @@ export default () => (
         information, you can clear your browsers cache and local storage.
       </Description>
     </Hero>
-    {/* Worker Level Settings */}
-    {workers.map((worker, index) => (
-      <WorkerSetting key={index} workerName={worker.name}></WorkerSetting>
-    ))}
+    <div className="CardboxGroupScroll">
+      <div className="CardboxGroup">
+        {/* Worker Level Settings */}
+        {workers.map((worker, index) => (
+          <WorkerSetting key={index} workerName={worker.name}></WorkerSetting>
+        ))}
+      </div>
+    </div>
   </Layout>
 )
 
