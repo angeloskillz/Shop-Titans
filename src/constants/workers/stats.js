@@ -1,202 +1,202 @@
 export default [
   {
-    "Worker Level": 1,
-    "XP Needed": "0",
-    "Crafting Speed Bonus": "0"
+    workerLevel: 1,
+    xpNeeded: "0",
+    craftingSpeedBonus: "0%",
   },
   {
-    "Worker Level": 2,
-    "XP Needed": 20,
-    "Crafting Speed Bonus": "1%"
+    workerLevel: 2,
+    xpNeeded: 20,
+    craftingSpeedBonus: "1%",
   },
   {
-    "Worker Level": 3,
-    "XP Needed": 60,
-    "Crafting Speed Bonus": "3%"
+    workerLevel: 3,
+    xpNeeded: 60,
+    craftingSpeedBonus: "3%",
   },
   {
-    "Worker Level": 4,
-    "XP Needed": 100,
-    "Crafting Speed Bonus": "4%"
+    workerLevel: 4,
+    xpNeeded: 100,
+    craftingSpeedBonus: "4%",
   },
   {
-    "Worker Level": 5,
-    "XP Needed": 180,
-    "Crafting Speed Bonus": "6%"
+    workerLevel: 5,
+    xpNeeded: 180,
+    craftingSpeedBonus: "6%",
   },
   {
-    "Worker Level": 6,
-    "XP Needed": 275,
-    "Crafting Speed Bonus": "7%"
+    workerLevel: 6,
+    xpNeeded: 275,
+    craftingSpeedBonus: "7%",
   },
   {
-    "Worker Level": 7,
-    "XP Needed": 375,
-    "Crafting Speed Bonus": "9%"
+    workerLevel: 7,
+    xpNeeded: 375,
+    craftingSpeedBonus: "9%",
   },
   {
-    "Worker Level": 8,
-    "XP Needed": 625,
-    "Crafting Speed Bonus": "10%"
+    workerLevel: 8,
+    xpNeeded: 625,
+    craftingSpeedBonus: "10%",
   },
   {
-    "Worker Level": 9,
-    "XP Needed": 900,
-    "Crafting Speed Bonus": "12%"
+    workerLevel: 9,
+    xpNeeded: 900,
+    craftingSpeedBonus: "12%",
   },
   {
-    "Worker Level": 10,
-    "XP Needed": "1,500",
-    "Crafting Speed Bonus": "13%"
+    workerLevel: 10,
+    xpNeeded: "1,500",
+    craftingSpeedBonus: "13%",
   },
   {
-    "Worker Level": 11,
-    "XP Needed": "2,000",
-    "Crafting Speed Bonus": "15%"
+    workerLevel: 11,
+    xpNeeded: "2,000",
+    craftingSpeedBonus: "15%",
   },
   {
-    "Worker Level": 12,
-    "XP Needed": "2,750",
-    "Crafting Speed Bonus": "16%"
+    workerLevel: 12,
+    xpNeeded: "2,750",
+    craftingSpeedBonus: "16%",
   },
   {
-    "Worker Level": 13,
-    "XP Needed": "3,250",
-    "Crafting Speed Bonus": "18%"
+    workerLevel: 13,
+    xpNeeded: "3,250",
+    craftingSpeedBonus: "18%",
   },
   {
-    "Worker Level": 14,
-    "XP Needed": "4,500",
-    "Crafting Speed Bonus": "19%"
+    workerLevel: 14,
+    xpNeeded: "4,500",
+    craftingSpeedBonus: "19%",
   },
   {
-    "Worker Level": 15,
-    "XP Needed": "6,000",
-    "Crafting Speed Bonus": "21%"
+    workerLevel: 15,
+    xpNeeded: "6,000",
+    craftingSpeedBonus: "21%",
   },
   {
-    "Worker Level": 16,
-    "XP Needed": "7,750",
-    "Crafting Speed Bonus": "22%"
+    workerLevel: 16,
+    xpNeeded: "7,750",
+    craftingSpeedBonus: "22%",
   },
   {
-    "Worker Level": 17,
-    "XP Needed": "10,000",
-    "Crafting Speed Bonus": "24%"
+    workerLevel: 17,
+    xpNeeded: "10,000",
+    craftingSpeedBonus: "24%",
   },
   {
-    "Worker Level": 18,
-    "XP Needed": "12,500",
-    "Crafting Speed Bonus": "25%"
+    workerLevel: 18,
+    xpNeeded: "12,500",
+    craftingSpeedBonus: "25%",
   },
   {
-    "Worker Level": 19,
-    "XP Needed": "15,000",
-    "Crafting Speed Bonus": "27%"
+    workerLevel: 19,
+    xpNeeded: "15,000",
+    craftingSpeedBonus: "27%",
   },
   {
-    "Worker Level": 20,
-    "XP Needed": "17,500",
-    "Crafting Speed Bonus": "28%"
+    workerLevel: 20,
+    xpNeeded: "17,500",
+    craftingSpeedBonus: "28%",
   },
   {
-    "Worker Level": 21,
-    "XP Needed": "22,500",
-    "Crafting Speed Bonus": "30%"
+    workerLevel: 21,
+    xpNeeded: "22,500",
+    craftingSpeedBonus: "30%",
   },
   {
-    "Worker Level": 22,
-    "XP Needed": "27,500",
-    "Crafting Speed Bonus": "31%"
+    workerLevel: 22,
+    xpNeeded: "27,500",
+    craftingSpeedBonus: "31%",
   },
   {
-    "Worker Level": 23,
-    "XP Needed": "32,500",
-    "Crafting Speed Bonus": "33%"
+    workerLevel: 23,
+    xpNeeded: "32,500",
+    craftingSpeedBonus: "33%",
   },
   {
-    "Worker Level": 24,
-    "XP Needed": "37,500",
-    "Crafting Speed Bonus": "34%"
+    workerLevel: 24,
+    xpNeeded: "37,500",
+    craftingSpeedBonus: "34%",
   },
   {
-    "Worker Level": 25,
-    "XP Needed": "42,500",
-    "Crafting Speed Bonus": "36%"
+    workerLevel: 25,
+    xpNeeded: "42,500",
+    craftingSpeedBonus: "36%",
   },
   {
-    "Worker Level": 26,
-    "XP Needed": "50,000",
-    "Crafting Speed Bonus": "37%"
+    workerLevel: 26,
+    xpNeeded: "50,000",
+    craftingSpeedBonus: "37%",
   },
   {
-    "Worker Level": 27,
-    "XP Needed": "55,000",
-    "Crafting Speed Bonus": "39%"
+    workerLevel: 27,
+    xpNeeded: "55,000",
+    craftingSpeedBonus: "39%",
   },
   {
-    "Worker Level": 28,
-    "XP Needed": "65,000",
-    "Crafting Speed Bonus": "40%"
+    workerLevel: 28,
+    xpNeeded: "65,000",
+    craftingSpeedBonus: "40%",
   },
   {
-    "Worker Level": 29,
-    "XP Needed": "72,500",
-    "Crafting Speed Bonus": "42%"
+    workerLevel: 29,
+    xpNeeded: "72,500",
+    craftingSpeedBonus: "42%",
   },
   {
-    "Worker Level": 30,
-    "XP Needed": "82,500",
-    "Crafting Speed Bonus": "43%"
+    workerLevel: 30,
+    xpNeeded: "82,500",
+    craftingSpeedBonus: "43%",
   },
   {
-    "Worker Level": 31,
-    "XP Needed": "92,500",
-    "Crafting Speed Bonus": "45%"
+    workerLevel: 31,
+    xpNeeded: "92,500",
+    craftingSpeedBonus: "45%",
   },
   {
-    "Worker Level": 32,
-    "XP Needed": "100,000",
-    "Crafting Speed Bonus": "46%"
+    workerLevel: 32,
+    xpNeeded: "100,000",
+    craftingSpeedBonus: "46%",
   },
   {
-    "Worker Level": 33,
-    "XP Needed": "125,000",
-    "Crafting Speed Bonus": "48%"
+    workerLevel: 33,
+    xpNeeded: "125,000",
+    craftingSpeedBonus: "48%",
   },
   {
-    "Worker Level": 34,
-    "XP Needed": "125,000",
-    "Crafting Speed Bonus": "49%"
+    workerLevel: 34,
+    xpNeeded: "125,000",
+    craftingSpeedBonus: "49%",
   },
   {
-    "Worker Level": 35,
-    "XP Needed": "150,000",
-    "Crafting Speed Bonus": "51%"
+    workerLevel: 35,
+    xpNeeded: "150,000",
+    craftingSpeedBonus: "51%",
   },
   {
-    "Worker Level": 36,
-    "XP Needed": "150,000",
-    "Crafting Speed Bonus": "52%"
+    workerLevel: 36,
+    xpNeeded: "150,000",
+    craftingSpeedBonus: "52%",
   },
   {
-    "Worker Level": 37,
-    "XP Needed": "175,000",
-    "Crafting Speed Bonus": "54%"
+    workerLevel: 37,
+    xpNeeded: "175,000",
+    craftingSpeedBonus: "54%",
   },
   {
-    "Worker Level": 38,
-    "XP Needed": "200,000",
-    "Crafting Speed Bonus": "55%"
+    workerLevel: 38,
+    xpNeeded: "200,000",
+    craftingSpeedBonus: "55%",
   },
   {
-    "Worker Level": 39,
-    "XP Needed": "200,000",
-    "Crafting Speed Bonus": "57%"
+    workerLevel: 39,
+    xpNeeded: "200,000",
+    craftingSpeedBonus: "57%",
   },
   {
-    "Worker Level": 40,
-    "XP Needed": "225,000",
-    "Crafting Speed Bonus": "60%"
-  }
+    workerLevel: 40,
+    xpNeeded: "225,000",
+    craftingSpeedBonus: "60%",
+  },
 ]
