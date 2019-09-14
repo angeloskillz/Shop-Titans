@@ -64,7 +64,8 @@ export default class WorkerSetting extends React.Component {
   render() {
     let level = this.state[this.props.workerName]
     try {
-      if (!level) level = localStorage.getItem(this.props.workerName.toLowerCase())
+      if (!level)
+        level = localStorage.getItem(this.props.workerName.toLowerCase())
     } catch {
       // This try catch is to handle localStorage not existing on gatsby server side rendering
       level = "1"
