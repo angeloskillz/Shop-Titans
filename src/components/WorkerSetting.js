@@ -3,6 +3,7 @@ import Fab from "@material-ui/core/Fab"
 import styled from "styled-components"
 import WorkerImage from "../components/WorkerImage"
 import { cleanName } from "../utils/util"
+import stats from "../constants/workers/stats"
 
 const Box = styled.a`
   display: flex;
@@ -96,8 +97,8 @@ export default class WorkerSetting extends React.Component {
         <Buttons>
           <Fab
             size="small"
-            onClick={() => {
-              const newValue = level - 1
+            onClick={level > 1 ? () => {
+              const newValue = parseInt(level) - 1
               this.setState({ [this.props.workerName]: newValue })
               try {
                 localStorage.setItem(
@@ -107,7 +108,7 @@ export default class WorkerSetting extends React.Component {
               } catch {
                 // try catch to ignore mising localstorage on server rendering
               }
-            }}
+            } : null}
           >
             -
           </Fab>
@@ -116,8 +117,8 @@ export default class WorkerSetting extends React.Component {
 
           <Fab
             size="small"
-            onClick={() => {
-              const newValue = level + 1
+            onClick={stats.length + 1 > parseInt(level) ? () => {
+              const newValue = parseInt(level) + 1
               this.setState({ [this.props.workerName]: newValue })
               try {
                 localStorage.setItem(
@@ -127,7 +128,7 @@ export default class WorkerSetting extends React.Component {
               } catch {
                 // try catch to ignore mising localstorage on server rendering
               }
-            }}
+            } : null}
           >
             +
           </Fab>
