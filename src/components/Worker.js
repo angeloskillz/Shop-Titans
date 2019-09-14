@@ -29,6 +29,21 @@ const Class = styled.a`
   margin-bottom: 16px;
   padding-bottom: 50px;
 `
+
+const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: auto;
+  width: 280px;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0px 8px 12px #bdccdb;
+  margin-left: 6px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 50px;
+`
 const Icons = styled.div`
   margin: 0 auto;
   margin-top: 16px;
@@ -112,8 +127,8 @@ const Cost = styled.p`
 `
 
 export default props => {
-  return (
-    <Class href={!props.className && `/workers/${props.details.name}`} className={props.className}>
+  const box = (
+    <React.Fragment>
       <Icons
         style={{
           background:
@@ -190,6 +205,17 @@ export default props => {
         <IconImage filename="gems" alt="gem" />
         <Cost>{props.type === "worker" ? props.details.gem_cost : "Free"}</Cost>
       </Gold>
+    </React.Fragment>
+  )
+
+  return props.className ? (
+    <Box className={props.className}>{box}</Box>
+  ) : (
+    <Class
+      href={!props.className && `/workers/${props.details.name}`}
+      className={props.className}
+    >
+      {box}
     </Class>
   )
 }
