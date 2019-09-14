@@ -150,29 +150,28 @@ class HomePageTabs extends React.Component {
         </AppBar>
         {value === 0 && (
           <TabContainer>
-            {workerData.map((data, index) => (
-              <React.Fragment key={index}>
-                <div
+            <div
+              style={{
+                marginTop: "10px",
+                textAlign: "center",
+              }}
+            >
+              <Link to="/settings">
+                <Fab
+                  size="small"
+                  variant="extended"
+                  color="secondary"
                   style={{
-                    marginTop: "10px",
-                    textAlign: "center",
+                    fontSize: "12px",
+                    boxShadow: "none",
                   }}
                 >
-                  <Link to="/settings">
-                    <Fab
-                      size="small"
-                      variant="extended"
-                      color="secondary"
-                      style={{
-                        fontSize: "12px",
-                        boxShadow: "none",
-                      }}
-                    >
-                      Set worker levels
-                    </Fab>
-                  </Link>
-                </div>
-
+                  Set worker levels
+                </Fab>
+              </Link>
+            </div>
+            {workerData.map((data, index) => (
+              <React.Fragment key={index}>
                 <div className="Selectan">
                   <Title style={{ color: data.color }}>{data.title}</Title>
                 </div>
