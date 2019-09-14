@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { cleanName } from "../utils/util"
 import Image from "../components/WorkerUnlocks"
 import WorkerImage from "../components/WorkerImage"
-import IconImage from "../components/IconImage"
+import HeroItem from "../components/HeroItem"
 
 const BlueprintBox = styled.div`
   position: relative;
@@ -191,18 +191,39 @@ export default props => {
       <Gold>
         {props.type === "resource" ? <Cost>Produces:</Cost> : null}
         {props.type === "resource" ? (
-          <IconImage
+          <HeroItem
             filename={props.details.resource}
             alt={props.details.resource}
+            style={{
+              position: "relative",
+              marginTop: "10px",
+              display: "block",
+            }}
           />
         ) : null}
         <Cost>Cost:</Cost>
 
-        <IconImage filename="gold" alt="gold" />
+        <HeroItem
+          filename="gold"
+          alt="gold"
+          style={{
+            position: "relative",
+            marginTop: "10px",
+            display: "block",
+          }}
+        />
         <Cost>
           {props.type === "worker" ? props.details.gold_cost : "Free"}
         </Cost>
-        <IconImage filename="gems" alt="gem" />
+        <HeroItem
+          filename="gems"
+          alt="gem"
+          style={{
+            position: "relative",
+            marginTop: "10px",
+            display: "block",
+          }}
+        />
         <Cost>{props.type === "worker" ? props.details.gem_cost : "Free"}</Cost>
       </Gold>
     </React.Fragment>

@@ -30,6 +30,8 @@ import styled from "styled-components"
 import champions from "../constants/champions/index"
 import ChampionBox from "../components/ChampionBox"
 import { Link } from "gatsby"
+import Fab from "@material-ui/core/Fab"
+
 const workers = [
   blacksmith,
   carpenter,
@@ -87,17 +89,6 @@ const workerData = [
 
 const TabContainer = styled.div`
   background: #f4faff;
-`
-
-const Description = styled.h2`
-  font-weight: bold;
-  font-size: 14px;
-  color: #406081;
-  text-align: center;
-  margin-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
-  white-space: pre-wrap;
 `
 
 const Title = styled.h2`
@@ -161,9 +152,27 @@ class HomePageTabs extends React.Component {
           <TabContainer>
             {workerData.map((data, index) => (
               <React.Fragment key={index}>
-                <Link to="/settings">
-                  <Description>Click here to set worker levels.</Description>
-                </Link>
+                <div
+                  style={{
+                    marginTop: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  <Link to="/settings">
+                    <Fab
+                      size="small"
+                      variant="extended"
+                      color="secondary"
+                      style={{
+                        fontSize: "12px",
+                        boxShadow: "none",
+                      }}
+                    >
+                      Set worker levels
+                    </Fab>
+                  </Link>
+                </div>
+
                 <div className="Selectan">
                   <Title style={{ color: data.color }}>{data.title}</Title>
                 </div>

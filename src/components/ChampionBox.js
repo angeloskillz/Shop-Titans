@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import WorkerImage from "./WorkerImage"
-import IconImage from "../components/IconImage"
+import HeroItem from "../components/HeroItem"
 
 const Class = styled.a`
   display: flex;
@@ -16,13 +16,13 @@ const Class = styled.a`
   margin-top: 16px;
 `
 const Icons = styled.div`
-margin: 0 auto;
-margin-top: 16px;
-width: 70px;
-border-radius: 26px;
-background: #ff665f;
-padding-bottom: 10px;
-padding-top: 10px;
+  margin: 0 auto;
+  margin-top: 16px;
+  width: 70px;
+  border-radius: 26px;
+  background: #ff665f;
+  padding-bottom: 10px;
+  padding-top: 10px;
 `
 const Title = styled.h1`
   font-weight: 800;
@@ -99,14 +99,24 @@ export default props => (
 
     <SubDescription>Threat Rating: {props.details.threatRating}</SubDescription>
 
-    <SubDescription>Unlock Cost: {props.details.unlockCost.coins}</SubDescription>
+    <SubDescription>
+      Unlock Cost: {props.details.unlockCost.coins}
+    </SubDescription>
 
     <Description>Hero Skill: {props.details.skill.name}</Description>
     <SubDescription>{props.details.skill.effect}</SubDescription>
     <Gold>
       {props.details.stats.map((stat, index) => (
         <React.Fragment key={index}>
-          <IconImage filename={stat.name} alt={stat.name} />
+          <HeroItem
+            filename={stat.name}
+            alt={stat.name}
+            style={{
+              position: "relative",
+              marginTop: "10px",
+              display: "block",
+            }}
+          />
           <Cost>{stat.amount}</Cost>
         </React.Fragment>
       ))}
