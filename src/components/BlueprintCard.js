@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { cleanName, calculateCraftTime } from "../utils/util"
 import Image from "./WorkerImage"
-import IconImage from "../components/IconImage"
+import HeroItem from "../components/HeroItem"
 import workers from "../constants/workers/workers"
 import stats from "../constants/workers/stats"
 
@@ -176,27 +176,45 @@ export default props => {
       <EnergyBox>
         {props.details["Research Scrolls"] !== "---" &&
         props.details["Research Scrolls"] ? (
-          <IconImage filename="bp_unlock" alt="bp_unlock" />
+          <HeroItem
+            filename="bp_unlock"
+            alt="bp_unlock"
+            style={{
+              position: "relative",
+              marginTop: "10px",
+              display: "block",
+            }}
+          />
         ) : null}
         {props.details["Research Scrolls"] !== "---" &&
         props.details["Research Scrolls"] ? (
           <EnergyCost>{props.details["Research Scrolls"]}</EnergyCost>
         ) : null}
-        <IconImage
+        <HeroItem
           filename={workers[
             props.details["Required Worker"].toLowerCase()
           ].name.toLowerCase()}
           alt={props.details["Required Worker"]}
+          style={{
+            position: "relative",
+            marginTop: "10px",
+            display: "block",
+          }}
         />
 
         <EnergyCost>Level {props.details["Worker Level"]}</EnergyCost>
 
         {props.details["Required Worker__1"] !== "---" ? (
-          <IconImage
+          <HeroItem
             filename={workers[
               props.details["Required Worker__1"].toLowerCase()
             ].name.toLowerCase()}
             alt={props.details["Required Worker__1"].toLowerCase()}
+            style={{
+              position: "relative",
+              marginTop: "10px",
+              display: "block",
+            }}
           />
         ) : null}
         {props.details["Required Worker__1"] !== "---" ? (
@@ -206,9 +224,25 @@ export default props => {
 
       <EnergyBox>
         <EnergyCost>Discount: {props.details["Discount Energy"]}</EnergyCost>
-        <IconImage filename="energy" alt="energy" />
+        <HeroItem
+          filename="energy"
+          alt="energy"
+          style={{
+            position: "relative",
+            marginTop: "10px",
+            display: "block",
+          }}
+        />
         <EnergyCost>Surcharge: {props.details["Surcharge Energy"]}</EnergyCost>
-        <IconImage filename="energy" alt="energy" />
+        <HeroItem
+          filename="energy"
+          alt="energy"
+          style={{
+            position: "relative",
+            marginTop: "10px",
+            display: "block",
+          }}
+        />
       </EnergyBox>
 
       <Description>Stats:</Description>
@@ -223,18 +257,28 @@ export default props => {
 
       <EnergyBox style={{ marginTop: "-6px" }}>
         {props.details.Component !== "---" ? (
-          <IconImage
+          <HeroItem
             filename={cleanName(props.details.Component)}
             alt="Component"
+            style={{
+              position: "relative",
+              marginTop: "10px",
+              display: "block",
+            }}
           />
         ) : null}
         {props.details["Amount Needed"] !== "---" ? (
           <Cost>{props.details["Amount Needed"]}</Cost>
         ) : null}
         {props.details.Component__1 !== "---" ? (
-          <IconImage
+          <HeroItem
             filename={cleanName(props.details.Component__1)}
             alt="Component__1"
+            style={{
+              position: "relative",
+              marginTop: "10px",
+              display: "block",
+            }}
           />
         ) : null}
         {props.details["Amount Needed__1"] !== "---" ? (
@@ -260,7 +304,15 @@ export default props => {
           if (!amount || amount === "---") return null
           return (
             <React.Fragment key={index}>
-              <IconImage filename={data.filename} alt={data.filename} />
+              <HeroItem
+                filename={data.filename}
+                alt={data.filename}
+                style={{
+                  position: "relative",
+                  marginTop: "10px",
+                  display: "block",
+                }}
+              />
               <Cost>{amount}</Cost>
             </React.Fragment>
           )

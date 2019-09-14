@@ -3,7 +3,6 @@ import styled from "styled-components"
 import WorkerImage from "../components/WorkerImage"
 import HeroItem from "../components/HeroItem"
 import { cleanName } from "../utils/util"
-import IconImage from "../components/IconImage"
 
 const Class = styled.a`
   display: flex;
@@ -216,7 +215,15 @@ export default props => (
         { name: "gold", amount: props.details.cost.gold },
       ].map((stat, index) => (
         <React.Fragment key={index}>
-          <IconImage filename={stat.name} alt={stat.name} />
+          <HeroItem
+            filename={stat.name}
+            alt={stat.name}
+            style={{
+              position: "relative",
+              marginTop: "10px",
+              display: "block",
+            }}
+          />
           <Cost
             style={{
               marginRight: rightMargins[props.index] || "2px",

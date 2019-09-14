@@ -29,6 +29,8 @@ import Tab from "@material-ui/core/Tab"
 import styled from "styled-components"
 import champions from "../constants/champions/index"
 import ChampionBox from "../components/ChampionBox"
+import { Link } from "gatsby"
+import Fab from "@material-ui/core/Fab"
 
 const workers = [
   blacksmith,
@@ -150,6 +152,27 @@ class HomePageTabs extends React.Component {
           <TabContainer>
             {workerData.map((data, index) => (
               <React.Fragment key={index}>
+                <div
+                  style={{
+                    marginTop: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  <Link to="/settings">
+                    <Fab
+                      size="small"
+                      variant="extended"
+                      color="secondary"
+                      style={{
+                        fontSize: "12px",
+                        boxShadow: "none",
+                      }}
+                    >
+                      Set worker levels
+                    </Fab>
+                  </Link>
+                </div>
+
                 <div className="Selectan">
                   <Title style={{ color: data.color }}>{data.title}</Title>
                 </div>
