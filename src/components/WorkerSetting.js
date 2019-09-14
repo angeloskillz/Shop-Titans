@@ -99,7 +99,7 @@ export default class WorkerSetting extends React.Component {
             size="small"
             onClick={() => {
               const newValue =
-                level > 1 ? parseInt(level) - 1 : stats.length + 1
+                level > 1 ? parseInt(level) - 1 : stats.length
               this.setState({ [this.props.workerName]: newValue })
               try {
                 localStorage.setItem(
