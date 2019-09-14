@@ -62,9 +62,13 @@ export default class WorkerSetting extends React.Component {
   state = {}
 
   render() {
-    const level = this.state[this.props.workerName]
-      ? this.state[this.props.workerName]
-      : localStorage.getItem(this.props.workerName.toLowerCase()) || "1"
+    let level = this.state[this.props.workerName]
+    try {
+      if (!level) level = localStorage.getItem(this.props.workerName.toLowerCase())
+    } catch {
+      // This try catch is to handle localStorage not existing on gatsby server side rendering
+      level = "1"
+    }
 
     return (
       <Box>
@@ -85,21 +89,16 @@ export default class WorkerSetting extends React.Component {
               marginRight: "5px",
             }}
             onClick={() => {
-              const level = localStorage.getItem(
-                this.props.workerName.toLowerCase()
-              )
-              const newValue = level
-                ? parseInt(
-                    localStorage.getItem(this.props.workerName.toLowerCase()),
-                    10
-                  ) - 1
-                : 1
-
+              const newValue = level - 1
               this.setState({ [this.props.workerName]: newValue })
-              localStorage.setItem(
-                this.props.workerName.toLowerCase(),
-                newValue.toString()
-              )
+              try {
+                localStorage.setItem(
+                  this.props.workerName.toLowerCase(),
+                  newValue.toString()
+                )
+              } catch {
+                // try catch to ignore mising localstorage on server rendering
+              }
             }}
           >
             Down
@@ -116,21 +115,16 @@ export default class WorkerSetting extends React.Component {
               marginRight: "5px",
             }}
             onClick={() => {
-              const level = localStorage.getItem(
-                this.props.workerName.toLowerCase()
-              )
-              const newValue = level
-                ? parseInt(
-                    localStorage.getItem(this.props.workerName.toLowerCase()),
-                    10
-                  ) + 1
-                : 1
-
+              const newValue = level + 1
               this.setState({ [this.props.workerName]: newValue })
-              localStorage.setItem(
-                this.props.workerName.toLowerCase(),
-                newValue.toString()
-              )
+              try {
+                localStorage.setItem(
+                  this.props.workerName.toLowerCase(),
+                  newValue.toString()
+                )
+              } catch {
+                // try catch to ignore mising localstorage on server rendering
+              }
             }}
           >
             Up

@@ -116,22 +116,30 @@ const EnergyCost = styled.p`
 `
 
 export default props => {
-  const workerLevel =
-    parseInt(
-      localStorage.getItem(
-        workers[
-          props.details["Required Worker"].toLowerCase()
-        ].name.toLowerCase()
-      )
-    ) || 1
-  const secondWorkerLevel =
-    parseInt(
-      localStorage.getItem(
-        workers[
-          props.details["Required Worker"].toLowerCase()
-        ].name.toLowerCase()
-      )
-    ) || 1
+  let workerLevel = 1
+  let secondWorkerLevel = 1
+
+  try {
+    workerLevel =
+      parseInt(
+        localStorage.getItem(
+          workers[
+            props.details["Required Worker"].toLowerCase()
+          ].name.toLowerCase()
+        )
+      ) || 1
+
+    secondWorkerLevel =
+      parseInt(
+        localStorage.getItem(
+          workers[
+            props.details["Required Worker"].toLowerCase()
+          ].name.toLowerCase()
+        )
+      ) || 1
+  } catch {
+    // ignore this try catch is to ignore localstorage missing in gatsby build server side rendering
+  }
 
   const workerBonus =
     parseInt(
