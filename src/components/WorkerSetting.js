@@ -98,7 +98,7 @@ export default class WorkerSetting extends React.Component {
           <Fab
             size="small"
             onClick={level > 1 ? () => {
-              const newValue = level - 1
+              const newValue = parseInt(level) - 1
               this.setState({ [this.props.workerName]: newValue })
               try {
                 localStorage.setItem(
@@ -117,8 +117,8 @@ export default class WorkerSetting extends React.Component {
 
           <Fab
             size="small"
-            onClick={stats.length + 1 > level ? () => {
-              const newValue = level + 1
+            onClick={stats.length + 1 > parseInt(level) ? () => {
+              const newValue = parseInt(level) + 1
               this.setState({ [this.props.workerName]: newValue })
               try {
                 localStorage.setItem(
