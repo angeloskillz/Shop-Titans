@@ -93,6 +93,8 @@ const version3 = [
 ]
 
 const changelog = [
+  "Blueprint craft times now reflect your workers levels",
+  "Add settings page to save your worker levels.",
   "Updated about page main description.",
   "Updated icon logo.",
   "Change Knight's element to Light",

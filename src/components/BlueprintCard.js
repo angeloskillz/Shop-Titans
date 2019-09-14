@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { cleanName } from "../utils/util"
+import { cleanName, calculateCraftTime } from "../utils/util"
 import Image from "./WorkerImage"
 import IconImage from "../components/IconImage"
 import workers from "../constants/workers/workers"
+import stats from "../constants/workers/stats"
 
 const Class = styled.div`
   display: flex;
@@ -82,21 +83,21 @@ const Cost = styled.p`
 
 const TierBadge = styled.div`
   width: 30px;
-    height: 30px;
-    background: #38ec94;
-    color: white;
-    font-size: 14px;
-    border-radius: 100%;
-    position: absolute;
-    right: 16px;
-    top: 16px;
-    text-align: center;
-    jusitfy-content: center;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 800;
+  height: 30px;
+  background: #38ec94;
+  color: white;
+  font-size: 14px;
+  border-radius: 100%;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  text-align: center;
+  jusitfy-content: center;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
 `
 
 const EnergyBox = styled.div`
@@ -115,6 +116,43 @@ const EnergyCost = styled.p`
 `
 
 export default props => {
+  let workerLevel = 1
+  let secondWorkerLevel = 1
+
+  try {
+    workerLevel =
+      parseInt(
+        localStorage.getItem(
+          workers[
+            props.details["Required Worker"].toLowerCase()
+          ].name.toLowerCase()
+        )
+      ) || 1
+
+    secondWorkerLevel =
+      parseInt(
+        localStorage.getItem(
+          workers[
+            props.details["Required Worker"].toLowerCase()
+          ].name.toLowerCase()
+        )
+      ) || 1
+  } catch {
+    // ignore this try catch is to ignore localstorage missing in gatsby build server side rendering
+  }
+
+  const workerBonus =
+    parseInt(
+      stats
+        .find(stat => stat.workerLevel === workerLevel)
+        .craftingSpeedBonus.slice(0, -1)
+    ) / 100
+  const secondWorkerBonus =
+    parseInt(
+      stats
+        .find(stat => stat.workerLevel === secondWorkerLevel)
+        .craftingSpeedBonus.slice(0, -1)
+    ) / 100
   return (
     <Class>
       <TierBadge className="badge">{props.details.Tier}</TierBadge>
@@ -125,7 +163,13 @@ export default props => {
         />
       </Icons>
       <Title style={{ color: "ff665f" }}>{props.details.Name}</Title>
-      <Description>{props.details["Crafting Time (formatted)"]}</Description>
+      <Description>
+        {calculateCraftTime(
+          props.details["Crafting Time (seconds)"],
+          workerBonus,
+          secondWorkerBonus
+        )}
+      </Description>
 
       <Description>Requirements:</Description>
 
