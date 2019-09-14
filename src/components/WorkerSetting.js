@@ -10,6 +10,7 @@ const Box = styled.a`
   position: relative;
   height: auto;
   width: 280px;
+  height: 130px;
   border-radius: 26px;
   background: #fff;
   box-shadow: 0px 8px 12px #bdccdb;
@@ -39,6 +40,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   margin-bottom: 0;
 `
+
 const Description = styled.h2`
   font-weight: bold;
   font-size: 14px;
@@ -56,6 +58,8 @@ const Buttons = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
+  font-size: 16px;
+  box-shadow: none;
 `
 
 export default class WorkerSetting extends React.Component {
@@ -63,7 +67,6 @@ export default class WorkerSetting extends React.Component {
 
   render() {
     let level = this.state[this.props.workerName]
-    console.log('before', level)
     try {
       if (!level)
         level = localStorage.getItem(this.props.workerName.toLowerCase()) || "1"
@@ -72,10 +75,18 @@ export default class WorkerSetting extends React.Component {
       level = "1"
     }
 
-    console.log('after', level)
     return (
       <Box>
-        <Icons style={{ background: "#ff665f" }}>
+        <Icons
+          style={{
+            background:
+              this.props.type === "worker"
+                ? "ff665f"
+                : this.props.type === "resource"
+                ? "lightblue"
+                : "orange",
+          }}
+        >
           <WorkerImage
             filename={cleanName(this.props.workerName)}
             alt={this.props.workerName}
@@ -85,12 +96,6 @@ export default class WorkerSetting extends React.Component {
         <Buttons>
           <Fab
             size="small"
-            color="primary"
-            style={{
-              fontSize: "12px",
-              boxShadow: "none",
-              marginRight: "5px",
-            }}
             onClick={() => {
               const newValue = level - 1
               this.setState({ [this.props.workerName]: newValue })
@@ -104,19 +109,13 @@ export default class WorkerSetting extends React.Component {
               }
             }}
           >
-            Down
+            -
           </Fab>
 
           <Description>Level: {level}</Description>
 
           <Fab
             size="small"
-            color="primary"
-            style={{
-              fontSize: "12px",
-              boxShadow: "none",
-              marginRight: "5px",
-            }}
             onClick={() => {
               const newValue = level + 1
               this.setState({ [this.props.workerName]: newValue })
@@ -130,7 +129,7 @@ export default class WorkerSetting extends React.Component {
               }
             }}
           >
-            Up
+            +
           </Fab>
         </Buttons>
       </Box>
