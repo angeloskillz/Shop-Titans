@@ -50,29 +50,6 @@ const Description = styled.h2`
   white-space: pre-wrap;
 `
 
-const SubDescription = styled.p`
-  font-weight: normal;
-  font-size: 12px;
-  color: #406081;
-  text-align: center;
-  margin-bottom: 16px;
-  margin-top: -10px;
-  padding-left: 16px;
-  padding-right: 16px;
-  white-space: pre-wrap;
-`
-
-const LvlRq = styled.div`
-  padding: 6px;
-  margin-left: 56px;
-  margin-right: 56px;
-  border-radius: 20px;
-  background: #bdccdb80;
-  font-weight: normal;
-  font-size: 12px;
-  text-align: center;
-  color: #406081;
-`
 const Buttons = styled.div`
   display: flex;
   box-sizing: border-box;
@@ -80,25 +57,7 @@ const Buttons = styled.div`
   flex-wrap: wrap;
   text-align: center;
 `
-const Gold = styled.div`
-  position: absolute;
-  display: flex;
-  width: 280px;
-  border-radius: 26px;
-  background: #f0f4f8;
-  border-radius: 0px 0px 26px 26px;
-  text-align: right;
-  bottom: 0;
-  justify-content: flex-end;
-`
-const Cost = styled.p`
-  font-weight: normal;
-  font-size: 12px;
-  color: #406081;
-  margin: 10px;
-  margin-left: 6px;
-  margin-right: 16px;
-`
+
 export default class WorkerSetting extends React.Component {
   state = {}
 
@@ -133,7 +92,7 @@ export default class WorkerSetting extends React.Component {
                 ? parseInt(
                     localStorage.getItem(this.props.workerName.toLowerCase()),
                     10
-                  ) + 1
+                  ) - 1
                 : 1
 
               this.setState({ [this.props.workerName]: newValue })
@@ -143,7 +102,7 @@ export default class WorkerSetting extends React.Component {
               )
             }}
           >
-            Up
+            Down
           </Fab>
 
           <Description>Level: {level}</Description>
@@ -164,7 +123,7 @@ export default class WorkerSetting extends React.Component {
                 ? parseInt(
                     localStorage.getItem(this.props.workerName.toLowerCase()),
                     10
-                  ) - 1
+                  ) + 1
                 : 1
 
               this.setState({ [this.props.workerName]: newValue })
@@ -174,7 +133,7 @@ export default class WorkerSetting extends React.Component {
               )
             }}
           >
-            Down
+            Up
           </Fab>
         </Buttons>
       </Box>
