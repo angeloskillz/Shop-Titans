@@ -63,6 +63,7 @@ export default class WorkerSetting extends React.Component {
 
   render() {
     let level = this.state[this.props.workerName]
+    console.log('before', level)
     try {
       if (!level)
         level = localStorage.getItem(this.props.workerName.toLowerCase())
@@ -71,6 +72,7 @@ export default class WorkerSetting extends React.Component {
       level = "1"
     }
 
+    console.log('after', level)
     return (
       <Box>
         <Icons style={{ background: "#ff665f" }}>
