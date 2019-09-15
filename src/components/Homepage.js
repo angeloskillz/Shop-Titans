@@ -4,6 +4,7 @@ import blacksmith from "../constants/workers/blacksmith"
 import carpenter from "../constants/workers/carpenter"
 import engineer from "../constants/workers/engineer"
 import herbalist from "../constants/workers/herbalist"
+import jeweler from "../constants/workers/jeweler"
 import master from "../constants/workers/master"
 import priestess from "../constants/workers/priestess"
 import scholar from "../constants/workers/scholar"
@@ -36,6 +37,7 @@ const workers = [
   blacksmith,
   carpenter,
   herbalist,
+  jeweler,
   master,
   priestess,
   tailor,
