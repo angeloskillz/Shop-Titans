@@ -2,8 +2,8 @@ const _ = require("lodash")
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
-const blueprints = require("./src/constants/oldblueprints")
-const workers = require("./src/constants/workers/oldworkers")
+const blueprints = require("./src/constants/blueprints/index")
+const workers = require("./src/constants/workers/index")
 const champions = require("./src/constants/champions/index")
 
 

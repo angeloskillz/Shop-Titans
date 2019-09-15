@@ -1,27 +1,5 @@
 import React from "react"
 import WorkerBox from "./Worker"
-import blacksmith from "../constants/workers/blacksmith"
-import carpenter from "../constants/workers/carpenter"
-import engineer from "../constants/workers/engineer"
-import herbalist from "../constants/workers/herbalist"
-import jeweler from "../constants/workers/jeweler"
-import master from "../constants/workers/master"
-import priestess from "../constants/workers/priestess"
-import scholar from "../constants/workers/scholar"
-import tailor from "../constants/workers/tailor"
-import wizard from "../constants/workers/wizard"
-import townhall from "../constants/special/townhall"
-import tavern from "../constants/special/tavern"
-import emeraldinn from "../constants/special/emeraldinn"
-import traininghall from "../constants/special/traininghall"
-import lumberyard from "../constants/farmers/lumberyard"
-import ironmine from "../constants/farmers/ironmine"
-import oilpress from "../constants/farmers/oilpress"
-import garden from "../constants/farmers/garden"
-import ironwoodsawmill from "../constants/farmers/ironwoodsawmill"
-import smelter from "../constants/farmers/smelter"
-import tannery from "../constants/farmers/tannery"
-import weavermill from "../constants/farmers/weavermill"
 import heroes from "../constants/heroes"
 import HeroBox from "../components/Hero"
 import AppBar from "@material-ui/core/AppBar"
@@ -32,31 +10,43 @@ import champions from "../constants/champions/index"
 import ChampionBox from "../components/ChampionBox"
 import { Link } from "gatsby"
 import Fab from "@material-ui/core/Fab"
+import allworkers from "../constants/workers"
 
-const workers = [
-  blacksmith,
-  carpenter,
-  herbalist,
-  jeweler,
-  master,
-  priestess,
-  tailor,
-  wizard,
-]
+const workers = allworkers.filter(worker =>
+  [
+    "blacksmith",
+    "carpenter",
+    "herbalist",
+    "jeweler",
+    "master",
+    "priestess",
+    "tailor",
+    "wizard",
+  ].includes(worker.title.toLowerCase())
+)
 
-const premiumWorkers = [engineer, scholar]
+const premiumWorkers = allworkers.filter(worker =>
+  ["engineer", "scholar"].includes(worker.title.toLowerCase())
+)
 
-const specialWorkers = [townhall, tavern, emeraldinn, traininghall]
-const resourceWorkers = [
-  garden,
-  ironmine,
-  ironwoodsawmill,
-  lumberyard,
-  oilpress,
-  smelter,
-  tannery,
-  weavermill,
-]
+const specialWorkers = allworkers.filter(worker =>
+  ["townhall", "tavern", "emeraldinn", "traininghall"].includes(
+    worker.title.toLowerCase()
+  )
+)
+
+const resourceWorkers = allworkers.filter(worker =>
+  [
+    "garden",
+    "ironmine",
+    "ironwoodsawmill",
+    "lumberyard",
+    "oilpress",
+    "smelter",
+    "tannery",
+    "weavermill",
+  ].includes(worker.title.toLowerCase())
+)
 
 const fighters = heroes.filter(hero => hero.class === "Fighter")
 const rogues = heroes.filter(hero => hero.class === "Rogue")

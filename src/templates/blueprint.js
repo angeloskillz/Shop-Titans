@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
-import workers from "../constants/workers/workers"
+import workers from "../constants/workers"
 import { cleanName } from "../utils/util"
-import blueprints from "../constants/blueprints"
+const blueprints = require('../constants/blueprints/index')
 
 const BlueprintBox = styled.div`
   position: relative;
@@ -157,9 +157,7 @@ export default ({ pageContext: data }) => {
           {data["Unlock Prerequisite"] !== "---" ? (
             <div>
               <Currency
-                src={require(`../images/Portraits/${workers[
-                  data["Required Worker"].toLowerCase()
-                ].name.toLowerCase()}.png`)}
+                src={require(`../images/Portraits/${workers.find(worker => worker.title.toLowerCase() === data["Required Worker"].toLowerCase()).name.toLowerCase()}.png`)}
               />
               <Cost>{data["Unlock Prerequisite"]}</Cost>
             </div>
@@ -170,18 +168,14 @@ export default ({ pageContext: data }) => {
           </div>
           <div>
             <Currency
-              src={require(`../images/Portraits/${workers[
-                data["Required Worker"].toLowerCase()
-              ].name.toLowerCase()}.png`)}
+              src={require(`../images/Portraits/${workers.find(worker => worker.title.toLowerCase() === data["Required Worker"].toLowerCase()).name.toLowerCase()}.png`)}
             />
             <Cost>Level {data["Worker Level"]}</Cost>
           </div>
           {data["Required Worker__1"] !== "---" ? (
             <div>
               <Currency
-                src={require(`../images/Portraits/${workers[
-                  data["Required Worker__1"].toLowerCase()
-                ].name.toLowerCase()}.png`)}
+                src={require(`../images/Portraits/${workers.find(worker => worker.title.toLowerCase() === data["Required Worker__1"].toLowerCase()).name.toLowerCase()}.png`)}
               />
               <Cost>Level {data["Worker Level__1"]}</Cost>
             </div>
