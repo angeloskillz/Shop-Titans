@@ -62,6 +62,10 @@ const version1 = [
 
 const version2 = [
   {
+    value: "GraphQL API",
+    done: true,
+  },
+  {
     value:
       "Users can create the guides through Netlify CMS right on the website.",
     done: false,
@@ -72,7 +76,7 @@ const version2 = [
   {
     value:
       "Better support for PWA with offline support so users can install it as an app on their devices.",
-    done: false,
+    done: true,
   },
 ]
 
@@ -93,6 +97,8 @@ const version3 = [
 ]
 
 const changelog = [
+  "Added API page documentation.",
+  "Shop Titans Design & Craft API is now live!",
   "Blueprint craft times now reflect your workers levels",
   "Add settings page to save your worker levels.",
   "Updated about page main description.",
