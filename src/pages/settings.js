@@ -42,6 +42,7 @@ const workerData = [
       "wallace",
       "allan",
       "maribel",
+      "katarina",
       "Theodore",
       "freyja",
       "julia",

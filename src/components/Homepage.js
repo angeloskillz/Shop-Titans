@@ -4,6 +4,7 @@ import blacksmith from "../constants/workers/blacksmith"
 import carpenter from "../constants/workers/carpenter"
 import engineer from "../constants/workers/engineer"
 import herbalist from "../constants/workers/herbalist"
+import jeweler from "../constants/workers/jeweler"
 import master from "../constants/workers/master"
 import priestess from "../constants/workers/priestess"
 import scholar from "../constants/workers/scholar"
@@ -36,6 +37,7 @@ const workers = [
   blacksmith,
   carpenter,
   herbalist,
+  jeweler,
   master,
   priestess,
   tailor,
@@ -150,29 +152,28 @@ class HomePageTabs extends React.Component {
         </AppBar>
         {value === 0 && (
           <TabContainer>
-            {workerData.map((data, index) => (
-              <React.Fragment key={index}>
-                <div
+            <div
+              style={{
+                marginTop: "10px",
+                textAlign: "center",
+              }}
+            >
+              <Link to="/settings">
+                <Fab
+                  size="small"
+                  variant="extended"
+                  color="secondary"
                   style={{
-                    marginTop: "10px",
-                    textAlign: "center",
+                    fontSize: "12px",
+                    boxShadow: "none",
                   }}
                 >
-                  <Link to="/settings">
-                    <Fab
-                      size="small"
-                      variant="extended"
-                      color="secondary"
-                      style={{
-                        fontSize: "12px",
-                        boxShadow: "none",
-                      }}
-                    >
-                      Set worker levels
-                    </Fab>
-                  </Link>
-                </div>
-
+                  Set worker levels
+                </Fab>
+              </Link>
+            </div>
+            {workerData.map((data, index) => (
+              <React.Fragment key={index}>
                 <div className="Selectan">
                   <Title style={{ color: data.color }}>{data.title}</Title>
                 </div>
