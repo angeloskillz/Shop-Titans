@@ -382,16 +382,131 @@ module.exports = [
               "25% more components found. Slightly more valuable loot found.",
           },
         },
+        title: "Kingly First Steps",
+        story: [
+          { name: "Reinhold", text: "Sia! I've decided!" },
+          { name: "Sia", text: "Yes, my King?" },
+          { name: "Reinhold", text: "Today, I would like to go shopping!" },
+          {
+            name: "Sia",
+            text:
+              "An excellent idea, your Majesty. However, looking at your schedule, it seems you are to meet foreign dignitaries today...",
+          },
+          {
+            name: "Reinhold",
+            text: "Oh, what a bore! Can't we just send them away?",
+          },
+          {
+            name: "Sia",
+            text:
+              "Remember, my King, though you may be young, you are still King. Your word is law.",
+          },
+          {
+            name: "Reinhold",
+            text:
+              "...You're absolutely right! Shopping it is, then! Those dignitaries can wait!",
+          },
+          {
+            name: "Sia",
+            text: "Your decisiveness is admirable. Shall I accompany you?",
+          },
+          {
+            name: "Reinhold",
+            text:
+              "Of course! I trust no one else with the protection of my graceful self.",
+          },
+        ],
       },
       {
         rank: 2,
         coins: 20,
         reward: { health: 2, attack: 42, defense: 30, skill: "---" },
+        title: "Friends in Low Places",
+        story: [
+          {
+            name: "Sia",
+            text:
+              "...And so, I have reasons to believe our King's life may be in danger.",
+          },
+          {
+            name: "Elder Owen",
+            text:
+              "I see. Indeed, a few rival kingdoms would benefit from an attempt on the King's life. I haven't seen any suspicious characters, but I'm sure Naya over at the tavern would know more.",
+          },
+          {
+            name: "Sia",
+            text:
+              "Thank you, Elder. Your wisdom and patriotism is appreciated.",
+          },
+          {
+            name: "Elder Owen",
+            text:
+              "Don't mention it. It is my duty as a resident to ensure our kingdom's prosperity. Though he may be young and foolish, I'm sure Reinhold will grow into a fine king... given time.",
+          },
+          {
+            name: "Sia",
+            text: "And it is my duty to see him live until then!",
+          },
+          {
+            name: "Naya",
+            text:
+              "Well well, it's not often we see pretty blue blood down here at the tavern!",
+          },
+          { name: "Sia", text: "Cut the act, Naya, you know who I am." },
+          {
+            name: "Naya",
+            text:
+              "Indeed! Sia Leonel, a gift to our King by the Kern emperor... To act as an advisor, but also to keep tabs on him, am I right?",
+          },
+          {
+            name: "Sia",
+            text:
+              "...! ...Nosy girl, aren't you? Well then, tell me, nosy Naya... Have you seen any strange faces in your tavern lately?",
+          },
+          {
+            name: "Naya",
+            text:
+              "Oh, we get plenty of strange faces! Tipsy orcs, shopkeepers... But the strangest of all would be that girl in the corner, over there.",
+          },
+          { name: "Yami", text: "...!" },
+          {
+            name: "Sia",
+            text:
+              "She escaped... That was an Azuman spy! ...or assassin. I'll need to be extra vigilant...",
+          },
+        ],
       },
       {
         rank: 3,
         coins: 30,
         reward: { health: 7, attack: 128, defense: 90, skill: "---" },
+        title: "Gate Crasher",
+        story: [
+          {
+            name: "Sia",
+            text:
+              "We have gathered you here today to celebrate the King's incredible generosity. In the past months, he has donated several million gold from his own coffers... ...To several local temples, schools, and orphanages. All are welcome to this feast, so please tell your friends and family Long live King Reinhold!",
+          },
+          { name: "Yami", text: "Tyrant Reinhold, your reign ends now!" },
+          { name: "Reinhold", text: "Aaargh..." },
+          {
+            name: "Sia",
+            text:
+              "A shuriken...! The Azuman spy! Guards! Form a perimeter around the castle! Let none escape! Argon, go after that assassin!",
+          },
+          { name: "Argon", text: "At once!" },
+          {
+            name: "Sia",
+            text:
+              "You! Unwashed buffoon! The King is injured! Seek out a healer at once!",
+          },
+          { name: "Tamas", text: "Wow, rude, dude." },
+          {
+            name: "Sia",
+            text:
+              "(I had every entry point under maximum surveillance...) (...Just who is this girl?)",
+          },
+        ],
       },
       {
         rank: 4,
@@ -405,6 +520,59 @@ module.exports = [
             effect: "50% more components found. More valuable loot found.",
           },
         },
+        title: "Mail Scorched Black",
+        story: [
+          {
+            name: "Sia",
+            text: "Nosy Naya, I believe you owe me some explanations.",
+          },
+          {
+            name: "Naya",
+            text: "Oh, Mrs. Leonel... I believe YOU owe me explanations.",
+          },
+          { name: "Sia", text: "I beg your pardon?" },
+          {
+            name: "Naya",
+            text:
+              "I've intercepted some VERY interesting letters. Sent by you, I believe. Shall we read it together?",
+          },
+          { name: "Sia", text: "...!" },
+          {
+            name: "Naya",
+            text:
+              "Let's see here... A Kern seal, addressed directly to the Kern emperor? My, my. I was dearly hoping for a scandalous love affair, but I suppose treason is fine, too.",
+          },
+          { name: "Sia", text: "N-naya, please stop!" },
+          {
+            name: "Naya",
+            text:
+              "Oh! Here's a juicy bit! 'King Reinhold is a complete fool whose presence on the throne benefits you greatly.' 'Keeping him alive is sure to damage his kingdom even more so than its ruler's death.'",
+          },
+          { name: "Sia", text: "..." },
+          {
+            name: "Naya",
+            text:
+              "Such unkind words are rather unbecoming of his advisor, I would say!",
+          },
+          { name: "Sia", text: "Nosy... Naya... You'll pay for this!" },
+          {
+            name: "Naya",
+            text:
+              "Someday, perhaps. But for now, I believe it is you who will pay. Handsomely, I suspect.",
+          },
+          { name: "Sia", text: "...Stooping so low as to blackmail?" },
+          {
+            name: "Naya",
+            text:
+              "So small a sin, compared to treason! If you had planned harm upon our king, on the other hand...",
+          },
+          {
+            name: "Sia",
+            text:
+              "Hmph. Very well. Name your price. And pray that my spy network never outsmarts yours, Naya.",
+          },
+          { name: "Naya", text: "I'm looking forward to it!" },
+        ],
       },
       {
         rank: 5,
