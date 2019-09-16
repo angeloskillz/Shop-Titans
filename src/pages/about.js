@@ -32,7 +32,10 @@ const Hero = styled.div`
 
 export default props => (
   <Layout>
-    <SEO title="About" />
+    <SEO
+      title="About"
+      description="Shop Titans Wiki is the website dedicated to Shop Titans Design & Craft game. Get all the game stats for all blueprints, workers, champions and much more. We are adding guides, news, guild features and much more over time."
+    />
     <Hero>
       <Title>About Us</Title>
       <Description>
