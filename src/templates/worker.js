@@ -2,13 +2,14 @@ import React from "react"
 import MaterialTable from "material-table"
 import Layout from "../components/layout"
 import styled from "styled-components"
-import blueprints from "../constants/blueprints"
-import Blueprint from "../components/Blueprint"
 import Worker from "../components/Worker"
 import SEO from "../components/seo"
 import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
+import Blueprint from "../components/Blueprint"
+
+const blueprints = require("../constants/blueprints/index")
 
 const Resources = styled.div`
   display: flex;
@@ -95,7 +96,13 @@ export default class WorkerPage extends React.Component {
 
     return (
       <Layout>
-        <SEO title={`Shop Titans ${data.name} Details & Stats`} description={data.description || `${data.name} is one of the workers available in the Shop Titans Game. `}></SEO>
+        <SEO
+          title={`Shop Titans ${data.name} Details & Stats`}
+          description={
+            data.description ||
+            `${data.name} is one of the workers available in the Shop Titans Game. `
+          }
+        ></SEO>
 
         <Section>
           <Container />

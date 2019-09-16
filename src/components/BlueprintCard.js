@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { cleanName, calculateCraftTime } from "../utils/util"
 import Image from "./WorkerImage"
 import HeroItem from "../components/HeroItem"
-import workers from "../constants/workers/workers"
+import workers from "../constants/workers"
 import stats from "../constants/workers/stats"
 
 const Class = styled.div`
@@ -123,18 +123,26 @@ export default props => {
     workerLevel =
       parseInt(
         localStorage.getItem(
-          workers[
-            props.details["Required Worker"].toLowerCase()
-          ].name.toLowerCase()
+          workers
+            .find(
+              worker =>
+                worker.title.toLowerCase() ===
+                props.details["Required Worker"].toLowerCase()
+            )
+            .name.toLowerCase()
         )
       ) || 1
 
     secondWorkerLevel =
       parseInt(
         localStorage.getItem(
-          workers[
-            props.details["Required Worker"].toLowerCase()
-          ].name.toLowerCase()
+          workers
+            .find(
+              worker =>
+                worker.title.toLowerCase() ===
+                props.details["Required Worker"].toLowerCase()
+            )
+            .name.toLowerCase()
         )
       ) || 1
   } catch {
@@ -191,9 +199,13 @@ export default props => {
           <EnergyCost>{props.details["Research Scrolls"]}</EnergyCost>
         ) : null}
         <HeroItem
-          filename={workers[
-            props.details["Required Worker"].toLowerCase()
-          ].name.toLowerCase()}
+          filename={workers
+            .find(
+              worker =>
+                worker.title.toLowerCase() ===
+                props.details["Required Worker"].toLowerCase()
+            )
+            .name.toLowerCase()}
           alt={props.details["Required Worker"]}
           style={{
             position: "relative",
@@ -206,9 +218,13 @@ export default props => {
 
         {props.details["Required Worker__1"] !== "---" ? (
           <HeroItem
-            filename={workers[
-              props.details["Required Worker__1"].toLowerCase()
-            ].name.toLowerCase()}
+            filename={workers
+              .find(
+                worker =>
+                  worker.title.toLowerCase() ===
+                  props.details["Required Worker__1"].toLowerCase()
+              )
+              .name.toLowerCase()}
             alt={props.details["Required Worker__1"].toLowerCase()}
             style={{
               position: "relative",

@@ -5,7 +5,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlueprintOverview from "../components/BlueprintOverview"
-const blueprints = require("../constants/oldblueprints")
+const blueprints = require("../constants/blueprints/index")
 
 const HeroContainer = styled.div`
   background-size: cover;
@@ -39,7 +39,6 @@ const IndexPage = props => {
       </Hero>
 
       <BlueprintOverview blueprints={relevantBlueprints}></BlueprintOverview>
-
     </Layout>
   )
 }
