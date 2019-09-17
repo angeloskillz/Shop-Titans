@@ -12,13 +12,12 @@ Hey fellow shopkeepers, Skillz4Killz here from the Happy Hamlet City bringing yo
 
 ## Creating Your Own City
 
-So you want to make your own city? **Let's do it!**
-
-1. Go into the **City** screen and click the **Guild** banner.
-2. Click the **Finder** button.
-3. Click **Create Guild.**
-4. Pick a name for your City.
-5. Click **Create.**
+1. So you want to make your own city? **Let's do it!**
+2. Go into the **City** screen and click the **Guild** banner.
+3. Click the **Finder** button.
+4. Click **Create Guild.**
+5. Pick a name for your City.
+6. Click **Create.**
 
 ## **Joining Another City**
 
@@ -36,7 +35,7 @@ Joining another city is also an option. There are two ways to do it!
 1. Go into the **City** screen and click the **Guild** banner.
 2. Click on **Invites.**
 3. You will see a list of guild names, simply tap on an invite and **Join.**\
-   _(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the guild rank and building levels for more information.)_
+   _(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the guild rank and building levels for more information if you need it.)_
 4. The game will ask you if you're sure about joining this guild, simply tap **Yes.**
 
 ## Creating vs Joining: Which one is the best route?
