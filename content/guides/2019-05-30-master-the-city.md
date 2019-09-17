@@ -40,7 +40,7 @@ Joining another city is also an option. There are two ways to do it!
 
 ## Creating vs Joining: Which one is the best route?
 
-Hi everyone! Angela here, guildmaster of "Oh Idk." I've seen a lot of people asking about how they can leave their guilds, especially new players. There are only two options: Creating your own OR Joining another which leads us to the next question: Which one is the most efficient path to take as a beginner?
+Hi everyone! Angela here, guildmaster of "Oh Idk." I've seen a lot of people asking about how they can leave their guilds, especially new players. There are only two options: Creating your own OR Joining another, which leads us to the next question: Which one is the most efficient path to take as a beginner?
 
 The answer is simple: Join a pre-existing guild. As a starting player, you need access to higher resources and worker buildings for better progression. Your crafts shouldn't take too long in the beginning or take too much resources, but faster is always better if you want to progress quick.
 
