@@ -39,12 +39,16 @@ Joining another city is also an option. There are two ways to do it!
    _(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the guild rank and building levels for more information.)_
 4. The game will ask you if you're sure about joining this guild, simply tap **Yes.**
 
-## Creating vs Joining: Which one is best route?
+## Creating vs Joining: Which one is the best route?
 
-Hi everyone! Angela here, guildmaster of "Oh Idk." I've seen a lot of people asking about how they can leave their guilds, especially new players. However, there are only two options: Creating your own OR Joining another, which leads us to the next question: Which one is the most efficient path to take as a beginner?
+Hi everyone! Angela here, guildmaster of "Oh Idk." I've seen a lot of people asking about how they can leave their guilds, especially new players. There are only two options: Creating your own OR Joining another which leads us to the next question: Which one is the most efficient path to take as a beginner?
 
-The answer is simply: Joining another guild.
+The answer is simple: Join a pre-existing guild. As a starting player, you need access to higher resources and worker buildings for better progression. Your crafts shouldn't take too long in the beginning or take too much resources, but faster is always better if you want to progress quick.
 
-As a starting player, you 
+Most guilds do require a certain investment level for them to allow you to join. Sure, but there are also starter guilds that will take you in no matter how much you have. The difference about newly-made guilds and well established ones is that, newer guilds thrive on how much a new player can instantly bring in to their guild upon joining, and not necessarily on how much you will be contributing in the future like well-established ones.
 
-Certain playe
+I made my own guild when I was in level 50s with 800M invested evenly throughout all the buildings. If you have plans on making your own guild in the future, the best way to prepare for it is to slowly invest in all the buildings and get to a stable point in your shop where you have almost nothing to spend your coins anymore and just actively invest.
+
+It all comes down to how you want to play the game. If you want to be with other new players, it's fine. The only downside to that is your growth would be a little slower because as a guildmaster, you have buildings to invest on and worry about. Surely, if you want to be the best guildmaster in town, you don't want pressure your members to invest. They're basically your in-game fam! Be a little more considerate as we all have a shop first before we have city buildings. We all can't invest much when we're not even making that much gold yet.
+
+In the end, this is just a game and we're all here to have fun!
