@@ -27,7 +27,7 @@
     "netlify-cms-app": "^2.9.7",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-sticky-footer": "^0.1.0-rc3",
     "react-table": "^6.10.3",
