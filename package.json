@@ -20,7 +20,7 @@
     "gatsby-plugin-styled-components": "^3.1.5",
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-filesystem": "^2.1.24",
-    "gatsby-transformer-javascript-frontmatter": "^2.1.2",
+    "gatsby-transformer-javascript-frontmatter": "^2.1.8",
     "gatsby-transformer-remark": "^2.6.22",
     "gatsby-transformer-sharp": "^2.2.14",
     "material-table": "^1.50.0",
