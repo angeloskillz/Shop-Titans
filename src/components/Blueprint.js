@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { cleanName } from "../utils/util"
-import Image from "./BlueprintImage"
+import Image from "./WorkerImage"
 
 const BlueprintBox = styled.div`
   position: relative;
@@ -51,7 +51,13 @@ export default props => {
   return (
     <div>
       <BlueprintBox>
-        <Image filename={name} alt={props.title} />
+        <Image
+          filename={name}
+          alt={props.title}
+          style={{
+            marginTop: "15px",
+          }}
+        />
       </BlueprintBox>
       <SubDescription>{props.details.Name}</SubDescription>
     </div>

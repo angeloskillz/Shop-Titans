@@ -1,7 +1,8 @@
 module.exports = [
   {
     name: "Wallace",
-    description: "Wallace specializes in forging all sorts of metal items, from swords to armor. Also forges jokes, but not good ones.",
+    description:
+      "Wallace specializes in forging all sorts of metal items, from swords to armor. Also forges jokes, but not good ones.",
     level_required: "0",
     gold_cost: "0",
     gem_cost: "0",
@@ -168,11 +169,12 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Allan",
-    description: "Allan handles the crafting of many wooden items, such as staves and bows. He's the best, according to himself.",
+    description:
+      "Allan handles the crafting of many wooden items, such as staves and bows. He's the best, according to himself.",
     level_required: "3",
     gold_cost: "2,500",
     gem_cost: "50",
@@ -339,11 +341,12 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Roxanne",
-    description: "Only Roxanne holds the secret of the powerful crossbows and gunpowder weapons. She likes to make things go boom.",
+    description:
+      "Only Roxanne holds the secret of the powerful crossbows and gunpowder weapons. She likes to make things go boom.",
     level_required: "0",
     gold_cost: "0",
     gem_cost: "0",
@@ -510,11 +513,12 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Maribel",
-    description: "Maribel concocts medicine such as magical herbs and potions. She has a druidic degree, so she's the real deal.",
+    description:
+      "Maribel concocts medicine such as magical herbs and potions. She has a druidic degree, so she's the real deal.",
     level_required: "5",
     gold_cost: "10,000",
     gem_cost: "200",
@@ -681,11 +685,12 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Katarina",
-    description: "Katarina's expert hands can craft rings and ornate equipment that no else can. She's a bit of a penny pincher.",
+    description:
+      "Katarina's expert hands can craft rings and ornate equipment that no else can. She's a bit of a penny pincher.",
     level_required: "20",
     gold_cost: "250,000",
     gem_cost: "600",
@@ -852,11 +857,12 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Theodore",
-    description: "Theodore's boundless knowledge allows the creation of rare and powerful equipment. He can usually be seen peacefully enjoying his retirement.",
+    description:
+      "Theodore's boundless knowledge allows the creation of rare and powerful equipment. He can usually be seen peacefully enjoying his retirement.",
     level_required: "30",
     gold_cost: "1,000,000",
     gem_cost: "1,500",
@@ -1023,11 +1029,12 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Freyja",
-    description: "Freyja's holy blessings are crucial to many magical items, such as amulets. She runs the temple and orphanage on her own.",
+    description:
+      "Freyja's holy blessings are crucial to many magical items, such as amulets. She runs the temple and orphanage on her own.",
     level_required: "25",
     gold_cost: "500,000",
     gem_cost: "1,000",
@@ -1194,11 +1201,12 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Evelyn",
-    description: "Evelyn teaches a wide variety of courses at the Academy. Thanks to her studies, she has learned how to craft Wands and Runestones.",
+    description:
+      "Evelyn teaches a wide variety of courses at the Academy. Thanks to her studies, she has learned how to craft Wands and Runestones.",
     level_required: "0",
     gold_cost: "0",
     gem_cost: "0",
@@ -1365,11 +1373,12 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Julia",
-    description: "Julia is a light armor specialist capable of crafting all sorts of equipment for agile Heroes.",
+    description:
+      "Julia is a light armor specialist capable of crafting all sorts of equipment for agile Heroes.",
     level_required: "2",
     gold_cost: "0",
     gem_cost: "0",
@@ -1536,16 +1545,17 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Grimar",
-    description: "Grimar's infinite wisdom allows the creation of powerful arcane scrolls. He tends to be on the forgetful side.",
+    description:
+      "Grimar's infinite wisdom allows the creation of powerful arcane scrolls. He tends to be on the forgetful side.",
     level_required: "12",
     gold_cost: "50,000",
     gem_cost: "300",
     title: "Wizard",
-    blueprint_unlocks: ["Scroll of Sparks", "Embed Element", "Bubble Element"],
+    blueprint_unlocks: ["Scroll of Sparks", "Ember Element", "Bubble Element"],
     levels: [
       {
         level: 1,
@@ -1707,7 +1717,7 @@ module.exports = [
         cost: 0,
         effect: "Max Worker Level: Lv. 40",
       },
-    ]
+    ],
   },
   {
     name: "Juniper",
@@ -2064,7 +2074,8 @@ module.exports = [
     gem_cost: "0",
     title: "Ironwood Sawmill",
     blueprint_unlocks: [],
-    description: "Investing in this industry will speed up ironwood production.",
+    description:
+      "Investing in this industry will speed up ironwood production.",
     bonus: "---",
     prerequisite: "Lumberyard Lv. 7",
     levels: [
@@ -3198,7 +3209,7 @@ module.exports = [
         time: "17h 20m",
         seconds: 62400,
         investments: { gold: 300000, gems: 60 },
-        cost: '---',
+        cost: "---",
         effect: "Sun God's Tomb Rest Time: 75%",
       },
     ],
@@ -3240,7 +3251,7 @@ module.exports = [
         cost: 12000,
         effect: "+20% Iron Pine Cone",
       },
-    {
+      {
         level: 4,
         time: "1h 30m",
         seconds: 5400,
@@ -3304,7 +3315,7 @@ module.exports = [
         cost: 2100000,
         effect: "+20% White Sand",
       },
-    {
+      {
         level: 12,
         time: "7h",
         seconds: 25200,
@@ -3312,7 +3323,7 @@ module.exports = [
         cost: 3200000,
         effect: "+20% Bronze Fang",
       },
-    {
+      {
         level: 13,
         time: "8h 20m",
         seconds: 30000,
@@ -3320,7 +3331,7 @@ module.exports = [
         cost: 5500000,
         effect: "+20% Moon Crystal",
       },
-    {
+      {
         level: 14,
         time: "10h",
         seconds: 36000,
@@ -3328,7 +3339,7 @@ module.exports = [
         cost: 9500000,
         effect: "+20% Evil Eye",
       },
-    {
+      {
         level: 15,
         time: "11h 40m",
         seconds: 42000,
@@ -3336,12 +3347,12 @@ module.exports = [
         cost: 20000000,
         effect: "+20% Silk Scarab",
       },
-    {
+      {
         level: 16,
         time: "13h 20m",
         seconds: 48000,
         investments: { gold: 75000, gems: 43 },
-        cost: '---',
+        cost: "---",
         effect: "+20% Star Metal",
       },
     ],
@@ -3354,7 +3365,8 @@ module.exports = [
     gem_cost: "0",
     title: "Town Hall",
     blueprint_unlocks: [],
-    description: "Investing in the Town Hall will allow more players to join the city.",
+    description:
+      "Investing in the Town Hall will allow more players to join the city.",
     bonus: "---",
     prerequisite: "---",
     levels: [
@@ -3491,7 +3503,7 @@ module.exports = [
         time: "4d 2h 40m",
         seconds: 355200,
         investments: { gold: 100000000, gems: 100 },
-        cost: '---',
+        cost: "---",
         effect: "City Population Limit: 20",
       },
     ],
@@ -3597,7 +3609,7 @@ module.exports = [
         cost: 220000000,
         effect: "Max Hero Level: Lv. 23",
       },
-    {
+      {
         level: 12,
         time: "1d",
         seconds: 86400,
@@ -3605,7 +3617,7 @@ module.exports = [
         cost: 520000000,
         effect: "Max Hero Level: Lv. 25",
       },
-    {
+      {
         level: 13,
         time: "1d 7h 40m",
         seconds: 114000,
@@ -3614,7 +3626,7 @@ module.exports = [
         effect: "Max Hero Level: Lv. 27",
       },
 
-    {
+      {
         level: 14,
         time: "1d 16h 20m",
         seconds: 145200,
@@ -3623,7 +3635,7 @@ module.exports = [
         effect: "Max Hero Level: Lv. 29",
       },
 
-    {
+      {
         level: 15,
         time: "2d 2h",
         seconds: 180000,
@@ -3632,7 +3644,7 @@ module.exports = [
         effect: "Max Hero Level: Lv. 31",
       },
 
-    {
+      {
         level: 16,
         time: "2d 12h 40m",
         seconds: 218400,
@@ -3641,7 +3653,7 @@ module.exports = [
         effect: "Max Hero Level: Lv. 33",
       },
 
-    {
+      {
         level: 17,
         time: "3d 20m",
         seconds: 260400,
@@ -3650,7 +3662,7 @@ module.exports = [
         effect: "Max Hero Level: Lv. 35",
       },
 
-    {
+      {
         level: 18,
         time: "3d 13h",
         seconds: 306666,
@@ -3659,7 +3671,7 @@ module.exports = [
         effect: "Max Hero Level: Lv. 37",
       },
 
-    {
+      {
         level: 19,
         time: "4d 2h 40m",
         seconds: 355200,
@@ -3668,15 +3680,15 @@ module.exports = [
         effect: "Max Hero Level: Lv. 39",
       },
 
-    {
+      {
         level: 20,
         time: "5d",
         seconds: 432000,
         investments: { gold: 100000000, gems: 100 },
-        cost: '---',
+        cost: "---",
         effect: "Max Hero Level: Lv. 40",
       },
     ],
     resource: "---",
-  }
+  },
 ]
