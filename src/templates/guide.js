@@ -3,8 +3,10 @@ import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Guide from "../components/Guide"
-import styled from "styled-components"
 import SEO from "../components/seo"
+import ImgHero from "gatsby-image"
+import Fab from "@material-ui/core/Fab"
+import WorkerImage from "../components/WorkerImage"
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
@@ -14,7 +16,58 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description}
       />
-
+      <div className="Hero">
+        <div className="HeroContainer">
+          <ImgHero
+            imgStyle={{ objectPosition: "center top" }}
+            className="Img"
+            fluid={data.imageOne.childImageSharp.fluid}
+          />
+          <div className="gradient" />
+        </div>
+        <div className="HeroGroup">
+          <WorkerImage filename="Logo" alt="Logo" />
+          <div style={{ marginTop: "5px" }}>
+            <a
+              href="https://discord.gg/shoptitans"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Fab
+                size="small"
+                variant="extended"
+                color="primary"
+                style={{
+                  fontSize: "12px",
+                  boxShadow: "none",
+                  marginRight: "5px",
+                }}
+              >
+                Official Discord
+              </Fab>
+            </a>
+            <a
+              href="https://discord.gg/rWMuMdk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Fab
+                size="small"
+                variant="extended"
+                color="secondary"
+                style={{
+                  fontSize: "12px",
+                  boxShadow: "none",
+                  margin: 0,
+                  background: "orange",
+                }}
+              >
+                Contact Us
+              </Fab>
+            </a>
+          </div>
+        </div>
+      </div>
       <Guide
         date={post.frontmatter.date}
         content={post.html}
@@ -42,6 +95,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+      }
+    }
+    imageOne: file(relativePath: { eq: "Backgrounds/BG1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1366) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }
