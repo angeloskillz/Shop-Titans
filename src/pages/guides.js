@@ -2,10 +2,10 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import GuideCard from "../components/GuideCard"
 
 export default props => {
   const posts = props.data.allMarkdownRemark.edges.map(e => e.node)
-  console.log(posts)
   return (
     <Layout>
       <SEO
@@ -14,12 +14,12 @@ export default props => {
       />
       <div style={{ paddingTop: "50px", marginLeft: "5px" }}>
         {posts.map((post, index) => (
-          <div>
-            <Link to={post.fields.slug}>
-              <h2 style={{ textAlign: "center" }}>{post.frontmatter.title}</h2>
-            </Link>
-            <p key={index}>{post.frontmatter.description}</p>
-          </div>
+          <GuideCard
+            key={index}
+            link={post.fields.slug}
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+          ></GuideCard>
         ))}
       </div>
     </Layout>

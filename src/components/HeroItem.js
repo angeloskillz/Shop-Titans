@@ -2,11 +2,11 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Image = props => (
+export default props => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile {
+        images: allFile(filter: { relativePath: { regex: "/Stat Indicators|Item Types|Items|Resources|Currencies|Components|Portraits/" } }) {
           edges {
             node {
               relativePath
@@ -44,5 +44,3 @@ const Image = props => (
     }}
   />
 )
-
-export default Image

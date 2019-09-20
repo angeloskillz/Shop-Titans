@@ -6,7 +6,7 @@ const Image = props => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile {
+        images: allFile(filter: { relativePath: { regex: "/Portraits|Items|Hero Classes/" } }) {
           edges {
             node {
               relativePath
@@ -31,7 +31,7 @@ const Image = props => (
         <Img
           alt={props.alt}
           fixed={image.node.childImageSharp.fixed}
-          style={{
+          style={props.style || {
             position: "relative",
             marginLeft: "auto",
             marginRight: "auto",
