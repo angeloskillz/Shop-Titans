@@ -84,9 +84,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
-          `src/templates/${String(
-            edge.node.frontmatter.category
-          ).toLowerCase()}.js`
+          `src/templates/guide.js`
         ),
         // additional data can be passed via context
         context: {
