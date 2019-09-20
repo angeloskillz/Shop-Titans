@@ -19,7 +19,7 @@ collections:
       preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Type/Category", name: "category", widget: "select", options: ["Lore"] }
+      - { label: "Type/Category", name: "category", widget: "select", options: ["Guide"] }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
