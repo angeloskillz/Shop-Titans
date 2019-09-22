@@ -118,7 +118,7 @@ const Layout = ({ children }) => (
           <p>Privacy Policy: We don’t store your data.</p>
         </StickyFooter>
 
-        <BottomNav />
+        <BottomNav className="bottomNav" />
       </>
     )}
   />

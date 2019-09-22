@@ -489,3 +489,15 @@ tbody tr:hover {
 .PrivateTabIndicator-colorPrimary-79 {
   visibility: hidden;
 }
+
+.bottomNav {
+  position: sticky;
+  bottom: 0;
+  background: lightgrey;
+}
+
+@media (min-width: 700px) {
+  .bottomNav {
+    display: none;
+  }
+}
