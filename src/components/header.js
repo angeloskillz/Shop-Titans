@@ -67,6 +67,12 @@ class Header extends React.Component {
               Blueprints
             </Link>
             <Link
+              to="/guides"
+              style={{ color: this.state.hasScrolled ? "white" : "" }}
+            >
+              Guides
+            </Link>
+            <Link
               to="/settings"
               style={{ color: this.state.hasScrolled ? "white" : "" }}
             >
