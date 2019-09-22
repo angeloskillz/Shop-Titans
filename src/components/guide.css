@@ -2,23 +2,20 @@
   color: black;
   text-align: left;
   font-size: 14px;
+  padding: 16px;
 }
 
 .guideTitle {
   text-align: center;
   max-width: 100%;
-  margin-top: -50px;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-bottom: 16pxpx;
-  font-family: QuadratSerial;
-  color: #ff665f;
+  color: rgb(95, 169, 255);
   font-size: 30px;
 }
 
 .guideDate {
   text-align: center;
-  margin-top: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
@@ -38,12 +35,12 @@
 
 .guideContent h1 {
   font-size: 20px;
-  color: lightblue;
+  color: rgba(0, 0, 0, 0.692);
 }
 
 .guideContent h2 {
   font-size: 18px;
-  color: orange;
+  color: #406081;
 }
 
 .guideContent p {

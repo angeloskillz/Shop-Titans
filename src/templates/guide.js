@@ -23,7 +23,6 @@ const BlogPost = ({ data }) => {
             className="Img"
             fluid={data.imageOne.childImageSharp.fluid}
           />
-          <div className="gradient" />
         </div>
         <div className="HeroGroup">
           <WorkerImage filename="Logo" alt="Logo" />
@@ -68,6 +67,7 @@ const BlogPost = ({ data }) => {
           </div>
         </div>
       </div>
+      <div style={{ background: 'white', paddingTop: '16px', borderRadius: '26px 26px 0px 0px', }}>
       <Guide
         date={post.frontmatter.date}
         content={post.html}
@@ -79,7 +79,8 @@ const BlogPost = ({ data }) => {
           </Helmet>
         }
         title={post.frontmatter.title}
-      />
+        />
+      </div>
     </Layout>
   )
 }

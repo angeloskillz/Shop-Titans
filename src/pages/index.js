@@ -18,7 +18,6 @@ const IndexPage = props => (
           className="Img"
           fluid={props.data.imageOne.childImageSharp.fluid}
         />
-        <div className="gradient" />
       </div>
       <div className="HeroGroup">
         <WorkerImage filename="Logo" alt="Logo" />
@@ -63,7 +62,9 @@ const IndexPage = props => (
         </div>
       </div>
     </div>
-    <Homepage />
+    <div style={{ background: '#f4faff', paddingTop: '16px', borderRadius: '26px 26px 0px 0px', }}>
+      <Homepage />
+    </div>
   </Layout>
 )
 

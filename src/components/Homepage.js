@@ -110,7 +110,7 @@ class HomePageTabs extends React.Component {
             width: "max-content",
             margin: "0 auto",
             boxShadow: "none",
-            marginTop: "-36px",
+            marginTop: "",
           }}
         >
           <Tabs
@@ -120,7 +120,7 @@ class HomePageTabs extends React.Component {
             textColor="primary"
             variant="fullWidth"
             TabIndicatorProps={{
-              style: { visibility: "hidden" },
+              style: { visibility: "hidden", border: 'none' },
             }}
           >
             {["WORKERS", "HEROES", "CHAMPIONS"].map((name, index) => (
@@ -130,7 +130,7 @@ class HomePageTabs extends React.Component {
                 selected={true}
                 style={{
                   background: this.state.value === index ? "#5FA9FF" : "",
-                  border: "1px solid grey",
+                  border: "0px solid grey",
                   borderRadius: "50px",
                   fontSize: "12px",
                   marginRight: "16px",

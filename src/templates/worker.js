@@ -38,7 +38,6 @@ const Container = styled.div`
 `
 
 const TabContainer = styled.div`
-  background: #f4faff;
 `
 
 export default class WorkerPage extends React.Component {
@@ -116,7 +115,7 @@ export default class WorkerPage extends React.Component {
             <Worker details={data} type="worker" className="no-active" />
           </Resources>
         </div>
-
+        <div style={{ background: 'white', paddingTop: '16px', borderRadius: '26px 26px 0px 0px', }}>
         <AppBar
           position="static"
           color="default"
@@ -147,7 +146,7 @@ export default class WorkerPage extends React.Component {
                 selected={true}
                 style={{
                   background: this.state.value === index ? "#5FA9FF" : "",
-                  border: "1px solid grey",
+                  border: "none",
                   borderRadius: "50px",
                   fontSize: "12px",
                   marginRight: "16px",
@@ -158,7 +157,7 @@ export default class WorkerPage extends React.Component {
           </Tabs>
         </AppBar>
         {value === 0 && (
-          <TabContainer>
+            <TabContainer style={{ background: ''}}>
             {Object.values(relevantBlueprints).map(blueprints => (
               <div className="CardboxGroupScroll">
                 <Resources className="CardboxGroup">
@@ -217,7 +216,8 @@ export default class WorkerPage extends React.Component {
               }}
             />
           </TabContainer>
-        )}
+          )}
+        </div>
       </Layout>
     )
   }
