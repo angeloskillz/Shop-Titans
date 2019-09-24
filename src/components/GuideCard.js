@@ -20,31 +20,31 @@ const Class = styled.div`
   user-select: none;
   box-shadow: 0px 8px 12px #bdccdb;
   text-align: center;
-  `
+`
 const Image = styled.img`
-position: relative;
+  position: relative;
   width: 280px;
   border-radius: 26px 26px 0px 26px;
 `
 const Button = styled.button`
-    border: 1.5px solid rgba(189, 204, 219, 0.5);
-	font-weight: 350;
-    font-size: 14px;
-    width: 85%;
-    height: 40px;
-    border-radius: 10px;
-    -webkit-font-smoothing: antialiased;
-    white-space: pre-line;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-   outline: none;
-   text-align: center;
-   font-weight: 600;
-   color: #406081;
-   margin-bottom: 16px;
-   &:hover {
-     background: rgba(189, 204, 219, 0.5);
+  border: 1.5px solid rgba(189, 204, 219, 0.5);
+  font-weight: 350;
+  font-size: 14px;
+  width: 85%;
+  height: 40px;
+  border-radius: 10px;
+  -webkit-font-smoothing: antialiased;
+  white-space: pre-line;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  text-align: center;
+  font-weight: 600;
+  color: #406081;
+  margin-bottom: 16px;
+  &:hover {
+    background: rgba(189, 204, 219, 0.5);
   }
 `
 
@@ -69,12 +69,12 @@ const SubDescription = styled.h3`
 const LoreBox = props => (
   <Link to={props.link}>
     <Class>
-      <Image src='https://i.imgur.com/q2056Bb.jpg'/>
+      <Image src={props.image || "https://i.imgur.com/SXOUs4O.jpg"} />
       <div>
         <Title>{props.title}</Title>
         <SubDescription>{props.description}</SubDescription>
       </div>
-    <Button>READ MORE</Button>
+      <Button>READ MORE</Button>
     </Class>
   </Link>
 )
