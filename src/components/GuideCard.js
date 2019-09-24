@@ -5,10 +5,10 @@ import { Link } from "gatsby"
 const Class = styled.div`
   position: relative;
   width: 280px;
-  height: 230px;
+  height: auto;
   align-items: stretch;
   border-radius: 26px;
-  background-image: url(https://i.imgur.com/hZAT7Ng.png);
+  background: white;
   border: 1px solid transparent;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
@@ -17,37 +17,50 @@ const Class = styled.div`
   cursor: pointer;
   outline: none;
   box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0px 8px 12px #bdccdb;
+  text-align: center;
+`
+const Image = styled.img`
+  position: relative;
+  width: 280px;
+  border-radius: 26px 26px 0px 26px;
+`
+const Button = styled.button`
+  border: 1.5px solid rgba(189, 204, 219, 0.5);
+  font-weight: 350;
+  font-size: 14px;
+  width: 85%;
+  height: 40px;
+  border-radius: 10px;
+  -webkit-font-smoothing: antialiased;
+  white-space: pre-line;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  text-align: center;
+  font-weight: 600;
+  color: #406081;
+  margin-bottom: 16px;
   &:hover {
-    transform: scale(1.1);
-    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    box-shadow: 0px 10px 25px 1px rgba(218, 165, 78, 0.3);
-    z-index: 1;
+    background: rgba(189, 204, 219, 0.5);
   }
 `
+
 const Title = styled.h2`
   font-weight: bold;
   font-size: 18px;
   text-align: center;
-  color: #fff;
-  margin-top: 16px;
+  color: rgb(95, 169, 255);
   text-transform: uppercase;
-  width: 248px;
-  margin-left: auto;
-  margin-right: auto;
 `
 const SubDescription = styled.h3`
   font-weight: normal;
   font-style: italic;
   font-size: 14px;
   text-align: center;
-  color: #fff;
+  color: #406081;
   margin-bottom: 16px;
   padding-left: 16px;
   padding-right: 16px;
@@ -56,10 +69,12 @@ const SubDescription = styled.h3`
 const LoreBox = props => (
   <Link to={props.link}>
     <Class>
-      <div style={{ marginTop: "80px" }}>
+      <Image src={props.image || "https://i.imgur.com/SXOUs4O.jpg"} />
+      <div>
         <Title>{props.title}</Title>
         <SubDescription>{props.description}</SubDescription>
       </div>
+      <Button>READ MORE</Button>
     </Class>
   </Link>
 )

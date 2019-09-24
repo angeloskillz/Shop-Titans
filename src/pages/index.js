@@ -6,7 +6,7 @@ import Fab from "@material-ui/core/Fab"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Homepage from "../components/Homepage"
-import WorkerImage from "../components/WorkerImage"
+import Logo from "../components/Logo"
 
 const IndexPage = props => (
   <Layout>
@@ -18,10 +18,9 @@ const IndexPage = props => (
           className="Img"
           fluid={props.data.imageOne.childImageSharp.fluid}
         />
-        <div className="gradient" />
       </div>
       <div className="HeroGroup">
-        <WorkerImage filename="Logo" alt="Logo" />
+        <Logo filename="Logo" alt="Logo" />
         <div style={{ marginTop: "5px" }}>
           <a
             href="https://discord.gg/shoptitans"
@@ -63,7 +62,9 @@ const IndexPage = props => (
         </div>
       </div>
     </div>
-    <Homepage />
+    <div style={{ background: '#f4faff', paddingTop: '16px', borderRadius: '26px 26px 0px 0px', }}>
+      <Homepage />
+    </div>
   </Layout>
 )
 

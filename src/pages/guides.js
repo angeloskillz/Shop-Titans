@@ -1,8 +1,19 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import GuideCard from "../components/GuideCard"
+import styled from "styled-components"
+
+const Grid = styled.div`
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  overflow: visible;
+  max-width: 1200px;
+`
 
 export default props => {
   const posts = props.data.allMarkdownRemark.edges.map(e => e.node)
@@ -12,7 +23,10 @@ export default props => {
         title="Shop Titans Design & Craft Guides & Tips"
         description="Shop Titans wiki helps you get the best shop titans guides and tips to make you one of the best players. Learn about how to master the city and understand every portion of the game from the top players around."
       />
-      <div style={{ paddingTop: "50px", marginLeft: "5px" }}>
+      <Grid
+        className="CardboxGroup"
+        style={{ paddingTop: "50px", marginLeft: "5px" }}
+      >
         {posts.map((post, index) => (
           <GuideCard
             key={index}
@@ -21,7 +35,7 @@ export default props => {
             description={post.frontmatter.description}
           ></GuideCard>
         ))}
-      </div>
+      </Grid>
     </Layout>
   )
 }

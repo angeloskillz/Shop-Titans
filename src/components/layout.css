@@ -81,19 +81,19 @@ a {
 
 .HeroContainer {
   background-size: cover;
-  height: 300px;
+  height: 35vh;
   width: 100%;
-  z-index: -1;
   position: relative;
 }
 .Img {
-  height: 300px;
+  height: 200%;
   object-position: center top;
+  z-index: -1000;
 }
 
 .gradient {
   position: absolute;
-  height: 80px;
+  height: 26px;
   width: 100%;
   bottom: 0;
   background: #f4faff;
@@ -488,4 +488,21 @@ tbody tr:hover {
 /* Hides the indicator on material ui tabs */
 .PrivateTabIndicator-colorPrimary-79 {
   visibility: hidden;
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  background: lightgrey;
+}
+
+.bottomNavOption {
+  margin-left: -5px;
+
+}
+
+@media (min-width: 700px) {
+  .bottomNav {
+    display: none;
+  }
 }

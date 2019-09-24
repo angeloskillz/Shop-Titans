@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from "gatsby"
 import StickyFooter from "react-sticky-footer"
 
 import Header from "./header"
+import BottomNav from "./BottomNav"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -103,7 +104,7 @@ const Layout = ({ children }) => (
           Made by{" "}
           <a
             style={{ color: "#daa54e" }}
-            href="https://twitter.com/AngeloCant1"
+            href="https://twitter.com/AC1design"
           >
             AngeloC
           </a>{" "}
@@ -116,6 +117,8 @@ const Layout = ({ children }) => (
           </a>
           <p>Privacy Policy: We don’t store your data.</p>
         </StickyFooter>
+
+        <BottomNav className="bottomNav" />
       </>
     )}
   />

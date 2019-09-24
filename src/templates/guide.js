@@ -7,14 +7,23 @@ import SEO from "../components/seo"
 import ImgHero from "gatsby-image"
 import Fab from "@material-ui/core/Fab"
 import WorkerImage from "../components/WorkerImage"
+import styled from "styled-components"
+
+const Title = styled.h2`
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  text-align: center;
+  margin-bottom: 0;
+`
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
   return (
     <Layout>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
+        title={`${post.frontmatter.title} - Shop Titans Design & Craft Guide`}
+        description={`${post.frontmatter.description} - Shop Titans Design & Craft Guide`}
       />
       <div className="Hero">
         <div className="HeroContainer">
@@ -23,9 +32,9 @@ const BlogPost = ({ data }) => {
             className="Img"
             fluid={data.imageOne.childImageSharp.fluid}
           />
-          <div className="gradient" />
         </div>
         <div className="HeroGroup">
+          <Title>Shop Titans Guide</Title>
           <WorkerImage filename="Logo" alt="Logo" />
           <div style={{ marginTop: "5px" }}>
             <a
@@ -68,18 +77,26 @@ const BlogPost = ({ data }) => {
           </div>
         </div>
       </div>
-      <Guide
-        date={post.frontmatter.date}
-        content={post.html}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Shop Titans Guide">
-            <title>{post.frontmatter.title}</title>
-            <meta name="description" content={post.frontmatter.description} />
-          </Helmet>
-        }
-        title={post.frontmatter.title}
-      />
+      <div
+        style={{
+          background: "white",
+          paddingTop: "16px",
+          borderRadius: "26px 26px 0px 0px",
+        }}
+      >
+        <Guide
+          date={post.frontmatter.date}
+          content={post.html}
+          description={post.frontmatter.description}
+          helmet={
+            <Helmet titleTemplate="%s | Shop Titans Guide">
+              <title>{post.frontmatter.title}</title>
+              <meta name="description" content={post.frontmatter.description} />
+            </Helmet>
+          }
+          title={post.frontmatter.title}
+        />
+      </div>
     </Layout>
   )
 }

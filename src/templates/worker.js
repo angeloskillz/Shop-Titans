@@ -8,6 +8,7 @@ import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
 import Blueprint from "../components/Blueprint"
+import { Link } from "gatsby"
 
 const blueprints = require("../constants/blueprints/index")
 
@@ -31,14 +32,14 @@ const Section = styled.div`
 `
 
 const Container = styled.div`
-  height: 50px;
+  height: 20px;
   width: 100%;
   z-index: -1;
   position: relative;
 `
 
 const TabContainer = styled.div`
-  background: #f4faff;
+  background: "";
 `
 
 export default class WorkerPage extends React.Component {
@@ -116,108 +117,115 @@ export default class WorkerPage extends React.Component {
             <Worker details={data} type="worker" className="no-active" />
           </Resources>
         </div>
-
-        <AppBar
-          position="static"
-          color="default"
+        <div
           style={{
-            background: "none",
-            width: "max-content",
-            margin: "0 auto",
-            boxShadow: "none",
+            background: "white",
+            paddingTop: "16px",
+            borderRadius: "26px 26px 0px 0px",
           }}
         >
-          <Tabs
-            value={this.state.value}
-            onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            variant="fullWidth"
-            TabIndicatorProps={{
-              style: { visibility: "hidden" },
-            }}
+          <AppBar
+            position="static"
+            color="default"
             style={{
-              marginBottom: "20px",
+              background: "none",
+              width: "max-content",
+              margin: "0 auto",
+              boxShadow: "none",
             }}
           >
-            {["BLUEPRINTS", "LEVELS"].map((name, index) => (
-              <Tab
-                label={name}
-                className="button"
-                selected={true}
-                style={{
-                  background: this.state.value === index ? "#5FA9FF" : "",
-                  border: "1px solid grey",
-                  borderRadius: "50px",
-                  fontSize: "12px",
-                  marginRight: "16px",
-                }}
-                key={index}
-              />
-            ))}
-          </Tabs>
-        </AppBar>
-        {value === 0 && (
-          <TabContainer>
-            {Object.values(relevantBlueprints).map(blueprints => (
-              <div className="CardboxGroupScroll">
-                <Resources className="CardboxGroup">
-                  {blueprints.map((blueprint, index) => (
-                    <div>
-                      <Blueprint key={index} details={blueprint}></Blueprint>
-                    </div>
-                  ))}
-                </Resources>
-              </div>
-            ))}
-          </TabContainer>
-        )}
-        {value === 1 && (
-          <TabContainer>
-            <MaterialTable
-              columns={[
-                { title: "Level", field: "level" },
-                { title: "Upgrade Time", field: "time" },
-                { title: "Gold", field: "gold" },
-                { title: "Gems", field: "gems" },
-                { title: "Investments Needed", field: "needed" },
-                { title: "Total Cost", field: "cost" },
-                { title: "Effect", field: "effect" },
-              ]}
-              data={data.levels.map(lvl => ({
-                ...lvl,
-                gold: lvl.investments.gold.toLocaleString(),
-                gems: lvl.investments.gems.toLocaleString(),
-                needed:
-                  lvl.cost === "---"
-                    ? "---"
-                    : Math.ceil(lvl.cost / lvl.investments.gold),
-                cost: lvl.cost.toLocaleString(),
-              }))}
-              options={{
-                sorting: true,
-                search: false,
-                showTitle: false,
-                showFirstLastPageButtons: false,
-                pageSize: 20,
-                emptyRowsWhenPaging: false,
-                headerStyle: {
-                  textAlign: "center",
-                  position: "sticky",
-                  zIndex: 11,
-                  top: 0,
-                },
-                cellStyle: {
-                  textAlign: "center",
-                },
+            <Tabs
+              value={this.state.value}
+              onChange={this.handleChange}
+              indicatorColor="primary"
+              textColor="primary"
+              variant="fullWidth"
+              TabIndicatorProps={{
+                style: { visibility: "hidden" },
               }}
               style={{
-                width: "75%",
-                margin: "auto",
+                marginBottom: "20px",
               }}
-            />
-          </TabContainer>
-        )}
+            >
+              {["BLUEPRINTS", "LEVELS"].map((name, index) => (
+                <Tab
+                  label={name}
+                  className="button"
+                  selected={true}
+                  style={{
+                    background: this.state.value === index ? "#5FA9FF" : "",
+                    border: "none",
+                    borderRadius: "50px",
+                    fontSize: "12px",
+                    marginRight: "16px",
+                  }}
+                  key={index}
+                />
+              ))}
+            </Tabs>
+          </AppBar>
+          {value === 0 && (
+            <TabContainer style={{ background: "" }}>
+              {Object.values(relevantBlueprints).map(blueprints => (
+                <div className="CardboxGroupScroll">
+                  <Resources className="CardboxGroup">
+                    {blueprints.map((blueprint, index) => (
+                      <Link to={`/blueprints/${blueprint.Name}`}>
+                        <Blueprint key={index} details={blueprint}></Blueprint>
+                      </Link>
+                    ))}
+                  </Resources>
+                </div>
+              ))}
+            </TabContainer>
+          )}
+          {value === 1 && (
+            <TabContainer>
+              <MaterialTable
+                columns={[
+                  { title: "Level", field: "level" },
+                  { title: "Upgrade Time", field: "time" },
+                  { title: "Gold", field: "gold" },
+                  { title: "Gems", field: "gems" },
+                  { title: "Investments Needed", field: "needed" },
+                  { title: "Total Cost", field: "cost" },
+                  { title: "Effect", field: "effect" },
+                ]}
+                data={data.levels.map(lvl => ({
+                  ...lvl,
+                  gold: lvl.investments.gold.toLocaleString(),
+                  gems: lvl.investments.gems.toLocaleString(),
+                  needed:
+                    lvl.cost === "---"
+                      ? "---"
+                      : Math.ceil(lvl.cost / lvl.investments.gold),
+                  cost: lvl.cost.toLocaleString(),
+                }))}
+                options={{
+                  sorting: true,
+                  search: false,
+                  showTitle: false,
+                  showFirstLastPageButtons: false,
+                  pageSize: 20,
+                  emptyRowsWhenPaging: false,
+                  headerStyle: {
+                    textAlign: "center",
+                    position: "sticky",
+                    zIndex: 11,
+                    top: 0,
+                  },
+                  cellStyle: {
+                    textAlign: "center",
+                  },
+                }}
+                style={{
+                  width: "75%",
+                  margin: "auto",
+                }}
+              />
+            </TabContainer>
+          )}
+        </div>
       </Layout>
     )
   }
