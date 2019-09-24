@@ -104,7 +104,7 @@ const Layout = ({ children }) => (
           Made by{" "}
           <a
             style={{ color: "#daa54e" }}
-            href="https://twitter.com/AngeloCant1"
+            href="https://twitter.com/AC1design"
           >
             AngeloC
           </a>{" "}
