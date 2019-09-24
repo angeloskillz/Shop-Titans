@@ -31,7 +31,7 @@ const Section = styled.div`
 `
 
 const Container = styled.div`
-  height: 50px;
+  height: 20px;
   width: 100%;
   z-index: -1;
   position: relative;

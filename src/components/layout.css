@@ -80,10 +80,10 @@ a {
 }
 
 .HeroContainer {
-	background-size: cover;
-	height: 35vh;
-	width: 100%;
-	position: relative;
+  background-size: cover;
+  height: 35vh;
+  width: 100%;
+  position: relative;
 }
 .Img {
   height: 200%;
@@ -491,9 +491,14 @@ tbody tr:hover {
 }
 
 .bottomNav {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   background: lightgrey;
+}
+
+.bottomNavOption {
+  margin-left: -5px;
+
 }
 
 @media (min-width: 700px) {
