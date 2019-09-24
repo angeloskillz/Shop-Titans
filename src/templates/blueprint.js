@@ -69,6 +69,11 @@ export default ({ pageContext: data }) => {
 
   return (
     <Layout>
+      <SEO
+        title={`${data.Name} - Shop Titans Design & Craft Guide`}
+        description={`Stats and details of ${data.Name} blueprint from Shop Titans Design & Craft game.`}
+      />
+
       <Section>
         <Container />
       </Section>
