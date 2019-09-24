@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import BlueprintCard from "../components/BlueprintCard"
+import SEO from "../components/seo"
 
 const Resources = styled.div`
   display: flex;
