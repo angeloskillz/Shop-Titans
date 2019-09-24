@@ -13,7 +13,6 @@ const Title = styled.h2`
   font-weight: 800;
   font-size: 20px;
   text-align: center;
-  color: #38ec94;
   text-align: center;
   margin-bottom: 0;
 `
