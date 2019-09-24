@@ -30,7 +30,7 @@ const premiumWorkers = allworkers.filter(worker =>
 )
 
 const specialWorkers = allworkers.filter(worker =>
-  ["townhall", "tavern", "emeraldinn", "traininghall"].includes(
+  ["town hall", "tavern", "emerald inn", "training hall"].includes(
     worker.title.toLowerCase()
   )
 )
