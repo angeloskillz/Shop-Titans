@@ -4,7 +4,7 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction"
 import SettingsIcon from "@material-ui/icons/Settings"
 import HomeIcon from "@material-ui/icons/Home"
 import AssignmentIcon from "@material-ui/icons/Assignment"
-import LocationOnIcon from "@material-ui/icons/LocationOn"
+// import LocationOnIcon from "@material-ui/icons/LocationOn"
 import InfoIcon from "@material-ui/icons/Info"
 import { Link } from "gatsby"
 

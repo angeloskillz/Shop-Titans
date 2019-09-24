@@ -10,6 +10,8 @@ description: Learn all the secrets to making a successful city!
 
 Hey fellow shopkeepers, Skillz4Killz here from the Happy Hamlet City bringing you a guide on helping you master the city. Many players will also call the City a Guild and both are accurate. The game actually refers to it as both. For this guide, we will use the term: City!
 
+![Test image](/img/artboard_2_copy_38.png "Test Image")
+
 ## Creating Your Own City
 
 1. So you want to make your own city? **Let's do it!**
@@ -35,7 +37,7 @@ Joining another city is also an option. There are two ways to do it!
 1. Go into the **City** screen and click the **Guild** banner.
 2. Click on **Invites.**
 3. You will see a list of guild names, simply tap on an invite and **Join.**\
-   > *(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the rank and building levels for more information about the guild if you need it.)*
+   > _(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the rank and building levels for more information about the guild if you need it.)_
 4. The game will ask you if you're sure about joining this guild, simply tap **Yes.**
 
 ## Creating vs Joining: Which one is the best route?
