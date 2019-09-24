@@ -51,3 +51,29 @@ I made my own guild when I was in level 50s with 800M invested evenly throughout
 It all comes down to how you want to play the game. If you want to be with other new players, it's fine. The only downside to that is your growth would be a little slower. As a guildmaster, you have buildings to invest on and worry about. Surely, if you want to be the best guildmaster in town, you don't want to pressure your members into investing. They're basically your in-game fam! Be a little more considerate as we all have a shop first before we have city buildings. We all can't invest much when we're not even making that much gold yet.
 
 In the end, this is just a game and we're all here to have fun!
+
+## Understanding City Investments
+
+No matter whether you join or create your own city, you will need to learn everything about how investing in your city works. When you earn gold from your shop or from selling items in the market, you invest that gold into your city.
+
+Investing gold, or gems, to improve your city is always helpful. If you were to leave your guild, those investments that you have made will be saved and carried with you to your new guild. So do not be afraid to invest as much as possible.
+
+### Investing Guild Bonus
+
+In the Guild Settings menu, you can select a worker to give the bonus to. Whenever, anyone in your guild invests to that worker they will be granted an extra 10% bonus to their investment.
+
+The bonus can be moved every 8 hours. This is important to remember, because if a worker is close to leveling up, you don't want to move the bonus there because then you can not move it for 8 hours. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
+
+### Which Worker To Invest In
+
+There is no "right" method of which worker to invest in. You can gain a small reward for each investment in a worker up to 10 times a day. Some workers will give you some resources, some will give speed up your quest times and more. Each worker is unique and you can see the benefits for investing in each one on the worker pages from the home page.
+
+Whenever you can you should try and invest in the worker with the bonus as you get an extra 10% bonus investment.
+
+## City Workers
+
+In your city, there are three types of workers. The "producers" who will produce resources you will use to craft items in your shop. The "workers" who are required to craft those items. The "special" workers who provide other types of benefits.
+
+To be able to invite more members to your guild, you have to invest into the Town Hall, Elder Owen. At this time, the maximum amount of guild members allowed in one guild is 20 members.
+
+The worker's level is determined by the total sum of every member's investment in that worker.

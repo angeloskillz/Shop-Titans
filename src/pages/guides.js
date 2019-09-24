@@ -27,7 +27,7 @@ export default props => {
         className="CardboxGroup"
         style={{ paddingTop: "50px", marginLeft: "5px" }}
       >
-        {[...posts, ...posts].map((post, index) => (
+        {posts.map((post, index) => (
           <GuideCard
             key={index}
             link={post.fields.slug}
