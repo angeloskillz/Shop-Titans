@@ -10,8 +10,6 @@ description: Learn all the secrets to making a successful city!
 
 Hey fellow shopkeepers, Skillz4Killz here from the Happy Hamlet City bringing you a guide on helping you master the city. Many players will also call the City a Guild and both are accurate. The game actually refers to it as both. For this guide, we will use the term: City!
 
-![Test image](/img/artboard_2_copy_38.png "Test Image")
-
 ## Creating Your Own City
 
 1. So you want to make your own city? **Let's do it!**
