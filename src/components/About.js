@@ -71,8 +71,8 @@ const version2 = [
     done: true,
   },
   { value: "Users can submit guides with Google Docs.", done: true },
-  { value: "Atleast a few guides must be written as a start.", done: false },
-  { value: "Each blueprint has it's own individual page.", done: false },
+  { value: "Atleast a few guides must be written as a start.", done: true },
+  { value: "Each blueprint has it's own individual page.", done: true },
   {
     value:
       "Better support for PWA with offline support so users can install it as an app on their devices.",
