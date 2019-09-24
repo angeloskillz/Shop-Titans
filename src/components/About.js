@@ -62,15 +62,15 @@ const version1 = [
 
 const version2 = [
   {
-    value: "GraphQL API",
+    value: "GraphQL API: https://shoptitans.xyz/api",
     done: true,
   },
   {
     value:
       "Users can create the guides through Netlify CMS right on the website.",
-    done: false,
+    done: true,
   },
-  { value: "Users can submit guides with Google Docs.", done: false },
+  { value: "Users can submit guides with Google Docs.", done: true },
   { value: "Atleast a few guides must be written as a start.", done: false },
   { value: "Each blueprint has it's own individual page.", done: false },
   {
@@ -97,6 +97,10 @@ const version3 = [
 ]
 
 const changelog = [
+  "Master the City guide added.",
+  "Mobile users will see bottom navigation bar. Feels more like an app.",
+  "Added guides page",
+  "Netlify CMS enabled and allowing articles be written by approved maintainers.",
   "Added API page documentation.",
   "Shop Titans Design & Craft API is now live!",
   "Blueprint craft times now reflect your workers levels",
