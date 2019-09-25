@@ -40,11 +40,10 @@ Joining another city is also an option. There are two ways to do it!
 
    ![](/img/invite3.jpg)
 3. You will see a list of guild names, simply tap on an invite and **Join.**
-
    ![](/img/invite4.jpg)
    > _(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the rank and building levels for more information about the guild if you need it.)_
 4. The game will ask you if you're sure about joining this guild, simply tap **Yes.**
-   ![](/img/invite4.jpg)
+   ![](/img/invite5.jpg)
 
 ## Creating vs Joining: Which one is the best route?
 
