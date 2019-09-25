@@ -18,14 +18,11 @@ So you want to make your own city? **Let's do it!**
    ![](/img/guildchoice1.1.jpg)
    ![](/img/guildchoice1.2.jpg)
 2. Click the **Finder** button.
-
-![](/img/join1.jpg)
-
-1. Click **Create Guild.**
-
-![](/img/createguild2.jpg)
-
-1. Pick a cool name for your City and Click **Create.**
+   ![](/img/join1.jpg)
+3. Click **Create Guild.**
+   ![](/img/createguild2.jpg)
+4. Pick a cool name for your City and Click **Create.** 
+   ![](/img/createguild1.jpg)
 
 ## **Joining Another City**
 
