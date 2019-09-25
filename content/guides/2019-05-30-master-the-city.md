@@ -8,16 +8,21 @@ description: Learn all the secrets to making a successful city!
 
 ## Introduction
 
-Hey fellow shopkeepers, Skillz4Killz here from the Happy Hamlet City bringing you a guide on helping you master the city. Many players will also call the City a Guild and both are accurate. The game actually refers to it as both. For this guide, we will use the term: City!
+Hey fellow shopkeepers, Skillz4Killz here from the Happy Hamlet City bringing you a guide on helping you master the city. Many players will also call the City a Guild and both are accurate. The game refers to it as both. For this guide, we will use the term: **City!**
 
 ## Creating Your Own City
 
-1. So you want to make your own city? **Let's do it!**
-2. Go into the **City** screen and click the **Guild** banner.
-3. Click the **Finder** button.
-4. Click **Create Guild.**
-5. Pick a cool name for your City.
-6. Click **Create.**
+So you want to make your own city? **Let's do it!**
+
+1. Go into the **City** screen and click the **Guild** banner.
+   ![](/img/guildchoice1.1.jpg)
+   ![](/img/guildchoice1.2.jpg)
+2. Click the **Finder** button.
+   ![](/img/join1.jpg)
+3. Click **Create Guild.**
+   ![](/img/createguild2.jpg)
+4. Pick a cool name for your City and Click **Create.** 
+   ![](/img/createguild1.jpg)
 
 ## **Joining Another City**
 
@@ -28,15 +33,19 @@ Joining another city is also an option. There are two ways to do it!
 1. Go into the **City** screen and click the **Guild** banner.
 2. Click the **Finder** button.
 3. Search for the name of the guild you want to join.
-4. A dialogue box will ask if you're sure about joining this guild, simply tap **Yes.**
+4. Click on it, and dialogue box will ask if you're sure about joining this guild, simply click **Yes.**
+   ![](/img/join3.jpg)
 
 **Method 2: Accepting Invites**
 
 1. Go into the **City** screen and click the **Guild** banner.
 2. Click on **Invites.**
-3. You will see a list of guild names, simply tap on an invite and **Join.**\
-   > _(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the rank and building levels for more information about the guild if you need it.)_
+   ![](/img/invite3.jpg)
+3. You will see a list of guild names, simply tap on an invite and **Join.**
+   ![](/img/invite4.jpg)
+   > _(**Note:** You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the rank and building levels for more information about the guild if you need it.)_
 4. The game will ask you if you're sure about joining this guild, simply tap **Yes.**
+   ![](/img/invite5.jpg)
 
 ## Creating vs Joining: Which one is the best route?
 
@@ -54,26 +63,82 @@ In the end, this is just a game and we're all here to have fun!
 
 ## Understanding City Investments
 
-No matter whether you join or create your own city, you will need to learn everything about how investing in your city works. When you earn gold from your shop or from selling items in the market, you invest that gold into your city.
+One thing you also need to understand in the city is how investing works.
 
-Investing gold, or gems, to improve your city is always helpful. If you were to leave your guild, those investments that you have made will be saved and carried with you to your new guild. So do not be afraid to invest as much as possible.
+As you continue to earn in your shop or from selling items in the market, you will more than likely invest. It will help improve your city's buildings and overall productivity rates. However, do not be afraid to invest as much as possible. If you were to leave your guild, the investments you have made will be saved and carried with you to your new guild.
 
-### Investing Guild Bonus
+### Investing in Guild's Choice
 
-In the Guild Settings menu, you can select a worker to give the bonus to. Whenever, anyone in your guild invests to that worker they will be granted an extra 10% bonus to their investment.
+In the Guild Settings menu, you can select a building to put the guild's choice. As you invest in the chosen building, you will be granted an extra 10% bonus to your investments.
 
-The bonus can be moved every 8 hours. This is important to remember, because if a worker is close to leveling up, you don't want to move the bonus there because then you can not move it for 8 hours. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
+![](/img/investments.jpg)
 
-### Which Worker To Invest In
+> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it. The 10% of 1,000,000.)_
 
-There is no "right" method of which worker to invest in. You can gain a small reward for each investment in a worker up to 10 times a day. Some workers will give you some resources, some will give speed up your quest times and more. Each worker is unique and you can see the benefits for investing in each one on the worker pages from the home page.
+The Guild's Choice can be moved by the guild masters and officers every 8 hours. This is important to remember because as the building is getting close to leveling up, you may not want to move the bonus there or you will wait 8 hours to choose another. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
 
-Whenever you can you should try and invest in the worker with the bonus as you get an extra 10% bonus investment.
+Here are two ways to move the Guild's Choice:
 
-## City Workers
+**A. Clicking on a building.** In this walk through, we will use Katarina/Jeweler as an example.
 
-In your city, there are three types of workers. The "producers" who will produce resources you will use to craft items in your shop. The "workers" who are required to craft those items. The "special" workers who provide other types of benefits.
+![](/img/guildchoice1.1.jpg)
 
-To be able to invite more members to your guild, you have to invest into the Town Hall, Elder Owen. At this time, the maximum amount of guild members allowed in one guild is 20 members.
+![](/img/guildchoice2.2.jpg)
 
-The worker's level is determined by the total sum of every member's investment in that worker.
+![](/img/guildchoice2.3.jpg)
+
+![](/img/guildchoice2.5.jpg)
+
+![](/img/guildchoice2.4.jpg)
+
+**B. Using the Guild Settings.**
+
+![](/img/guildchoice1.1.jpg)
+
+![](/img/guildchoice1.2.jpg)
+
+![](/img/guildchoice1.3.jpg)
+
+![](/img/guildchoice1.4.jpg)
+
+![](/img/guildchoice1.5.jpg)
+
+## Types of Buildings
+
+A building's level is determined by the total sum of every member's investment in that building. In your city, there are three types of it: Worker, Resource and Special buildings. You can gain small rewards for your first 10 investments in each building, every day! Some workers will give you some resources, some will give speed up your quest times and more. Below, we'll have a closer look on these perks!
+
+### Worker Buildings
+
+The city's worker buildings are the main determinants of the maximum level our personal workers can go up to. These workers will give us a crafting speed bonus that starts at +1% at level 2. 
+
+In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current crafts on queue that the Theodore crafts by 5% each click for 10x per day, a total of 50% off on crafting time. The same applies to other workers and their buildings.
+
+![](/img/masterworker.jpg)
+
+### Resource Buildings
+
+This is the type of building that produce our resources and determines how many of it we can get per minute in relation to its level. Currently, we have 8 types of resources: the primary ones, iron, wood, leather and herb; and, the secondaries which are steel, ironwood, fabric and oil.
+
+![](/img/rss.png)
+
+The number of bonus we get from investing in a Resource building is 10% of our personal resource bin's maximum capacity.
+
+![](/img/rssbonus.jpg)
+
+> _I have 4 pcs of Level 11 Iron bins that allows me to have a maximum amount of 440 pcs of iron when full and 10% of that is 44. Investing in the Iron Mine will give me +44 iron per click for 10x each day. The same principle applies to the rest of the resource buildings._
+>
+> _However, if you noticed, I can have a maximum of 175 ironwoods and 215 oil droplets. 10% of these would be 17.5 and 21.5 respectively, but I can only have +17 and +21 per click if I invested on these buildings to get them. The system does not round them up._
+
+### Special Buildings
+
+![](/img/specials.team.png)
+
+We have 4 special buildings: the Town Hall; the Training Hall; the Emerald Inn; and, the Tavern.
+
+The **Town Hall** manned by our own Elder Owen, determines the guild's maximum capacity. At its max level, a city can hold 20 people. Investing in this building will give no daily bonus of any sort, but who doesn't want more people in their guild?!
+
+The **Training Hall**, managed by Argon is tied to our hero levels. He does not give 10x daily bonuses, sure, but Argon volunteered to train our heroes day and night, let's cut him some slack!
+
+Oscar's **Emerald Inn** speeds up the healing rate of Heroes. Most guilds already has the inn maxed out at Level 11, but we can still invest 10x a day to speed up our current resting heroes' healing time. Invest in this building if all or most of your heroes are currently resting to maximize the bonus.
+
+Lastly, we have Naya's **Tavern**. This building increases loot found in quests, but like the inn, many guilds already have the Tavern maxed out at Level 16. Investing in the tavern 10x a day can cut upto 50% of our running quests. It's best to invest in this building when your quest slots are full!
