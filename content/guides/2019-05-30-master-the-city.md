@@ -105,7 +105,9 @@ Here are two ways to move the Guild's Choice:
 
 ## Types of Buildings
 
-A building's level is determined by the total sum of every member's investment in that building. In your city, there are three types of it: Worker, Resource and Special buildings. You can gain small rewards for your first 10 investments in each building, every day! Some workers will give you some resources, some will give speed up your quest times and more. Below, we'll have a closer look on these perks!
+A building's level is determined by the total sum of every member's investment in that building. In your city, there are three types of it: Worker, Resource and Special buildings. You can gain small rewards for your first 10 investments in each building, every day! Some workers will give you additional resources, some will give speed up your quest times, crafts and more!
+
+Below, we'll have a closer look on these perks!
 
 ### Worker Buildings
 
