@@ -115,16 +115,19 @@ Whenever you can you should try and invest in the worker with the bonus as you g
 
 ### Resource Buildings
 
-These are buildings that produce our resources.
+This is the type of building that produce our resources and determines how many of it we get according to its level. 
 
-Currently, we have 8 types of resources.
+Currently, we have 8 types of resources. The primary ones are Wood,
+
+![](/img/rss.png)
 
 ### Special Buildings
 
-![](/img/specials.team.png)
-
 We have 4 special buildings: the Town Hall; the Training Hall; the Emerald Inn; and, the Tavern.
 
-The **Town Hall** level determines the guild's maximum capacity. At its max level, a guild can hold 20 people. Investing in this building will give no bonus of any sort.
+The **Town Hall** manned by our own Elder Owen, determines the guild's maximum capacity. At its max level, a guild can hold 20 people. Investing in this building will give no daily bonus of any sort, but who doesn't want more people in their guild?!
 
-The **Training Hall** managed by Argon is tied to our hero levels.
+The **Training Hall**, managed by Argon is tied to our hero levels. He doesn't give daily bonuses, sure. But Argon volunteered to train our heroes day and night, let's cut him some slack!
+
+Oscar's **Emerald Inn** speeds up the healing rate of Heroes. Most guilds already has the inn maxed out at Level 11, but we can still invest 10x a day to speed up our current resting heroes' healing time.
+
