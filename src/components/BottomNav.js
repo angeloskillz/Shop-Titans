@@ -28,35 +28,30 @@ export default class extends React.Component {
           <BottomNavigationAction
             label="Home"
             icon={<HomeIcon />}
-            className="bottomNavOption"
           />
         </Link>
         <Link to="/guides">
           <BottomNavigationAction
             label="Guides"
             icon={<AssignmentIcon />}
-            className="bottomNavOption"
           />
         </Link>
         <Link to="/overview">
           <BottomNavigationAction
             label="Blueprints"
             icon={<ListIcon />}
-            className="bottomNavOption"
           />
         </Link>
         <Link to="/settings">
           <BottomNavigationAction
             label="Settings"
             icon={<SettingsIcon />}
-            className="bottomNavOption"
           />
         </Link>
         <Link to="/about">
           <BottomNavigationAction
             label="About"
             icon={<InfoIcon />}
-            className="bottomNavOption"
           />
         </Link>
       </BottomNavigation>
