@@ -107,9 +107,15 @@ A building's level is determined by the total sum of every member's investment i
 
 ### Worker Buildings
 
+The city's worker buildings are the main determinants of the maximum level our personal workers can go up to. These workers will give us a crafting speed bonus that starts at +1% at level 2. 
+
+In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27. Investing on the Master Lodge will speed up our current crafts on queue that the Theodore crafts by 5% each click for 10x per day.
+
+![](/img/masterworker.jpg)
+
 ### Resource Buildings
 
-This is the type of building that produce our resources and determines how many of it we get per minute according to its level. Currently, we have 8 types of resources. The primary ones: iron, wood, leather and herb; and, the secondaries are steel, ironwood, fabric and oil.
+This is the type of building that produce our resources and determines how many of it we can get per minute in relation to its level. Currently, we have 8 types of resources: the primary ones, iron, wood, leather and herb; and, the secondaries which are steel, ironwood, fabric and oil.
 
 ![](/img/rss.png)
 
@@ -117,17 +123,19 @@ The number of bonus we get from investing in a Resource building is 10% of our b
 
 ![](/img/rssbonus.jpg)
 
-> _I have 4 pcs of Level 11 Iron bins that allows me to have a maximum amount of 440 pcs of iron when full and 10%  of that is 44. Investing in the Iron Mine will give me +44 iron per tap for 10x each day. The same principle applies to the rest of the resource buildings._
+> _I have 4 pcs of Level 11 Iron bins that allows me to have a maximum amount of 440 pcs of iron when full and 10%  of that is 44. Investing in the Iron Mine will give me +44 iron per click for 10x each day. The same principle applies to the rest of the resource buildings._
 >
-> _However, if you noticed, I can have a maximum of 175 ironwoods and 215 oil droplets. 10% of these would be 17.5 and 21.5 respectively, but I can only have +17 and +21 if I invested on these buildings to get them. The system does not round them up._
+> _However, if you noticed, I can have a maximum of 175 ironwoods and 215 oil droplets. 10% of these would be 17.5 and 21.5 respectively, but I can only have +17 and +21 per click if I invested on these buildings to get them. The system does not round them up._
 
 ### Special Buildings
 
+![](/img/specials.team.png)
+
 We have 4 special buildings: the Town Hall; the Training Hall; the Emerald Inn; and, the Tavern.
 
-The **Town Hall** manned by our own Elder Owen, determines the guild's maximum capacity. At its max level, a guild can hold 20 people. Investing in this building will give no daily bonus of any sort, but who doesn't want more people in their guild?!
+The **Town Hall** manned by our own Elder Owen, determines the guild's maximum capacity. At its max level, a city can hold 20 people. Investing in this building will give no daily bonus of any sort, but who doesn't want more people in their guild?!
 
-The **Training Hall**, managed by Argon is tied to our hero levels. He doesn't give daily bonuses, sure. But Argon volunteered to train our heroes day and night, let's cut him some slack!
+The **Training Hall**, managed by Argon is tied to our hero levels. He does not give 10x daily bonuses, sure, but Argon volunteered to train our heroes day and night, let's cut him some slack!
 
 Oscar's **Emerald Inn** speeds up the healing rate of Heroes. Most guilds already has the inn maxed out at Level 11, but we can still invest 10x a day to speed up our current resting heroes' healing time. Invest in this building if all or most of your heroes are currently resting to maximize the bonus.
 
