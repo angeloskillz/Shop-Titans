@@ -115,8 +115,16 @@ Whenever you can you should try and invest in the worker with the bonus as you g
 
 ### Resource Buildings
 
+These are buildings that produce our resources.
+
+Currently, we have 8 types of resources.
+
 ### Special Buildings
 
 ![](/img/specials.team.png)
 
 We have 4 special buildings: the Town Hall; the Training Hall; the Emerald Inn; and, the Tavern.
+
+The **Town Hall** level determines the guild's maximum capacity. At its max level, a guild can hold 20 people. Investing in this building will give no bonus of any sort.
+
+The **Training Hall** managed by Argon is tied to our hero levels.
