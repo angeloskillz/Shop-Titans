@@ -1,12 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import ImgHero from "gatsby-image"
 import Fab from "@material-ui/core/Fab"
 import styled from "styled-components"
-
+import Logo from "../components/Logo"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import WorkerImage from "../components/WorkerImage"
 
 const queryExample = `
 const fetch = require("node-fetch")
@@ -76,15 +74,9 @@ const IndexPage = props => (
     />
     <div className="Hero">
       <div className="HeroContainer">
-        <ImgHero
-          imgStyle={{ objectPosition: "center top" }}
-          className="Img"
-          fluid={props.data.imageOne.childImageSharp.fluid}
-        />
-        <div className="gradient" />
       </div>
       <div className="HeroGroup">
-        <WorkerImage filename="Logo" alt="Logo" />
+        <Logo filename="Logo" alt="Logo" />
         <div style={{ marginTop: "5px" }}>
           <a
             href="https://discord.gg/shoptitans"
