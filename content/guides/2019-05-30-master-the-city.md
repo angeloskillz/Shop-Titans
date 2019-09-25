@@ -8,16 +8,24 @@ description: Learn all the secrets to making a successful city!
 
 ## Introduction
 
-Hey fellow shopkeepers, Skillz4Killz here from the Happy Hamlet City bringing you a guide on helping you master the city. Many players will also call the City a Guild and both are accurate. The game actually refers to it as both. For this guide, we will use the term: City!
+Hey fellow shopkeepers, Skillz4Killz here from the Happy Hamlet City bringing you a guide on helping you master the city. Many players will also call the City a Guild and both are accurate. The game refers to it as both. For this guide, we will use the term: **City!**
 
 ## Creating Your Own City
 
-1. So you want to make your own city? **Let's do it!**
-2. Go into the **City** screen and click the **Guild** banner.
-3. Click the **Finder** button.
-4. Click **Create Guild.**
-5. Pick a cool name for your City.
-6. Click **Create.**
+So you want to make your own city? **Let's do it!**
+
+1. Go into the **City** screen and click the **Guild** banner.
+   ![](/img/guildchoice1.1.jpg)
+   ![](/img/guildchoice1.2.jpg)
+2. Click the **Finder** button.
+
+![](/img/join1.jpg)
+
+1. Click **Create Guild.**
+
+![](/img/createguild2.jpg)
+
+1. Pick a cool name for your City and Click **Create.**
 
 ## **Joining Another City**
 
@@ -26,10 +34,7 @@ Joining another city is also an option. There are two ways to do it!
 **Method 1: Using the Guild Finder**
 
 1. Go into the **City** screen and click the **Guild** banner.
-   ![](/img/guildchoice1.1.jpg)
-   ![](/img/guildchoice1.2.jpg)
 2. Click the **Finder** button.
-   ![](/img/join1.jpg)
 3. Search for the name of the guild you want to join.
 4. Click on it, and dialogue box will ask if you're sure about joining this guild, simply click **Yes.**
    ![](/img/join3.jpg)
