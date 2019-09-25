@@ -26,17 +26,25 @@ Joining another city is also an option. There are two ways to do it!
 **Method 1: Using the Guild Finder**
 
 1. Go into the **City** screen and click the **Guild** banner.
+   ![](/img/guildchoice1.1.jpg)
+   ![](/img/guildchoice1.2.jpg)
 2. Click the **Finder** button.
+   ![](/img/join1.jpg)
 3. Search for the name of the guild you want to join.
-4. A dialogue box will ask if you're sure about joining this guild, simply tap **Yes.**
+   ![](/img/join2.jpg)
+4. Click on it, and dialogue box will ask if you're sure about joining this guild, simply click **Yes.**
+   ![](/img/join3.jpg)
 
 **Method 2: Accepting Invites**
 
 1. Go into the **City** screen and click the **Guild** banner.
 2. Click on **Invites.**
-3. You will see a list of guild names, simply tap on an invite and **Join.**\
+   ![](/img/invite-3.jpg)
+3. You will see a list of guild names, simply tap on an invite and **Join.**
+   ![](/img/invite-4.jpg)
    > _(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the rank and building levels for more information about the guild if you need it.)_
 4. The game will ask you if you're sure about joining this guild, simply tap **Yes.**
+   ![](/img/invite-5.jpg)
 
 ## Creating vs Joining: Which one is the best route?
 
@@ -54,15 +62,41 @@ In the end, this is just a game and we're all here to have fun!
 
 ## Understanding City Investments
 
-No matter whether you join or create your own city, you will need to learn everything about how investing in your city works. When you earn gold from your shop or from selling items in the market, you invest that gold into your city.
+One thing you also need to understand in the city is how investing works.
 
-Investing gold, or gems, to improve your city is always helpful. If you were to leave your guild, those investments that you have made will be saved and carried with you to your new guild. So do not be afraid to invest as much as possible.
+As you continue to earn in your shop or from selling items in the market, you will more than likely invest. It will help improve your city's buildings and overall productivity rates. However, do not be afraid to invest as much as possible. If you were to leave your guild, the investments you have made will be saved and carried with you to your new guild.
 
-### Investing Guild Bonus
+### Investing in Guild's Choice
 
-In the Guild Settings menu, you can select a worker to give the bonus to. Whenever, anyone in your guild invests to that worker they will be granted an extra 10% bonus to their investment.
+In the Guild Settings menu, you can select a building to put the guild's choice. As you invest in the chosen building, you will be granted an extra 10% bonus to your investments.
 
-The bonus can be moved every 8 hours. This is important to remember, because if a worker is close to leveling up, you don't want to move the bonus there because then you can not move it for 8 hours. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
+The Guild's Choice can be moved every 8 hours. This is important to remember as the building is getting close to leveling up, you may not want to move the bonus there or you will wait 8 hours to choose another. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
+
+Here are two ways to move the Guild's Choice:
+
+**A. Clicking on a building.** In this walk through, we will use Katarina/Jeweler as an example.
+
+![](/img/guildchoice1.1.jpg)
+
+![](/img/guildchoice2.2.jpg)
+
+![](/img/guildchoice2.3.jpg)
+
+![](/img/guildchoice2.5.jpg)
+
+![](/img/guildchoice2.4.jpg)
+
+**B. Using the Guild Settings.**
+
+![](/img/guildchoice1.1.jpg)
+
+![](/img/guildchoice1.2.jpg)
+
+![](/img/guildchoice1.3.jpg)
+
+![](/img/guildchoice1.4.jpg)
+
+![](/img/guildchoice1.5.jpg)
 
 ### Which Worker To Invest In
 
