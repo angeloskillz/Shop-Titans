@@ -118,3 +118,5 @@ Whenever you can you should try and invest in the worker with the bonus as you g
 ### Special Buildings
 
 ![](/img/specials.team.png)
+
+We have 4 special buildings: the Town Hall; the Training Hall; the Emerald Inn; and, the Tavern.
