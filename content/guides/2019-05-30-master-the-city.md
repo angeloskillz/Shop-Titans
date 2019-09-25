@@ -109,7 +109,7 @@ A building's level is determined by the total sum of every member's investment i
 
 The city's worker buildings are the main determinants of the maximum level our personal workers can go up to. These workers will give us a crafting speed bonus that starts at +1% at level 2. 
 
-In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27. Investing on the Master Lodge will speed up our current crafts on queue that the Theodore crafts by 5% each click for 10x per day.
+In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current crafts on queue that the Theodore crafts by 5% each click for 10x per day, a total of 50% off on crafting time. The same applies to other workers and their buildings.
 
 ![](/img/masterworker.jpg)
 
