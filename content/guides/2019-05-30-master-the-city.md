@@ -111,6 +111,7 @@ Whenever you can you should try and invest in the worker with the bonus as you g
 
 ### Special Buildings
 
+
 To be able to invite more members to your guild, you have to invest into the Town Hall, Elder Owen. At this time, the maximum amount of guild members allowed in one guild is 20 members.
 
 The worker's level is determined by the total sum of every member's investment in that worker.
