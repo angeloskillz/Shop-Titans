@@ -103,21 +103,21 @@ Here are two ways to move the Guild's Choice:
 
 ## Types of Buildings
 
-In your city, there are three types of buildings. The Resource produce resources you will use to craft items in your shop. The "workers" who are required to craft those items. The "special" workers who provide other types of benefits.
-
-You can gain a small reward for each investment in a worker up to 10x a day. Some workers will give you some resources, some will give speed up your quest times and more. Below, we'll have a closer look on these perks!
+A building's level is determined by the total sum of every member's investment in that building. In your city, there are three types of it: Worker, Resource and Special buildings. You can gain small rewards for your first 10 investments in each building, every day! Some workers will give you some resources, some will give speed up your quest times and more. Below, we'll have a closer look on these perks!
 
 ### Worker Buildings
 
-The worker's level is determined by the total sum of every member's investment in that worker.
-
 ### Resource Buildings
 
-This is the type of building that produce our resources and determines how many of it we get according to its level.
-
-Currently, we have 8 types of resources. The primary ones: iron, wood, leather and herb; and, the secondaries are steel, ironwood, fabric and oil.
+This is the type of building that produce our resources and determines how many of it we get per minute according to its level. Currently, we have 8 types of resources. The primary ones: iron, wood, leather and herb; and, the secondaries are steel, ironwood, fabric and oil.
 
 ![](/img/rss.png)
+
+The number of bonus we get from investing in a Resource building is 10% of our bin's maximum capacity.
+
+![](/img/rssbonus.jpg)
+
+> _I have 4pcs of Level 11 Iron bins that allows me to have a maximum amount of 440pcs of iron when full and 10%  of that is 44. Investing in the Iron Mine will give me +44 iron/tap for 10x each day._
 
 ### Special Buildings
 
