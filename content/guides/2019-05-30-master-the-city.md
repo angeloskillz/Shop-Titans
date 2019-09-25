@@ -1,7 +1,7 @@
 ---
 title: Mastering The City!
 category: Guide
-date: 2019-02-25T20:47:00.000Z
+date: 2019-09-25T20:47:00.000Z
 description: Learn all the secrets to making a successful city!
 ---
 # Creating Your Own City Versus Joining Another
