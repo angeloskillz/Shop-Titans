@@ -97,15 +97,19 @@ Here are two ways to move the Guild's Choice:
 
 ![](/img/guildchoice1.5.jpg)
 
-### Which Worker To Invest In
+## Types of Buildings
+
+In your city, there are three types of buildings. The "producers" who produce resources you will use to craft items in your shop. The "workers" who are required to craft those items. The "special" workers who provide other types of benefits.
 
 There is no "right" method of which worker to invest in. You can gain a small reward for each investment in a worker up to 10 times a day. Some workers will give you some resources, some will give speed up your quest times and more. Each worker is unique and you can see the benefits for investing in each one on the worker pages from the home page.
 
 Whenever you can you should try and invest in the worker with the bonus as you get an extra 10% bonus investment.
 
-## City Workers
+### Worker Buildings
 
-In your city, there are three types of workers. The "producers" who will produce resources you will use to craft items in your shop. The "workers" who are required to craft those items. The "special" workers who provide other types of benefits.
+### Resource Buildings
+
+### Special Buildings
 
 To be able to invite more members to your guild, you have to invest into the Town Hall, Elder Owen. At this time, the maximum amount of guild members allowed in one guild is 20 members.
 
