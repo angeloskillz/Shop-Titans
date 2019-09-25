@@ -494,11 +494,7 @@ tbody tr:hover {
   position: fixed;
   bottom: 0;
   background: lightgrey;
-}
-
-.bottomNavOption {
-  margin-left: -5px;
-
+  width: 100%;
 }
 
 @media (min-width: 700px) {
