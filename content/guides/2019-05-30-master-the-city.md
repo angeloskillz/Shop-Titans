@@ -119,11 +119,11 @@ This is the type of building that produce our resources and determines how many 
 
 ![](/img/rss.png)
 
-The number of bonus we get from investing in a Resource building is 10% of our bin's maximum capacity.
+The number of bonus we get from investing in a Resource building is 10% of our personal resource bin's maximum capacity.
 
 ![](/img/rssbonus.jpg)
 
-> _I have 4 pcs of Level 11 Iron bins that allows me to have a maximum amount of 440 pcs of iron when full and 10%  of that is 44. Investing in the Iron Mine will give me +44 iron per click for 10x each day. The same principle applies to the rest of the resource buildings._
+> _I have 4 pcs of Level 11 Iron bins that allows me to have a maximum amount of 440 pcs of iron when full and 10% of that is 44. Investing in the Iron Mine will give me +44 iron per click for 10x each day. The same principle applies to the rest of the resource buildings._
 >
 > _However, if you noticed, I can have a maximum of 175 ironwoods and 215 oil droplets. 10% of these would be 17.5 and 21.5 respectively, but I can only have +17 and +21 per click if I invested on these buildings to get them. The system does not round them up._
 
