@@ -41,7 +41,7 @@ Joining another city is also an option. There are two ways to do it!
    ![](/img/invite3.jpg)
 3. You will see a list of guild names, simply tap on an invite and **Join.**
    ![](/img/invite4.jpg)
-   > _(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the rank and building levels for more information about the guild if you need it.)_
+   > _(**Note:** You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the rank and building levels for more information about the guild if you need it.)_
 4. The game will ask you if you're sure about joining this guild, simply tap **Yes.**
    ![](/img/invite5.jpg)
 
@@ -69,7 +69,11 @@ As you continue to earn in your shop or from selling items in the market, you wi
 
 In the Guild Settings menu, you can select a building to put the guild's choice. As you invest in the chosen building, you will be granted an extra 10% bonus to your investments.
 
-The Guild's Choice can be moved every 8 hours. This is important to remember as the building is getting close to leveling up, you may not want to move the bonus there or you will wait 8 hours to choose another. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
+![](/img/investments.jpg)
+
+> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it. The 10% of 1,000,000.)_
+
+The Guild's Choice can be moved by the guild masters and officers every 8 hours. This is important to remember because as the building is getting close to leveling up, you may not want to move the bonus there or you will wait 8 hours to choose another. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
 
 Here are two ways to move the Guild's Choice:
 
@@ -109,11 +113,7 @@ Whenever you can you should try and invest in the worker with the bonus as you g
 
 ### Worker Buildings
 
-
-
 ### Resource Buildings
-
-
 
 ### Special Buildings
 
