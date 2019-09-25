@@ -31,20 +31,20 @@ Joining another city is also an option. There are two ways to do it!
 2. Click the **Finder** button.
    ![](/img/join1.jpg)
 3. Search for the name of the guild you want to join.
-   ![](/img/join2.jpg)
 4. Click on it, and dialogue box will ask if you're sure about joining this guild, simply click **Yes.**
-   ![](/img/join3.jpg)
 
 **Method 2: Accepting Invites**
 
 1. Go into the **City** screen and click the **Guild** banner.
 2. Click on **Invites.**
-   ![](/img/invite-3.jpg)
+
+   ![](/img/invite3.jpg)
 3. You will see a list of guild names, simply tap on an invite and **Join.**
-   ![](/img/invite-4.jpg)
+
+   ![](/img/invite4.jpg)
    > _(Note: You cannot see a guild's information other than how many members it currently has. It's best to ask around on world chat about the rank and building levels for more information about the guild if you need it.)_
 4. The game will ask you if you're sure about joining this guild, simply tap **Yes.**
-   ![](/img/invite-5.jpg)
+   ![](/img/invite4.jpg)
 
 ## Creating vs Joining: Which one is the best route?
 
