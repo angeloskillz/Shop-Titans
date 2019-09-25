@@ -117,7 +117,7 @@ The number of bonus we get from investing in a Resource building is 10% of our b
 
 ![](/img/rssbonus.jpg)
 
-> _I have 4pcs of Level 11 Iron bins that allows me to have a maximum amount of 440pcs of iron when full and 10%  of that is 44. Investing in the Iron Mine will give me +44 iron/tap for 10x each day._
+> _I have 4 pcs of Level 11 Iron bins that allows me to have a maximum amount of 440 pcs of iron when full and 10%  of that is 44. Investing in the Iron Mine will give me +44 iron/tap for 10x each day._
 
 ### Special Buildings
 
