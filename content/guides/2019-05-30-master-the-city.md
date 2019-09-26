@@ -73,7 +73,7 @@ In the Guild Settings menu, you can select a building to put the guild's choice.
 
 ![](/img/investments.jpg)
 
-> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it. The 10% of 1,000,000.)_
+> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it, 10% of 1,000,000.)_
 
 The Guild's Choice can be moved by guildmasters and officers every 8 hours. This is important to remember because as the building is getting close to leveling up, you may not want to move the bonus there or you will wait 8 hours to choose another. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
 
@@ -115,7 +115,9 @@ Below, we'll have a closer look on these perks!
 
 The city's worker buildings are the main determinants of the maximum level our personal workers can go up to. These workers will give us a crafting speed bonus that starts at +1% at level 2. 
 
-In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current crafts on queue that the Theodore crafts by 5% each click for 10x per day, a total of 50% off on crafting time. The same applies to other workers and their buildings.
+In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current crafts on queue that Theodore crafts by 5% each click for 10x per day, a total of 50% off on crafting time. The same applies to other workers and their buildings.
+
+![](/img/masterworker.jpg)
 
 ### Resources
 
