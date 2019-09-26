@@ -7,7 +7,9 @@ import SEO from "../components/seo"
 import AppBar from "@material-ui/core/AppBar"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
+import BlueprintCard from "../components/BlueprintCard"
 import Blueprint from "../components/Blueprint"
+import GridOnIcon from "@material-ui/icons/GridOn"
 import { Link } from "gatsby"
 
 const blueprints = require("../constants/blueprints/index")
@@ -42,9 +44,27 @@ const TabContainer = styled.div`
   background: "";
 `
 
+const ViewIcon = styled.div`
+  width: 30px;
+  height: 30px;
+  background: black;
+  color: white;
+  border-radius: 100%;
+  position: absolute;
+  right: 26px;
+  text-align: center;
+  jusitfy-content: center;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`
+
 export default class WorkerPage extends React.Component {
   state = {
     value: 0,
+    grid: true,
   }
 
   handleChange = (event, value) => {
@@ -53,6 +73,11 @@ export default class WorkerPage extends React.Component {
 
   handleChangeIndex = index => {
     this.setState({ value: index })
+  }
+
+  handleViewChange = () => {
+    console.log('it worked', this.state.grid)
+    this.setState({ grid: !this.state.grid })
   }
 
   componentDidMount() {
@@ -79,7 +104,7 @@ export default class WorkerPage extends React.Component {
 
   render() {
     const data = this.props.pageContext
-    const { value } = this.state
+    const { value, grid } = this.state
 
     const relevantBlueprints = {}
 
@@ -166,15 +191,36 @@ export default class WorkerPage extends React.Component {
           </AppBar>
           {value === 0 && (
             <TabContainer style={{ background: "" }}>
+              <div style={{ paddingBottom: "25px" }}>
+                <ViewIcon onClick={this.handleViewChange}>
+                  <GridOnIcon></GridOnIcon>
+                </ViewIcon>
+              </div>
               {Object.values(relevantBlueprints).map(blueprints => (
                 <div className="CardboxGroupScroll">
-                  <Resources className="CardboxGroup">
-                    {blueprints.map((blueprint, index) => (
-                      <Link to={`/blueprints/${blueprint.Name}`}>
-                        <Blueprint key={index} details={blueprint}></Blueprint>
-                      </Link>
-                    ))}
-                  </Resources>
+                  {grid ? (
+                    <div className="CardboxGroup">
+                      {blueprints.map((blueprint, index) => (
+                        <Link to={`/blueprints/${blueprint.Name}`}>
+                          <BlueprintCard
+                            key={index}
+                            details={blueprint}
+                          ></BlueprintCard>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : (
+                    <Resources className="CardboxGroup">
+                      {blueprints.map((blueprint, index) => (
+                        <Link to={`/blueprints/${blueprint.Name}`}>
+                          <Blueprint
+                            key={index}
+                            details={blueprint}
+                          ></Blueprint>
+                        </Link>
+                      ))}
+                    </Resources>
+                  )}
                 </div>
               ))}
             </TabContainer>
