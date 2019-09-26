@@ -76,7 +76,7 @@ export default class WorkerPage extends React.Component {
   }
 
   handleViewChange = () => {
-    console.log('it worked', this.state.grid)
+    console.log("it worked", this.state.grid)
     this.setState({ grid: !this.state.grid })
   }
 
@@ -200,14 +200,16 @@ export default class WorkerPage extends React.Component {
                 <div className="CardboxGroupScroll">
                   {grid ? (
                     <div className="CardboxGroup">
-                      {blueprints.map((blueprint, index) => (
-                        <Link to={`/blueprints/${blueprint.Name}`}>
-                          <BlueprintCard
-                            key={index}
-                            details={blueprint}
-                          ></BlueprintCard>
-                        </Link>
-                      ))}
+                      {blueprints
+                        .sort((a, b) => a.Tier - b.Tier)
+                        .map((blueprint, index) => (
+                          <Link to={`/blueprints/${blueprint.Name}`}>
+                            <BlueprintCard
+                              key={index}
+                              details={blueprint}
+                            ></BlueprintCard>
+                          </Link>
+                        ))}
                     </div>
                   ) : (
                     <Resources className="CardboxGroup">
