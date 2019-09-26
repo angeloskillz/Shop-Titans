@@ -8,7 +8,7 @@
     "@material-ui/core": "^4.4.3",
     "@material-ui/icons": "^4.4.3",
     "babel-plugin-styled-components": "^1.10.6",
-    "gatsby": "^2.15.21",
+    "gatsby": "^2.15.26",
     "gatsby-cli": "^2.7.49",
     "gatsby-image": "^2.2.19",
     "gatsby-plugin-manifest": "^2.2.18",
