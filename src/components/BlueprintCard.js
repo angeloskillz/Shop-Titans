@@ -262,9 +262,20 @@ export default props => {
       </EnergyBox>
 
       <Description>Stats:</Description>
-      <SubDescription>Worker XP: {props.details["Worker XP"]}</SubDescription>
       <SubDescription>
-        Merchant XP: {props.details["Merchant XP"]}
+        <strong>Worker XP:</strong> {props.details["Worker XP"]} |{" "}
+        <strong>XP/Second</strong>{" "}
+        {(
+          props.details["Worker XP"] / props.details["Crafting Time (seconds)"]
+        ).toFixed(2)}
+      </SubDescription>
+      <SubDescription>
+        <strong>Merchant XP:</strong> {props.details["Merchant XP"]} |{" "}
+        <strong>XP/Second</strong>{" "}
+        {(
+          parseInt(props.details["Merchant XP"]) /
+          props.details["Crafting Time (seconds)"]
+        ).toFixed(2)}
       </SubDescription>
 
       {props.details.Component !== "---" ? (
