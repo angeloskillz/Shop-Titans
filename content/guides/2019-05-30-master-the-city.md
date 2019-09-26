@@ -109,15 +109,15 @@ A building's level is determined by the total sum of every member's investment i
 
 Below, we'll have a closer look on these perks!
 
-### Worker Buildings
+### Workers
+
+![](/img/workersteam1.png)
 
 The city's worker buildings are the main determinants of the maximum level our personal workers can go up to. These workers will give us a crafting speed bonus that starts at +1% at level 2. 
 
 In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current crafts on queue that the Theodore crafts by 5% each click for 10x per day, a total of 50% off on crafting time. The same applies to other workers and their buildings.
 
-![](/img/masterworker.jpg)
-
-### Resource Buildings
+### Resources
 
 This is the type of building that produce our resources and determines how many of it we can get per minute in relation to its level. Currently, we have 8 types of resources: the primary ones, iron, wood, leather and herb; and, the secondaries which are steel, ironwood, fabric and oil.
 
@@ -131,7 +131,7 @@ The number of bonus we get from investing in a Resource building is 10% of our p
 >
 > _However, if you noticed, I can have a maximum of 175 ironwoods and 215 oil droplets. 10% of these would be 17.5 and 21.5 respectively, but I can only have +17 and +21 per click if I invested on these buildings to get them. The system does not round them up._
 
-### Special Buildings
+### Specials
 
 ![](/img/specials.team.png)
 
