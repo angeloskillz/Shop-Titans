@@ -73,7 +73,7 @@ In the Guild Settings menu, you can select a building to put the guild's choice.
 
 ![](/img/investments.jpg)
 
-> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it, 10% of 1,000,000.)_
+> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it. The 10% of 1,000,000.)_
 
 The Guild's Choice can be moved by guildmasters and officers every 8 hours. This is important to remember because as the building is getting close to leveling up, you may not want to move the bonus there or you will wait 8 hours to choose another. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
 
@@ -105,21 +105,17 @@ Here are two ways to move the Guild's Choice:
 
 ## Types of Buildings
 
-A building's level is determined by the total sum of every member's investment in that building. In your city, there are three types of it: Worker, Resource and Special buildings. You can gain small rewards for your first 10 investments in each building, every day! Some workers will give you additional resources, some will give speed up your quest times, crafts and more!
+A building's level is determined by the total sum of every member's investment in that building. In your city, there are three types of it: Worker, Resource and Special buildings. You can gain small rewards for your first 10 investments in each building, every day! Some workers will give you some resources, some will give speed up your quest times and more. Below, we'll have a closer look on these perks!
 
-Below, we'll have a closer look on these perks!
-
-### Workers
-
-![](/img/workersteam1.png)
+### Worker Buildings
 
 The city's worker buildings are the main determinants of the maximum level our personal workers can go up to. These workers will give us a crafting speed bonus that starts at +1% at level 2. 
 
-In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current crafts on queue that Theodore crafts by 5% each click for 10x per day, a total of 50% off on crafting time. The same applies to other workers and their buildings.
+In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current crafts on queue that the Theodore crafts by 5% each click for 10x per day, a total of 50% off on crafting time. The same applies to other workers and their buildings.
 
 ![](/img/masterworker.jpg)
 
-### Resources
+### Resource Buildings
 
 This is the type of building that produce our resources and determines how many of it we can get per minute in relation to its level. Currently, we have 8 types of resources: the primary ones, iron, wood, leather and herb; and, the secondaries which are steel, ironwood, fabric and oil.
 
@@ -133,7 +129,7 @@ The number of bonus we get from investing in a Resource building is 10% of our p
 >
 > _However, if you noticed, I can have a maximum of 175 ironwoods and 215 oil droplets. 10% of these would be 17.5 and 21.5 respectively, but I can only have +17 and +21 per click if I invested on these buildings to get them. The system does not round them up._
 
-### Specials
+### Special Buildings
 
 ![](/img/specials.team.png)
 
