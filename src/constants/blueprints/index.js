@@ -2,7 +2,7 @@ module.exports = [
   {
     Name: "Squire Sword",
     Type: "Sword",
-    "Unlock Prerequisite": "Blacksmith",
+    "Unlock Prerequisite": "",
     "Research Scrolls": "",
     Tier: 1,
     Value: 50,
