@@ -65,15 +65,15 @@ In the end, this is just a game and we're all here to have fun!
 
 One thing you also need to understand in the city is how investing works.
 
-As you continue to earn in your shop or from selling items in the market, you will more than likely invest. It will help improve your city's buildings and overall productivity rates. However, do not be afraid to invest as much as possible. If you were to leave your guild, the investments you have made will be saved and carried with you to your new guild.
+As you continue to earn in your shop or from selling items in the market, you will more than likely invest. It will help improve your city's buildings and overall productivity rates. However, do not be afraid to invest as much as possible. If you were to leave your city, the investments you have made will be saved and carried with you.
 
 ### Investing in Guild's Choice
 
-In the Guild Settings menu, you can select a building to put the guild's choice. As you invest in the chosen building, you will be granted an extra 10% bonus to your investments.
+In the Guild Settings menu, you can select a building to put the guild's choice on. As you invest in the chosen building, you will be granted an extra 10% bonus to your investments.
 
 ![](/img/investments.jpg)
 
-> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it. The 10% of 1,000,000.)_
+> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it,10% of 1,000,000.)_
 
 The Guild's Choice can be moved by guildmasters and officers every 8 hours. This is important to remember because as the building is getting close to leveling up, you may not want to move the bonus there or you will wait 8 hours to choose another. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
 
@@ -91,7 +91,7 @@ Here are two ways to move the Guild's Choice:
 
 ![](/img/guildchoice2.4.jpg)
 
-**B. Using the Guild Settings.**
+**B. Using the Guild Settings.** This time, let's use the Lumberyard!
 
 ![](/img/guildchoice1.1.jpg)
 
@@ -105,17 +105,25 @@ Here are two ways to move the Guild's Choice:
 
 ## Types of Buildings
 
-A building's level is determined by the total sum of every member's investment in that building. In your city, there are three types of it: Worker, Resource and Special buildings. You can gain small rewards for your first 10 investments in each building, every day! Some workers will give you some resources, some will give speed up your quest times and more. Below, we'll have a closer look on these perks!
+A building's level is determined by the total sum of every member's investment in that building. In your city, there are three types of it: Worker, Resource and Special buildings.
 
-### Worker Buildings
+You can gain small rewards for your first 10 investments in each building, every day! Some workers will give you resources, speed up your quest times and more!
+
+Let's have a closer look on these perks!
+
+### Workers
+
+![](/img/workersteam1.png)
 
 The city's worker buildings are the main determinants of the maximum level our personal workers can go up to. These workers will give us a crafting speed bonus that starts at +1% at level 2. 
 
-In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current crafts on queue that the Theodore crafts by 5% each click for 10x per day, a total of 50% off on crafting time. The same applies to other workers and their buildings.
+In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current items on queue that Theodore crafts by 5% each click for 10x per day. A total of 50% off on crafting time. The same applies to other workers and their buildings.
 
 ![](/img/masterworker.jpg)
 
-### Resource Buildings
+### Resources
+
+![](/img/rssteam.png)
 
 This is the type of building that produce our resources and determines how many of it we can get per minute in relation to its level. Currently, we have 8 types of resources: the primary ones, iron, wood, leather and herb; and, the secondaries which are steel, ironwood, fabric and oil.
 
@@ -129,16 +137,16 @@ The number of bonus we get from investing in a Resource building is 10% of our p
 >
 > _However, if you noticed, I can have a maximum of 175 ironwoods and 215 oil droplets. 10% of these would be 17.5 and 21.5 respectively, but I can only have +17 and +21 per click if I invested on these buildings to get them. The system does not round them up._
 
-### Special Buildings
+### Specials
 
 ![](/img/specials.team.png)
 
 We have 4 special buildings: the Town Hall; the Training Hall; the Emerald Inn; and, the Tavern.
 
-The **Town Hall** manned by our own Elder Owen, determines the guild's maximum capacity. At its max level, a city can hold 20 people. Investing in this building will give no daily bonus of any sort, but who doesn't want more people in their guild?!
+The **Town Hall** manned by our own Elder Owen, determines the city's maximum capacity. At its max level, a city can hold 20 people. Investing in this building will give no daily bonus of any sort, but who doesn't want more people?!
 
-The **Training Hall**, managed by Argon is tied to our hero levels. He does not give 10x daily bonuses, sure, but Argon volunteered to train our heroes day and night, let's cut him some slack!
+The **Training Hall**, managed by Argon is tied to our hero levels. He does not give 10x daily bonuses, sure! But, Argon volunteered to train our heroes day and night, let's cut him some slack!
 
-Oscar's **Emerald Inn** speeds up the healing rate of Heroes. Most guilds already has the inn maxed out at Level 11, but we can still invest 10x a day to speed up our current resting heroes' healing time. Invest in this building if all or most of your heroes are currently resting to maximize the bonus.
+Oscar's **Emerald Inn** speeds up the healing rate of Heroes. Most cities already has the inn maxed out at Level 11, but we can still invest 10x a day to speed up our current resting heroes' healing time. Invest in this building if all or most of your heroes are currently resting to maximize the bonus.
 
-Lastly, we have Naya's **Tavern**. This building increases loot found in quests, but like the inn, many guilds already have the Tavern maxed out at Level 16. Investing in the tavern 10x a day can cut upto 50% of our running quests. It's best to invest in this building when your quest slots are full!
+Lastly, we have Naya's **Tavern**. This building increases loot found in quests, but like the inn, many cities already have the Tavern maxed out at Level 16. Investing in the tavern 10x a day can cut upto 50% of our running quests. It's best to invest in this building when your quest slots are full!
