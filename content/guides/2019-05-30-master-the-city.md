@@ -73,7 +73,7 @@ In the Guild Settings menu, you can select a building to put the guild's choice 
 
 ![](/img/investments.jpg)
 
-> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it,10% of 1,000,000.)_
+> _(**Note**: Here, you will see the difference of investment logged in Wood Workshop vs Wizard Tower. The current Guild's Choice is Wizard Tower. Hence, the extra 100,000 on it, 10% of 1,000,000.)_
 
 The Guild's Choice can be moved by guildmasters and officers every 8 hours. This is important to remember because as the building is getting close to leveling up, you may not want to move the bonus there or you will wait 8 hours to choose another. Try to keep the bonus on buildings that require more money or the ones your guild is trying to focus on completing.
 
