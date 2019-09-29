@@ -14,9 +14,9 @@ A
 
 ## A list of Good Stuff to use gems on!
 ### Crafting Slots:
-> 8th, 9th, 10th, 11th and 12th. = **11**
+> 7th, 8th, 9th, 10th, 11th and 12th. = **11**
 
-The level requirements for slots did change, so I recommend buying the 7th slot if you can and not wait till you're level 50. Really, you need all the crafting slots you can get.
+You can buy the 7th slot if you can and not wait till you're level 50. Really, you need all the crafting slots you can get to produce more items to sell.
 
 ### Expansion Slots:
 > 6th, 7th, 8th, 9th = **111**
