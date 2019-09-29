@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { cleanName, calculateCraftTime } from "../utils/util"
 import Image from "./WorkerImage"
+import Package from "./PackageImage"
 import HeroItem from "../components/HeroItem"
 import workers from "../constants/workers"
 import stats from "../constants/workers/stats"
@@ -115,6 +116,20 @@ const EnergyCost = styled.p`
   margin-right: 6px;
 `
 
+const PackageIcon = styled.div`
+  font-size: 14px;
+  border-radius: 100%;
+  position: absolute;
+  right: 16px;
+  top: 50px;
+  text-align: center;
+  jusitfy-content: center;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 export default props => {
   let workerLevel = 1
   let secondWorkerLevel = 1
@@ -164,6 +179,11 @@ export default props => {
   return (
     <Class>
       <TierBadge className="badge">{props.details.Tier}</TierBadge>
+      {props.details["Unlock Prerequisite"] ? (
+        <PackageIcon className="badge">
+          <Package filename={cleanName(props.details["Unlock Prerequisite"])} />
+        </PackageIcon>
+      ) : null}
       <Icons style={{ background: "ff665f" }}>
         <Image
           filename={cleanName(props.details.Name)}
@@ -266,7 +286,15 @@ export default props => {
         <strong>Worker XP:</strong> {props.details["Worker XP"]} |{" "}
         <strong>XP/Second</strong>{" "}
         {(
-          props.details["Worker XP"] / props.details["Crafting Time (seconds)"]
+          props.details["Worker XP"] /
+          calculateCraftTime(
+            props.details["Crafting Time (seconds)"],
+            workerBonus,
+            secondWorkerBonus,
+            0,
+            0,
+            false
+          )
         ).toFixed(2)}
       </SubDescription>
       <SubDescription>
@@ -274,7 +302,14 @@ export default props => {
         <strong>XP/Second</strong>{" "}
         {(
           parseInt(props.details["Merchant XP"]) /
-          props.details["Crafting Time (seconds)"]
+          calculateCraftTime(
+            props.details["Crafting Time (seconds)"],
+            workerBonus,
+            secondWorkerBonus,
+            0,
+            0,
+            false
+          )
         ).toFixed(2)}
       </SubDescription>
 

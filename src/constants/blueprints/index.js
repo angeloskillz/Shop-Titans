@@ -11885,7 +11885,7 @@ module.exports = [
   {
     Name: "Explorer's Axe",
     Type: "Axe",
-    "Unlock Prerequisite": "Explorer Package",
+    "Unlock Prerequisite": "Explorer's Package",
     "Research Scrolls": 0,
     Tier: 3,
     Value: "1,850",
@@ -12050,7 +12050,7 @@ module.exports = [
   {
     Name: "Hero's Boots",
     Type: "Heavy Footwear",
-    "Unlock Prerequisite": "Hero Package",
+    "Unlock Prerequisite": "Hero's Package",
     "Research Scrolls": 0,
     Tier: 3,
     Value: "1,200",
@@ -12105,7 +12105,7 @@ module.exports = [
   {
     Name: "Ring of the Chosen",
     Type: "Ring",
-    "Unlock Prerequisite": "Hero Package",
+    "Unlock Prerequisite": "Hero's Package",
     "Research Scrolls": 0,
     Tier: 7,
     Value: "125,000",
@@ -12160,7 +12160,7 @@ module.exports = [
   {
     Name: "Hero's Sword",
     Type: "Sword",
-    "Unlock Prerequisite": "Hero Package",
+    "Unlock Prerequisite": "Hero's Package",
     "Research Scrolls": 0,
     Tier: 5,
     Value: "11,500",

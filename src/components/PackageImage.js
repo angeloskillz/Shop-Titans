@@ -2,15 +2,13 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-export default props => (
+const Image = props => (
   <StaticQuery
     query={graphql`
       query {
         images: allFile(
           filter: {
-            relativePath: {
-              regex: "/Stat Indicators|Item Types|Items|Resources|Currencies|Components|Portraits/"
-            }
+            relativePath: { regex: "/Packs/" }
           }
         ) {
           edges {
@@ -18,7 +16,7 @@ export default props => (
               relativePath
               name
               childImageSharp {
-                fixed(height: 15) {
+                fixed(height: 30) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -29,9 +27,8 @@ export default props => (
     `}
     render={data => {
       const image = data.images.edges.find(n => {
-        return n.node.relativePath.endsWith(`/${props.filename}.png`)
+        return n.node.relativePath.includes(props.filename)
       })
-
       if (!image) return null
 
       return (
@@ -41,7 +38,8 @@ export default props => (
           style={
             props.style || {
               position: "relative",
-              margin: "auto",
+              marginLeft: "auto",
+              marginRight: "auto",
               display: "block",
             }
           }
@@ -50,3 +48,5 @@ export default props => (
     }}
   />
 )
+
+export default Image

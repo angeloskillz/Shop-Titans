@@ -9,7 +9,8 @@ export const calculateCraftTime = (
   firstWorkerBonus = 0,
   secondWorkerBonus = 0,
   firstMilestone = 0,
-  secondMilestone = 0
+  secondMilestone = 0,
+  needString = true
 ) => {
   const totalSeconds = Math.round(
     base *
@@ -18,6 +19,8 @@ export const calculateCraftTime = (
       (1 - firstMilestone) *
       (1 - secondMilestone)
   )
+
+  if (!needString) return totalSeconds
 
   const hours = Math.floor(totalSeconds / 60 / 60)
   const minutes = Math.floor((totalSeconds / 60) % 60)
