@@ -14,22 +14,22 @@ A
 
 ## A list of Good Stuff to use gems on!
 ### Crafting Slots:
-> 7th, 8th, 9th, 10th, 11th and 12th. = **11**
+> 7th, 8th, 9th, 10th, 11th and 12th. = **22,000 gems**
 
 You can buy the 7th slot if you can and not wait till you're level 50. Really, you need all the crafting slots you can get to produce more items to sell.
 
 ### Expansion Slots:
-> 6th, 7th, 8th, 9th = **111**
+> 6th, 7th, 8th, 9th = **15,000 gems**
 
 A
 
 ### Hero Slots:
-> 11 = **111**
+> 14th to 21st = **111**
 
 A
 
 ### Quest Slots:
-> 6th, 7th, 8th = **111**
+> 6th, 7th, 8th = **7,000 gems**
 
 A
 ### Ancient Chests:
