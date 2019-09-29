@@ -19,15 +19,21 @@ A
 The level requirements for slots did change, so I recommend buying the 7th slot if you can and not wait till you're level 50. Really, you need all the crafting slots you can get.
 
 ### Expansion Slots:
-> 6th, 7th, 8th, 9th = 
+> 6th, 7th, 8th, 9th = **111**
 
 A
 
 ### Hero Slots:
-> 
+> 11 = **111**
+
+A
 
 ### Quest Slots:
-> 6th, 7th, 8th =
+> 6th, 7th, 8th = **111**
 
 A
 ### Ancient Chests:
+
+> **250 gems per chest**
+
+AA
