@@ -10,7 +10,10 @@ import Logo from "../components/Logo"
 
 const IndexPage = props => (
   <Layout>
-    <SEO title="Home" />
+    <SEO
+      title="Shop Titans Design & Craft Stats & Wiki"
+      description="Shop Titans is a simulation RPG game that consists of building your own shop within a fantasy kingdom. Craft items, gear up heroes and embark on adventures. Learn and improve your gameplay by reading all our guides, viewing all the statistics about each blueprint and worker to perfect your craftsmenship and among the top shop keepers."
+    />
     <div className="Hero">
       <div className="HeroContainer">
         <ImgHero
@@ -62,7 +65,13 @@ const IndexPage = props => (
         </div>
       </div>
     </div>
-    <div style={{ background: '#f4faff', paddingTop: '16px', borderRadius: '26px 26px 0px 0px', }}>
+    <div
+      style={{
+        background: "#f4faff",
+        paddingTop: "16px",
+        borderRadius: "26px 26px 0px 0px",
+      }}
+    >
       <Homepage />
     </div>
   </Layout>

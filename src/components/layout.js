@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
             },
             {
               property: "og:image",
-              content: "https://i.imgur.com/SXOUs4O.jpg",
+              content: "https://i.imgur.com/9Mq9ePq.png",
             },
             {
               name: "viewport",
@@ -56,7 +56,7 @@ const Layout = ({ children }) => (
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Shop Titans Wiki" />
           <meta property="og:description" content="A Shop Titans Wiki" />
-          <meta property="og:image" content="https://i.imgur.com/SXOUs4O.jpg" />
+          <meta property="og:image" content="https://i.imgur.com/9Mq9ePq.png" />
           <meta property="og:url" content="https://shoptitans.netlify.com/" />
 
           <meta property="twitter:card" content="summary_large_image" />
@@ -68,7 +68,7 @@ const Layout = ({ children }) => (
           <meta property="twitter:description" content="A Shop Titans Wiki" />
           <meta
             property="twitter:image"
-            content="https://i.imgur.com/SXOUs4O.jpg"
+            content="https://i.imgur.com/9Mq9ePq.png"
           />
           <html lang="en" />
         </Helmet>

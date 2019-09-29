@@ -97,6 +97,7 @@ const version3 = [
 ]
 
 const changelog = [
+  "Added package icons for items that can only be bought in a package.",
   "Master the City guide added.",
   "Mobile users will see bottom navigation bar. Feels more like an app.",
   "Added guides page",

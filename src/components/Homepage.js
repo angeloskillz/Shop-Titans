@@ -102,6 +102,7 @@ class HomePageTabs extends React.Component {
 
     return (
       <div>
+        <h1 style={{ textAlign: "center" }}>Shop Titans Design & Craft Wiki</h1>
         <AppBar
           position="static"
           color="default"
@@ -120,7 +121,7 @@ class HomePageTabs extends React.Component {
             textColor="primary"
             variant="fullWidth"
             TabIndicatorProps={{
-              style: { visibility: "hidden", border: 'none' },
+              style: { visibility: "hidden", border: "none" },
             }}
           >
             {["WORKERS", "HEROES", "CHAMPIONS"].map((name, index) => (

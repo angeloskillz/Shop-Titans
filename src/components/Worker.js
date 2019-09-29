@@ -54,7 +54,7 @@ const Icons = styled.div`
   padding-top: 10px;
 `
 
-const Title = styled.h1`
+const Title = styled.h2`
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
     sans-serif;
   font-weight: 800;
@@ -65,7 +65,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   margin-bottom: 0;
 `
-const Description = styled.h2`
+const Description = styled.h3`
   font-weight: bold;
   font-size: 14px;
   color: #406081;
