@@ -64,6 +64,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-styled-components`,
     'gatsby-transformer-javascript-frontmatter',
     `gatsby-plugin-netlify-cms`,
