@@ -1,6 +1,6 @@
 ---
 title: Gem your way!
-category: Lore
+category: Guide
 date: 2019-09-18T11:23:13.856Z
 description: 'Learn how to spend your gems: Wisely!'
 ---
@@ -12,5 +12,5 @@ A
 
 A
 
-## A list of Good Stuff for gems on!
+## A list of Good Stuff to use gems on!
 A
