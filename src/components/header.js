@@ -1,6 +1,7 @@
 import "./header.css"
 import React from "react"
 import { Link } from "gatsby"
+import HeaderLogo from "./HeaderLogo"
 
 class Header extends React.Component {
   state = {
@@ -46,8 +47,8 @@ class Header extends React.Component {
         className={this.state.hasScrolled ? "Header HeaderScrolled" : "Header"}
       >
         <div className="HeaderGroup">
-          <Link to="/">
-            <img src={require("./../images/Logo.png")} alt="LOGOSTWIKI" />
+          <Link to="/" style={{ marginLeft: "-10px" }}>
+            <HeaderLogo filename="Logo" />
           </Link>
           <div
             style={{
