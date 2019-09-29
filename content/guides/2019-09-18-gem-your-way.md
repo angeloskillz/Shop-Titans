@@ -24,9 +24,9 @@ You can buy the 7th slot if you can and not wait till you're level 50. Really, y
 A
 
 ### Hero Slots:
-> 14th to 21st = **111**
+> 14th to 21st = **26,250 gems**
 
-A
+*tbh, 14th can be bought with coins if you don't wanna gem it/willing to wait till level 52 to unlock the coin function
 
 ### Quest Slots:
 > 6th, 7th, 8th = **7,000 gems**
@@ -34,6 +34,12 @@ A
 A
 ### Ancient Chests:
 
-> **250 gems per chest**
+> **250 gems/chest**
 
 AA
+
+*ppl would argue wooden chests tho,
+
+shards/scroll
+wooden
+ancient 25, 25
