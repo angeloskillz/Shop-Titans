@@ -15,6 +15,7 @@ Also take into consideration, there are stuff you can easily buy/unlock with coi
 *Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaidk . ideas . ideas . ideas
 
 ## A list of Good Stuff to use gems on!
+
 ### Crafting Slots:
 > 7th, 8th, 9th, 10th, 11th and 12th. = **22,000 gems**
 
