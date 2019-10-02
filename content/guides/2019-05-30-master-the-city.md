@@ -3,7 +3,9 @@ title: Mastering The City!
 category: Guide
 date: 2019-09-25T20:47:00.000Z
 description: Learn all the secrets to making a successful city!
+image: https://i.imgur.com/9Mq9ePq.png
 ---
+
 # Creating Your Own City Versus Joining Another
 
 ## Introduction
@@ -21,7 +23,7 @@ So you want to make your own city? **Let's do it!**
    ![](/img/join1.jpg)
 3. Click **Create Guild.**
    ![](/img/createguild2.jpg)
-4. Pick a cool name for your City and Click **Create.** 
+4. Pick a cool name for your City and Click **Create.**
    ![](/img/createguild1.jpg)
 
 ## **Joining Another City**
@@ -115,7 +117,7 @@ Let's have a closer look on these perks!
 
 ![](/img/workersteam1.png)
 
-The city's worker buildings are the main determinants of the maximum level our personal workers can go up to. These workers will give us a crafting speed bonus that starts at +1% at level 2. 
+The city's worker buildings are the main determinants of the maximum level our personal workers can go up to. These workers will give us a crafting speed bonus that starts at +1% at level 2.
 
 In this photo, we can see that the Master Lodge at level 13 will allow Theodore to level up to 27 and will give me a 39% crafting speed bonus on all of Theodore's blueprints. Investing on the Master Lodge will speed up our current items on queue that Theodore crafts by 5% each click for 10x per day. A total of 50% off on crafting time. The same applies to other workers and their buildings.
 

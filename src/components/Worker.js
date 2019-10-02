@@ -4,6 +4,7 @@ import { cleanName } from "../utils/util"
 import Image from "../components/WorkerUnlocks"
 import WorkerImage from "../components/WorkerImage"
 import HeroItem from "../components/HeroItem"
+import { Link } from "gatsby"
 
 const BlueprintBox = styled.div`
   position: relative;
@@ -15,7 +16,7 @@ const BlueprintBox = styled.div`
   margin-bottom: 0;
 `
 
-const Class = styled.a`
+const Class = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -232,11 +233,10 @@ export default props => {
   return props.className ? (
     <Box className={props.className}>{box}</Box>
   ) : (
-    <Class
-      href={!props.className && `/workers/${props.details.name}`}
-      className={props.className}
-    >
-      {box}
-    </Class>
+    <React.Fragment>
+      <Link to={!props.className && `/workers/${props.details.name}`}>
+        <Class className={props.className}>{box}</Class>
+      </Link>
+    </React.Fragment>
   )
 }
