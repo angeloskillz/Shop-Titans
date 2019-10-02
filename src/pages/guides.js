@@ -33,6 +33,7 @@ export default props => {
             link={post.fields.slug}
             title={post.frontmatter.title}
             description={post.frontmatter.description}
+            image={post.frontmatter.image}
           ></GuideCard>
         ))}
       </Grid>
@@ -54,6 +55,7 @@ export const pageQuery = graphql`
             title
             description
             category
+            image
           }
         }
       }
