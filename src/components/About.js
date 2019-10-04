@@ -62,7 +62,7 @@ const version1 = [
 
 const version2 = [
   {
-    value: "GraphQL API: https://shoptitans.xyz/api",
+    value: "GraphQL API: https://shoptitans.wiki/api",
     done: true,
   },
   {

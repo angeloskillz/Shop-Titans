@@ -3,7 +3,7 @@ module.exports = {
     title: `Shop Titans Wiki`,
     description: `The best Shop Titans wiki stats site.`,
     author: `AngeloCant1 & Skillz4Killz`,
-    url: `https://www.shoptitans.xyz`,
+    url: `https://www.shoptitans.wiki`,
     image: `https://i.imgur.com/3xw6ZyV.png`
   },
   plugins: [
