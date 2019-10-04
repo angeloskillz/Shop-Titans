@@ -30,7 +30,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
     "react-chartjs-2": "^2.8.0",
-    "react-dom": "^16.10.1",
+    "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
     "react-sticky-footer": "^0.1.0-rc3",
     "react-table": "^6.10.3",
