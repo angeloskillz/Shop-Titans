@@ -4,8 +4,8 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-site_url: https://shoptitans.xyz
-logo_url: https://shoptitans.xyz/images/icon.png
+site_url: https://shoptitans.wiki
+logo_url: https://shoptitans.wiki/images/icon.png
 show_preview_links: false
 publish_mode: editorial_workflow
 
