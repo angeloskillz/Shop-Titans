@@ -3,9 +3,7 @@ title: Mastering The City!
 category: Guide
 date: 2019-09-25T20:47:00.000Z
 description: Learn all the secrets to making a successful city!
-image: https://i.imgur.com/9Mq9ePq.png
 ---
-
 # Creating Your Own City Versus Joining Another
 
 ## Introduction
@@ -151,4 +149,4 @@ The **Training Hall**, managed by Argon is tied to our hero levels. He does not 
 
 Oscar's **Emerald Inn** speeds up the healing rate of Heroes. Most cities already has the inn maxed out at Level 11, but we can still invest 10x a day to speed up our current resting heroes' healing time. Invest in this building if all or most of your heroes are currently resting to maximize the bonus.
 
-Lastly, we have Naya's **Tavern**. This building increases loot found in quests, but like the inn, many cities already have the Tavern maxed out at Level 16. Investing in the tavern 10x a day can cut upto 50% of our running quests. It's best to invest in this building when your quest slots are full!
+Lastly, we have Naya's **Tavern**. This building increases loot found in quests, but like the inn, many cities already have the Tavern maxed out at Level 16. Investing in the tavern 10x a day can cut upto 50% off the time of our running quests. It's best to invest in this building when your quest slots are full!
