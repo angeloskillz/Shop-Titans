@@ -29,10 +29,14 @@ We have a new Dungeon called **Chronos Ruins.** It costs *!!!* to unlock, and wi
 
 ### New and Improved way of Investing!
 
-The **Ticks**, as they call it now 
+If you're a new player being held captive in a large guild, at least once in your game life you may have experienced not being able to get investment perks like additional resources and crafting boosts because a tap on a building will cost you your hard-earned hundreds of thousands to millions. But, not anymore!!!
+
+The **Ticks** replacing how buildings are upgraded is a REAL game changer. We still don't know how this will affect a lot of cities with the grace period we're given to cover up on buildings that are lacking, but in the following days we're sure to see them! **need more info**
 
 
 ### The Academy's Scholar: Evelyn!
+
+
 
 I don't have her, but I'm throwing in a #JusticeForEvelyn! for those who are unhappy about this change.
 
