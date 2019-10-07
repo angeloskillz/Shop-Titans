@@ -13,6 +13,10 @@ The purpose of them is**
 
 Along the way, I'll also tell you my secret to endless crafting. Most people way up in the leaderboards are already doing this, but for those of you who are still not in on the secret, this is your time to shine!
 
+### What are Ascension Shards!?
+
+A
+
 ### So, what to Ascend?!
 
 The answer is simple: Whatever you wanna craft forever (and ever) or... till a new blueprint tier comes out.
