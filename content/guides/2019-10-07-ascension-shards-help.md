@@ -7,15 +7,15 @@ description: >-
   use them!)
 ---
 ### Introduction:
-One of the most frequently asked questions I've seen both in discord and on wc that the Game's built-in FAQs don't answer is about what we can do with our limited ascension shards.
+As you all know, I'm  One of the most frequently asked questions I've seen both in discord and on wc that the Game's built-in FAQs don't answer is about what we can do with our limited shards.
 
-The purpose of them is**
 
 Along the way, I'll also tell you my secret to endless crafting. Most people way up in the leaderboards are already doing this, but for those of you who are still not in on the secret, this is your time to shine!
 
 ### What are Ascension Shards!?
 
-A
+Let's start with getting them. 
+The purpose of them is**
 
 ### So, what to Ascend?!
 
