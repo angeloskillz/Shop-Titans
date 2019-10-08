@@ -24,21 +24,34 @@ We have a new Dungeon called **Chronos Ruins.** It costs *!!!* to unlock, and wi
 
 **screenie, png. quick**
 
-We also got 2 new NPCS that produce resources. Meet Serene and Maylee!! 
+We also got 2 new NPCS that produce resources. Meet Serene and Maylee!
 
+The cost to unlock them are as follows:
+
+> Maylee:
+
+> Serene: 
+
+Serene produces ** and Maylee will give us **! More helpers, more fun!
 
 ### New and Improved way of Investing!
 
-If you're a new player being held captive in a large guild, at least once in your game life you may have experienced not being able to get investment perks like additional resources and crafting boosts because a tap on a building will cost you your hard-earned hundreds of thousands to millions. But, not anymore!!!
+If you're a new player being held captive in a large guild, at least once in your game life you may have experienced not being able to get investment perks like additional resources and crafting boosts because a tap on a building will cost you your hard-earned hundreds of 
+thousands to millions. But, not anymore!!!
 
-The **Ticks** replacing how buildings are upgraded is a REAL game changer. We still don't know how this will affect a lot of cities with the grace period we're given to cover up on buildings that are lacking, but in the following days we're sure to see them! **need more info**
+Unlike before, Investments now count as a **"Tick."**
 
+These **Ticks** replacing how buildings are upgraded is a REAL game changer. We still can't see how much this will affect a lot of cities with the grace period we're given to cover up on buildings that are lacking on them, but in the following days we're sure to see them! Luckily, buildings will only take a minute to upgrade! **Longest 60 seconds of my life.**
 
 ### The Academy's Scholar: Evelyn!
 
+The 5% multicraft chance on enchantments brought by Evelyn is now changed into +25% Merchant XP bonus. Those who previously unlocked her received 50 Ascension Shards as compensation for this change.
 
+So far, all I've seen from the community are protests about this change. According to some, they bought it for that 5% multicraft chance more than the wands themselves and crafting their own runestones. They most certainly did not expect 25% Merchant XP.
 
-I don't have her, but I'm throwing in a #JusticeForEvelyn! for those who are unhappy about this change.
+At higher levels, 50+ specifically, there's not much we can unlock anymore and if there were, they're very expensive gold-wise. People choose to just use gems instead. These amounts are doable, yes, but there is so much more we can do with anything above 100M like investing it on a building, for example. 
+
+I don't have her, but I'm throwing in a #JusticeForEvelyn!
 
 ### More!
 
