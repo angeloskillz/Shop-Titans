@@ -217,7 +217,7 @@ export default props => {
           {props.type === "worker" ? props.details.gold_cost : "Free"}
         </Cost>
         <HeroItem
-          filename="gems"
+          filename="gem"
           alt="gem"
           style={{
             position: "relative",
