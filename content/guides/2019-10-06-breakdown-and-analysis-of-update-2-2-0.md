@@ -32,14 +32,14 @@ The cost to unlock them are as follows:
 
 > Serene: 
 
-Serene produces ** and Maylee will give us **! More helpers, more fun!
+Serene produces *!!* and Maylee will give us *!!* ! More helpers, more fun! (More buildings to invest in)
 
 ### New and Improved way of Investing!
 
 If you're a new player being held captive in a large guild, at least once in your game life you may have experienced not being able to get investment perks like additional resources and crafting boosts because a tap on a building will cost you your hard-earned hundreds of 
-thousands to millions. But, not anymore!!!
+thousands to millions. 
 
-Unlike before, Investments now count as a **"Tick."**
+Well, not anymore!!! Unlike before, the amount you can invest is now and Invest **"Tick."**
 
 These **Ticks** replacing how buildings are upgraded is a REAL game changer. We still can't see how much this will affect a lot of cities with the grace period we're given to cover up on buildings that are lacking on them, but in the following days we're sure to see them! Luckily, buildings will only take a minute to upgrade! **Longest 60 seconds of my life.**
 
