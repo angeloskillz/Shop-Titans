@@ -86,7 +86,7 @@ export default class BlueprintOverview extends React.Component {
     return (
       <div>
         <div style={{ textAlign: "center", marginBottom: "10px" }}>
-          {[0, 1, 2, 3, 4, 5, 6, 7].map(tier => (
+          {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(tier => (
             <Fab
               key={tier}
               size="small"
