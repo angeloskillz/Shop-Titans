@@ -56,9 +56,11 @@ So far, all I've seen from the community are protests about this change. Accordi
 
 At higher levels, 50+ specifically, there's not much we can unlock anymore and if there were, they're very expensive gold-wise. People choose to just use gems instead. These gold amounts are doable, yes, but there is so much more we can do with anything above 100M like investing it on a building, for example. 
 
-I don't have The Academy unlocked, but I agree with the others that Merchant XP becomes useless at some point. Our levels ain't gonna upgrade them buildings, extra enchantments from time to time will. So i'm throwing in a #JusticeForEvelyn!
+I don't have The Academy unlocked, but I agree with the others that Merchant XP becomes useless at some point. Our levels ain't gonna upgrade them buildings, extra enchantments from time to time will. So i'm throwing in a **#JusticeForEvelyn!**
 
-### More!
+On a side note, have you checked out your Ascension Tracks?! If you ascend enough items and reach an ascension milestone, there's a number of things you can claim such as gold and gems! You can also get **+25% Worker XP bonuses, -10% surcharge energy costs, x1.5 Quality Chance AND 5% multicraft chance!!!**
+
+## More!
 
 It's what we've all been asking for! A faster way to invest! Just hold down on the **+** button and you won't have to sprain your finger tapping!
 
