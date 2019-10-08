@@ -4,7 +4,7 @@ category: Guide
 date: 2019-10-06T15:23:03.072Z
 description: 'Major Changes: Oh no!'
 ---
-### Introduction:
+## Introduction:
 
 New Update! It's what we've all been waiting for, everyone! There's our Tier 8! New crafts to master and even more expensive stuff to sell! I can already smell the gold brewing extensively from here!
 
@@ -32,7 +32,7 @@ Here, we got Elemental blueprints! (More items to find and master for our collec
 
 ![](/img/elementals.png)
 
-### New and Improved way of Investing!
+## New and Improved way of Investing!
 
 If you're a new player being held captive in a large guild, at least once in your game life you may have experienced not being able to get investment perks like additional resources and crafting boosts because a tap on a building will cost you your hard-earned hundreds of thousands to millions. 
 
@@ -46,7 +46,7 @@ Our investments from gold are converted generally into ticks, and not how many t
 
 Replacing how buildings are upgraded is a REAL game changer. For now, we still can't see how much this affects  our city with the grace period we're given to pay up these debts. But in the following days, we're sure to see them! Luckily though, buildings will only take a minute to upgrade! _(**Longest 60 seconds of my life.)**_
 
-### The Academy's Scholar: Evelyn!
+## The Academy's Scholar: Evelyn!
 
 The 5% multicraft chance on enchantments brought by Evelyn is now changed into +25% Merchant XP bonus. Those who previously unlocked her received 50 Ascension Shards as compensation for this change.
 
@@ -60,12 +60,14 @@ I don't have The Academy unlocked, but I agree with the others that Merchant XP 
 
 ### More!
 
-We now have a faster way to invest! Just hold down on 
+It's what we've all been asking for! A faster way to invest! Just hold down on the **+** button and you won't have to sprain your finger tapping!
 
-But you know what I'm most happy about? The **MEOW** sound! They made enchanting MORE fun! Try it with the Cat Spirit! 
+![](/img/invest.png)
 
-And of course, you can now tick on The Laboratory and The Academy even if you don't have them unlocked for yourself. It's gonna be really helpful as there are cities with very few members who has them and buildings do get expensive as they grow. More investors mean easier to upgrade buildings!
+You can also invest on The Laboratory and The Academy now, even if you don't have them unlocked for yourself. It's gonna be really helpful as there are cities with very few members who has them and buildings do get expensive as they grow. More investors mean easier to upgrade buildings!
 
-As one of the ancient players, probably the best **TIP** I can give you is adapt to these changes, learn to navigate around it and with it. Change a few things on your play style and have fun. Don't worry, they always take our feedbacks into consideration. We've seen that happen countless times. However, things don't always change the way we want it to or as fast as we expect them to change. So let's do what we can for now and trust the Game Gods' wisdom, shall we?! :)
+Requesting Items with Quality is also doable now!!! But you know what I'm most happy about? The **MEOW** sound! They made enchanting MORE fun! Try it with the Cat Spirit and embrace your inner Cat!
+
+As one of the ancient players, probably the best **TIP** I can give you is adapt to these changes, learn to navigate around it and with it. Changing a few things on your play style won't hurt that much. And don't worry, they always take our feedbacks into consideration. We've seen that happen countless times. However, things don't always change the way we want it to or as fast as we expect them to change. So let's do what we can for now, craft, sell, and trust the Game Gods!
 
 ![](/img/angela-endtag.png)
