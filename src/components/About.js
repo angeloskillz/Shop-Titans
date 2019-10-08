@@ -97,6 +97,9 @@ const version3 = [
 ]
 
 const changelog = [
+  "Sorted blueprints from higher tier to lower",
+  "Updated all 2.2 blueprint stats.",
+  "Added all 2.2 assets.",
   "Added package icons for items that can only be bought in a package.",
   "Master the City guide added.",
   "Mobile users will see bottom navigation bar. Feels more like an app.",

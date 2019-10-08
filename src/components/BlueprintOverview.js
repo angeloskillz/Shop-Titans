@@ -66,7 +66,7 @@ export default class BlueprintOverview extends React.Component {
                       !this.state.tier ||
                       blueprint.Tier.toString() === this.state.tier.toString()
                   )
-                  .sort((a, b) => a.Tier - b.Tier)
+                  .sort((a, b) => b.Tier - a.Tier)
                   .map((blueprint, printIndex) => (
                     <BlueprintCard
                       details={blueprint}
