@@ -41,7 +41,7 @@ thousands to millions.
 
 Well, not anymore!!! Unlike before, the amount you can invest is now based on how much you previously invested on a building. The less you invest, the less expensive it will cost you per tap. Similarly, as your investment increases, the more expensive it will be.
 
-However, no matter how expensive these amounts get, it will be counted as One **Tick"**
+However, no matter how expensive these amounts get, it will be counted as One **Tick.** For me, this will bring a balance
 
 These **Ticks** replacing how buildings are upgraded is a REAL game changer. We still can't see how much this will affect a lot of cities with the grace period we're given to cover up on buildings that are lacking on them, but in the following days we're sure to see them! Luckily, buildings will only take a minute to upgrade! **Longest 60 seconds of my life.**
 
@@ -57,7 +57,7 @@ I don't have The Academy unlocked, but I agree with the others that Merchant XP 
 
 ### More!
 
-But you know what I'm most happy about? The **MEOW!** sound! And of course, you can now tick on The Laboratory and The Academy even you we don't have them unlocked for yourself. It's gonna be really helpful as there are cities with very few members who has them and buildings do get expensive as they grow. More investors mean easier to upgrade buildings!
+But you know what I'm most happy about? The **MEOW** sound! And of course, you can now tick on The Laboratory and The Academy even if you don't have them unlocked for yourself. It's gonna be really helpful as there are cities with very few members who has them and buildings do get expensive as they grow. More investors mean easier to upgrade buildings!
 
 As one of the ancient players, probably the best **TIP** I can give you is adapt to these changes, learn to navigate around it and with it. Just change a few things on your play style. They always take our feedbacks into consideration, we've seen that happen countless times. However, things don't always change the way we want it to. So let's do what we can for now and trust the Game Gods' wisdom, shall we?! :)
 
