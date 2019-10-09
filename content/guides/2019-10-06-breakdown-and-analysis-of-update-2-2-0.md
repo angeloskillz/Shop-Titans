@@ -3,6 +3,7 @@ title: Breakdown and Analysis of Update 2.2.0
 category: Guide
 date: 2019-10-06T15:23:03.072Z
 description: 'Major Changes: Oh no!'
+image: https://i.imgur.com/9Mq9ePq.png
 ---
 ## Introduction:
 
@@ -37,7 +38,7 @@ We also got Elemental blueprints! (More items to find and master for our collect
 
 ## New and Improved way of Investing!
 
-If you're a new player being held captive in a large guild, at least once in your game life you may have experienced not being able to get investment perks like additional resources and crafting boosts because a tap on a building will cost you your hard-earned hundreds of thousands to millions. 
+If you're a new player being held captive in a large guild, at least once in your game life you may have experienced not being able to get investment perks like additional resources and crafting boosts because a tap on a building will cost you your hard-earned hundreds of thousands to millions.
 
 Well, not anymore!!! Unlike before, the amount you can invest is now based on how much you previously invested on a building. The less you have invested, the less expensive it will cost you per tap. Similarly, as your investment increases, the more expensive it will be. Below are the investment costs for someone with 30G when compared someone with 30M.
 
@@ -57,7 +58,7 @@ The 5% multicraft chance on enchantments brought by Evelyn is now changed into +
 
 So far, all I've seen from the community are protests about this change. According to some, they bought it for that 5% multi-craft chance more than the wands themselves and crafting their own runestones. They most certainly did not expect 25% Merchant XP.
 
-At higher levels, 50+ specifically, there's not much we can unlock anymore and if there were, they're very expensive gold-wise. People choose to just use gems instead. These gold amounts are doable, yes, but there is so much more we can do with anything above 100M like investing it on a building, for example. 
+At higher levels, 50+ specifically, there's not much we can unlock anymore and if there were, they're very expensive gold-wise. People choose to just use gems instead. These gold amounts are doable, yes, but there is so much more we can do with anything above 100M like investing it on a building, for example.
 
 I don't have The Academy unlocked, but I agree with the others that Merchant XP becomes useless at some point. Our levels ain't gonna upgrade them buildings, extra enchantments from time to time will. So i'm throwing in a **#JusticeForEvelyn!**
 
