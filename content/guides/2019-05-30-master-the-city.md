@@ -151,8 +151,8 @@ The **Town Hall** manned by our own Elder Owen, determines the city's maximum ca
 
 The **Training Hall**, managed by Argon is tied to our hero levels. He does not give 10x daily bonuses, sure! But, Argon volunteered to train our heroes day and night, let's cut him some slack!
 
-Oscar's **Emerald Inn** speeds up the healing rate of Heroes. Most cities already has the inn maxed out at Level 11, but we can still invest 10x a day to speed up our current resting heroes' healing time. Invest in this building if all or most of your heroes are currently resting to maximize the bonus.
+Oscar's **Emerald Inn** speeds up the healing rate of Heroes. It's pretty easy to max out at level 13, but we can still invest 10x a day to speed up our current resting heroes' healing time. Invest in this building if all or most of your heroes are currently resting to maximize the bonus.
 
-Lastly, we have Naya's **Tavern**. This building increases loot found in quests, but like the inn, many cities already have the Tavern maxed out at Level 16. Investing in the tavern 10x a day can cut upto 50% off the time of our running quests. It's best to invest in this building when your quest slots are full!
+Lastly, we have Naya's **Tavern**. This building increases loot found in quests, but the bonus it gives is different. Investing in the tavern 10x a day can cut upto 50% off the time of our running quests. It's best to invest in this building when your quest slots are full! From level 16, its Max level was bumped up to 19.
 
 ![](/img/angela-endtag.png)
