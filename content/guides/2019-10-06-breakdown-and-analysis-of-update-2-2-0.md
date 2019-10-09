@@ -71,9 +71,7 @@ It's what we've all been asking for! A faster way to invest! Just hold down on t
 
 You can also invest on The Laboratory and The Academy now, even if you don't have them unlocked for yourself. It's gonna be really helpful as there are cities with very few members who has them and buildings do get expensive as they grow. More investors mean easier to upgrade buildings!
 
-Do you need superior items for your crafts but don't want to tap for like, 50x to buy them? Well, requesting Items with quality is now doable! 
-
-BUT!--- Do you know what I'm most excited about? The **MEOW** sound! They made enchanting MORE fun! Try enchanting an item with the Cat Spirit and embrace your inner cat!
+Do you need superior items for your crafts but don't want to tap for like, 50x to buy them? Well, requesting Items with quality is now doable! BUT!--- Do you know what I'm most excited about? The **MEOW** sound! They made enchanting MORE fun! Try enchanting an item with the Cat Spirit and embrace your inner cat!
 
 As one of the ancient players, probably the best **TIP** I can give you is adapt to these changes, learn to navigate around it AND with it. Changing a few things on your play style won't hurt that much.
 
