@@ -28,7 +28,7 @@ We have a new Dungeon called **Chronos Ruins.** It costs **15,000,000** to unloc
 
 We also got 2 new NPCS that produce resources. Meet Serene and Maylee! Serene produces _Ether_ and Maylee will give us _Jewels_ ! More helpers, more fun! \*(and more buildings to invest in....)\*
 
-Here, we got Elemental blueprints! (More items to find and master for our collectors!) The only way to get them is if you get lucky in a chest. But remember, just because you can't change who or what they are, doesn't mean you can't collect them!
+We also got Elemental blueprints! *(More items to find and master for our collectors!)* The only way to get them is if you get lucky in a chest. But remember, just because you can't change who or what they are, doesn't mean you can't collect them!
 
 ![](/img/elementals.png)
 
@@ -36,17 +36,17 @@ Here, we got Elemental blueprints! (More items to find and master for our collec
 
 If you're a new player being held captive in a large guild, at least once in your game life you may have experienced not being able to get investment perks like additional resources and crafting boosts because a tap on a building will cost you your hard-earned hundreds of thousands to millions. 
 
-Well, not anymore!!! Unlike before, the amount you can invest is now based on how much you previously invested on a building. The less you invest, the less expensive it will cost you per tap. Similarly, as your investment increases, the more expensive it will be. Below are the investment costs for someone with 30G when compared someone with 30M.
+Well, not anymore!!! Unlike before, the amount you can invest is now based on how much you previously invested on a building. The less you invest, the less expensive it will cost you per tap. Similarly, as your investment increases, the more expensive it will be. Below are the investment costs for someone with 30G invested when compared to someone with 30M.
 
 ![](/img/tick-compared.png)
 
 As you can see, no matter how expensive these amounts get, it will be counted as **One** **Tick.** For me, this will bring a more balanced flow on investments in a city. We can't have one-man cities anymore, if you know what I mean. Everyone is now obliged to help their city out when needed.
 
-Our investments from gold are converted generally into ticks, and not how many times we invested or tapped into a building. You might want to halt on investing and/or buying more ticks while the rest of your city are still not on the update. This should save you more gold as their investments are still not counted. You'll see soon where your ticks can be more utilized.
+Our investments from gold are converted generally into ticks, and not based on how many times we invested or tapped on a building. You might want to halt on investing and/or buying more ticks while the rest of your city are still not on the update. This should save you more gold as their investments are still not counted. You need to see first where your ticks can be more utilized to further help your city.
 
-Replacing how buildings are upgraded is a REAL game changer. For now, we still can't see how much this affects  our city with the grace period we're given to pay up these debts. But in the following days, we're sure to see them! Luckily though, buildings will only take a minute to upgrade! _(**Longest 60 seconds of my life.)**_
+Replacing how buildings are upgraded is a REAL game changer. For now, we still can't see how much this affects  our city with the grace period we're given to pay up these debts. But in the following days, we're sure to see them! Luckily though, buildings will only take a minute to upgrade! _(**They can still be the longest 60 seconds of my life.)**_
 
-## The Academy's Scholar: Evelyn!
+## The Academy's Scholar, Evelyn!
 
 The 5% multicraft chance on enchantments brought by Evelyn is now changed into +25% Merchant XP bonus. Those who previously unlocked her received 50 Ascension Shards as compensation for this change.
 
@@ -58,7 +58,7 @@ At higher levels, 50+ specifically, there's not much we can unlock anymore and i
 
 I don't have The Academy unlocked, but I agree with the others that Merchant XP becomes useless at some point. Our levels ain't gonna upgrade them buildings, extra enchantments from time to time will. So i'm throwing in a **#JusticeForEvelyn!**
 
-On a side note, have you checked out your Ascension Tracks?! If you ascend enough items and reach an ascension milestone, there's a number of things you can claim such as gold and gems! You can also get **+25% Worker XP bonuses, -10% surcharge energy costs, x1.5 Quality Chance AND 5% multicraft chance!!!**
+On a side note, have you checked out your Ascension Tracks?! If you ascend enough items and reach an ascension milestone, there's a number of things you can claim such as gold and gems! You can also get **+25% Worker XP bonuses, -10% Surcharge Energy Costs, x1.5 Quality Chance AND 5% multicraft chance!!!**
 
 ## More!
 
