@@ -80,7 +80,7 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges
     posts.forEach(edge => {
       const id = edge.node.id
-      if (edge.node.frontmatter.title !== 'Mastering The City!') return;
+      // if (edge.node.frontmatter.title !== 'Mastering The City!') return;
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
