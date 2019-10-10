@@ -3,7 +3,7 @@ title: Mastering The City!
 category: Guide
 date: 2019-09-25T20:47:00.000Z
 description: Learn all the secrets to making a successful city!
-image: https://i.imgur.com/9Mq9ePq.png
+image: https://i.imgur.com/1KIKaQ8.jpg
 ---
 # Creating Your Own City Versus Joining Another
 

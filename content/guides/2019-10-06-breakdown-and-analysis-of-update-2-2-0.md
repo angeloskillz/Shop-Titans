@@ -3,7 +3,7 @@ title: Breakdown and Analysis of Update 2.2.0
 category: Guide
 date: 2019-10-06T15:23:03.072Z
 description: 'Major Changes: Oh no!'
-image: https://i.imgur.com/9Mq9ePq.png
+image: https://i.imgur.com/vPAjEvZ.jpg
 ---
 ## Introduction:
 
