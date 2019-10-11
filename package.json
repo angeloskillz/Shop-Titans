@@ -11,7 +11,7 @@
     "chart.js": "^2.8.0",
     "gatsby": "^2.15.34",
     "gatsby-cli": "^2.7.57",
-    "gatsby-image": "^2.2.25",
+    "gatsby-image": "^2.2.27",
     "gatsby-plugin-manifest": "^2.2.20",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-netlify-cache": "^1.2.0",
