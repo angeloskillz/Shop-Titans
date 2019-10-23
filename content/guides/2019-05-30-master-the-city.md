@@ -4,8 +4,6 @@ category: Guide
 date: 2019-09-25T20:47:00.000Z
 description: Learn all the secrets to making a successful city!
 ---
-# Creating Your Own City Versus Joining Another
-
 ## Introduction
 
 Hey fellow shopkeepers, Skillz4Killz here from the Happy Hamlet City bringing you a guide on helping you master the city. Many players will also call the City a Guild and both are accurate. The game refers to it as both. For this guide, we will use the term: **City!**
