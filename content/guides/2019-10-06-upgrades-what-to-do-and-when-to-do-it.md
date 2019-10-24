@@ -36,15 +36,17 @@ Some players aim for just a little over 480, I say AIM HIGHER. By that, I mean 9
 
 >>> Sell (+21): **166**/1000
 
->>> Small Talk 2: **294**/1000
+>>> Small Talk 2: **249**/1000
 
->>> Discount and Sell (45+21=66): **360**/1000
+>>> Discount and Sell (45+21=66): **315**/1000
 
->>> Small Talk 3: **424**/1000
+>>> Small Talk 3: **383**/1000
 
->>> Discount and Sell (+66): **490/1000**
+>>> Discount and Sell (+66): **449**/1000
 
-From there you will see, I only needed 3 successful small talks and 3 Hauberks to sell 1 Halberd. Not having a high enough energy will require more small talks and discount items. Also add in backfires, and a chain of it if you're unlucky. For every backfire, you lose 7% of your maximum amount.*
+>>> Small Talk 4: **504**/1000, Surcharge, Sell.
+
+From there you will see, I only needed 4 successful small talks and 3 Hauberks to sell 1 Halberd. Not having a high enough energy will require more small talks and discount items. Also add in backfires, and a chain of it if you're unlucky. For every backfire, you lose 7% of your maximum amount.*
 
 >>>> __Maximum Energy on the date of computation is 1,238.__
 
